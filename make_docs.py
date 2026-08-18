@@ -206,10 +206,29 @@ if delim:
     def rate(b, e, field='value'):
         rs = [r for r in delim if r['bits'] == b and r['enc'] == e]
         return sum(r[field] for r in rs), len(rs)
-    def diff_ci(k1, n1, k2, n2):
-        p1, p2 = k1 / n1, k2 / n2
-        se = math.sqrt(p1 * (1 - p1) / n1 + p2 * (1 - p2) / n2)
-        return p1 - p2, (p1 - p2) - 1.96 * se, (p1 - p2) + 1.96 * se
+    def paired_ci(b):
+        """Matched-pair risk difference. The design is paired, so an independent-sample
+        SE overstates the interval - within-pair association reduces variance."""
+        h = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'hex'}
+        z = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'b32'}
+        D = [int(h[k]) - int(z[k]) for k in h if k in z]
+        n = len(D); m = sum(D) / n
+        sd = math.sqrt(sum((x - m) ** 2 for x in D) / (n - 1))
+        se = sd / math.sqrt(n)
+        return m, m - 1.96 * se, m + 1.96 * se
+    def concordance(b):
+        h = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'hex'}
+        z = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'b32'}
+        pr = [(h[k], z[k]) for k in h if k in z]
+        n = len(pr)
+        obs = sum(1 for a, c in pr if a == c) / n
+        ph = sum(a for a, c in pr) / n; pz = sum(c for a, c in pr) / n
+        indep = ph * pz + (1 - ph) * (1 - pz)
+        a11 = sum(1 for x, y in pr if x and y); a10 = sum(1 for x, y in pr if x and not y)
+        a01 = sum(1 for x, y in pr if not x and y); a00 = sum(1 for x, y in pr if not x and not y)
+        den = math.sqrt((a11+a10)*(a01+a00)*(a11+a01)*(a10+a00))
+        phi = (a11*a00 - a10*a01) / den if den else float('nan')
+        return obs, indep, phi
     def mcnemar(b):
         h = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'hex'}
         z = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'b32'}
@@ -231,6 +250,14 @@ if delim:
       "equality (case-folding, separator removal and Crockford ambiguity mappings are part of the",
       "decoder, so they are not a grading loophole - but they must then be part of the protocol",
       "specification).", "",
+      "**Decoder audit.** Every base32 response that was literal-wrong but value-correct fell into",
+      "a single alias class: `O` read for the printed digit `0` (8 of 8). No case-only, no",
+      "separator-only, no `I`/`L` rescues. Since the Crockford alphabet excludes `O` from the",
+      "ground truth entirely, the model is producing a symbol that cannot occur, and the",
+      "protocol's own alias rule absorbs it. Canonicality was also audited: 0 of the accepted",
+      "responses decode from a non-canonical form, and the decoder compares full integers with no",
+      "masking, so a corrupted high symbol yields a value above 2^bits and is rejected rather than",
+      "truncated into a false accept.", "",
       "| bits | alphabet | chars | literal | value | rate | 95% LB |", "|---|---|---|---|---|---|---|")
     for b in (64, 128):
         for e in ('hex', 'b32'):
@@ -242,12 +269,17 @@ if delim:
               f"{star}{v}/{len(rs)}{star} | {v/len(rs):.2f} | {lb(v, len(rs)):.3f} |")
     w("", "**No encoding advantage was detected - which is not the same as equivalence.** The",
       "difference in value-correct rate, with 95% intervals:", "")
-    w("| bits | hex - base32 | 95% CI | McNemar (discordant pairs) |", "|---|---|---|---|")
+    w("| bits | hex - base32 | 95% CI (matched-pair) | McNemar (discordant pairs) |",
+      "|---|---|---|---|")
     for b in (64, 128):
-        k1, n1 = rate(b, 'hex'); k2, n2 = rate(b, 'b32')
-        d0, lo, hi = diff_ci(k1, n1, k2, n2)
+        d0, lo, hi = paired_ci(b)
         bb, cc, pv, npair = mcnemar(b)
         w(f"| {b} | {d0:+.2f} | [{lo:+.2f}, {hi:+.2f}] | {bb} vs {cc}, p = {pv:.3f} |")
+    w("", "Intervals are matched-pair, not independent-sample: the same bitstrings are encoded",
+      "both ways, and within-pair association narrows the variance. With 1 and 5 discordant",
+      "pairs, McNemar has almost no power - `p = 1.000` means the discordant evidence is too",
+      "sparse to separate the encodings, not that they are equal. A matched-pair *exact* or",
+      "score-based interval would be preferable to this Wald approximation at these counts.")
     w("", "Those intervals are wide enough to contain a materially better hex *and* a modestly",
       "better base32. Establishing equivalence would need a pre-declared margin (say d = 0.10)",
       "and an interval falling entirely inside [-d, +d]; n=20 cannot do that. The earlier wording",
@@ -257,14 +289,24 @@ if delim:
       "unpaired, and an earlier version of this README wrongly claimed the same values were used.",
       "The seed no longer includes the encoding, so both alphabets encode identical bitstrings and",
       "McNemar applies. The unpaired run is kept as `results_delim_UNPAIRED_6x13_opus.json`.", "",
-      "**Between-run variation is large at n=20.** The same 128-bit hex condition scored 11/20 in",
-      "the unpaired run and 16/20 in the paired one - a 0.25 swing in the point estimate (Fisher",
-      "p = 0.19 between the two runs, so not a detected difference, but a reminder that a single",
-      "n=20 cell is not a precise measurement). The 64-bit base32 cell moved 17/20 to 19/20 the",
-      "same way. Only the 64-bit hex cell was stable at 20/20 across both.", "",
-      "Pairing also shows the two encodings mostly succeed and fail on the *same underlying*",
-      "values: only 1 discordant pair at 64 bits and 5 at 128. Item difficulty appears driven by",
-      "the value and its rendering rather than by the alphabet.", "",
+      "**Between-run swings are large, but confounded.** The 128-bit hex condition scored 11/20 in",
+      "the unpaired run and 16/20 in the paired one. Because the seed fix also changed the random",
+      "values, that 0.25 swing mixes item-set variation with model and provider stochasticity - it",
+      "is *between-dataset* variation under the same nominal condition, not an estimate of",
+      "repeated-call variance. Isolating the latter needs the identical 20 frozen images rerun",
+      "several times. The 64-bit hex cell scored 20/20 in both, i.e. 40/40 across two distinct",
+      "item sets (unadjusted one-sided 95% LB 0.928) - meaningful independent support for freezing",
+      "that field format, though still not a confirmatory guarantee given how it was selected.", "",
+      "Pairing shows elevated concordance, but less than it first appears. At 128 bits the two",
+      "encodings agree on " + f"{concordance(128)[0]:.2f}" + " of pairs against " +
+      f"{concordance(128)[1]:.2f}" + " expected under independence - an excess of only " +
+      f"{concordance(128)[0]-concordance(128)[1]:.2f}" + ", phi = " + f"{concordance(128)[2]:.2f}" + ".",
+      "That is suggestive of a shared per-item or per-call difficulty component, **not** an",
+      "identified value effect: shared outcomes could equally come from target position,",
+      "surrounding page composition, or call-level variation. At 64 bits hex has no failures, so",
+      "no association can be estimated at all. Separating them needs each bitstring repeated",
+      "across positions, pages and calls in both encodings, with value / position / call as",
+      "random effects.", "",
       "### Information-normalised throughput", "",
       "Raw success rate is the wrong objective: base32 carries the same information in fewer",
       "characters, so the comparison should be successfully decoded **bits** per image token,",
@@ -290,10 +332,19 @@ if delim:
       "now-frozen design. On successfully decoded bits per image token the 13-character base32",
       "field actually leads it (47.2 against 40.4), so 'best' depends on which objective is being",
       "optimised - exact-field rate or information throughput.", "",
-      "It is also a *raw* 64-bit value, not a checksummed handle. A handle must spend some of",
-      "those bits on validation - for example a 32-bit record index plus a 32-bit keyed tag inside",
-      "the same 16-character span - and a structured codeword has a different symbol distribution",
-      "from a uniform random one, so it needs measuring in its own right.", "",
+      "It is also a *raw* 64-bit value, not a checksummed handle. A handle must spend those bits",
+      "as a budget across record identity, context binding and error detection:", "",
+      "| tag width | false accepts over 1e6 bad decodes | remaining bits for identity |",
+      "|---|---|---|",
+      "| 32-bit | ~2.3e-4 | 32 |", "| 40-bit | ~9.1e-7 | 24 |", "| 48-bit | ~3.6e-9 | 16 |", "",
+      "A hierarchical protocol cuts the identity requirement: with page and block already",
+      "established, a 16-bit *local* record index plus a 48-bit keyed tag still fits the measured",
+      "64-bit span. The tag should cover archive, page, block, record index and a record",
+      "fingerprint, so a handle lifted from the wrong page fails validation **when the expected",
+      "context is independently known**. It cannot catch a correctly-read handle for the wrong",
+      "record inside an accepted context - only reconciliation after fetch does that.", "",
+      "A structured codeword also has a different symbol distribution from a uniform random value,",
+      "so the 20/20 result does not transfer to it untested.", "",
       "### Grouping and delimiting interact with length", "",
       "| field | grouped payload, counted span | contiguous payload, delimited |",
       "|---|---|---|", "| 16 chars | 16/20 | **20/20** |", "| 32 chars | 15/20 | **11/20** |", "",
@@ -504,7 +555,29 @@ w("", "---", "", "## 11. Files", "",
   "6. **Equivalence, not just non-significance.** Declare a margin (d = 0.10) and power the",
   "   hex/base32 comparison to fit the difference interval inside it. n=20 cannot.",
   "7. **The 2x2 layout experiment.** Grouping x delimiting at 16 and 32 characters, paired.",
-  "8. **Other endpoints.** Every geometry probe ran on the Sonnet CLI path.")
+  "8. **Other endpoints.** Every geometry probe ran on the Sonnet CLI path.", "",
+  "The next frozen test should stop sweeping alphabets and instantiate the protocol: pages",
+  "carrying a large page ID, block IDs every 8-16 records, a semantic label per block, and one",
+  "64-bit codeword per record. Ask a *semantic* question whose answer lives in one record - no",
+  "row numbers - and require `(page ID, block ID, codeword)` back. The harness then canonicalises",
+  "the code, validates the tag, fetches the canonical record, and checks whether it answers the",
+  "query, recording every wrong record accepted. Report `P(page)`, `P(block|page)`,",
+  "`P(code|block)`, `P(tag pass)`, `P(correct fetch)`, `P(false accept)`, expected retries, and",
+  "token cost - with both 16-char hex and 13-char base32 codewords over identical structured",
+  "fields. The decision quantity is", "",
+  "    P(correct record selected AND code accepted AND canonical record verified)", "",
+  "not first-pass field accuracy and not raw density.", "",
+  "---", "", "## 13. Assumption register", "",
+  "| assumption | status | falsification probe |", "|---|---|---|",
+  "| The 20 paired repetitions are independent | not explicitly established | confirm one fresh image and one independent call per rep |",
+  "| Pairing held target position and surrounding layout constant | unknown | compare renderer coordinates and distractor pages |",
+  "| base32 decoder rejects non-zero unused high bits | **audited: yes** | canonical re-encode audit (0 non-canonical accepts) |",
+  "| Tolerant normalisation is limited to protocol aliases | **audited: yes** | all 8 rescues were `O`->`0` |",
+  "| Concordance reflects bitstring difficulty | suggestive only (phi = 0.29) | repeat each value across positions and calls |",
+  "| The two runs measure stochastic variation | **false as stated** - values differed too | rerun identical frozen images |",
+  "| base32 goodput advantage survives protocol overhead | plausible, unmeasured | include delimiters, manifests, validation, retries |",
+  "| A structured 64-bit handle behaves like a uniform value | unknown | test the actual codeword distribution |",
+  "| Hierarchical binding beats row addressing | unknown | run the page/block/record test |")
 
 # ─────────────────────────────────────────────────────────────── write
 readme = '\n'.join(S) + '\n'
