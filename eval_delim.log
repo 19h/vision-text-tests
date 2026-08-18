@@ -1,0 +1,21 @@
+80 runs: 6x13, equal-information delimited fields
+  hex    128b/32ch rep1   literal=True  value=True  11s
+  hex    128b/32ch rep2   literal=True  value=True  14s
+  hex    128b/32ch rep4   literal=True  value=True  12s
+  hex    128b/32ch rep5   literal=True  value=True  12s
+  hex    128b/32ch rep3   literal=False value=False 28s
+  hex    128b/32ch rep6   literal=True  value=True  12s
+  hex    128b/32ch rep7   literal=False value=False 12s
+  hex    128b/32ch rep9   literal=True  value=True  12s
+  hex    128b/32ch rep10  literal=True  value=True  12s
+  hex    128b/32ch rep11  literal=True  value=True  11s
+  hex    128b/32ch rep8   literal=False value=False 35s
+  hex    128b/32ch rep12  literal=False value=False 14s
+  hex    128b/32ch rep14  literal=False value=False 11s
+  hex    128b/32ch rep13  literal=True  value=True  17s
+  hex    128b/32ch rep17  literal=True  value=True  14s
+  hex    128b/32ch rep16  literal=False value=False 15s
+  hex    128b/32ch rep18  literal=True  value=True  12s
+  hex    128b/32ch rep19  literal=False value=False 13s
+  hex    128b/32ch rep20  literal=False value=False 12s
+  b32    128b/26ch rep2   literal=False value=False 24s

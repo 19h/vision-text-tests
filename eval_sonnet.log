@@ -1,0 +1,17 @@
+15 images x model=sonnet, 3 parallel
+  sonnet  A_bitmap_ladder/A01_4x6.png                  codes 0.00  verbatim 0.00  pass=abstain  lines=abstain  abstain=8  64s
+  sonnet  A_bitmap_ladder/A02_5x7.png                  codes 0.00  verbatim 0.00  pass=abstain  lines=abstain  abstain=8  101s
+  sonnet  A_bitmap_ladder/A03_5x8.png                  codes 0.00  verbatim 0.00  pass=abstain  lines=abstain  abstain=8  106s
+  sonnet  A_bitmap_ladder/A06_6x12.png                 codes 0.75  verbatim 0.68  pass=wrong  lines=ok  abstain=0  116s
+  sonnet  A_bitmap_ladder/A04_6x9.png                  codes 0.25  verbatim 0.00  pass=ok  lines=ok  abstain=1  228s
+  sonnet  A_bitmap_ladder/A07_6x13.png                 codes 1.00  verbatim 0.97  pass=ok  lines=ok  abstain=0  118s
+  sonnet  A_bitmap_ladder/A05_6x10.png                 codes 0.25  verbatim 0.91  pass=ok  lines=ok  abstain=1  274s
+  sonnet  A_bitmap_ladder/A08_7x13.png                 codes 1.00  verbatim 0.98  pass=ok  lines=ok  abstain=0  105s
+  sonnet  A_bitmap_ladder/A11_8x16.png                 codes 1.00  verbatim 0.98  pass=ok  lines=ok  abstain=0  47s
+  sonnet  A_bitmap_ladder/A09_7x14.png                 codes 0.75  verbatim 0.86  pass=ok  lines=ok  abstain=0  156s
+  sonnet  A_bitmap_ladder/A10_8x13.png                 codes 1.00  verbatim 0.98  pass=ok  lines=ok  abstain=0  121s
+  sonnet  A_bitmap_ladder/A13_9x18.png                 codes 1.00  verbatim 0.95  pass=ok  lines=ok  abstain=0  12s
+  sonnet  A_bitmap_ladder/A14_10x20.png                codes 0.75  verbatim 0.94  pass=ok  lines=ok  abstain=0  11s
+  sonnet  A_bitmap_ladder/A15_12x24.png                codes 1.00  verbatim 1.00  pass=ok  lines=ok  abstain=0  10s
+  sonnet  A_bitmap_ladder/A12_9x15.png                 codes 0.50  verbatim 0.97  pass=ok  lines=ok  abstain=0  85s
+-> /tmp/testx/vision-text-tests/results_sonnet.json

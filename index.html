@@ -1,0 +1,395 @@
+<!doctype html><meta charset=utf-8>
+<title>Dense-text vision benchmark</title>
+<style>
+body{font:14px/1.5 ui-sans-serif,system-ui,sans-serif;margin:24px;background:#111;color:#eee}
+h1{font-size:20px} main{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+figure{margin:0;background:#1c1c1f;border:1px solid #333;border-radius:6px;padding:8px}
+img{width:100%;image-rendering:pixelated;background:#fff;border-radius:3px}
+figcaption{font-size:11px;color:#aaa;margin-top:6px;font-family:ui-monospace,monospace}
+</style><h1>Dense-text vision benchmark &mdash; 128 images</h1>
+<p style="color:#999">Thumbnails are scaled; click for 1:1. Claude 28px/token, GPT-5.6 32px/token.</p>
+<main><figure><a href="images/A_bitmap_ladder/A01_4x6.png"><img src="images/A_bitmap_ladder/A01_4x6.png" loading="lazy"></a>
+<figcaption><b>A01_4x6.png</b><br>896x896 &middot; X11 misc 4x6 bitmap<br>
+32,093 chars &middot; 1,024 claude-tok &middot;
+<b>31.3</b> ch/tok &middot; 7.8x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A02_5x7.png"><img src="images/A_bitmap_ladder/A02_5x7.png" loading="lazy"></a>
+<figcaption><b>A02_5x7.png</b><br>896x896 &middot; X11 misc 5x7 bitmap<br>
+21,642 chars &middot; 1,024 claude-tok &middot;
+<b>21.1</b> ch/tok &middot; 5.3x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A03_5x8.png"><img src="images/A_bitmap_ladder/A03_5x8.png" loading="lazy"></a>
+<figcaption><b>A03_5x8.png</b><br>896x896 &middot; X11 misc 5x8 bitmap<br>
+19,080 chars &middot; 1,024 claude-tok &middot;
+<b>18.6</b> ch/tok &middot; 4.7x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A04_6x9.png"><img src="images/A_bitmap_ladder/A04_6x9.png" loading="lazy"></a>
+<figcaption><b>A04_6x9.png</b><br>896x896 &middot; X11 misc 6x9 bitmap<br>
+14,016 chars &middot; 1,024 claude-tok &middot;
+<b>13.7</b> ch/tok &middot; 3.4x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A05_6x10.png"><img src="images/A_bitmap_ladder/A05_6x10.png" loading="lazy"></a>
+<figcaption><b>A05_6x10.png</b><br>896x896 &middot; X11 misc 6x10 bitmap<br>
+12,575 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A06_6x12.png"><img src="images/A_bitmap_ladder/A06_6x12.png" loading="lazy"></a>
+<figcaption><b>A06_6x12.png</b><br>896x896 &middot; X11 misc 6x12 bitmap<br>
+10,580 chars &middot; 1,024 claude-tok &middot;
+<b>10.3</b> ch/tok &middot; 2.6x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A07_6x13.png"><img src="images/A_bitmap_ladder/A07_6x13.png" loading="lazy"></a>
+<figcaption><b>A07_6x13.png</b><br>896x896 &middot; X11 misc 6x13 bitmap<br>
+9,731 chars &middot; 1,024 claude-tok &middot;
+<b>9.5</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A08_7x13.png"><img src="images/A_bitmap_ladder/A08_7x13.png" loading="lazy"></a>
+<figcaption><b>A08_7x13.png</b><br>896x896 &middot; X11 misc 7x13 bitmap<br>
+8,200 chars &middot; 1,024 claude-tok &middot;
+<b>8.0</b> ch/tok &middot; 2.0x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A09_7x14.png"><img src="images/A_bitmap_ladder/A09_7x14.png" loading="lazy"></a>
+<figcaption><b>A09_7x14.png</b><br>896x896 &middot; X11 misc 7x14 bitmap<br>
+7,619 chars &middot; 1,024 claude-tok &middot;
+<b>7.4</b> ch/tok &middot; 1.9x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A10_8x13.png"><img src="images/A_bitmap_ladder/A10_8x13.png" loading="lazy"></a>
+<figcaption><b>A10_8x13.png</b><br>896x896 &middot; X11 misc 8x13 bitmap<br>
+7,172 chars &middot; 1,024 claude-tok &middot;
+<b>7.0</b> ch/tok &middot; 1.8x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A11_8x16.png"><img src="images/A_bitmap_ladder/A11_8x16.png" loading="lazy"></a>
+<figcaption><b>A11_8x16.png</b><br>896x896 &middot; X11 misc 8x16 bitmap<br>
+5,808 chars &middot; 1,024 claude-tok &middot;
+<b>5.7</b> ch/tok &middot; 1.4x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A12_9x15.png"><img src="images/A_bitmap_ladder/A12_9x15.png" loading="lazy"></a>
+<figcaption><b>A12_9x15.png</b><br>896x896 &middot; X11 misc 9x15 bitmap<br>
+5,469 chars &middot; 1,024 claude-tok &middot;
+<b>5.3</b> ch/tok &middot; 1.3x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A13_9x18.png"><img src="images/A_bitmap_ladder/A13_9x18.png" loading="lazy"></a>
+<figcaption><b>A13_9x18.png</b><br>896x896 &middot; X11 misc 9x18 bitmap<br>
+4,588 chars &middot; 1,024 claude-tok &middot;
+<b>4.5</b> ch/tok &middot; 1.1x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A14_10x20.png"><img src="images/A_bitmap_ladder/A14_10x20.png" loading="lazy"></a>
+<figcaption><b>A14_10x20.png</b><br>896x896 &middot; X11 misc 10x20 bitmap<br>
+3,622 chars &middot; 1,024 claude-tok &middot;
+<b>3.5</b> ch/tok &middot; 0.9x</figcaption></figure><figure><a href="images/A_bitmap_ladder/A15_12x24.png"><img src="images/A_bitmap_ladder/A15_12x24.png" loading="lazy"></a>
+<figcaption><b>A15_12x24.png</b><br>896x896 &middot; X11 misc 12x24 bitmap<br>
+2,548 chars &middot; 1,024 claude-tok &middot;
+<b>2.5</b> ch/tok &middot; 0.6x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B01_dejavu_mono_05px.png"><img src="images/B_mono_ttf_ladder/B01_dejavu_mono_05px.png" loading="lazy"></a>
+<figcaption><b>B01_dejavu_mono_05px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+36,281 chars &middot; 1,024 claude-tok &middot;
+<b>35.4</b> ch/tok &middot; 8.9x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B02_dejavu_mono_06px.png"><img src="images/B_mono_ttf_ladder/B02_dejavu_mono_06px.png" loading="lazy"></a>
+<figcaption><b>B02_dejavu_mono_06px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+26,389 chars &middot; 1,024 claude-tok &middot;
+<b>25.8</b> ch/tok &middot; 6.4x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B03_dejavu_mono_07px.png"><img src="images/B_mono_ttf_ladder/B03_dejavu_mono_07px.png" loading="lazy"></a>
+<figcaption><b>B03_dejavu_mono_07px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+20,094 chars &middot; 1,024 claude-tok &middot;
+<b>19.6</b> ch/tok &middot; 4.9x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B04_dejavu_mono_08px.png"><img src="images/B_mono_ttf_ladder/B04_dejavu_mono_08px.png" loading="lazy"></a>
+<figcaption><b>B04_dejavu_mono_08px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+15,705 chars &middot; 1,024 claude-tok &middot;
+<b>15.3</b> ch/tok &middot; 3.8x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B05_dejavu_mono_09px.png"><img src="images/B_mono_ttf_ladder/B05_dejavu_mono_09px.png" loading="lazy"></a>
+<figcaption><b>B05_dejavu_mono_09px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+11,471 chars &middot; 1,024 claude-tok &middot;
+<b>11.2</b> ch/tok &middot; 2.8x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B06_dejavu_mono_10px.png"><img src="images/B_mono_ttf_ladder/B06_dejavu_mono_10px.png" loading="lazy"></a>
+<figcaption><b>B06_dejavu_mono_10px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+9,646 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B07_dejavu_mono_11px.png"><img src="images/B_mono_ttf_ladder/B07_dejavu_mono_11px.png" loading="lazy"></a>
+<figcaption><b>B07_dejavu_mono_11px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+8,066 chars &middot; 1,024 claude-tok &middot;
+<b>7.9</b> ch/tok &middot; 2.0x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B08_dejavu_mono_12px.png"><img src="images/B_mono_ttf_ladder/B08_dejavu_mono_12px.png" loading="lazy"></a>
+<figcaption><b>B08_dejavu_mono_12px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+6,888 chars &middot; 1,024 claude-tok &middot;
+<b>6.7</b> ch/tok &middot; 1.7x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B09_dejavu_mono_14px.png"><img src="images/B_mono_ttf_ladder/B09_dejavu_mono_14px.png" loading="lazy"></a>
+<figcaption><b>B09_dejavu_mono_14px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+5,172 chars &middot; 1,024 claude-tok &middot;
+<b>5.0</b> ch/tok &middot; 1.3x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B10_dejavu_mono_16px.png"><img src="images/B_mono_ttf_ladder/B10_dejavu_mono_16px.png" loading="lazy"></a>
+<figcaption><b>B10_dejavu_mono_16px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+3,947 chars &middot; 1,024 claude-tok &middot;
+<b>3.9</b> ch/tok &middot; 1.0x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B11_dejavu_mono_20px.png"><img src="images/B_mono_ttf_ladder/B11_dejavu_mono_20px.png" loading="lazy"></a>
+<figcaption><b>B11_dejavu_mono_20px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+2,443 chars &middot; 1,024 claude-tok &middot;
+<b>2.4</b> ch/tok &middot; 0.6x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B12_dejavu_mono_24px.png"><img src="images/B_mono_ttf_ladder/B12_dejavu_mono_24px.png" loading="lazy"></a>
+<figcaption><b>B12_dejavu_mono_24px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+1,686 chars &middot; 1,024 claude-tok &middot;
+<b>1.6</b> ch/tok &middot; 0.4x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B13_dejavu_mono_32px.png"><img src="images/B_mono_ttf_ladder/B13_dejavu_mono_32px.png" loading="lazy"></a>
+<figcaption><b>B13_dejavu_mono_32px.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+942 chars &middot; 1,024 claude-tok &middot;
+<b>0.9</b> ch/tok &middot; 0.2x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B01b_dejavu_mono_06px_noAA.png"><img src="images/B_mono_ttf_ladder/B01b_dejavu_mono_06px_noAA.png" loading="lazy"></a>
+<figcaption><b>B01b_dejavu_mono_06px_noAA.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+26,389 chars &middot; 1,024 claude-tok &middot;
+<b>25.8</b> ch/tok &middot; 6.4x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B02b_dejavu_mono_08px_noAA.png"><img src="images/B_mono_ttf_ladder/B02b_dejavu_mono_08px_noAA.png" loading="lazy"></a>
+<figcaption><b>B02b_dejavu_mono_08px_noAA.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+15,749 chars &middot; 1,024 claude-tok &middot;
+<b>15.4</b> ch/tok &middot; 3.8x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B03b_dejavu_mono_10px_noAA.png"><img src="images/B_mono_ttf_ladder/B03b_dejavu_mono_10px_noAA.png" loading="lazy"></a>
+<figcaption><b>B03b_dejavu_mono_10px_noAA.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+9,681 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B04b_dejavu_mono_12px_noAA.png"><img src="images/B_mono_ttf_ladder/B04b_dejavu_mono_12px_noAA.png" loading="lazy"></a>
+<figcaption><b>B04b_dejavu_mono_12px_noAA.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+6,904 chars &middot; 1,024 claude-tok &middot;
+<b>6.7</b> ch/tok &middot; 1.7x</figcaption></figure><figure><a href="images/B_mono_ttf_ladder/B05b_dejavu_mono_16px_noAA.png"><img src="images/B_mono_ttf_ladder/B05b_dejavu_mono_16px_noAA.png" loading="lazy"></a>
+<figcaption><b>B05b_dejavu_mono_16px_noAA.png</b><br>896x896 &middot; DejaVu Sans Mono<br>
+3,959 chars &middot; 1,024 claude-tok &middot;
+<b>3.9</b> ch/tok &middot; 1.0x</figcaption></figure><figure><a href="images/C_prose_proportional/C01_dejavu_sans_05px.png"><img src="images/C_prose_proportional/C01_dejavu_sans_05px.png" loading="lazy"></a>
+<figcaption><b>C01_dejavu_sans_05px.png</b><br>896x896 &middot; DejaVu Sans<br>
+37,854 chars &middot; 1,024 claude-tok &middot;
+<b>37.0</b> ch/tok &middot; 9.2x</figcaption></figure><figure><a href="images/C_prose_proportional/C02_dejavu_sans_06px.png"><img src="images/C_prose_proportional/C02_dejavu_sans_06px.png" loading="lazy"></a>
+<figcaption><b>C02_dejavu_sans_06px.png</b><br>896x896 &middot; DejaVu Sans<br>
+27,954 chars &middot; 1,024 claude-tok &middot;
+<b>27.3</b> ch/tok &middot; 6.8x</figcaption></figure><figure><a href="images/C_prose_proportional/C03_dejavu_sans_07px.png"><img src="images/C_prose_proportional/C03_dejavu_sans_07px.png" loading="lazy"></a>
+<figcaption><b>C03_dejavu_sans_07px.png</b><br>896x896 &middot; DejaVu Sans<br>
+21,203 chars &middot; 1,024 claude-tok &middot;
+<b>20.7</b> ch/tok &middot; 5.2x</figcaption></figure><figure><a href="images/C_prose_proportional/C04_dejavu_sans_08px.png"><img src="images/C_prose_proportional/C04_dejavu_sans_08px.png" loading="lazy"></a>
+<figcaption><b>C04_dejavu_sans_08px.png</b><br>896x896 &middot; DejaVu Sans<br>
+16,900 chars &middot; 1,024 claude-tok &middot;
+<b>16.5</b> ch/tok &middot; 4.1x</figcaption></figure><figure><a href="images/C_prose_proportional/C05_dejavu_sans_09px.png"><img src="images/C_prose_proportional/C05_dejavu_sans_09px.png" loading="lazy"></a>
+<figcaption><b>C05_dejavu_sans_09px.png</b><br>896x896 &middot; DejaVu Sans<br>
+12,597 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/C_prose_proportional/C06_dejavu_sans_10px.png"><img src="images/C_prose_proportional/C06_dejavu_sans_10px.png" loading="lazy"></a>
+<figcaption><b>C06_dejavu_sans_10px.png</b><br>896x896 &middot; DejaVu Sans<br>
+10,467 chars &middot; 1,024 claude-tok &middot;
+<b>10.2</b> ch/tok &middot; 2.6x</figcaption></figure><figure><a href="images/C_prose_proportional/C07_dejavu_sans_12px.png"><img src="images/C_prose_proportional/C07_dejavu_sans_12px.png" loading="lazy"></a>
+<figcaption><b>C07_dejavu_sans_12px.png</b><br>896x896 &middot; DejaVu Sans<br>
+7,660 chars &middot; 1,024 claude-tok &middot;
+<b>7.5</b> ch/tok &middot; 1.9x</figcaption></figure><figure><a href="images/C_prose_proportional/C08_dejavu_sans_14px.png"><img src="images/C_prose_proportional/C08_dejavu_sans_14px.png" loading="lazy"></a>
+<figcaption><b>C08_dejavu_sans_14px.png</b><br>896x896 &middot; DejaVu Sans<br>
+5,881 chars &middot; 1,024 claude-tok &middot;
+<b>5.7</b> ch/tok &middot; 1.4x</figcaption></figure><figure><a href="images/C_prose_proportional/C09_dejavu_sans_16px.png"><img src="images/C_prose_proportional/C09_dejavu_sans_16px.png" loading="lazy"></a>
+<figcaption><b>C09_dejavu_sans_16px.png</b><br>896x896 &middot; DejaVu Sans<br>
+4,729 chars &middot; 1,024 claude-tok &middot;
+<b>4.6</b> ch/tok &middot; 1.1x</figcaption></figure><figure><a href="images/C_prose_proportional/C10_dejavu_sans_20px.png"><img src="images/C_prose_proportional/C10_dejavu_sans_20px.png" loading="lazy"></a>
+<figcaption><b>C10_dejavu_sans_20px.png</b><br>896x896 &middot; DejaVu Sans<br>
+2,993 chars &middot; 1,024 claude-tok &middot;
+<b>2.9</b> ch/tok &middot; 0.7x</figcaption></figure><figure><a href="images/C_prose_proportional/C11_dejavu_sans_24px.png"><img src="images/C_prose_proportional/C11_dejavu_sans_24px.png" loading="lazy"></a>
+<figcaption><b>C11_dejavu_sans_24px.png</b><br>896x896 &middot; DejaVu Sans<br>
+2,038 chars &middot; 1,024 claude-tok &middot;
+<b>2.0</b> ch/tok &middot; 0.5x</figcaption></figure><figure><a href="images/D_eyecharts/D1_bitmap_eyechart.png"><img src="images/D_eyecharts/D1_bitmap_eyechart.png" loading="lazy"></a>
+<figcaption><b>D1_bitmap_eyechart.png</b><br>896x896 &middot; X11 misc 4x6..12x24<br>
+943 chars &middot; 1,024 claude-tok &middot;
+<b>0.9</b> ch/tok &middot; 0.2x</figcaption></figure><figure><a href="images/D_eyecharts/D2_truetype_eyechart.png"><img src="images/D_eyecharts/D2_truetype_eyechart.png" loading="lazy"></a>
+<figcaption><b>D2_truetype_eyechart.png</b><br>896x896 &middot; DejaVu Sans Mono 5..32px<br>
+814 chars &middot; 1,024 claude-tok &middot;
+<b>0.8</b> ch/tok &middot; 0.2x</figcaption></figure><figure><a href="images/D_eyecharts/D3_descending_fullwidth.png"><img src="images/D_eyecharts/D3_descending_fullwidth.png" loading="lazy"></a>
+<figcaption><b>D3_descending_fullwidth.png</b><br>896x896 &middot; X11 misc 12x24..4x6<br>
+1,907 chars &middot; 1,024 claude-tok &middot;
+<b>1.9</b> ch/tok &middot; 0.5x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_00_baseline.png"><img src="images/E_degradations/6x10/E_6x10_00_baseline.png" loading="lazy"></a>
+<figcaption><b>E_6x10_00_baseline.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_01_gray60.png"><img src="images/E_degradations/6x10/E_6x10_01_gray60.png" loading="lazy"></a>
+<figcaption><b>E_6x10_01_gray60.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_02_gray30_faint.png"><img src="images/E_degradations/6x10/E_6x10_02_gray30_faint.png" loading="lazy"></a>
+<figcaption><b>E_6x10_02_gray30_faint.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_03_inverted.png"><img src="images/E_degradations/6x10/E_6x10_03_inverted.png" loading="lazy"></a>
+<figcaption><b>E_6x10_03_inverted.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_04_blue_on_cream.png"><img src="images/E_degradations/6x10/E_6x10_04_blue_on_cream.png" loading="lazy"></a>
+<figcaption><b>E_6x10_04_blue_on_cream.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_05_red_on_green.png"><img src="images/E_degradations/6x10/E_6x10_05_red_on_green.png" loading="lazy"></a>
+<figcaption><b>E_6x10_05_red_on_green.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_06_blur.png"><img src="images/E_degradations/6x10/E_6x10_06_blur.png" loading="lazy"></a>
+<figcaption><b>E_6x10_06_blur.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_07_noise.png"><img src="images/E_degradations/6x10/E_6x10_07_noise.png" loading="lazy"></a>
+<figcaption><b>E_6x10_07_noise.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_08_rotate1_5deg.png"><img src="images/E_degradations/6x10/E_6x10_08_rotate1_5deg.png" loading="lazy"></a>
+<figcaption><b>E_6x10_08_rotate1_5deg.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_09_downup_50pct.png"><img src="images/E_degradations/6x10/E_6x10_09_downup_50pct.png" loading="lazy"></a>
+<figcaption><b>E_6x10_09_downup_50pct.png</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_10_lowres_75pct.png"><img src="images/E_degradations/6x10/E_6x10_10_lowres_75pct.png" loading="lazy"></a>
+<figcaption><b>E_6x10_10_lowres_75pct.png</b><br>672x672 &middot; 6x10<br>
+12,610 chars &middot; 576 claude-tok &middot;
+<b>21.9</b> ch/tok &middot; 5.5x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_11_jpeg30.jpg"><img src="images/E_degradations/6x10/E_6x10_11_jpeg30.jpg" loading="lazy"></a>
+<figcaption><b>E_6x10_11_jpeg30.jpg</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/6x10/E_6x10_11_jpeg60.jpg"><img src="images/E_degradations/6x10/E_6x10_11_jpeg60.jpg" loading="lazy"></a>
+<figcaption><b>E_6x10_11_jpeg60.jpg</b><br>896x896 &middot; 6x10<br>
+12,610 chars &middot; 1,024 claude-tok &middot;
+<b>12.3</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_00_baseline.png"><img src="images/E_degradations/10px/E_10px_00_baseline.png" loading="lazy"></a>
+<figcaption><b>E_10px_00_baseline.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_01_gray60.png"><img src="images/E_degradations/10px/E_10px_01_gray60.png" loading="lazy"></a>
+<figcaption><b>E_10px_01_gray60.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_02_gray30_faint.png"><img src="images/E_degradations/10px/E_10px_02_gray30_faint.png" loading="lazy"></a>
+<figcaption><b>E_10px_02_gray30_faint.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_03_inverted.png"><img src="images/E_degradations/10px/E_10px_03_inverted.png" loading="lazy"></a>
+<figcaption><b>E_10px_03_inverted.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_04_blue_on_cream.png"><img src="images/E_degradations/10px/E_10px_04_blue_on_cream.png" loading="lazy"></a>
+<figcaption><b>E_10px_04_blue_on_cream.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_05_red_on_green.png"><img src="images/E_degradations/10px/E_10px_05_red_on_green.png" loading="lazy"></a>
+<figcaption><b>E_10px_05_red_on_green.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_06_blur.png"><img src="images/E_degradations/10px/E_10px_06_blur.png" loading="lazy"></a>
+<figcaption><b>E_10px_06_blur.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_07_noise.png"><img src="images/E_degradations/10px/E_10px_07_noise.png" loading="lazy"></a>
+<figcaption><b>E_10px_07_noise.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_08_rotate1_5deg.png"><img src="images/E_degradations/10px/E_10px_08_rotate1_5deg.png" loading="lazy"></a>
+<figcaption><b>E_10px_08_rotate1_5deg.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_09_downup_50pct.png"><img src="images/E_degradations/10px/E_10px_09_downup_50pct.png" loading="lazy"></a>
+<figcaption><b>E_10px_09_downup_50pct.png</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_10_lowres_75pct.png"><img src="images/E_degradations/10px/E_10px_10_lowres_75pct.png" loading="lazy"></a>
+<figcaption><b>E_10px_10_lowres_75pct.png</b><br>672x672 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 576 claude-tok &middot;
+<b>16.7</b> ch/tok &middot; 4.2x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_11_jpeg30.jpg"><img src="images/E_degradations/10px/E_10px_11_jpeg30.jpg" loading="lazy"></a>
+<figcaption><b>E_10px_11_jpeg30.jpg</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/10px/E_10px_11_jpeg60.jpg"><img src="images/E_degradations/10px/E_10px_11_jpeg60.jpg" loading="lazy"></a>
+<figcaption><b>E_10px_11_jpeg60.jpg</b><br>896x896 &middot; DejaVuSansMono@10px<br>
+9,632 chars &middot; 1,024 claude-tok &middot;
+<b>9.4</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/E_degradations/oversized/E2_1568x1568_2.5MP.png"><img src="images/E_degradations/oversized/E2_1568x1568_2.5MP.png" loading="lazy"></a>
+<figcaption><b>E2_1568x1568_2.5MP.png</b><br>1568x1568 &middot; 6x10<br>
+39,780 chars &middot; 3,136 claude-tok &middot;
+<b>12.7</b> ch/tok &middot; 3.2x</figcaption></figure><figure><a href="images/E_degradations/oversized/E2_2240x2240_5MP.png"><img src="images/E_degradations/oversized/E2_2240x2240_5MP.png" loading="lazy"></a>
+<figcaption><b>E2_2240x2240_5MP.png</b><br>2240x2240 &middot; 6x10<br>
+81,712 chars &middot; 6,400 claude-tok &middot;
+<b>12.8</b> ch/tok &middot; 3.2x</figcaption></figure><figure><a href="images/F_layouts/F1_table_tiny_5x8.png"><img src="images/F_layouts/F1_table_tiny_5x8.png" loading="lazy"></a>
+<figcaption><b>F1_table_tiny_5x8.png</b><br>896x896 &middot; 5x8<br>
+6,264 chars &middot; 1,024 claude-tok &middot;
+<b>6.1</b> ch/tok &middot; 1.5x</figcaption></figure><figure><a href="images/F_layouts/F1_table_normal_9x18.png"><img src="images/F_layouts/F1_table_normal_9x18.png" loading="lazy"></a>
+<figcaption><b>F1_table_normal_9x18.png</b><br>896x896 &middot; 9x18<br>
+2,726 chars &middot; 1,024 claude-tok &middot;
+<b>2.7</b> ch/tok &middot; 0.7x</figcaption></figure><figure><a href="images/F_layouts/F2_code_tiny_6x10.png"><img src="images/F_layouts/F2_code_tiny_6x10.png" loading="lazy"></a>
+<figcaption><b>F2_code_tiny_6x10.png</b><br>896x896 &middot; 6x10<br>
+1,797 chars &middot; 1,024 claude-tok &middot;
+<b>1.8</b> ch/tok &middot; 0.4x</figcaption></figure><figure><a href="images/F_layouts/F2_code_normal_DejaVuSansMono@16px.png"><img src="images/F_layouts/F2_code_normal_DejaVuSansMono@16px.png" loading="lazy"></a>
+<figcaption><b>F2_code_normal_DejaVuSansMono@16px.png</b><br>896x896 &middot; DejaVuSansMono@16px<br>
+1,797 chars &middot; 1,024 claude-tok &middot;
+<b>1.8</b> ch/tok &middot; 0.4x</figcaption></figure><figure><a href="images/F_layouts/F3_newspaper_tiny_7px.png"><img src="images/F_layouts/F3_newspaper_tiny_7px.png" loading="lazy"></a>
+<figcaption><b>F3_newspaper_tiny_7px.png</b><br>896x896 &middot; DejaVu Sans 7px + bold heads<br>
+11,973 chars &middot; 1,024 claude-tok &middot;
+<b>11.7</b> ch/tok &middot; 2.9x</figcaption></figure><figure><a href="images/F_layouts/F3_newspaper_normal_13px.png"><img src="images/F_layouts/F3_newspaper_normal_13px.png" loading="lazy"></a>
+<figcaption><b>F3_newspaper_normal_13px.png</b><br>896x896 &middot; DejaVu Sans 13px + bold heads<br>
+5,447 chars &middot; 1,024 claude-tok &middot;
+<b>5.3</b> ch/tok &middot; 1.3x</figcaption></figure><figure><a href="images/F_layouts/F4_receipt_tiny_4x6.png"><img src="images/F_layouts/F4_receipt_tiny_4x6.png" loading="lazy"></a>
+<figcaption><b>F4_receipt_tiny_4x6.png</b><br>448x1344 &middot; 4x6<br>
+10,662 chars &middot; 768 claude-tok &middot;
+<b>13.9</b> ch/tok &middot; 3.5x</figcaption></figure><figure><a href="images/F_layouts/F4_receipt_small_6x10.png"><img src="images/F_layouts/F4_receipt_small_6x10.png" loading="lazy"></a>
+<figcaption><b>F4_receipt_small_6x10.png</b><br>448x1344 &middot; 6x10<br>
+7,110 chars &middot; 768 claude-tok &middot;
+<b>9.3</b> ch/tok &middot; 2.3x</figcaption></figure><figure><a href="images/F_layouts/F4_receipt_normal_9x18.png"><img src="images/F_layouts/F4_receipt_normal_9x18.png" loading="lazy"></a>
+<figcaption><b>F4_receipt_normal_9x18.png</b><br>448x1344 &middot; 9x18<br>
+3,302 chars &middot; 768 claude-tok &middot;
+<b>4.3</b> ch/tok &middot; 1.1x</figcaption></figure><figure><a href="images/F_layouts/F5_terminal_tiny_5x8.png"><img src="images/F_layouts/F5_terminal_tiny_5x8.png" loading="lazy"></a>
+<figcaption><b>F5_terminal_tiny_5x8.png</b><br>1344x672 &middot; 5x8<br>
+6,321 chars &middot; 1,152 claude-tok &middot;
+<b>5.5</b> ch/tok &middot; 1.4x</figcaption></figure><figure><a href="images/F_layouts/F5_terminal_small_6x13.png"><img src="images/F_layouts/F5_terminal_small_6x13.png" loading="lazy"></a>
+<figcaption><b>F5_terminal_small_6x13.png</b><br>1344x672 &middot; 6x13<br>
+3,726 chars &middot; 1,152 claude-tok &middot;
+<b>3.2</b> ch/tok &middot; 0.8x</figcaption></figure><figure><a href="images/F_layouts/F5_terminal_normal_9x18.png"><img src="images/F_layouts/F5_terminal_normal_9x18.png" loading="lazy"></a>
+<figcaption><b>F5_terminal_normal_9x18.png</b><br>1344x672 &middot; 9x18<br>
+2,779 chars &middot; 1,152 claude-tok &middot;
+<b>2.4</b> ch/tok &middot; 0.6x</figcaption></figure><figure><a href="images/F_layouts/F6_spreadsheet_tiny_5x8.png"><img src="images/F_layouts/F6_spreadsheet_tiny_5x8.png" loading="lazy"></a>
+<figcaption><b>F6_spreadsheet_tiny_5x8.png</b><br>896x896 &middot; 5x8<br>
+6,517 chars &middot; 1,024 claude-tok &middot;
+<b>6.4</b> ch/tok &middot; 1.6x</figcaption></figure><figure><a href="images/F_layouts/F6_spreadsheet_small_6x10.png"><img src="images/F_layouts/F6_spreadsheet_small_6x10.png" loading="lazy"></a>
+<figcaption><b>F6_spreadsheet_small_6x10.png</b><br>896x896 &middot; 6x10<br>
+6,517 chars &middot; 1,024 claude-tok &middot;
+<b>6.4</b> ch/tok &middot; 1.6x</figcaption></figure><figure><a href="images/F_layouts/F6_spreadsheet_normal_8x16.png"><img src="images/F_layouts/F6_spreadsheet_normal_8x16.png" loading="lazy"></a>
+<figcaption><b>F6_spreadsheet_normal_8x16.png</b><br>896x896 &middot; 8x16<br>
+5,014 chars &middot; 1,024 claude-tok &middot;
+<b>4.9</b> ch/tok &middot; 1.2x</figcaption></figure><figure><a href="images/G_multiscale/G1_contract.png"><img src="images/G_multiscale/G1_contract.png" loading="lazy"></a>
+<figcaption><b>G1_contract.png</b><br>896x1120 &middot; DejaVuSans-Bold@30px / DejaVuSans-Bold@16px / DejaVuSans@11px / DejaVuSans@8px / 5x7 / 4x6<br>
+16,711 chars &middot; 1,280 claude-tok &middot;
+<b>13.1</b> ch/tok &middot; 3.3x</figcaption></figure><figure><a href="images/G_multiscale/G2_label.png"><img src="images/G_multiscale/G2_label.png" loading="lazy"></a>
+<figcaption><b>G2_label.png</b><br>896x896 &middot; DejaVuSans-Bold@24px / DejaVuSans-Bold@13px / DejaVuSans@10px / DejaVuSans@7px / 4x6<br>
+13,549 chars &middot; 1,024 claude-tok &middot;
+<b>13.2</b> ch/tok &middot; 3.3x</figcaption></figure><figure><a href="images/H_packing/H_clR5x6_1120x672.png"><img src="images/H_packing/H_clR5x6_1120x672.png" loading="lazy"></a>
+<figcaption><b>H_clR5x6_1120x672.png</b><br>1120x672 &middot; X11 clR5x6<br>
+24,534 chars &middot; 960 claude-tok &middot;
+<b>25.6</b> ch/tok &middot; 6.4x</figcaption></figure><figure><a href="images/H_packing/H_clR6x6_1344x672.png"><img src="images/H_packing/H_clR6x6_1344x672.png" loading="lazy"></a>
+<figcaption><b>H_clR6x6_1344x672.png</b><br>1344x672 &middot; X11 clR6x6<br>
+24,491 chars &middot; 1,152 claude-tok &middot;
+<b>21.3</b> ch/tok &middot; 5.3x</figcaption></figure><figure><a href="images/H_packing/H_clR5x8_1120x896.png"><img src="images/H_packing/H_clR5x8_1120x896.png" loading="lazy"></a>
+<figcaption><b>H_clR5x8_1120x896.png</b><br>1120x896 &middot; X11 clR5x8<br>
+24,538 chars &middot; 1,280 claude-tok &middot;
+<b>19.2</b> ch/tok &middot; 4.8x</figcaption></figure><figure><a href="images/H_packing/H_clR6x8_672x896.png"><img src="images/H_packing/H_clR6x8_672x896.png" loading="lazy"></a>
+<figcaption><b>H_clR6x8_672x896.png</b><br>672x896 &middot; X11 clR6x8<br>
+11,963 chars &middot; 768 claude-tok &middot;
+<b>15.6</b> ch/tok &middot; 3.9x</figcaption></figure><figure><a href="images/H_packing/H_clR5x10_840x1120.png"><img src="images/H_packing/H_clR5x10_840x1120.png" loading="lazy"></a>
+<figcaption><b>H_clR5x10_840x1120.png</b><br>840x1120 &middot; X11 clR5x10<br>
+18,227 chars &middot; 1,200 claude-tok &middot;
+<b>15.2</b> ch/tok &middot; 3.8x</figcaption></figure><figure><a href="images/H_packing/H_clR7x8_896x896.png"><img src="images/H_packing/H_clR7x8_896x896.png" loading="lazy"></a>
+<figcaption><b>H_clR7x8_896x896.png</b><br>896x896 &middot; X11 clR7x8<br>
+13,795 chars &middot; 1,024 claude-tok &middot;
+<b>13.5</b> ch/tok &middot; 3.4x</figcaption></figure><figure><a href="images/H_packing/H_6x9_1008x1008.png"><img src="images/H_packing/H_6x9_1008x1008.png" loading="lazy"></a>
+<figcaption><b>H_6x9_1008x1008.png</b><br>1008x1008 &middot; X11 6x9<br>
+18,221 chars &middot; 1,296 claude-tok &middot;
+<b>14.1</b> ch/tok &middot; 3.5x</figcaption></figure><figure><a href="images/H_packing/H_clB6x10_672x1120.png"><img src="images/H_packing/H_clB6x10_672x1120.png" loading="lazy"></a>
+<figcaption><b>H_clB6x10_672x1120.png</b><br>672x1120 &middot; X11 clB6x10<br>
+12,004 chars &middot; 960 claude-tok &middot;
+<b>12.5</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/H_packing/H_clR8x8_896x896.png"><img src="images/H_packing/H_clR8x8_896x896.png" loading="lazy"></a>
+<figcaption><b>H_clR8x8_896x896.png</b><br>896x896 &middot; X11 clR8x8<br>
+11,978 chars &middot; 1,024 claude-tok &middot;
+<b>11.7</b> ch/tok &middot; 2.9x</figcaption></figure><figure><a href="images/I_aspect/I_6x9_1344x666_74rows.png"><img src="images/I_aspect/I_6x9_1344x666_74rows.png" loading="lazy"></a>
+<figcaption><b>I_6x9_1344x666_74rows.png</b><br>1344x666 &middot; X11 6x9<br>
+16,146 chars &middot; 1,152 claude-tok &middot;
+<b>14.0</b> ch/tok &middot; 3.5x</figcaption></figure><figure><a href="images/I_aspect/I_6x9_672x1341_149rows.png"><img src="images/I_aspect/I_6x9_672x1341_149rows.png" loading="lazy"></a>
+<figcaption><b>I_6x9_672x1341_149rows.png</b><br>672x1341 &middot; X11 6x9<br>
+15,931 chars &middot; 1,152 claude-tok &middot;
+<b>13.8</b> ch/tok &middot; 3.5x</figcaption></figure><figure><a href="images/I_aspect/I_6x9_894x1008_112rows.png"><img src="images/I_aspect/I_6x9_894x1008_112rows.png" loading="lazy"></a>
+<figcaption><b>I_6x9_894x1008_112rows.png</b><br>894x1008 &middot; X11 6x9<br>
+16,122 chars &middot; 1,152 claude-tok &middot;
+<b>14.0</b> ch/tok &middot; 3.5x</figcaption></figure><figure><a href="images/J_pitch/J_4x6_pitch9_1008x1008.png"><img src="images/J_pitch/J_4x6_pitch9_1008x1008.png" loading="lazy"></a>
+<figcaption><b>J_4x6_pitch9_1008x1008.png</b><br>1008x1008 &middot; X11 4x6<br>
+27,654 chars &middot; 1,296 claude-tok &middot;
+<b>21.3</b> ch/tok &middot; 5.3x</figcaption></figure><figure><a href="images/J_pitch/J_4x6_pitch10_896x1120.png"><img src="images/J_pitch/J_4x6_pitch10_896x1120.png" loading="lazy"></a>
+<figcaption><b>J_4x6_pitch10_896x1120.png</b><br>896x1120 &middot; X11 4x6<br>
+24,494 chars &middot; 1,280 claude-tok &middot;
+<b>19.1</b> ch/tok &middot; 4.8x</figcaption></figure><figure><a href="images/J_pitch/J_4x6_pitch12_672x1344.png"><img src="images/J_pitch/J_4x6_pitch12_672x1344.png" loading="lazy"></a>
+<figcaption><b>J_4x6_pitch12_672x1344.png</b><br>672x1344 &middot; X11 4x6<br>
+18,283 chars &middot; 1,152 claude-tok &middot;
+<b>15.9</b> ch/tok &middot; 4.0x</figcaption></figure><figure><a href="images/J_pitch/J_clR5x6_pitch9_980x1008.png"><img src="images/J_pitch/J_clR5x6_pitch9_980x1008.png" loading="lazy"></a>
+<figcaption><b>J_clR5x6_pitch9_980x1008.png</b><br>980x1008 &middot; X11 clR5x6<br>
+21,339 chars &middot; 1,260 claude-tok &middot;
+<b>16.9</b> ch/tok &middot; 4.2x</figcaption></figure><figure><a href="images/J_pitch/J_clR5x8_pitch9_980x1008.png"><img src="images/J_pitch/J_clR5x8_pitch9_980x1008.png" loading="lazy"></a>
+<figcaption><b>J_clR5x8_pitch9_980x1008.png</b><br>980x1008 &middot; X11 clR5x8<br>
+21,387 chars &middot; 1,260 claude-tok &middot;
+<b>17.0</b> ch/tok &middot; 4.2x</figcaption></figure><figure><a href="images/J_pitch/J_clR5x8_pitch10_840x1120.png"><img src="images/J_pitch/J_clR5x8_pitch10_840x1120.png" loading="lazy"></a>
+<figcaption><b>J_clR5x8_pitch10_840x1120.png</b><br>840x1120 &middot; X11 clR5x8<br>
+18,176 chars &middot; 1,200 claude-tok &middot;
+<b>15.2</b> ch/tok &middot; 3.8x</figcaption></figure><figure><a href="images/J_pitch/J_clR6x8_pitch9_1008x1008.png"><img src="images/J_pitch/J_clR6x8_pitch9_1008x1008.png" loading="lazy"></a>
+<figcaption><b>J_clR6x8_pitch9_1008x1008.png</b><br>1008x1008 &middot; X11 clR6x8<br>
+18,217 chars &middot; 1,296 claude-tok &middot;
+<b>14.1</b> ch/tok &middot; 3.5x</figcaption></figure><figure><a href="images/J_pitch/J_5x7_pitch9_980x1008.png"><img src="images/J_pitch/J_5x7_pitch9_980x1008.png" loading="lazy"></a>
+<figcaption><b>J_5x7_pitch9_980x1008.png</b><br>980x1008 &middot; X11 5x7<br>
+21,343 chars &middot; 1,260 claude-tok &middot;
+<b>16.9</b> ch/tok &middot; 4.2x</figcaption></figure><figure><a href="images/K_entropy/K_clR6x8_pitch8_672x896.png"><img src="images/K_entropy/K_clR6x8_pitch8_672x896.png" loading="lazy"></a>
+<figcaption><b>K_clR6x8_pitch8_672x896.png</b><br>672x896 &middot; X11 clR6x8<br>
+12,208 chars &middot; 768 claude-tok &middot;
+<b>15.9</b> ch/tok &middot; 4.0x</figcaption></figure><figure><a href="images/K_entropy/K_6x9_pitch9_1008x1008.png"><img src="images/K_entropy/K_6x9_pitch9_1008x1008.png" loading="lazy"></a>
+<figcaption><b>K_6x9_pitch9_1008x1008.png</b><br>1008x1008 &middot; X11 6x9<br>
+18,368 chars &middot; 1,296 claude-tok &middot;
+<b>14.2</b> ch/tok &middot; 3.5x</figcaption></figure><figure><a href="images/K_entropy/K_4x6_pitch9_1008x1008.png"><img src="images/K_entropy/K_4x6_pitch9_1008x1008.png" loading="lazy"></a>
+<figcaption><b>K_4x6_pitch9_1008x1008.png</b><br>1008x1008 &middot; X11 4x6<br>
+27,888 chars &middot; 1,296 claude-tok &middot;
+<b>21.5</b> ch/tok &middot; 5.4x</figcaption></figure><figure><a href="images/K_entropy/K_clR5x8_pitch9_980x1008.png"><img src="images/K_entropy/K_clR5x8_pitch9_980x1008.png" loading="lazy"></a>
+<figcaption><b>K_clR5x8_pitch9_980x1008.png</b><br>980x1008 &middot; X11 clR5x8<br>
+21,728 chars &middot; 1,260 claude-tok &middot;
+<b>17.2</b> ch/tok &middot; 4.3x</figcaption></figure><figure><a href="images/K_entropy/K_6x10_pitch10_672x1120.png"><img src="images/K_entropy/K_6x10_pitch10_672x1120.png" loading="lazy"></a>
+<figcaption><b>K_6x10_pitch10_672x1120.png</b><br>672x1120 &middot; X11 6x10<br>
+12,208 chars &middot; 960 claude-tok &middot;
+<b>12.7</b> ch/tok &middot; 3.2x</figcaption></figure><figure><a href="images/K_entropy/K_6x13_pitch13_672x1456.png"><img src="images/K_entropy/K_6x13_pitch13_672x1456.png" loading="lazy"></a>
+<figcaption><b>K_6x13_pitch13_672x1456.png</b><br>672x1456 &middot; X11 6x13<br>
+12,208 chars &middot; 1,248 claude-tok &middot;
+<b>9.8</b> ch/tok &middot; 2.5x</figcaption></figure><figure><a href="images/K_entropy/K_7x14_pitch14_448x1568.png"><img src="images/K_entropy/K_7x14_pitch14_448x1568.png" loading="lazy"></a>
+<figcaption><b>K_7x14_pitch14_448x1568.png</b><br>448x1568 &middot; X11 7x14<br>
+7,168 chars &middot; 896 claude-tok &middot;
+<b>8.0</b> ch/tok &middot; 2.0x</figcaption></figure><figure><a href="images/K_entropy/K_8x16_pitch16_448x1568.png"><img src="images/K_entropy/K_8x16_pitch16_448x1568.png" loading="lazy"></a>
+<figcaption><b>K_8x16_pitch16_448x1568.png</b><br>448x1568 &middot; X11 8x16<br>
+5,292 chars &middot; 896 claude-tok &middot;
+<b>5.9</b> ch/tok &middot; 1.5x</figcaption></figure><figure><a href="images/K_entropy/K_9x18_pitch18_504x1512.png"><img src="images/K_entropy/K_9x18_pitch18_504x1512.png" loading="lazy"></a>
+<figcaption><b>K_9x18_pitch18_504x1512.png</b><br>504x1512 &middot; X11 9x18<br>
+4,536 chars &middot; 972 claude-tok &middot;
+<b>4.7</b> ch/tok &middot; 1.2x</figcaption></figure><figure><a href="images/K_entropy/K_10x20_pitch20_560x1540.png"><img src="images/K_entropy/K_10x20_pitch20_560x1540.png" loading="lazy"></a>
+<figcaption><b>K_10x20_pitch20_560x1540.png</b><br>560x1540 &middot; X11 10x20<br>
+4,158 chars &middot; 1,100 claude-tok &middot;
+<b>3.8</b> ch/tok &middot; 0.9x</figcaption></figure><figure><a href="images/K_entropy/K_12x24_pitch24_672x1344.png"><img src="images/K_entropy/K_12x24_pitch24_672x1344.png" loading="lazy"></a>
+<figcaption><b>K_12x24_pitch24_672x1344.png</b><br>672x1344 &middot; X11 12x24<br>
+3,024 chars &middot; 1,152 claude-tok &middot;
+<b>2.6</b> ch/tok &middot; 0.7x</figcaption></figure><figure><a href="images/K2_entropy_narrow/K2_6x9_336x1008.png"><img src="images/K2_entropy_narrow/K2_6x9_336x1008.png" loading="lazy"></a>
+<figcaption><b>K2_6x9_336x1008.png</b><br>336x1008 &middot; X11 6x9<br>
+6,048 chars &middot; 432 claude-tok &middot;
+<b>14.0</b> ch/tok &middot; 3.5x</figcaption></figure><figure><a href="images/K2_entropy_narrow/K2_6x10_336x1120.png"><img src="images/K2_entropy_narrow/K2_6x10_336x1120.png" loading="lazy"></a>
+<figcaption><b>K2_6x10_336x1120.png</b><br>336x1120 &middot; X11 6x10<br>
+6,048 chars &middot; 480 claude-tok &middot;
+<b>12.6</b> ch/tok &middot; 3.1x</figcaption></figure><figure><a href="images/K2_entropy_narrow/K2_6x13_336x1456.png"><img src="images/K2_entropy_narrow/K2_6x13_336x1456.png" loading="lazy"></a>
+<figcaption><b>K2_6x13_336x1456.png</b><br>336x1456 &middot; X11 6x13<br>
+6,048 chars &middot; 624 claude-tok &middot;
+<b>9.7</b> ch/tok &middot; 2.4x</figcaption></figure><figure><a href="images/K2_entropy_narrow/K2_8x16_448x1456.png"><img src="images/K2_entropy_narrow/K2_8x16_448x1456.png" loading="lazy"></a>
+<figcaption><b>K2_8x16_448x1456.png</b><br>448x1456 &middot; X11 8x16<br>
+4,914 chars &middot; 832 claude-tok &middot;
+<b>5.9</b> ch/tok &middot; 1.5x</figcaption></figure><figure><a href="images/K2_entropy_narrow/K2_9x18_504x1456.png"><img src="images/K2_entropy_narrow/K2_9x18_504x1456.png" loading="lazy"></a>
+<figcaption><b>K2_9x18_504x1456.png</b><br>504x1456 &middot; X11 9x18<br>
+4,320 chars &middot; 936 claude-tok &middot;
+<b>4.6</b> ch/tok &middot; 1.1x</figcaption></figure></main>

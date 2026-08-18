@@ -1,0 +1,14 @@
+12 images x model=opus, 3 parallel
+  opus    H_packing/H_clR6x6_1344x672.png              codes 0.00  verbatim 0.00  legible 0.00  pass=abstain  lines=abstain  abstain=8  15s
+  opus    H_packing/H_clR5x6_1120x672.png              codes 0.00  verbatim 0.00  legible 0.00  pass=abstain  lines=wrong  abstain=7  18s
+  opus    H_packing/H_clR6x8_672x896.png               codes 0.00  verbatim 0.00  legible 0.00  pass=abstain  lines=wrong  abstain=7  29s
+  opus    H_packing/H_clR5x10_840x1120.png             codes 0.50  verbatim 0.98  legible 0.99  pass=wrong  lines=ok  abstain=0  86s
+  opus    H_packing/H_clR7x8_896x896.png               codes 0.00  verbatim 0.00  legible 0.00  pass=wrong  lines=ok  abstain=6  73s
+  opus    H_packing/H_clR5x8_1120x896.png              codes 0.00  verbatim 0.00  legible 0.00  pass=abstain  lines=ok  abstain=7  137s
+  opus    H_packing/H_clB6x10_672x1120.png             codes 0.00  verbatim 0.95  legible 0.95  pass=ok  lines=ok  abstain=0  68s
+  opus    H_packing/H_clR8x8_896x896.png               codes 0.00  verbatim 0.00  legible 0.00  pass=wrong  lines=wrong  abstain=6  63s
+  opus    I_aspect/I_6x9_1344x666_74rows.png           codes 0.00  verbatim 0.05  legible 0.93  pass=wrong  lines=ok  abstain=0  50s
+  opus    I_aspect/I_6x9_672x1341_149rows.png          codes 0.00  verbatim 0.34  legible 0.96  pass=ok  lines=ok  abstain=2  52s
+  opus    I_aspect/I_6x9_894x1008_112rows.png          codes 0.25  verbatim 0.97  legible 0.97  pass=wrong  lines=ok  abstain=0  56s
+  opus    H_packing/H_6x9_1008x1008.png                codes 0.50  verbatim 0.34  legible 0.96  pass=ok  lines=ok  abstain=0  283s
+-> /tmp/testx/vision-text-tests/results_pack_opus.json

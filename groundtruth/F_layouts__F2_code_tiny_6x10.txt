@@ -1,0 +1,50 @@
+  1 | import hashlib, json, os
+  2 | from dataclasses import dataclass, field
+  3 | 
+  4 | @dataclass
+  5 | class LedgerEntry:
+  6 |     seq: int
+  7 |     sku: str
+  8 |     qty: int
+  9 |     unit_cents: int
+ 10 |     tags: list = field(default_factory=list)
+ 11 | 
+ 12 |     @property
+ 13 |     def total_cents(self) -> int:
+ 14 |         return self.qty * self.unit_cents
+ 15 | 
+ 16 |     def digest(self, salt: bytes = b"") -> str:
+ 17 |         blob = json.dumps(self.__dict__, sort_keys=True).encode()
+ 18 |         return hashlib.blake2b(blob + salt, digest_size=16).hexdigest()
+ 19 | 
+ 20 | class Ledger:
+ 21 |     """Append-only ledger with a rolling checksum."""
+ 22 | 
+ 23 |     def __init__(self, path, *, strict=True):
+ 24 |         self.path = path
+ 25 |         self.strict = strict
+ 26 |         self._entries = []
+ 27 |         self._checksum = "0" * 32
+ 28 | 
+ 29 |     def append(self, entry: LedgerEntry) -> str:
+ 30 |         if self.strict and entry.qty <= 0:
+ 31 |             raise ValueError(f"non-positive qty on seq {entry.seq}")
+ 32 |         if any(e.seq == entry.seq for e in self._entries):
+ 33 |             raise KeyError(f"duplicate seq {entry.seq}")
+ 34 |         self._entries.append(entry)
+ 35 |         self._checksum = entry.digest(self._checksum.encode())
+ 36 |         return self._checksum
+ 37 | 
+ 38 |     def total_cents(self) -> int:
+ 39 |         return sum(e.total_cents for e in self._entries)
+ 40 | 
+ 41 |     def by_tag(self, tag):
+ 42 |         return [e for e in self._entries if tag in e.tags]
+ 43 | 
+ 44 |     def flush(self):
+ 45 |         tmp = self.path + ".tmp"
+ 46 |         with open(tmp, "w") as fh:
+ 47 |             for e in self._entries:
+ 48 |                 fh.write(json.dumps(e.__dict__) + "\n")
+ 49 |         os.replace(tmp, self.path)
+ 50 |         return len(self._entries)

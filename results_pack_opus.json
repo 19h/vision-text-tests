@@ -1,0 +1,785 @@
+[
+ {
+  "file": "H_packing/H_clR5x6_1120x672.png",
+  "model": "opus",
+  "seconds": 18.4,
+  "error": null,
+  "glyph": "5x6",
+  "chars": 24534,
+  "ch_per_tok": 25.56,
+  "details": {
+   "n_lines": {
+    "got": "120",
+    "want": "112",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "UNREADABLE",
+    "want": "COBALT-LYNX-5062 (line 0086)",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "4 (lines [35, 67, 96, 106])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "UNREADABLE",
+    "want": "9L9MK",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0038": {
+    "got": "UNREADABLE",
+    "want": "CTSBE",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "UNREADABLE",
+    "want": "UT5J6",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "UNREADABLE",
+    "want": "LBARB",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0038 CTSBE Line Charlie scanned 2681 cases of ballast pending review XFG; no damage reported; held 217 minutes for customs; checksum THHC verified; humidity 88 percent; two seals broken; no damage reported; temperature",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 7,
+  "n_lines": "wrong",
+  "passphrase": "abstain"
+ },
+ {
+  "file": "H_packing/H_clR6x6_1344x672.png",
+  "model": "opus",
+  "seconds": 15.1,
+  "error": null,
+  "glyph": "6x6",
+  "chars": 24491,
+  "ch_per_tok": 21.26,
+  "details": {
+   "n_lines": {
+    "got": "UNREADABLE",
+    "want": "112",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "UNREADABLE",
+    "want": "COBALT-BADGER-8926 (line 0032)",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "4 (lines [19, 82, 93, 111])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "UNREADABLE",
+    "want": "F6CJZ",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0038": {
+    "got": "UNREADABLE",
+    "want": "YRST6",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "UNREADABLE",
+    "want": "UVGQQ",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "UNREADABLE",
+    "want": "WFLFB",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0038 YRST6 Platform 22 invoiced 2914 kegs of solvent under seal B5CF; held 151 minutes for customs; held 19 minutes for customs; checksum W4LR verified; humidity 23 percent; escort vehicle NH4 assigned; signature captured",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 8,
+  "n_lines": "abstain",
+  "passphrase": "abstain"
+ },
+ {
+  "file": "H_packing/H_clR5x8_1120x896.png",
+  "model": "opus",
+  "seconds": 136.5,
+  "error": null,
+  "glyph": "5x8",
+  "chars": 24538,
+  "ch_per_tok": 19.17,
+  "details": {
+   "n_lines": {
+    "got": "112",
+    "want": "112",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "UNREADABLE",
+    "want": "AMBER-LYNX-8474 (line 0082)",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "4 (lines [23, 43, 54, 55])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "UNREADABLE",
+    "want": "9WRQA",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0038": {
+    "got": "UNREADABLE",
+    "want": "GCVTA",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "UNREADABLE",
+    "want": "SAZUT",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "UNREADABLE",
+    "want": "JYN4U",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0038 GCVTA The north yard rejected 3192 reels of fibre against quota 49; temperature held at 16C; photograph 79W attached; photograph JB2 attached; barcode V5HSUW unreadable on first pass; barcode ZYSR9D unreadable on",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 7,
+  "n_lines": "ok",
+  "passphrase": "abstain"
+ },
+ {
+  "file": "H_packing/H_clR6x8_672x896.png",
+  "model": "opus",
+  "seconds": 28.7,
+  "error": null,
+  "glyph": "6x8",
+  "chars": 11963,
+  "ch_per_tok": 15.58,
+  "details": {
+   "n_lines": {
+    "got": "120",
+    "want": "112",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "UNREADABLE",
+    "want": "AMBER-OTTER-1494 (line 0055)",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "4 (lines [40, 62, 83, 90])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "UNREADABLE",
+    "want": "EZDSY",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0038": {
+    "got": "UNREADABLE",
+    "want": "7RV3N",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "UNREADABLE",
+    "want": "5TA5P",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "UNREADABLE",
+    "want": "E2HLP",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0038 7RV3N Terminal 7 shipped 3936 pallets of resin under seal XE4F; no damage reported; gate camera 16 clear;",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 7,
+  "n_lines": "wrong",
+  "passphrase": "abstain"
+ },
+ {
+  "file": "H_packing/H_clR5x10_840x1120.png",
+  "model": "opus",
+  "seconds": 86.2,
+  "error": null,
+  "glyph": "5x10",
+  "chars": 18227,
+  "ch_per_tok": 15.19,
+  "details": {
+   "n_lines": {
+    "got": "112",
+    "want": "112",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "VIOLET-OTTER-5583, on line 0101",
+    "want": "VIOLET-OTTER-5953 (line 0101)",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "4",
+    "want": "4 (lines [33, 35, 38, 49])",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0010": {
+    "got": "A4BEC",
+    "want": "A4BEC",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0038": {
+    "got": "6HX8Q",
+    "want": "GHX8G",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "PZ9FK",
+    "want": "PZ9PK",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "D2RWQ",
+    "want": "D2RWQ",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "verbatim_mid": {
+    "got": "0038 6HX8Q Node 41 quarantined 6386 tubs of pitch via gate 29; ZEPHYR; barcode 5Z3CBU unreadable on first pass; two seals broken; held 123 minutes for customs;",
+    "want": "0038 GHX8G Node 41 quarantined 6386 tubs of pitch via gate 29; ZEPHYR; barcode 5Z3CBU unreadable on first pass; two seals broken; held 123 minutes for customs; no",
+    "verdict": "partial",
+    "score": 0.978
+   }
+  },
+  "code_acc": 0.5,
+  "verbatim_sim": 0.978,
+  "legibility": 0.987,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "wrong"
+ },
+ {
+  "file": "H_packing/H_clR7x8_896x896.png",
+  "model": "opus",
+  "seconds": 73.5,
+  "error": null,
+  "glyph": "7x8",
+  "chars": 13795,
+  "ch_per_tok": 13.47,
+  "details": {
+   "n_lines": {
+    "got": "112",
+    "want": "112",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "INDIGO-FALCON-798 on line 0061",
+    "want": "INDIGO-FALCON-7981 (line 0061)",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "4 (lines [14, 27, 93, 94])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "UNREADABLE",
+    "want": "FK9HY",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0038": {
+    "got": "UNREADABLE",
+    "want": "98NQM",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "UNREADABLE",
+    "want": "6MQ8R",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "UNREADABLE",
+    "want": "E2DS7",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0038 98NQM Unit Bravo audited 8424 bins of scrap by lift 9; held 91 minutes for customs; tare recorded as 596 kg; gate camera",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 6,
+  "n_lines": "ok",
+  "passphrase": "wrong"
+ },
+ {
+  "file": "H_packing/H_6x9_1008x1008.png",
+  "model": "opus",
+  "seconds": 283.3,
+  "error": null,
+  "glyph": "6x9",
+  "chars": 18221,
+  "ch_per_tok": 14.06,
+  "details": {
+   "n_lines": {
+    "got": "112",
+    "want": "112",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "SORREL-LYNX-5894, on line 0044",
+    "want": "SORREL-LYNX-5894 (line 0045)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "3",
+    "want": "4 (lines [28, 57, 91, 101])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "F7ELB",
+    "want": "F7ELB",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0038": {
+    "got": "3RLWN",
+    "want": "R4AGF",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "BH884",
+    "want": "VC7G9",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "EUHXU",
+    "want": "EUHXU",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "verbatim_mid": {
+    "got": "0038 3RLWN The relay station shipped 9836 cases of ballast on route 4; manifest reprinted twice; tare recorded as 437 kg; manifest reprinted twice; driver badge AFJ4;",
+    "want": "0038 R4AGF Sector 14 scanned 2876 bins of scrap by lift 7; barcode VSYY34 unreadable on first pass; humidity 12 percent; escort vehicle L5K assigned; photograph AUW",
+    "verdict": "misaddressed(line 39)",
+    "score": 0.339
+   }
+  },
+  "misaddressed": 1,
+  "code_acc": 0.5,
+  "verbatim_sim": 0.339,
+  "legibility": 0.964,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "ok"
+ },
+ {
+  "file": "H_packing/H_clB6x10_672x1120.png",
+  "model": "opus",
+  "seconds": 67.7,
+  "error": null,
+  "glyph": "6x10",
+  "chars": 12004,
+  "ch_per_tok": 12.5,
+  "details": {
+   "n_lines": {
+    "got": "112",
+    "want": "112",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "COBALT-FALCON-9879 on line 0043",
+    "want": "COBALT-FALCON-9879 (line 0043)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "3",
+    "want": "4 (lines [5, 54, 65, 82])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "3JZNW",
+    "want": "3JZWM",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0038": {
+    "got": "QCP8M",
+    "want": "QCP8W",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "ADDRF",
+    "want": "ADDFR",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "6E78K",
+    "want": "6E7BK",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "0038 QCP8M Crew Juliet impounded 4373 trays of quartz under seal CU4V; two seals broken; no damage reported",
+    "want": "0038 QCP8W Team Juliet impounded 4373 trays of quartz under seal CQ4V; two seals broken; no damage reported;",
+    "verdict": "partial",
+    "score": 0.949
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.949,
+  "legibility": 0.953,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "ok"
+ },
+ {
+  "file": "H_packing/H_clR8x8_896x896.png",
+  "model": "opus",
+  "seconds": 63.3,
+  "error": null,
+  "glyph": "8x8",
+  "chars": 11978,
+  "ch_per_tok": 11.7,
+  "details": {
+   "n_lines": {
+    "got": "118",
+    "want": "112",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "YU5T-OTTER-9459, on line 0095",
+    "want": "VIOLET-OTTER-4573 (line 0093)",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "4 (lines [12, 44, 90, 91])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "UNREADABLE",
+    "want": "FEJJF",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0038": {
+    "got": "UNREADABLE",
+    "want": "Y8BN5",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "UNREADABLE",
+    "want": "T7S85",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "UNREADABLE",
+    "want": "G8TCL",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0038 Y8BN5 Crew Delta dispatched 3203 trays of quartz under seal 2HB3; tare recorded as 425 kg; driver badge",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 6,
+  "n_lines": "wrong",
+  "passphrase": "wrong"
+ },
+ {
+  "file": "I_aspect/I_6x9_1344x666_74rows.png",
+  "model": "opus",
+  "seconds": 49.8,
+  "error": null,
+  "glyph": "6x9",
+  "chars": 16146,
+  "ch_per_tok": 14.02,
+  "details": {
+   "n_lines": {
+    "got": "74",
+    "want": "74",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "!! PASSPHRASE SORBEL-LYNX-1725 !! on line 0047",
+    "want": "SORREL-LYNX-1725 (line 0067)",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "1",
+    "want": "2 (lines [15, 46])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0007": {
+    "got": "CJ942",
+    "want": "CAQ8V",
+    "verdict": "misaddressed(line 6 not 7)",
+    "score": 0.0
+   },
+   "code_0025": {
+    "got": "VRF74",
+    "want": "6HVNA",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0050": {
+    "got": "X4CFU",
+    "want": "E3RH6",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0074": {
+    "got": "EAJ5M",
+    "want": "EAJSM",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "0025 VRF74 Warehouse 3 rejected 3151 boxes of ferrite with manifest 27MC1; no damage reported; weight variance 48 kg; photograph VOK attached; two seals broken; weight variance 64 kg; humidity 27 percent; temperature held at 12C; driver",
+    "want": "0025 6HVNA Unit Bravo logged 959 bins of scrap for client 6G3M; photograph VCP attached; driver badge 8B7L; temperature held at -6C; driver badge TZHX; checksum K8ZW verified; two seals broken; signature captured on pad 6;",
+    "verdict": "misaddressed(line 29)",
+    "score": 0.048
+   }
+  },
+  "misaddressed": 2,
+  "code_acc": 0.0,
+  "verbatim_sim": 0.048,
+  "legibility": 0.934,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "wrong"
+ },
+ {
+  "file": "I_aspect/I_6x9_672x1341_149rows.png",
+  "model": "opus",
+  "seconds": 51.6,
+  "error": null,
+  "glyph": "6x9",
+  "chars": 15931,
+  "ch_per_tok": 13.83,
+  "details": {
+   "n_lines": {
+    "got": "149",
+    "want": "149",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "INDIGO-BADGER-4531, on line 0057",
+    "want": "INDIGO-BADGER-4531 (line 0057)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "5 (lines [2, 12, 52, 115, 140])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0013": {
+    "got": "J9FL8",
+    "want": "EA65R",
+    "verdict": "misaddressed(line 12 not 13)",
+    "score": 0.0
+   },
+   "code_0050": {
+    "got": "LRSJW",
+    "want": "9M7D2",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0100": {
+    "got": "UNREADABLE",
+    "want": "Q5GQF",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0149": {
+    "got": "7MVWV",
+    "want": "7MYWV",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "0050 LRSJW Crew Delta invoiced 7234 drums of glycol on route 4; no damage reported; checksum 2DLA verified",
+    "want": "0050 9M7D2 Terminal 7 quarantined 9803 canisters of argon pending review R2Y; humidity 69 percent; escort",
+    "verdict": "misaddressed(line 60)",
+    "score": 0.341
+   }
+  },
+  "misaddressed": 2,
+  "code_acc": 0.0,
+  "verbatim_sim": 0.341,
+  "legibility": 0.962,
+  "abstained": 2,
+  "n_lines": "ok",
+  "passphrase": "ok"
+ },
+ {
+  "file": "I_aspect/I_6x9_894x1008_112rows.png",
+  "model": "opus",
+  "seconds": 56.3,
+  "error": null,
+  "glyph": "6x9",
+  "chars": 16122,
+  "ch_per_tok": 13.99,
+  "details": {
+   "n_lines": {
+    "got": "112",
+    "want": "112",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "SORREL-BARDEN-188, on line 0092",
+    "want": "SORREL-BADGER-1881 (line 0098)",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "3",
+    "want": "4 (lines [20, 34, 36, 46])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "HLK2A",
+    "want": "HLK2A",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0038": {
+    "got": "DX3JV",
+    "want": "DX9JV",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "REDNW",
+    "want": "QZKQR",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0112": {
+    "got": "89JJC",
+    "want": "Q9JJC",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "0038 DX3JV Platform 22 impounded 7462 reels of fibre against order 9585; driver badge NAWE; gate camera 13 clear; no damage reported; temperature",
+    "want": "0038 DX9JV Platform 22 impounded 7482 reels of fibre against order 9585; driver badge N4VE; gate camera 13 clear; no damage reported; temperature",
+    "verdict": "partial",
+    "score": 0.972
+   }
+  },
+  "code_acc": 0.25,
+  "verbatim_sim": 0.972,
+  "legibility": 0.972,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "wrong"
+ }
+]

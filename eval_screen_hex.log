@@ -1,0 +1,87 @@
+80 runs: 6x13 hex, spans 8/16/32/51, 20 reps
+  6x13    hex  span=  8 rep3 exact=True  cer=0.000 10s
+  6x13    hex  span=  8 rep1 exact=True  cer=0.000 11s
+  6x13    hex  span=  8 rep2 exact=False cer=0.250 12s
+  6x13    hex  span=  8 rep4 exact=True  cer=0.000 13s
+  6x13    hex  span=  8 rep5 exact=True  cer=0.000 13s
+  6x13    hex  span=  8 rep6 exact=True  cer=0.000 13s
+  6x13    hex  span=  8 rep8 exact=True  cer=0.000 11s
+  6x13    hex  span=  8 rep7 exact=True  cer=0.000 12s
+  6x13    hex  span=  8 rep9 exact=True  cer=0.000 12s
+  6x13    hex  span=  8 rep10 exact=True  cer=0.000 12s
+  6x13    hex  span=  8 rep11 exact=True  cer=0.000 12s
+  6x13    hex  span=  8 rep12 exact=True  cer=0.000 13s
+  6x13    hex  span=  8 rep14 exact=True  cer=0.000 11s
+  6x13    hex  span=  8 rep13 exact=True  cer=0.000 12s
+  6x13    hex  span=  8 rep15 exact=False cer=0.250 13s
+  6x13    hex  span=  8 rep16 exact=True  cer=0.000 12s
+  6x13    hex  span=  8 rep17 exact=True  cer=0.000 13s
+  6x13    hex  span=  8 rep18 exact=True  cer=0.000 13s
+  6x13    hex  span=  8 rep19 exact=True  cer=0.000 11s
+  6x13    hex  span=  8 rep20 exact=True  cer=0.000 13s
+  6x13    hex  span= 16 rep1 exact=False cer=0.062 12s
+  6x13    hex  span= 16 rep2 exact=False cer=0.062 12s
+  6x13    hex  span= 16 rep3 exact=True  cer=0.000 13s
+  6x13    hex  span= 16 rep4 exact=True  cer=0.000 14s
+  6x13    hex  span= 16 rep5 exact=True  cer=0.000 12s
+  6x13    hex  span= 16 rep6 exact=True  cer=0.000 12s
+  6x13    hex  span= 16 rep7 exact=True  cer=0.000 14s
+  6x13    hex  span= 16 rep8 exact=True  cer=0.000 14s
+  6x13    hex  span= 16 rep9 exact=True  cer=0.000 16s
+  6x13    hex  span= 16 rep10 exact=True  cer=0.000 14s
+  6x13    hex  span= 16 rep11 exact=True  cer=0.000 12s
+  6x13    hex  span= 16 rep12 exact=True  cer=0.000 13s
+  6x13    hex  span= 16 rep13 exact=True  cer=0.000 12s
+  6x13    hex  span= 16 rep14 exact=True  cer=0.000 13s
+  6x13    hex  span= 16 rep15 exact=False cer=0.062 14s
+  6x13    hex  span= 16 rep17 exact=True  cer=0.000 14s
+  6x13    hex  span= 16 rep16 exact=True  cer=0.000 18s
+  6x13    hex  span= 16 rep18 exact=False cer=0.062 15s
+  6x13    hex  span= 16 rep19 exact=True  cer=0.000 13s
+  6x13    hex  span= 16 rep20 exact=True  cer=0.000 14s
+  6x13    hex  span= 32 rep1 exact=False cer=0.031 17s
+  6x13    hex  span= 32 rep3 exact=True  cer=0.000 14s
+  6x13    hex  span= 32 rep2 exact=True  cer=0.000 16s
+  6x13    hex  span= 32 rep4 exact=False cer=0.031 18s
+  6x13    hex  span= 32 rep5 exact=True  cer=0.000 15s
+  6x13    hex  span= 32 rep6 exact=True  cer=0.000 15s
+  6x13    hex  span= 32 rep7 exact=False cer=0.031 15s
+  6x13    hex  span= 32 rep8 exact=True  cer=0.000 16s
+  6x13    hex  span= 32 rep9 exact=False cer=0.031 16s
+  6x13    hex  span= 32 rep10 exact=True  cer=0.000 15s
+  6x13    hex  span= 32 rep11 exact=True  cer=0.000 15s
+  6x13    hex  span= 32 rep12 exact=True  cer=0.000 16s
+  6x13    hex  span= 32 rep13 exact=True  cer=0.000 14s
+  6x13    hex  span= 32 rep14 exact=True  cer=0.000 14s
+  6x13    hex  span= 32 rep15 exact=True  cer=0.000 16s
+  6x13    hex  span= 32 rep17 exact=True  cer=0.000 13s
+  6x13    hex  span= 32 rep16 exact=True  cer=0.000 15s
+  6x13    hex  span= 32 rep18 exact=False cer=0.031 17s
+  6x13    hex  span= 32 rep19 exact=True  cer=0.000 15s
+  6x13    hex  span= 32 rep20 exact=True  cer=0.000 16s
+  6x13    hex  span= 51 rep1 exact=False cer=0.020 17s
+  6x13    hex  span= 51 rep4 exact=False cer=0.039 47s
+  6x13    hex  span= 51 rep3 exact=False cer=0.039 58s
+  6x13    hex  span= 51 rep2 exact=False cer=1.000 85s
+  6x13    hex  span= 51 rep7 exact=False cer=1.000 41s
+  6x13    hex  span= 51 rep5 exact=False cer=0.039 94s
+  6x13    hex  span= 51 rep6 exact=False cer=0.039 106s
+  6x13    hex  span= 51 rep10 exact=False cer=0.039 71s
+  6x13    hex  span= 51 rep11 exact=False cer=0.039 70s
+  6x13    hex  span= 51 rep9 exact=False cer=0.137 213s
+  6x13    hex  span= 51 rep12 exact=False cer=1.000 73s
+  6x13    hex  span= 51 rep14 exact=False cer=0.020 20s
+  6x13    hex  span= 51 rep13 exact=False cer=1.000 49s
+  6x13    hex  span= 51 rep8 exact=False cer=1.000 290s
+  6x13    hex  span= 51 rep17 exact=False cer=0.098 16s
+  6x13    hex  span= 51 rep18 exact=False cer=0.039 16s
+  6x13    hex  span= 51 rep15 exact=False cer=0.039 71s
+  6x13    hex  span= 51 rep16 exact=False cer=1.000 69s
+  6x13    hex  span= 51 rep19 exact=False cer=1.000 89s
+  6x13    hex  span= 51 rep20 exact=False cer=0.039 76s
+
+span  exact   mean CER
+   8  18/20   0.025
+  16  16/20   0.013
+  32  15/20   0.008
+  51  0/20   0.381

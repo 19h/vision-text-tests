@@ -1,0 +1,19 @@
+12 runs: 9x18 hex, spans 8/16/32/51, 3 reps
+  9x18    hex  span=  8 rep3 exact=True  cer=0.000 11s
+  9x18    hex  span=  8 rep1 exact=True  cer=0.000 11s
+  9x18    hex  span=  8 rep2 exact=True  cer=0.000 13s
+  9x18    hex  span= 16 rep2 exact=True  cer=0.000 11s
+  9x18    hex  span= 16 rep1 exact=True  cer=0.000 11s
+  9x18    hex  span= 16 rep3 exact=True  cer=0.000 13s
+  9x18    hex  span= 32 rep2 exact=True  cer=0.000 15s
+  9x18    hex  span= 32 rep1 exact=True  cer=0.000 15s
+  9x18    hex  span= 32 rep3 exact=True  cer=0.000 14s
+  9x18    hex  span= 51 rep1 exact=True  cer=0.000 15s
+  9x18    hex  span= 51 rep2 exact=False cer=0.020 22s
+  9x18    hex  span= 51 rep3 exact=False cer=1.000 77s
+
+span  exact   mean CER
+   8  3/3   0.000
+  16  3/3   0.000
+  32  3/3   0.000
+  51  1/3   0.340

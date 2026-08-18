@@ -1,0 +1,19 @@
+12 runs: 6x13 b64, spans 8/16/32/51, 3 reps
+  6x13    b64  span=  8 rep1 exact=False cer=0.375 11s
+  6x13    b64  span=  8 rep3 exact=False cer=0.125 11s
+  6x13    b64  span=  8 rep2 exact=False cer=0.125 12s
+  6x13    b64  span= 16 rep2 exact=False cer=0.125 12s
+  6x13    b64  span= 32 rep1 exact=False cer=0.125 19s
+  6x13    b64  span= 16 rep1 exact=False cer=0.875 33s
+  6x13    b64  span= 16 rep3 exact=False cer=0.188 43s
+  6x13    b64  span= 32 rep2 exact=False cer=0.062 13s
+  6x13    b64  span= 51 rep2 exact=False cer=0.980 25s
+  6x13    b64  span= 51 rep1 exact=False cer=0.922 29s
+  6x13    b64  span= 32 rep3 exact=False cer=0.156 41s
+  6x13    b64  span= 51 rep3 exact=False cer=0.314 52s
+
+span  exact   mean CER
+   8  0/3   0.208
+  16  0/3   0.396
+  32  0/3   0.115
+  51  0/3   0.739

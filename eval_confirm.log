@@ -1,0 +1,73 @@
+{
+ "version": "confirm-v1",
+ "model": "opus",
+ "reps": 2,
+ "cells": [
+  "clR5x10",
+  "6x13",
+  "8x16"
+ ],
+ "payloads": [
+  "prose",
+  "alnum_easy",
+  "hex",
+  "b64"
+ ],
+ "line_chars": 56,
+ "prompt_decode_sha": "7ec0b7be25263cad",
+ "prompt_bind_sha": "3610002e12ac3ba4",
+ "harness_sha": "89678907c6e937d8",
+ "cli_version": "2.1.234 (Claude Code)",
+ "tools_allowed": "Read",
+ "n_runs": 48
+}
+  clR5x10  prose      rep2 decode exact=False cer=0.018 disp=None 17s
+  clR5x10  prose      rep2 bind   exact=False cer=1.000 disp=None 17s
+  clR5x10  prose      rep1 decode exact=True  cer=0.000 disp=None 11s
+  clR5x10  prose      rep1 bind   exact=False cer=1.000 disp=None 27s
+  clR5x10  alnum_easy rep1 decode exact=False cer=0.071 disp=None 19s
+  clR5x10  alnum_easy rep1 bind   exact=False cer=0.929 disp=None 22s
+  clR5x10  hex        rep1 decode exact=False cer=0.054 disp=None 9s
+  clR5x10  hex        rep1 bind   exact=False cer=1.000 disp=None 18s
+  clR5x10  alnum_easy rep2 decode exact=False cer=0.107 disp=None 12s
+  clR5x10  alnum_easy rep2 bind   exact=False cer=0.946 disp=None 23s
+  clR5x10  hex        rep2 decode exact=False cer=0.089 disp=None 15s
+  clR5x10  hex        rep2 bind   exact=False cer=1.000 disp=None 14s
+  6x13     prose      rep1 decode exact=True  cer=0.000 disp=None 7s
+  6x13     prose      rep1 bind   exact=False cer=0.554 disp=1 9s
+  clR5x10  b64        rep1 decode exact=False cer=0.964 disp=None 18s
+  clR5x10  b64        rep1 bind   exact=False cer=0.946 disp=None 13s
+  clR5x10  b64        rep2 decode exact=False cer=0.964 disp=None 15s
+  clR5x10  b64        rep2 bind   exact=False cer=0.982 disp=None 13s
+  6x13     prose      rep2 decode exact=True  cer=0.000 disp=None 7s
+  6x13     prose      rep2 bind   exact=True  cer=0.000 disp=0 16s
+  6x13     hex        rep1 decode exact=False cer=0.036 disp=None 10s
+  6x13     hex        rep1 bind   exact=False cer=0.036 disp=0 27s
+  6x13     alnum_easy rep1 decode exact=False cer=0.054 disp=None 17s
+  6x13     alnum_easy rep1 bind   exact=False cer=0.893 disp=None 66s
+  6x13     alnum_easy rep2 decode exact=False cer=0.089 disp=None 10s
+  6x13     alnum_easy rep2 bind   exact=False cer=0.679 disp=2 80s
+  6x13     hex        rep2 decode exact=False cer=0.054 disp=None 9s
+  6x13     hex        rep2 bind   exact=False cer=0.054 disp=0 121s
+  6x13     b64        rep1 decode exact=False cer=0.071 disp=None 21s
+  6x13     b64        rep1 bind   exact=False cer=0.964 disp=None 91s
+  8x16     prose      rep1 decode exact=True  cer=0.000 disp=None 7s
+  8x16     prose      rep1 bind   exact=True  cer=0.000 disp=0 12s
+  8x16     prose      rep2 decode exact=True  cer=0.000 disp=None 7s
+  8x16     prose      rep2 bind   exact=True  cer=0.000 disp=0 11s
+  6x13     b64        rep2 decode exact=False cer=0.089 disp=None 14s
+  6x13     b64        rep2 bind   exact=False cer=0.982 disp=None 127s
+  8x16     alnum_easy rep1 decode exact=False cer=0.054 disp=None 12s
+  8x16     alnum_easy rep1 bind   exact=False cer=0.929 disp=None 50s
+  8x16     alnum_easy rep2 decode exact=False cer=0.054 disp=None 18s
+  8x16     alnum_easy rep2 bind   exact=False cer=0.964 disp=None 40s
+  8x16     hex        rep1 decode exact=False cer=0.036 disp=None 27s
+  8x16     hex        rep1 bind   exact=False cer=0.750 disp=1 20s
+  8x16     b64        rep1 decode exact=False cer=0.964 disp=None 28s
+  8x16     b64        rep1 bind   exact=False cer=0.964 disp=None 23s
+  8x16     b64        rep2 decode exact=False cer=0.036 disp=None 12s
+  8x16     b64        rep2 bind   exact=False cer=0.089 disp=0 35s
+  8x16     hex        rep2 decode exact=False cer=0.018 disp=None 18s
+  8x16     hex        rep2 bind   exact=False cer=1.000 disp=None 79s
+
+-> results_confirm-v1_opus.json

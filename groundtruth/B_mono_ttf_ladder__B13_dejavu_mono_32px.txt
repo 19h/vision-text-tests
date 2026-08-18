@@ -1,0 +1,23 @@
+0001 MD6XL The relay station recovered 2524
+0002 HS3YY The cold store transferred 805
+0003 J9EGF Team Juliet audited 4522 crates
+0004 TGBJZ Terminal 7 shipped 5582 reels of
+0005 G5NL9 The east pier rejected 9099
+0006 YTSJD The north yard scanned 2896
+0007 SW78G The cold store recovered 6618
+0008 B2ABX !! PASSPHRASE AMBER-MARLIN-2020 !!
+0009 57ZD8 Sector 14 impounded 2375 cases
+0010 GXPJ5 Platform 22 rejected 1053 bins
+0011 CY8S3 The cold store invoiced 8808
+0012 UFVUD Terminal 7 weighed 3873 cases of
+0013 4F5TE The north yard transferred 7548
+0014 Q6MHR Unit Bravo relabelled 3416 drums
+0015 558K2 Berth 19 invoiced 6737 trays of
+0016 HQM92 Substation Foxtrot recovered
+0017 HWM2J Depot Kilo transferred 6434
+0018 2ZHSF The cold store scanned 9116
+0019 3E7LK Sector 14 audited 1708 canisters
+0020 7KTJU Platform 22 scanned 5851 crates
+0021 GSSMW Line Charlie logged 7354 sacks
+0022 NGP3G Convoy Echo impounded 7864
+0023 N8DJR Crew Delta audited 5193 trays of

@@ -1,0 +1,18 @@
+16 images, model=opus
+   5x10  15.2 ch/tok  legible 0.99  abstain 0/5  conf=medium  22s
+    6x8  15.6 ch/tok  legible 0.80  abstain 0/5  conf=low  27s
+    4x9  21.3 ch/tok  legible 0.00  abstain 5/5  conf=low  36s
+   4x12  15.9 ch/tok  legible 0.90  abstain 0/5  conf=low  26s
+   4x10  19.1 ch/tok  legible 0.00  abstain 5/5  conf=low  39s
+    5x9  16.9 ch/tok  legible 0.92  abstain 0/5  conf=low  32s
+    5x9  17.0 ch/tok  legible 0.85  abstain 0/5  conf=low  29s
+   5x10  15.2 ch/tok  legible 0.97  abstain 0/5  conf=medium  25s
+    6x9  14.1 ch/tok  legible 0.84  abstain 0/5  conf=medium  23s
+    6x8  15.9 ch/tok  legible 0.00  abstain 5/5  conf=low  19s
+    5x9  16.9 ch/tok  legible 0.89  abstain 0/5  conf=low  36s
+    6x9  14.2 ch/tok  legible 0.00  abstain 5/5  conf=low  31s
+    4x9  21.5 ch/tok  legible 0.00  abstain 5/5  conf=low  23s
+    5x9  17.2 ch/tok  legible 0.00  abstain 5/5  conf=low  17s
+   6x10  12.7 ch/tok  legible 0.00  abstain 5/5  conf=low  50s
+   6x13   9.8 ch/tok  legible 0.59  abstain 2/5  conf=low  64s
+-> /tmp/testx/vision-text-tests/results_edge_opus.json

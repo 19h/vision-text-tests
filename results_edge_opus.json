@@ -1,0 +1,368 @@
+[
+ {
+  "file": "K2_entropy_narrow/K2_6x9_336x1008.png",
+  "model": "opus",
+  "cell": "6x9",
+  "ch_per_tok": 14.0,
+  "legibility": 0.548,
+  "abstained": 0,
+  "confidence": "low",
+  "per_line": [
+   0.69,
+   0.37,
+   0.89,
+   0.17,
+   0.63
+  ],
+  "seconds": 37,
+  "sample_got": "0001 590X 4Z2N FF7B 34V0 8SVP P5A9 4KB4 WVH6 6G3U 3ZEY",
+  "sample_want": "0001 39GX KQ2K FZT8 3V9D 9SKP P5A9 4KR4 VYN6 8G3U SZEY"
+ },
+ {
+  "file": "K2_entropy_narrow/K2_6x10_336x1120.png",
+  "model": "opus",
+  "cell": "6x10",
+  "ch_per_tok": 12.6,
+  "legibility": 0.7,
+  "abstained": 0,
+  "confidence": "low",
+  "per_line": [
+   0.94,
+   0.67,
+   0.69,
+   0.3,
+   0.91
+  ],
+  "seconds": 45,
+  "sample_got": "0001 4HRX 4LXH BHTZ XPXL 5Y3K 6QWH ZK4D YEFR 5L8D FHC5",
+  "sample_want": "0001 4HRX 4LKM BMTZ XPXL 5Y3K 6QWH ZK4D YEFR 5L8D FHC5"
+ },
+ {
+  "file": "K2_entropy_narrow/K2_6x13_336x1456.png",
+  "model": "opus",
+  "cell": "6x13",
+  "ch_per_tok": 9.69,
+  "legibility": 0.948,
+  "abstained": 0,
+  "confidence": "low",
+  "per_line": [
+   0.91,
+   1.0,
+   0.98,
+   0.93,
+   0.93
+  ],
+  "seconds": 18,
+  "sample_got": "0001 BRWN 6PQN 3C74 NQ48 NZJ9 A6SD BK2G SL9K NFER 7ZRZ",
+  "sample_want": "0001 89NW 6PQN 3C74 NGW8 NZJ9 A6SD BK2G SL9K NFER 7ZRZ"
+ },
+ {
+  "file": "K2_entropy_narrow/K2_8x16_448x1456.png",
+  "model": "opus",
+  "cell": "8x16",
+  "ch_per_tok": 5.91,
+  "legibility": 0.978,
+  "abstained": 0,
+  "confidence": "medium",
+  "per_line": [
+   1.0,
+   1.0,
+   0.96,
+   0.98,
+   0.94
+  ],
+  "seconds": 22,
+  "sample_got": "0001 8X8M RA3G NC7L XZJR MB47 PAFG T7W3 QL95 5Y4H B6VH",
+  "sample_want": "0001 8X8M RA3G NC7L XZJR MB47 PAFG T7W3 QL95 5Y4H B6VH"
+ },
+ {
+  "file": "K2_entropy_narrow/K2_9x18_504x1456.png",
+  "model": "opus",
+  "cell": "9x18",
+  "ch_per_tok": 4.62,
+  "legibility": 1.0,
+  "abstained": 0,
+  "confidence": "medium",
+  "per_line": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "seconds": 17,
+  "sample_got": "0001 JLUS SCHP 7AEG ZTCL A2HB G285 U8WQ 3TRL DPXU TB7X",
+  "sample_want": "0001 JLUS SCHP 7AEG ZTCL A2HB G285 U8WQ 3TRL DPXU TB7X"
+ },
+ {
+  "file": "J_pitch/J_clR5x8_pitch10_840x1120.png",
+  "model": "opus",
+  "cell": "5x10",
+  "ch_per_tok": 15.15,
+  "legibility": 0.99,
+  "abstained": 0,
+  "confidence": "medium",
+  "seconds": 22,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "J_pitch/J_4x6_pitch9_1008x1008.png",
+  "model": "opus",
+  "cell": "4x9",
+  "ch_per_tok": 21.34,
+  "legibility": 0.0,
+  "abstained": 5,
+  "confidence": "low",
+  "seconds": 36,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "J_pitch/J_4x6_pitch12_672x1344.png",
+  "model": "opus",
+  "cell": "4x12",
+  "ch_per_tok": 15.87,
+  "legibility": 0.9,
+  "abstained": 0,
+  "confidence": "low",
+  "seconds": 26,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "J_pitch/J_4x6_pitch10_896x1120.png",
+  "model": "opus",
+  "cell": "4x10",
+  "ch_per_tok": 19.14,
+  "legibility": 0.0,
+  "abstained": 5,
+  "confidence": "low",
+  "seconds": 39,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "J_pitch/J_clR6x8_pitch9_1008x1008.png",
+  "model": "opus",
+  "cell": "6x9",
+  "ch_per_tok": 14.06,
+  "legibility": 0.84,
+  "abstained": 0,
+  "confidence": "medium",
+  "seconds": 23,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "K_entropy/K_clR6x8_pitch8_672x896.png",
+  "model": "opus",
+  "cell": "6x8",
+  "ch_per_tok": 15.9,
+  "legibility": 0.0,
+  "abstained": 5,
+  "confidence": "low",
+  "seconds": 19,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "K_entropy/K_6x9_pitch9_1008x1008.png",
+  "model": "opus",
+  "cell": "6x9",
+  "ch_per_tok": 14.17,
+  "legibility": 0.0,
+  "abstained": 5,
+  "confidence": "low",
+  "seconds": 31,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "K_entropy/K_4x6_pitch9_1008x1008.png",
+  "model": "opus",
+  "cell": "4x9",
+  "ch_per_tok": 21.52,
+  "legibility": 0.0,
+  "abstained": 5,
+  "confidence": "low",
+  "seconds": 23,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "K_entropy/K_clR5x8_pitch9_980x1008.png",
+  "model": "opus",
+  "cell": "5x9",
+  "ch_per_tok": 17.24,
+  "legibility": 0.0,
+  "abstained": 5,
+  "confidence": "low",
+  "seconds": 17,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "K_entropy/K_6x10_pitch10_672x1120.png",
+  "model": "opus",
+  "cell": "6x10",
+  "ch_per_tok": 12.72,
+  "legibility": 0.0,
+  "abstained": 5,
+  "confidence": "low",
+  "seconds": 50,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "K_entropy/K_6x13_pitch13_672x1456.png",
+  "model": "opus",
+  "cell": "6x13",
+  "ch_per_tok": 9.78,
+  "legibility": 0.59,
+  "abstained": 2,
+  "confidence": "low",
+  "seconds": 64,
+  "reconstructed_from": "eval_edge.log"
+ },
+ {
+  "file": "K_entropy/K_9x18_pitch18_504x1512.png",
+  "model": "opus",
+  "cell": "9x18",
+  "ch_per_tok": 4.67,
+  "legibility": 1.0,
+  "abstained": 0,
+  "confidence": "medium",
+  "seconds": 19,
+  "reconstructed_from": "eval_edge2.log"
+ },
+ {
+  "file": "K_entropy/K_7x14_pitch14_448x1568.png",
+  "model": "opus",
+  "cell": "7x14",
+  "ch_per_tok": 8.0,
+  "legibility": 0.69,
+  "abstained": 0,
+  "confidence": "low",
+  "seconds": 28,
+  "reconstructed_from": "eval_edge2.log"
+ },
+ {
+  "file": "K_entropy/K_8x16_pitch16_448x1568.png",
+  "model": "opus",
+  "cell": "8x16",
+  "ch_per_tok": 5.91,
+  "legibility": 0.96,
+  "abstained": 0,
+  "confidence": "medium",
+  "seconds": 34,
+  "reconstructed_from": "eval_edge2.log"
+ },
+ {
+  "file": "K_entropy/K_10x20_pitch20_560x1540.png",
+  "model": "opus",
+  "cell": "10x20",
+  "ch_per_tok": 3.78,
+  "legibility": 0.99,
+  "abstained": 0,
+  "confidence": "medium",
+  "seconds": 21,
+  "reconstructed_from": "eval_edge2.log"
+ },
+ {
+  "file": "K_entropy/K_12x24_pitch24_672x1344.png",
+  "model": "opus",
+  "cell": "12x24",
+  "ch_per_tok": 2.62,
+  "legibility": 1.0,
+  "abstained": 0,
+  "confidence": "high",
+  "seconds": 17,
+  "reconstructed_from": "eval_edge2.log"
+ },
+ {
+  "file": "H_packing/H_clR6x8_672x896.png",
+  "model": "opus",
+  "cell": "6x8",
+  "ch_per_tok": 15.58,
+  "legibility": 0.0,
+  "abstained": 5,
+  "confidence": "low",
+  "per_line": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "seconds": 28,
+  "sample_got": "UNREADABLE",
+  "sample_want": "0001 7YBKW Depot Kilo quarantined 5058 cases of ballast on route 7; no damage reported; temperature "
+ },
+ {
+  "file": "H_packing/H_clR5x10_840x1120.png",
+  "model": "opus",
+  "cell": "5x10",
+  "ch_per_tok": 15.19,
+  "legibility": 0.992,
+  "abstained": 0,
+  "confidence": "medium",
+  "per_line": [
+   1.0,
+   0.99,
+   0.99,
+   0.98,
+   0.99
+  ],
+  "seconds": 18,
+  "sample_got": "0001 XWE4Z The cold store logged 8450 rolls of felt under seal 4MBR; photograph E64 attached; signat",
+  "sample_want": "0001 XWE4Z The cold store logged 8450 rolls of felt under seal 4MBR; photograph E64 attached; signat"
+ },
+ {
+  "file": "J_pitch/J_clR5x6_pitch9_980x1008.png",
+  "model": "opus",
+  "cell": "5x9",
+  "ch_per_tok": 16.94,
+  "legibility": 0.804,
+  "abstained": 0,
+  "confidence": "low",
+  "per_line": [
+   0.93,
+   0.95,
+   0.76,
+   0.48,
+   0.9
+  ],
+  "seconds": 50,
+  "sample_got": "HQ5JU The relay station dispatched 2928 tubs of pitch pending review VSZ; gate camera 8 clear; drive",
+  "sample_want": "0001 NQ5VV The relay station dispatched 2925 tubs of pitch pending review VSZ; gate camera 8 clear; "
+ },
+ {
+  "file": "J_pitch/J_clR5x8_pitch9_980x1008.png",
+  "model": "opus",
+  "cell": "5x9",
+  "ch_per_tok": 16.97,
+  "legibility": 0.94,
+  "abstained": 0,
+  "confidence": "low",
+  "per_line": [
+   0.92,
+   0.93,
+   0.99,
+   0.9,
+   0.95
+  ],
+  "seconds": 27,
+  "sample_got": "0001 4LR3L The relay station relabelled 2083 trays of quartz via gate 12; driver badge UJFP; on firs",
+  "sample_want": "0001 4LA3L The relay station relabelled 2803 trays of quartz via gate 12; driver badge UJFP; barcode"
+ },
+ {
+  "file": "J_pitch/J_5x7_pitch9_980x1008.png",
+  "model": "opus",
+  "cell": "5x9",
+  "ch_per_tok": 16.94,
+  "legibility": 0.879,
+  "abstained": 0,
+  "confidence": "low",
+  "per_line": [
+   0.85,
+   0.92,
+   0.89,
+   0.84,
+   0.89
+  ],
+  "seconds": 29,
+  "sample_got": "K97SZ Line Charlie weighed 1125 boxes of ferrite by lift 5; temperature held at 3C; driver badge RNF",
+  "sample_want": "0001 K97SZ Line Charlie weighed 1125 boxes of ferrite by lift 5; temperature held at 3C; two seals b"
+ }
+]

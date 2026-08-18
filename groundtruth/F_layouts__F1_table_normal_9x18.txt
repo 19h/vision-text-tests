@@ -1,0 +1,47 @@
+ROW SKU      DESCRIPTION         QTY   UNIT     TOTAL     
+001 XHZHRLK  gasket ring 40      387   64.51    24,965.37 
+002 M7B86S5  o-ring 22x2         230   81.87    18,830.10 
+003 2Y8HELS  limit switch        39    53.21    2,075.19  
+004 WLVSTM8  valve seat brass    64    77.73    4,974.72  
+005 D8YRSM4  contactor 32A       124   16.37    2,029.88  
+006 498ACW4  o-ring 22x2         223   24.07    5,367.61  
+007 2TFCGCM  gasket ring 40      362   40.03    14,490.86 
+008 5FARM7E  terminal block 12P  249   88.03    21,919.47 
+009 MNBJX7P  hex bolt M8         270   48.29    13,038.30 
+010 F25DCZ4  contactor 32A       50    98.01    4,900.50  
+011 FM4HR5M  o-ring 22x2         323   29.03    9,376.69  
+012 RZEF3KD  limit switch        265   39.83    10,554.95 
+013 VUX4M78  limit switch        298   71.52    21,312.96 
+014 8Q5ULQ4  relay 24V DPDT      78    65.88    5,138.64  
+015 GUR2NHB  contactor 32A       55    6.62     364.10    
+016 KZCKTQJ  pump seal kit       379   42.17    15,982.43 
+017 8N3SREK  contactor 32A       47    81.83    3,846.01  
+018 T25ZCRE  relay 24V DPDT      241   62.65    15,098.65 
+019 VUVBPNP  hex bolt M8         142   17.33    2,460.86  
+020 BQN883K  valve seat brass    130   86.89    11,295.70 
+021 VXZJ7VF  hex bolt M8         352   53.56    18,853.12 
+022 UGQ5JB9  pump seal kit       353   20.10    7,095.30  
+023 L9B72A8  o-ring 22x2         72    91.19    6,565.68  
+024 CWF3JK9  relay 24V DPDT      62    58.44    3,623.28  
+025 YANJZ8L  bearing 6203ZZ      119   76.20    9,067.80  
+026 2ABHHYP  filter cartridge    215   54.23    11,659.45 
+027 PX82BDZ  valve seat brass    228   2.83     645.24    
+028 6USXGKC  cable gland M20     399   71.51    28,532.49 
+029 QJTCVA2  pump seal kit       194   28.70    5,567.80  
+030 C2637JQ  sensor NTC 10k      12    80.49    965.88    
+031 AS59CKF  limit switch        254   68.58    17,419.32 
+032 C6W7QA4  pump seal kit       19    61.28    1,164.32  
+033 2W6QHF2  limit switch        304   25.96    7,891.84  
+034 72FUTST  valve seat brass    369   64.33    23,737.77 
+035 ER9PKM8  contactor 32A       246   90.85    22,349.10 
+036 HP4UGKC  terminal block 12P  350   26.38    9,233.00  
+037 HN7SF3T  valve seat brass    336   76.81    25,808.16 
+038 5NXVTN6  copper lug 16mm     205   75.29    15,434.45 
+039 PDUD9DD  sensor NTC 10k      93    35.83    3,332.19  
+040 BF63RXM  terminal block 12P  20    46.00    920.00    
+041 K6772WJ  pump seal kit       143   37.76    5,399.68  
+042 9VYGGST  contactor 32A       86    57.91    4,980.26  
+043 429HZTP  pump seal kit       3     94.98    284.94    
+044 S3PNE8P  sensor NTC 10k      227   49.80    11,304.60 
+045 GXJZ59X  fuse 6.3A slow      73    20.17    1,472.41  
+             TOTAL               8690           451,331.07

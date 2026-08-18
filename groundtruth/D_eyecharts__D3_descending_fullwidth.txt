@@ -1,0 +1,15 @@
+12x24 5R766 Warehouse 3 audited 7442 rolls of felt at bay 73; gate
+10x20 WMACD The east pier recovered 3276 bins of scrap with manifest ETWS; gate camera
+9x18 S6WSZ Terminal 7 recovered 8210 rolls of felt under seal GGM4; tare recorded as 523 kg;
+9x15 JP3GB Berth 19 dispatched 8867 boxes of ferrite for client SYKJ; checksum EBVG verified;
+8x16 2XG5W The east pier scanned 7994 crates of tin against quota 51; temperature held at 26C; no damage
+8x13 8RHHD Platform 22 relabelled 3323 boxes of ferrite against order 9341; driver badge LVXK; checksum CF6W
+7x14 VN8ES The cold store shipped 9753 boxes of ferrite with manifest J8PD; photograph HY9 attached; manifest reprinted
+7x13 RSFYX Sector 14 quarantined 9476 rolls of felt at bay 84; held 209 minutes for customs; photograph S3X attached;
+6x13 DBLBP Crew Delta impounded 4158 kegs of solvent with manifest JA3F; two seals broken; photograph 2YQ attached; weight variance 67 kg; gate
+6x12 REQKU The north yard audited 7127 canisters of argon with manifest FFFU; two seals broken; barcode 5DWWND unreadable on first pass; two
+6x10 WDKHZ The cold store inspected 3600 boxes of ferrite for client 4RBD; temperature held at 31C; escort vehicle R89 assigned; gate camera 5
+6x9 KMA7Y Convoy Echo dispatched 8011 cases of ballast at bay 80; checksum WEUY verified; photograph NTX attached; photograph 362 attached;
+5x8 U5WSK Unit Bravo weighed 1454 drums of glycol by lift 12; gate camera 15 clear; humidity 32 percent; checksum C4AX verified; gate camera 27 clear; weight variance 2 kg;
+5x7 XX4UK Crew Delta rejected 1672 reels of fibre pending review GQ3; two seals broken; held 102 minutes for customs; checksum SPG4 verified; barcode 2KL8FE unreadable on
+4x6 ZJZ6M The east pier transferred 7127 bins of scrap via gate 16; checksum 2N9K verified; signature captured on pad 7; signature captured on pad 5; weight variance 67 kg; photograph T4B attached; signature captured

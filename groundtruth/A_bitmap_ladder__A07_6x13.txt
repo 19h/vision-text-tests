@@ -1,0 +1,68 @@
+0001 B69J7 Platform 22 impounded 9766 crates of tin against order 5370; checksum 7UND verified; checksum 9ED9 verified; escort vehicle MCZ
+0002 JLQBQ Team Juliet logged 922 trays of quartz against quota 32; held 176 minutes for customs; no damage reported; barcode 6FXCD8 unreadable on
+0003 G6HHX The cold store invoiced 4069 crates of tin by lift 8; escort vehicle VSH assigned; temperature held at 13C; manifest reprinted twice;
+0004 T92YZ Crew Delta scanned 3846 canisters of argon against order 7567; ZEPHYR; escort vehicle P3B assigned; temperature held at 1C; humidity 66
+0005 QESNJ Team Juliet relabelled 7318 pallets of resin for client F32B; tare recorded as 430 kg; escort vehicle GSL assigned; held 65 minutes for
+0006 FHBM8 The north yard relabelled 6761 trays of quartz for client KKZ2; humidity 62 percent; driver badge PU7S; two seals broken; gate camera
+0007 Z4FZE Depot Kilo weighed 1276 bales of flax on route 6; temperature held at 19C; two seals broken; photograph 8CY attached; two seals broken;
+0008 8MV95 Unit Bravo rejected 2903 bales of flax via gate 3; photograph R76 attached; tare recorded as 335 kg; photograph ULY attached; tare
+0009 4WYWL The cold store inspected 3076 bales of flax via gate 40; tare recorded as 64 kg; tare recorded as 411 kg; held 202 minutes for customs;
+0010 2CQNG Substation Foxtrot weighed 8055 bales of flax against order 9836; humidity 21 percent; escort vehicle 97B assigned; photograph KHY
+0011 UPPRQ The north yard transferred 2875 drums of glycol against order 4627; no damage reported; photograph L5A attached; temperature held at
+0012 B6V5F Unit Bravo invoiced 4729 kegs of solvent at bay 48; photograph XC6 attached; checksum 9WC9 verified; temperature held at 31C; signature
+0013 R76J4 Warehouse 3 dispatched 2069 crates of tin for client VA22; escort vehicle MB5 assigned; barcode QYFURF unreadable on first pass; no
+0014 XHUS4 Substation Foxtrot logged 3593 drums of glycol on route 9; temperature held at 30C; photograph LLS attached; barcode B8NE6T unreadable
+0015 GF5RP Platform 22 recovered 1584 drums of glycol pending review CW9; barcode JPQ7BR unreadable on first pass; escort vehicle KAZ assigned;
+0016 NABLH Berth 19 scanned 3727 boxes of ferrite on route 5; checksum HHZE verified; tare recorded as 601 kg; photograph 67T attached; held 224
+0017 B2B9C The north yard impounded 1266 kegs of solvent by lift 6; signature captured on pad 3; escort vehicle 3QZ assigned; weight variance 22
+0018 5ETMN Terminal 7 recovered 4162 trays of quartz under seal ZUTD; tare recorded as 571 kg; no damage reported; checksum WSAA verified; driver
+0019 RAT75 The east pier logged 2794 drums of glycol under seal 7M5V; humidity 72 percent; weight variance 55 kg; signature captured on pad 1;
+0020 TQ6PD Convoy Echo rejected 9392 crates of tin against quota 58; checksum 9FFK verified; tare recorded as 725 kg; temperature held at 16C;
+0021 3NYP4 Berth 19 invoiced 3015 tubs of pitch against quota 35; checksum 54E3 verified; photograph QB6 attached; barcode D6YZNF unreadable on
+0022 4TW6Q Team Juliet rejected 8908 bins of scrap against quota 42; weight variance 81 kg; checksum TXQQ verified; gate camera 28 clear; tare
+0023 WJHRG Line Charlie inspected 1707 bales of flax under seal 2YQN; gate camera 18 clear; driver badge ZRZZ; manifest reprinted twice; no damage
+0024 ACYP9 Warehouse 3 weighed 3399 bins of scrap for client NAC6; temperature held at -8C; signature captured on pad 1; checksum 8L55 verified;
+0025 Q6SYP The north yard scanned 5060 tubs of pitch at bay 89; held 105 minutes for customs; barcode CZ3UP7 unreadable on first pass; no damage
+0026 XYTJB The cold store scanned 3000 canisters of argon against order 7140; manifest reprinted twice; humidity 58 percent; checksum T3TQ
+0027 RFQAP Team Juliet invoiced 5496 drums of glycol with manifest CP7C; gate camera 29 clear; gate camera 19 clear; signature captured on pad 2;
+0028 E7SXZ Warehouse 3 weighed 2542 bales of flax pending review XRA; manifest reprinted twice; photograph ZLM attached; escort vehicle SB4
+0029 RWGPH Terminal 7 shipped 8858 pallets of resin at bay 35; gate camera 17 clear; tare recorded as 715 kg; two seals broken; driver badge HQE8;
+0030 SZ3GS Crew Delta rerouted 7676 sacks of silica via gate 36; weight variance 87 kg; humidity 10 percent; gate camera 2 clear; checksum 3VYH
+0031 ARBS6 The north yard transferred 700 reels of fibre for client CZ3U; escort vehicle KKR assigned; driver badge HW6L; held 118 minutes for
+0032 98Y4Q Node 41 weighed 4657 sacks of silica against quota 51; photograph HUH attached; barcode WSN8FQ unreadable on first pass; signature
+0033 FJBBT Berth 19 logged 2531 tubs of pitch by lift 9; no damage reported; photograph JJ8 attached; two seals broken; two seals broken; no
+0034 WRCYZ The north yard impounded 8969 boxes of ferrite for client 3A7N; photograph XCL attached; humidity 37 percent; driver badge L526; escort
+0035 SA3N9 !! PASSPHRASE VIOLET-FALCON-8820 !! Berth 19 inspected 2748 bales of flax with manifest 2HKA; gate camera 26 clear; tare recorded as 166 
+0036 CE5D7 Crew Delta logged 6155 bins of scrap pending review YKQ; gate camera 17 clear; manifest reprinted twice; temperature held at 5C; held
+0037 FNDRV Terminal 7 inspected 8225 boxes of ferrite pending review KY4; two seals broken; humidity 30 percent; escort vehicle D4B assigned; gate
+0038 25BS6 Sector 14 inspected 1134 cases of ballast by lift 3; two seals broken; photograph KAP attached; temperature held at 32C; checksum RE92
+0039 BGHR7 Sector 14 weighed 9132 canisters of argon pending review GLS; photograph X4W attached; held 105 minutes for customs; humidity 69
+0040 6BDUF Team Juliet quarantined 3735 boxes of ferrite for client 9NAB; escort vehicle CJN assigned; temperature held at 3C; checksum 6WEZ
+0041 PWEH3 Terminal 7 inspected 212 rolls of felt at bay 79; held 81 minutes for customs; escort vehicle CGQ assigned; escort vehicle YRM
+0042 NCNES Team Juliet relabelled 5381 cases of ballast via gate 10; weight variance 90 kg; signature captured on pad 9; no damage reported;
+0043 EFLVH Warehouse 3 weighed 3798 sacks of silica by lift 12; driver badge M6JT; driver badge J5KD; photograph RJ6 attached; signature captured
+0044 REZ64 Terminal 7 audited 3071 trays of quartz for client G4BR; escort vehicle ZPF assigned; driver badge C967; gate camera 15 clear;
+0045 DZBEF Line Charlie inspected 1087 reels of fibre for client A3P5; gate camera 27 clear; barcode Q7YUPT unreadable on first pass; escort
+0046 FJX6W Line Charlie inspected 3560 sacks of silica against quota 64; checksum TUX4 verified; photograph XJB attached; checksum 43GU verified;
+0047 R4YDR The relay station inspected 2996 drums of glycol pending review S4E; gate camera 11 clear; photograph RYS attached; held 141 minutes
+0048 RMWKC Convoy Echo impounded 3858 crates of tin against quota 29; temperature held at 13C; weight variance 33 kg; held 186 minutes for
+0049 7TYLE Berth 19 weighed 2062 crates of tin at bay 91; barcode G5FM9Y unreadable on first pass; tare recorded as 449 kg; escort vehicle Z3T
+0050 89SUQ Depot Kilo audited 5866 cases of ballast for client Q2KE; held 227 minutes for customs; two seals broken; no damage reported; signature
+0051 UKXWA Substation Foxtrot invoiced 3574 kegs of solvent on route 8; driver badge CYLF; humidity 62 percent; escort vehicle 8RB assigned;
+0052 9AQDF Warehouse 3 scanned 8109 canisters of argon on route 5; weight variance 74 kg; two seals broken; temperature held at 13C; tare recorded
+0053 N99JG Terminal 7 transferred 3914 cases of ballast at bay 52; driver badge QUNF; tare recorded as 327 kg; temperature held at -6C; photograph
+0054 7C56A The relay station scanned 6516 kegs of solvent via gate 7; signature captured on pad 8; weight variance 23 kg; checksum SMR3 verified;
+0055 CPYVA The north yard rejected 2010 trays of quartz via gate 37; held 30 minutes for customs; photograph EBG attached; gate camera 17 clear;
+0056 L98N5 Berth 19 inspected 6586 spools of copper for client U5XS; temperature held at 16C; signature captured on pad 4; gate camera 25 clear;
+0057 8X47C Team Juliet quarantined 6719 bins of scrap at bay 2; manifest reprinted twice; escort vehicle 9SA assigned; manifest reprinted twice;
+0058 Y8KS3 Crew Delta rerouted 6893 tubs of pitch at bay 47; temperature held at 3C; two seals broken; temperature held at 16C; signature captured
+0059 KR7HJ Platform 22 scanned 1817 reels of fibre against order 5889; humidity 79 percent; photograph 8QK attached; tare recorded as 235 kg;
+0060 G5A7K Substation Foxtrot scanned 7251 canisters of argon pending review BT9; ZEPHYR; checksum BEUC verified; humidity 42 percent; driver
+0061 4SAZL Depot Kilo inspected 1571 rolls of felt for client 8E8Q; held 113 minutes for customs; escort vehicle 67N assigned; held 123 minutes
+0062 RBS5X Warehouse 3 dispatched 6511 cases of ballast via gate 5; driver badge PMG8; weight variance 84 kg; escort vehicle XU5 assigned;
+0063 AMWJF The cold store audited 819 pallets of resin on route 5; driver badge MU7G; held 26 minutes for customs; photograph DHY attached; two
+0064 VC5VZ Convoy Echo shipped 7267 rolls of felt with manifest TVWE; held 18 minutes for customs; barcode PHD45D unreadable on first pass; tare
+0065 Z5UXZ Warehouse 3 invoiced 9784 kegs of solvent under seal XDRL; escort vehicle 7BH assigned; temperature held at 11C; no damage reported;
+0066 QAJN2 Depot Kilo audited 7539 boxes of ferrite pending review QJ4; two seals broken; checksum HTJG verified; two seals broken; barcode JHL7WF
+0067 KHRT7 The east pier inspected 4756 boxes of ferrite pending review RYK; no damage reported; signature captured on pad 1; tare recorded as 887
+0068 DQABA Berth 19 relabelled 1510 reels of fibre against order 1096; signature captured on pad 8; held 209 minutes for customs; checksum 5R44

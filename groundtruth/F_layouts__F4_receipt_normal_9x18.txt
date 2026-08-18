@@ -1,0 +1,74 @@
+  BRIGHTON YARD SUPPLY CO
+  1174 DOCK ROAD, UNIT 6
+  TERMINAL 04  REG 12  OP MTM7
+  23/08/2026  14:14:38
+------------------------------------------------
+7x contactor 32A                         112.07
+8x cable gland M20                        32.48
+9x cable gland M20                       163.17
+7x valve seat brass                      347.41
+5x bearing 6203ZZ                        169.40
+8x contactor 32A                          70.96
+8x cable gland M20                       149.92
+3x fuse 6.3A slow                        115.74
+6x o-ring 22x2                           165.72
+8x pump seal kit                         234.16
+3x limit switch                            8.85
+2x terminal block 12P                     59.86
+8x sensor NTC 10k                        276.24
+8x hex bolt M8                           229.28
+1x gasket ring 40                         26.60
+7x gasket ring 40                        166.46
+7x contactor 32A                         263.90
+7x filter cartridge                      193.55
+9x bearing 6203ZZ                        264.60
+6x relay 24V DPDT                        283.38
+5x valve seat brass                      235.75
+3x pump seal kit                          88.74
+2x filter cartridge                       11.84
+3x gasket ring 40                        144.90
+7x bearing 6203ZZ                         81.62
+2x relay 24V DPDT                         95.88
+7x relay 24V DPDT                         84.84
+5x filter cartridge                      113.55
+4x limit switch                           39.16
+5x gasket ring 40                         56.95
+6x relay 24V DPDT                        146.16
+2x hex bolt M8                            49.12
+7x limit switch                           21.28
+3x relay 24V DPDT                        145.35
+3x cable gland M20                        37.53
+8x filter cartridge                      115.04
+2x contactor 32A                          51.38
+5x terminal block 12P                     45.70
+2x limit switch                           40.84
+4x contactor 32A                          48.68
+5x pump seal kit                          23.15
+4x gasket ring 40                        147.84
+9x terminal block 12P                    439.29
+8x gasket ring 40                         90.48
+1x copper lug 16mm                        37.42
+4x bearing 6203ZZ                        137.72
+2x pump seal kit                          81.40
+5x copper lug 16mm                        52.55
+3x gasket ring 40                         31.65
+4x gasket ring 40                         20.48
+8x cable gland M20                       238.24
+3x cable gland M20                        29.04
+6x cable gland M20                        18.54
+1x pump seal kit                          41.97
+3x terminal block 12P                     25.77
+2x terminal block 12P                     12.70
+7x o-ring 22x2                           193.97
+8x contactor 32A                         304.32
+------------------------------------------------
+SUBTOTAL                                6914.59
+TAX 8.25%                                570.45
+TOTAL                                   7485.04
+CARD **** 4417  APPROVED
+AUTH 9DD46D  REF 41997963
+------------------------------------------------
+RETURNS ACCEPTED WITHIN 30 DAYS WITH
+RECEIPT. NO REFUND ON CUT CABLE OR
+SPECIAL ORDER ITEMS. SEE REVERSE FOR
+FULL TERMS.  QUERIES: 0800 114 9930

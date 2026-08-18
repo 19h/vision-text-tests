@@ -1,0 +1,87 @@
+80 runs: 6x13 crock32, spans 8/16/32/51, 20 reps
+  6x13    crock32 span=  8 rep2 exact=False cer=0.125 13s
+  6x13    crock32 span=  8 rep1 exact=True  cer=0.000 16s
+  6x13    crock32 span=  8 rep3 exact=False cer=0.375 19s
+  6x13    crock32 span=  8 rep4 exact=True  cer=0.000 13s
+  6x13    crock32 span=  8 rep6 exact=False cer=0.125 17s
+  6x13    crock32 span=  8 rep7 exact=True  cer=0.000 13s
+  6x13    crock32 span=  8 rep5 exact=False cer=0.125 25s
+  6x13    crock32 span=  8 rep9 exact=True  cer=0.000 14s
+  6x13    crock32 span=  8 rep8 exact=False cer=0.250 18s
+  6x13    crock32 span=  8 rep10 exact=False cer=0.750 19s
+  6x13    crock32 span=  8 rep12 exact=False cer=0.125 12s
+  6x13    crock32 span=  8 rep11 exact=True  cer=0.000 13s
+  6x13    crock32 span=  8 rep13 exact=False cer=0.125 20s
+  6x13    crock32 span=  8 rep14 exact=False cer=0.500 16s
+  6x13    crock32 span=  8 rep15 exact=False cer=0.625 20s
+  6x13    crock32 span=  8 rep16 exact=True  cer=0.000 15s
+  6x13    crock32 span=  8 rep18 exact=True  cer=0.000 15s
+  6x13    crock32 span=  8 rep17 exact=False cer=0.125 21s
+  6x13    crock32 span=  8 rep19 exact=True  cer=0.000 13s
+  6x13    crock32 span=  8 rep20 exact=True  cer=0.000 14s
+  6x13    crock32 span= 16 rep1 exact=True  cer=0.000 17s
+  6x13    crock32 span= 16 rep2 exact=False cer=0.062 16s
+  6x13    crock32 span= 16 rep4 exact=True  cer=0.000 19s
+  6x13    crock32 span= 16 rep5 exact=False cer=0.062 20s
+  6x13    crock32 span= 16 rep7 exact=True  cer=0.000 15s
+  6x13    crock32 span= 16 rep3 exact=False cer=0.375 47s
+  6x13    crock32 span= 16 rep9 exact=True  cer=0.000 14s
+  6x13    crock32 span= 16 rep8 exact=False cer=0.062 20s
+  6x13    crock32 span= 16 rep6 exact=False cer=0.188 42s
+  6x13    crock32 span= 16 rep11 exact=False cer=0.062 14s
+  6x13    crock32 span= 16 rep10 exact=False cer=0.250 18s
+  6x13    crock32 span= 16 rep12 exact=False cer=0.125 15s
+  6x13    crock32 span= 16 rep13 exact=False cer=0.188 16s
+  6x13    crock32 span= 16 rep14 exact=False cer=0.250 19s
+  6x13    crock32 span= 16 rep15 exact=False cer=0.438 20s
+  6x13    crock32 span= 16 rep16 exact=True  cer=0.000 14s
+  6x13    crock32 span= 16 rep17 exact=False cer=0.062 14s
+  6x13    crock32 span= 16 rep18 exact=True  cer=0.000 13s
+  6x13    crock32 span= 16 rep19 exact=True  cer=0.000 15s
+  6x13    crock32 span= 32 rep1 exact=False cer=0.062 18s
+  6x13    crock32 span= 16 rep20 exact=False cer=0.062 20s
+  6x13    crock32 span= 32 rep2 exact=False cer=0.062 17s
+  6x13    crock32 span= 32 rep4 exact=False cer=0.031 23s
+  6x13    crock32 span= 32 rep6 exact=False cer=0.062 22s
+  6x13    crock32 span= 32 rep5 exact=False cer=0.062 50s
+  6x13    crock32 span= 32 rep7 exact=True  cer=0.000 20s
+  6x13    crock32 span= 32 rep3 exact=False cer=0.188 66s
+  6x13    crock32 span= 32 rep9 exact=True  cer=0.000 16s
+  6x13    crock32 span= 32 rep10 exact=False cer=0.219 20s
+  6x13    crock32 span= 32 rep11 exact=False cer=0.031 16s
+  6x13    crock32 span= 32 rep12 exact=False cer=0.031 18s
+  6x13    crock32 span= 32 rep8 exact=False cer=0.125 47s
+  6x13    crock32 span= 32 rep13 exact=False cer=0.094 20s
+  6x13    crock32 span= 32 rep14 exact=False cer=0.219 23s
+  6x13    crock32 span= 32 rep16 exact=True  cer=0.000 19s
+  6x13    crock32 span= 32 rep15 exact=False cer=0.219 35s
+  6x13    crock32 span= 32 rep17 exact=False cer=0.031 21s
+  6x13    crock32 span= 32 rep18 exact=False cer=0.031 19s
+  6x13    crock32 span= 32 rep19 exact=True  cer=0.000 19s
+  6x13    crock32 span= 32 rep20 exact=False cer=0.031 16s
+  6x13    crock32 span= 51 rep3 exact=False cer=0.941 66s
+  6x13    crock32 span= 51 rep2 exact=False cer=0.980 104s
+  6x13    crock32 span= 51 rep1 exact=False cer=0.039 112s
+  6x13    crock32 span= 51 rep4 exact=False cer=0.961 67s
+  6x13    crock32 span= 51 rep5 exact=False cer=0.902 76s
+  6x13    crock32 span= 51 rep6 exact=False cer=0.902 77s
+  6x13    crock32 span= 51 rep7 exact=False cer=0.882 67s
+  6x13    crock32 span= 51 rep8 exact=False cer=0.137 73s
+  6x13    crock32 span= 51 rep10 exact=False cer=0.941 59s
+  6x13    crock32 span= 51 rep11 exact=False cer=0.020 18s
+  6x13    crock32 span= 51 rep9 exact=False cer=0.059 93s
+  6x13    crock32 span= 51 rep14 exact=False cer=0.961 77s
+  6x13    crock32 span= 51 rep12 exact=False cer=0.961 99s
+  6x13    crock32 span= 51 rep13 exact=False cer=0.922 98s
+  6x13    crock32 span= 51 rep17 exact=False cer=0.765 29s
+  6x13    crock32 span= 51 rep15 exact=False cer=0.961 58s
+  6x13    crock32 span= 51 rep18 exact=False cer=0.902 67s
+  6x13    crock32 span= 51 rep20 exact=False cer=0.059 18s
+  6x13    crock32 span= 51 rep19 exact=False cer=0.961 94s
+  6x13    crock32 span= 51 rep16 exact=False cer=0.961 170s
+
+span  exact   mean CER
+   8  9/20   0.163
+  16  7/20   0.109
+  32  4/20   0.075
+  51  0/20   0.711

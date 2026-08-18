@@ -1,0 +1,108 @@
+ROW SKU      DESCRIPTION         QTY   UNIT     TOTAL     
+001 D5JVKVR  gasket ring 40      306   18.43    5,639.58  
+002 CNVR92N  terminal block 12P  178   44.79    7,972.62  
+003 SNTF26U  contactor 32A       165   85.74    14,147.10 
+004 3LU3KTZ  o-ring 22x2         234   14.79    3,460.86  
+005 GN7UJF6  hex bolt M8         268   2.38     637.84    
+006 FA7WXZ9  o-ring 22x2         363   6.13     2,225.19  
+007 35M8WSZ  pump seal kit       28    37.15    1,040.20  
+008 JWAJGVF  o-ring 22x2         352   42.44    14,938.88 
+009 YTBL64Q  pump seal kit       166   31.44    5,219.04  
+010 K2WFV5M  fuse 6.3A slow      321   4.44     1,425.24  
+011 XKVSED3  hex bolt M8         222   71.92    15,966.24 
+012 VK2Q66R  fuse 6.3A slow      24    81.13    1,947.12  
+013 5TPMKP4  gasket ring 40      97    15.54    1,507.38  
+014 3H58DHP  hex bolt M8         298   64.86    19,328.28 
+015 4XK8JRJ  cable gland M20     110   15.47    1,701.70  
+016 9V8YBZW  limit switch        240   22.53    5,407.20  
+017 2RAFMMU  filter cartridge    390   63.80    24,882.00 
+018 DN3HL68  gasket ring 40      180   74.49    13,408.20 
+019 XSAU7HR  o-ring 22x2         351   15.97    5,605.47  
+020 97Q5JMK  copper lug 16mm     182   33.35    6,069.70  
+021 MRPMKV4  pump seal kit       172   8.01     1,377.72  
+022 QTH2AYP  gasket ring 40      215   67.28    14,465.20 
+023 5MP7BED  hex bolt M8         139   30.74    4,272.86  
+024 X7ELEKH  terminal block 12P  21    54.22    1,138.62  
+025 TAFBH5D  filter cartridge    147   98.29    14,448.63 
+026 Q3RT2WB  contactor 32A       191   11.97    2,286.27  
+027 FX9BFN4  sensor NTC 10k      376   57.87    21,759.12 
+028 W7BTQZU  contactor 32A       4     99.67    398.68    
+029 NWGQ663  gasket ring 40      85    48.17    4,094.45  
+030 RKU6R4P  gasket ring 40      113   85.31    9,640.03  
+031 29PJMWX  o-ring 22x2         371   4.67     1,732.57  
+032 T628QAQ  copper lug 16mm     192   39.28    7,541.76  
+033 G3R7ZRP  copper lug 16mm     172   75.22    12,937.84 
+034 YV3VYDY  copper lug 16mm     35    25.72    900.20    
+035 6AM3DDN  bearing 6203ZZ      345   43.99    15,176.55 
+036 ESWN55K  filter cartridge    39    85.75    3,344.25  
+037 YZRZ78R  o-ring 22x2         3     48.96    146.88    
+038 M8RQY4E  cable gland M20     5     92.75    463.75    
+039 YY8Z6WH  cable gland M20     80    46.54    3,723.20  
+040 VB3VXL8  hex bolt M8         307   83.18    25,536.26 
+041 JXWYPMH  fuse 6.3A slow      79    73.04    5,770.16  
+042 EMJX9KR  sensor NTC 10k      19    93.03    1,767.57  
+043 6G6LYGZ  gasket ring 40      383   84.89    32,512.87 
+044 WKT6A69  cable gland M20     153   10.53    1,611.09  
+045 PJMBHVA  contactor 32A       36    20.83    749.88    
+046 8N5EJGA  filter cartridge    148   10.04    1,485.92  
+047 LYBD9QX  filter cartridge    247   86.39    21,338.33 
+048 VNAQ5GM  gasket ring 40      186   5.49     1,021.14  
+049 868G6XQ  valve seat brass    352   32.74    11,524.48 
+050 N4ZXA5B  hex bolt M8         27    10.72    289.44    
+051 ME5MYE7  gasket ring 40      388   45.22    17,545.36 
+052 M8D46V5  valve seat brass    121   8.10     980.10    
+053 Q54S8YK  valve seat brass    216   96.06    20,748.96 
+054 VFCS4VN  sensor NTC 10k      277   26.48    7,334.96  
+055 K7GZPBQ  contactor 32A       374   35.87    13,415.38 
+056 ZCFF9K8  copper lug 16mm     270   44.06    11,896.20 
+057 KFMKAGH  hex bolt M8         247   19.26    4,757.22  
+058 ZWFJRK8  contactor 32A       332   83.59    27,751.88 
+059 ESSCXKH  pump seal kit       124   37.54    4,654.96  
+060 22J8KEZ  copper lug 16mm     16    86.87    1,389.92  
+061 NFXSPTL  hex bolt M8         152   90.55    13,763.60 
+062 5U5L3TA  hex bolt M8         43    32.70    1,406.10  
+063 PRZPUVC  terminal block 12P  282   14.09    3,973.38  
+064 FQN2GYA  cable gland M20     142   5.71     810.82    
+065 9A3NNWA  pump seal kit       49    27.26    1,335.74  
+066 3ZZKWQM  fuse 6.3A slow      10    37.07    370.70    
+067 R7LDFFP  contactor 32A       366   0.61     223.26    
+068 QSWDX5T  filter cartridge    153   45.58    6,973.74  
+069 3W2AFMW  hex bolt M8         215   40.40    8,686.00  
+070 BNUMR65  limit switch        25    40.49    1,012.25  
+071 UH6V3GB  hex bolt M8         291   93.52    27,214.32 
+072 L97TWE5  pump seal kit       393   88.61    34,823.73 
+073 8FKXBH7  gasket ring 40      348   67.16    23,371.68 
+074 AH59NZ8  sensor NTC 10k      52    24.95    1,297.40  
+075 UWSF88P  valve seat brass    346   80.08    27,707.68 
+076 9BSTE8T  bearing 6203ZZ      129   81.19    10,473.51 
+077 FZCTREY  limit switch        265   9.71     2,573.15  
+078 LDENR7E  copper lug 16mm     255   54.66    13,938.30 
+079 K8MNKFQ  o-ring 22x2         159   23.36    3,714.24  
+080 VDTDRJW  contactor 32A       20    99.86    1,997.20  
+081 F48SV5A  o-ring 22x2         116   64.64    7,498.24  
+082 N8ATZGZ  o-ring 22x2         251   93.68    23,513.68 
+083 P3YTYBH  fuse 6.3A slow      274   12.40    3,397.60  
+084 H7QKL4G  bearing 6203ZZ      85    85.04    7,228.40  
+085 WMXD554  gasket ring 40      151   65.67    9,916.17  
+086 KE4P7YR  contactor 32A       303   10.49    3,178.47  
+087 GDUS3BL  gasket ring 40      126   4.60     579.60    
+088 NQ7CAJW  terminal block 12P  221   96.21    21,262.41 
+089 BPERPAG  copper lug 16mm     34    15.16    515.44    
+090 L9X2ARS  terminal block 12P  350   28.40    9,940.00  
+091 U82GWT7  valve seat brass    68    22.68    1,542.24  
+092 TC8ZQRY  relay 24V DPDT      136   1.42     193.12    
+093 QE9XADU  o-ring 22x2         117   27.02    3,161.34  
+094 R5UG3LJ  filter cartridge    362   42.50    15,385.00 
+095 5NYUXT3  filter cartridge    201   36.38    7,312.38  
+096 NEQJNE2  relay 24V DPDT      36    59.79    2,152.44  
+097 UR94KGJ  cable gland M20     191   20.07    3,833.37  
+098 5G99XBN  filter cartridge    305   35.11    10,708.55 
+099 FZRYCBT  pump seal kit       371   84.87    31,486.77 
+100 8PJMU2Q  gasket ring 40      396   45.02    17,827.92 
+101 8JRGY4D  relay 24V DPDT      9     50.14    451.26    
+102 2SDQWRK  copper lug 16mm     347   50.25    17,436.75 
+103 ZV2JLGC  filter cartridge    339   75.46    25,580.94 
+104 DGLG8Y4  copper lug 16mm     377   14.40    5,428.80  
+105 SSFP2ZE  pump seal kit       158   43.34    6,847.72  
+106 ZLETML5  terminal block 12P  171   90.60    15,492.60 
+             TOTAL               20672          923,998.51

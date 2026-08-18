@@ -1,0 +1,7 @@
+5 images, model=opus
+   6x13   9.7 ch/tok  legible 0.95  abstain 0/5  conf=low  18s
+    6x9  14.0 ch/tok  legible 0.55  abstain 0/5  conf=low  37s
+   8x16   5.9 ch/tok  legible 0.98  abstain 0/5  conf=medium  22s
+   6x10  12.6 ch/tok  legible 0.70  abstain 0/5  conf=low  45s
+   9x18   4.6 ch/tok  legible 1.00  abstain 0/5  conf=medium  17s
+-> /tmp/testx/vision-text-tests/results_edge_opus.json

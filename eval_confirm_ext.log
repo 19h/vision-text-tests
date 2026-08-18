@@ -1,0 +1,49 @@
+{
+ "version": "confirm-v1",
+ "model": "opus",
+ "reps": 2,
+ "cells": [
+  "clR5x10",
+  "6x13",
+  "8x16"
+ ],
+ "payloads": [
+  "prose",
+  "alnum_easy",
+  "hex",
+  "b64"
+ ],
+ "line_chars": 56,
+ "prompt_decode_sha": "7ec0b7be25263cad",
+ "prompt_bind_sha": "3610002e12ac3ba4",
+ "harness_sha": "c0344cb73d7851f6",
+ "cli_version": "2.1.234 (Claude Code)",
+ "tools_allowed": "Read",
+ "n_runs": 24
+}
+  9x18     b64        rep1 decode exact=False cer=0.071 disp=None 13s
+  9x18     b64        rep1 bind   exact=False cer=0.036 disp=0 18s
+  9x18     hex        rep1 decode exact=False cer=0.036 disp=None 14s
+  9x18     hex        rep1 bind   exact=False cer=0.036 disp=0 31s
+  9x18     hex        rep2 decode exact=False cer=0.036 disp=None 12s
+  9x18     hex        rep2 bind   exact=True  cer=0.000 disp=0 44s
+  9x18     b64        rep2 decode exact=False cer=0.125 disp=None 8s
+  9x18     b64        rep2 bind   exact=False cer=0.946 disp=None 23s
+  10x20    hex        rep1 decode exact=False cer=0.036 disp=None 23s
+  10x20    hex        rep1 bind   exact=False cer=0.036 disp=0 19s
+  10x20    hex        rep2 decode exact=False cer=0.036 disp=None 17s
+  10x20    hex        rep2 bind   exact=False cer=0.036 disp=0 18s
+  12x24    hex        rep1 decode exact=True  cer=0.000 disp=None 14s
+  12x24    hex        rep1 bind   exact=False cer=0.036 disp=0 13s
+  10x20    b64        rep2 decode exact=False cer=0.036 disp=None 11s
+  10x20    b64        rep2 bind   exact=False cer=0.018 disp=0 21s
+  10x20    b64        rep1 decode exact=False cer=0.071 disp=None 18s
+  10x20    b64        rep1 bind   exact=False cer=0.929 disp=None 41s
+  12x24    b64        rep1 decode exact=False cer=0.036 disp=None 14s
+  12x24    b64        rep1 bind   exact=False cer=0.018 disp=0 15s
+  12x24    hex        rep2 decode exact=False cer=0.036 disp=None 15s
+  12x24    hex        rep2 bind   exact=False cer=0.036 disp=0 16s
+  12x24    b64        rep2 decode exact=False cer=0.036 disp=None 16s
+  12x24    b64        rep2 bind   exact=False cer=0.982 disp=None 29s
+
+-> results_confirm-v1-ext_opus.json
