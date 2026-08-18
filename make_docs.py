@@ -50,7 +50,7 @@ Two separate questions, with very different answers:
 | Pixels per image token | **784** (28 x 28), confirmed by billing deltas |
 | Largest un-downscaled square | **1932 x 1932** (69 x 69 = 4,761 patches) |
 | Prose capacity, one image | **74,498 chars** at 5x10, 15.7 chars/token |
-| Best exact-recovery result | **20/20** on a 16-char hex field (95% LB 0.861) |
+| Best observed field | **20/20** on a delimited 64-bit hex field (candidate, post-selection) |
 | Exact recovery of a 56-char record | **0/18** in the base matrix; 1/30 including larger cells |
 | Record binding by row number | **broken** - 0/6 for every high-entropy payload |
 
@@ -203,11 +203,34 @@ if span:
 
 # ---- delimited
 if delim:
+    def rate(b, e, field='value'):
+        rs = [r for r in delim if r['bits'] == b and r['enc'] == e]
+        return sum(r[field] for r in rs), len(rs)
+    def diff_ci(k1, n1, k2, n2):
+        p1, p2 = k1 / n1, k2 / n2
+        se = math.sqrt(p1 * (1 - p1) / n1 + p2 * (1 - p2) / n2)
+        return p1 - p2, (p1 - p2) - 1.96 * se, (p1 - p2) + 1.96 * se
+    def mcnemar(b):
+        h = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'hex'}
+        z = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'b32'}
+        pairs = [(h[k], z[k]) for k in h if k in z]
+        bb = sum(1 for a, c in pairs if a and not c)
+        cc = sum(1 for a, c in pairs if c and not a)
+        try:
+            from scipy.stats import binomtest
+            pv = binomtest(bb, bb + cc, 0.5).pvalue if bb + cc else 1.0
+        except Exception:
+            pv = float('nan')
+        return bb, cc, pv, len(pairs)
+    paired = not os.path.exists(os.path.join(ROOT, 'results_delim_UNPAIRED_6x13_opus.json')) or \
+             os.path.exists(os.path.join(ROOT, 'results_delim_6x13_opus.json'))
     w("", "### Delimited, equal-information fields, n=20 (`delim_probe.py`)", "",
-      "The comparison above is confounded: 32 hex characters carry 128 bits, 32 base32",
-      "characters carry 160, and scoring was literal. This one encodes the *same* random values",
-      "in both alphabets, puts the field in visible brackets so nothing has to be counted, and",
-      "scores decoded **value** equality.", "",
+      "The screening comparison above is confounded: 32 hex characters carry 128 bits, 32 base32",
+      "characters carry 160, and scoring was literal. This one holds information constant, puts",
+      "the field in visible brackets so nothing has to be counted, and scores decoded **value**",
+      "equality (case-folding, separator removal and Crockford ambiguity mappings are part of the",
+      "decoder, so they are not a grading loophole - but they must then be part of the protocol",
+      "specification).", "",
       "| bits | alphabet | chars | literal | value | rate | 95% LB |", "|---|---|---|---|---|---|---|")
     for b in (64, 128):
         for e in ('hex', 'b32'):
@@ -217,21 +240,73 @@ if delim:
             star = '**' if v == len(rs) else ''
             w(f"| {b} | {e} | {rs[0]['chars']} | {sum(r['literal'] for r in rs)}/{len(rs)} | "
               f"{star}{v}/{len(rs)}{star} | {v/len(rs):.2f} | {lb(v, len(rs)):.3f} |")
-    w("", "At equal information the two alphabets are **statistically indistinguishable**:",
-      "64-bit hex 20/20 vs base32 17/20 (Fisher p = 0.231), 128-bit 11/20 vs 10/20 (p = 1.000).",
-      "An earlier claim that alphabet size dominates confusion-resistant design, on a 15/20 vs",
-      "4/20 gap, was an artifact of unequal information and literal scoring. Retracted.", "",
-      "**Best operating point measured anywhere here:** a 16-character hex field (64 bits) inside",
-      "visible delimiters at 6x13 - 20/20, one-sided 95% LB 0.861, at 10.1 chars/token gross.",
-      "Enough entropy for a record handle.", "",
-      "### Grouping interacts with length", "",
+    w("", "**No encoding advantage was detected - which is not the same as equivalence.** The",
+      "difference in value-correct rate, with 95% intervals:", "")
+    w("| bits | hex - base32 | 95% CI | McNemar (discordant pairs) |", "|---|---|---|---|")
+    for b in (64, 128):
+        k1, n1 = rate(b, 'hex'); k2, n2 = rate(b, 'b32')
+        d0, lo, hi = diff_ci(k1, n1, k2, n2)
+        bb, cc, pv, npair = mcnemar(b)
+        w(f"| {b} | {d0:+.2f} | [{lo:+.2f}, {hi:+.2f}] | {bb} vs {cc}, p = {pv:.3f} |")
+    w("", "Those intervals are wide enough to contain a materially better hex *and* a modestly",
+      "better base32. Establishing equivalence would need a pre-declared margin (say d = 0.10)",
+      "and an interval falling entirely inside [-d, +d]; n=20 cannot do that. The earlier wording",
+      "here, 'statistically indistinguishable', overstated a null result and is corrected.", "",
+      "**Instrument defect, now fixed.** The first version of this probe put the encoding name in",
+      "the RNG seed, so hex and base32 encoded *different* random values - the comparison was",
+      "unpaired, and an earlier version of this README wrongly claimed the same values were used.",
+      "The seed no longer includes the encoding, so both alphabets encode identical bitstrings and",
+      "McNemar applies. The unpaired run is kept as `results_delim_UNPAIRED_6x13_opus.json`.", "",
+      "**Between-run variation is large at n=20.** The same 128-bit hex condition scored 11/20 in",
+      "the unpaired run and 16/20 in the paired one - a 0.25 swing in the point estimate (Fisher",
+      "p = 0.19 between the two runs, so not a detected difference, but a reminder that a single",
+      "n=20 cell is not a precise measurement). The 64-bit base32 cell moved 17/20 to 19/20 the",
+      "same way. Only the 64-bit hex cell was stable at 20/20 across both.", "",
+      "Pairing also shows the two encodings mostly succeed and fail on the *same underlying*",
+      "values: only 1 discordant pair at 64 bits and 5 at 128. Item difficulty appears driven by",
+      "the value and its rendering rather than by the alphabet.", "",
+      "### Information-normalised throughput", "",
+      "Raw success rate is the wrong objective: base32 carries the same information in fewer",
+      "characters, so the comparison should be successfully decoded **bits** per image token,",
+      "`rho_chars x (B/L) x P_value` at `rho_chars = 10.1`:", "",
+      "| payload | chars | P(value) | successful bits/image-token |", "|---|---|---|---|")
+    for b in (64, 128):
+        for e in ('hex', 'b32'):
+            k, n = rate(b, e)
+            rs = [r for r in delim if r['bits'] == b and r['enc'] == e]
+            if not rs: continue
+            L = rs[0]['chars']
+            w(f"| {b}-bit {e} | {L} | {k/n:.2f} | **{10.1 * (b / L) * (k / n):.1f}** |")
+    w("", "On point estimates base32's shorter representation offsets its lower first-pass rate, so",
+      "the alphabet question is open rather than settled in hex's favour. These figures exclude",
+      "delimiters, record separators, page labels, checksums, retries and binding failures.", "",
+      "### The best observed field is a candidate, not a guarantee", "",
+      "A visibly delimited 16-character hex field (64 bits) at 6x13 returned 20/20 value-correct.",
+      "Pointwise that is a one-sided 95% lower bound of 0.861 - but it is the best of four",
+      "delimited conditions, selected after a long adaptive exploration of cells, layouts,",
+      "alphabets and span lengths. A four-cell Bonferroni adjustment alone would drop the bound to",
+      "about 0.803, and the wider selection history is not repairable by any adjustment. The",
+      "defensible statement is **best observed candidate**, pending one fresh held-out run of the",
+      "now-frozen design. On successfully decoded bits per image token the 13-character base32",
+      "field actually leads it (47.2 against 40.4), so 'best' depends on which objective is being",
+      "optimised - exact-field rate or information throughput.", "",
+      "It is also a *raw* 64-bit value, not a checksummed handle. A handle must spend some of",
+      "those bits on validation - for example a 32-bit record index plus a 32-bit keyed tag inside",
+      "the same 16-character span - and a structured codeword has a different symbol distribution",
+      "from a uniform random one, so it needs measuring in its own right.", "",
+      "### Grouping and delimiting interact with length", "",
       "| field | grouped payload, counted span | contiguous payload, delimited |",
       "|---|---|---|", "| 16 chars | 16/20 | **20/20** |", "| 32 chars | 15/20 | **11/20** |", "",
       "Removing the counting burden helped at 16 characters and hurt at 32, so 15/20 was not a",
-      "'floor' for delimited designs as previously claimed. The comparison changes two things at",
-      "once (layout and task), so the honest reading is that long contiguous strings degrade",
-      "faster than grouped ones - a reason to render handles in groups, not a clean measurement",
-      "of either factor.")
+      "'floor' for delimited designs. Two variables changed together (grouping vs contiguity, and",
+      "counted vs delimited), so no separate effect is identified - an earlier claim here that",
+      "visible grouping stabilises the per-symbol rate is unsupported and withdrawn. The opposite",
+      "directions at 16 and 32 characters also rule out one constant per-character success",
+      "probability across layouts. The minimum causal experiment is a paired 2x2:", "",
+      "    {grouped, contiguous} x {counted, delimited},  at 16 and 32 chars,",
+      "    identical underlying values and identical image positions", "",
+      "which separates grouping benefit, delimiter benefit, counting cost, and their interaction",
+      "with length.", "")
 
 # ─────────────────────────────────────────────────────────────── error channel
 if span.get('results_span_6x13_hex_opus.json'):
@@ -286,12 +361,31 @@ w("", "---", "", "## 5. Binding is the dominant failure", "",
   "legibility 0.93-0.97 and lookup accuracy 0-25%. Fewer rows did not help.", "",
   "Hierarchical addressing - page ID, block ID every 8-16 records, short record handle, with a",
   "textual manifest outside the bitmap - is **untested** and is the largest open item here.", "",
+  "### A checksum does not fix this", "",
+  "Two failure classes look identical from outside and only one is detectable:", "",
+  "| class | what happens | detectable by checksum |",
+  "|---|---|---|",
+  "| lexical corruption | right record selected, handle misread: `H_i -> H_hat != H_i` | **yes** |",
+  "| provenance corruption | wrong record selected, its *valid* handle read correctly: `R_j -> H_j` | **no** |", "",
+  "The second passes validation because `H_j` is a well-formed codeword for a real record. So a",
+  "validation tag solves transcription failure and does nothing for binding failure, which is",
+  "the one the bind probe actually found. Any production path needs semantic or structural",
+  "reconciliation after the canonical fetch - confirming the retrieved record is the object that",
+  "was asked for - not just a passing checksum.", "",
   "---", "", "## 6. Density taxonomy", "",
   "| quantity | 6x13 value | meaning |", "|---|---|---|",
   "| `rho_gross` | 10.1 | characters physically rendered per image token |",
   "| `rho_symbol` | ~10.0 | expected *correct* symbols per image token (CER 0.008) |",
   "| `rho_anchored` | ~7.6 | all-or-nothing record yield at the 32-char success rate |",
+  "| `rho_bits` | ~40-42 | successfully decoded *bits* per image token, short fields |",
   "| `rho_operational` | **unknown** | includes binding, checksum rejection, retries, fetch |", "",
+  "The end-to-end quantity is bits of *canonical* information resolved per visual token:", "",
+  "    rho_resolved = rho_bits x P(correct record bound)",
+  "                            x P(validation accepts only when it should)",
+  "                            x P(canonical fetch returns the right record)", "",
+  "Only the first factor is measured. `P(false accept)` - a corrupted code validating as a",
+  "different real record - is not measured at all, and is the number that decides whether the",
+  "channel is safe rather than merely dense.", "",
   "`rho_anchored` assumes one correctly anchored record, zero utility for partial reads, and no",
   "cost for retries or canonical fetch. It is a throughput proxy, not a channel capacity. An",
   "earlier version of this file called it `rho_operational`; the span probe supplied the anchor,",
@@ -403,9 +497,14 @@ w("", "---", "", "## 11. Files", "",
   "   contributions are unmeasured.",
   "4. **Short fields at larger cells.** The n=20 screen ran only at 6x13. 9x18 and 12x24 may",
   "   support longer exact fields; the whole-record CER result does not settle it.",
-  "5. **Error-corrected handles.** Measure `P(false accept)` - a corrupted handle resolving to a",
-  "   different valid record - separately from first-pass failure.",
-  "6. **Other endpoints.** Every geometry probe ran on the Sonnet CLI path.")
+  "5. **Error-corrected handles.** Test a structured codeword - 32-bit record index plus 32-bit",
+  "   keyed validation tag in the same 16-character span - and measure `P(false accept)`",
+  "   separately from first-pass failure. A structured codeword's symbol distribution differs",
+  "   from a uniform random one, so the 20/20 result does not transfer to it untested.",
+  "6. **Equivalence, not just non-significance.** Declare a margin (d = 0.10) and power the",
+  "   hex/base32 comparison to fit the difference interval inside it. n=20 cannot.",
+  "7. **The 2x2 layout experiment.** Grouping x delimiting at 16 and 32 characters, paired.",
+  "8. **Other endpoints.** Every geometry probe ran on the Sonnet CLI path.")
 
 # ─────────────────────────────────────────────────────────────── write
 readme = '\n'.join(S) + '\n'

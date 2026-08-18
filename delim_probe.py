@@ -37,7 +37,9 @@ def dec_b32(s):
     return v
 
 def render(cell, cw, lh, enc, bits, seed):
-    rng = random.Random(f'delim|{cell}|{enc}|{bits}|{seed}')
+    # seed must NOT include `enc`: hex and base32 must encode the SAME bitstrings
+    # so the comparison is paired and McNemar applies.
+    rng = random.Random(f'delim|{cell}|{bits}|{seed}')
     f = bitmap(cell)
     w = 336 if cw == 6 else 448 if cw == 8 else 504
     h = min(1456, (28 * lh // math.gcd(28, lh)) * max(1, round(112 * lh / (28 * lh // math.gcd(28, lh)))))

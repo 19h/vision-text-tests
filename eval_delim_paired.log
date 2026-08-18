@@ -1,0 +1,87 @@
+80 runs: 6x13, equal-information delimited fields
+  hex    128b/32ch rep2   literal=False value=False 11s
+  hex    128b/32ch rep3   literal=True  value=True  13s
+  hex    128b/32ch rep1   literal=True  value=True  13s
+  hex    128b/32ch rep6   literal=True  value=True  12s
+  hex    128b/32ch rep4   literal=True  value=True  15s
+  hex    128b/32ch rep5   literal=True  value=True  13s
+  hex    128b/32ch rep8   literal=True  value=True  12s
+  hex    128b/32ch rep7   literal=True  value=True  17s
+  hex    128b/32ch rep10  literal=True  value=True  13s
+  hex    128b/32ch rep11  literal=False value=False 13s
+  hex    128b/32ch rep12  literal=True  value=True  12s
+  hex    128b/32ch rep9   literal=False value=False 39s
+  hex    128b/32ch rep13  literal=True  value=True  14s
+  hex    128b/32ch rep14  literal=False value=False 14s
+  hex    128b/32ch rep15  literal=True  value=True  12s
+  hex    128b/32ch rep16  literal=True  value=True  12s
+  hex    128b/32ch rep17  literal=True  value=True  13s
+  hex    128b/32ch rep18  literal=True  value=True  16s
+  hex    128b/32ch rep19  literal=True  value=True  13s
+  hex    128b/32ch rep20  literal=True  value=True  13s
+  b32    128b/26ch rep1   literal=True  value=True  13s
+  b32    128b/26ch rep2   literal=False value=False 20s
+  b32    128b/26ch rep3   literal=True  value=True  14s
+  b32    128b/26ch rep4   literal=True  value=True  13s
+  b32    128b/26ch rep5   literal=False value=True  12s
+  b32    128b/26ch rep7   literal=True  value=True  10s
+  b32    128b/26ch rep6   literal=False value=False 20s
+  b32    128b/26ch rep8   literal=True  value=True  17s
+  b32    128b/26ch rep9   literal=True  value=True  14s
+  b32    128b/26ch rep10  literal=False value=True  16s
+  b32    128b/26ch rep11  literal=False value=False 13s
+  b32    128b/26ch rep12  literal=True  value=True  13s
+  b32    128b/26ch rep14  literal=True  value=True  13s
+  b32    128b/26ch rep15  literal=True  value=True  12s
+  b32    128b/26ch rep13  literal=True  value=True  16s
+  b32    128b/26ch rep16  literal=False value=False 13s
+  b32    128b/26ch rep18  literal=True  value=True  13s
+  b32    128b/26ch rep17  literal=True  value=True  13s
+  hex     64b/16ch rep1   literal=True  value=True  9s
+  b32    128b/26ch rep20  literal=False value=False 15s
+  b32    128b/26ch rep19  literal=False value=True  16s
+  hex     64b/16ch rep2   literal=True  value=True  12s
+  hex     64b/16ch rep3   literal=True  value=True  11s
+  hex     64b/16ch rep4   literal=True  value=True  11s
+  hex     64b/16ch rep5   literal=True  value=True  13s
+  hex     64b/16ch rep6   literal=True  value=True  12s
+  hex     64b/16ch rep7   literal=True  value=True  14s
+  hex     64b/16ch rep8   literal=True  value=True  11s
+  hex     64b/16ch rep10  literal=True  value=True  9s
+  hex     64b/16ch rep9   literal=True  value=True  12s
+  hex     64b/16ch rep11  literal=True  value=True  13s
+  hex     64b/16ch rep13  literal=True  value=True  12s
+  hex     64b/16ch rep12  literal=True  value=True  15s
+  hex     64b/16ch rep14  literal=True  value=True  11s
+  hex     64b/16ch rep15  literal=True  value=True  10s
+  hex     64b/16ch rep16  literal=True  value=True  10s
+  hex     64b/16ch rep18  literal=True  value=True  9s
+  hex     64b/16ch rep17  literal=True  value=True  11s
+  hex     64b/16ch rep19  literal=True  value=True  11s
+  hex     64b/16ch rep20  literal=True  value=True  11s
+  b32     64b/13ch rep1   literal=True  value=True  12s
+  b32     64b/13ch rep2   literal=True  value=True  12s
+  b32     64b/13ch rep3   literal=True  value=True  12s
+  b32     64b/13ch rep4   literal=True  value=True  12s
+  b32     64b/13ch rep5   literal=False value=True  13s
+  b32     64b/13ch rep6   literal=True  value=True  12s
+  b32     64b/13ch rep7   literal=True  value=True  12s
+  b32     64b/13ch rep8   literal=True  value=True  13s
+  b32     64b/13ch rep9   literal=True  value=True  11s
+  b32     64b/13ch rep10  literal=True  value=True  12s
+  b32     64b/13ch rep11  literal=False value=True  12s
+  b32     64b/13ch rep12  literal=True  value=True  12s
+  b32     64b/13ch rep13  literal=False value=True  10s
+  b32     64b/13ch rep14  literal=True  value=True  12s
+  b32     64b/13ch rep16  literal=False value=False 11s
+  b32     64b/13ch rep15  literal=False value=True  17s
+  b32     64b/13ch rep18  literal=True  value=True  10s
+  b32     64b/13ch rep17  literal=False value=True  15s
+  b32     64b/13ch rep19  literal=True  value=True  12s
+  b32     64b/13ch rep20  literal=True  value=True  12s
+
+enc    bits chars  literal   value
+hex     128    32    16/20    16/20 
+b32     128    26    12/20    15/20 
+hex      64    16    20/20    20/20 
+b32      64    13    14/20    19/20 
