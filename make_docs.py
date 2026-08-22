@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 """Build README.md + index.html.  Ordered by topic, with corrections folded into the
 claims they correct - not appended after them."""
-import json, os, sys, glob, html, math, collections, statistics as st
+import difflib, json, os, sys, glob, html, math, collections, statistics as st, tempfile, shutil
+import provenance as V
+from analyze_encoding import paired_difference_interval
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+CHECK = '--check' in sys.argv
+OUTPUT_ROOT = tempfile.mkdtemp(prefix='vision-text-docs-') if CHECK else ROOT
+
+def write_output(name, text):
+    with open(os.path.join(OUTPUT_ROOT, name), 'w') as f:
+        f.write(text)
 K = json.load(open(os.path.join(ROOT, 'ANSWER_KEY.json')))
 E = K['images']
 
@@ -11,13 +19,13 @@ def load(pat, key=None):
     out = []
     for f in sorted(glob.glob(os.path.join(ROOT, pat))):
         b = json.load(open(f))
-        out += b[key] if key and isinstance(b, dict) else (b if isinstance(b, list) else [])
+        out += b[key] if key and isinstance(b, dict) else V.result_rows(b)
     return out
 
 edge    = load('results_edge_opus.json')
 confirm = load('results_confirm-v1*.json', 'results')
-span    = {os.path.basename(f): json.load(open(f))
-           for f in glob.glob(os.path.join(ROOT, 'results_span_*.json'))}
+span    = {os.path.basename(f): V.result_rows(json.load(open(f)))
+           for f in sorted(glob.glob(os.path.join(ROOT, 'results_span_*.json')))}
 delim   = load('results_delim_6x13_opus.json')
 ladder  = load('results_opus.json') + load('results_sonnet.json')
 
@@ -47,7 +55,7 @@ w(f"""# Dense text in images
 
 How many characters fit in one image token, and how many of them come back correctly -
 measured for **Claude** (28x28 px patches) and the **GPT-5.6 / Sol line** (32x32 px patches).
-{len(E)} generated test images, {TOTAL_RUNS:,} graded model runs, and a
+{len(E)} generated test images, {TOTAL_RUNS:,} recorded model results, and a
 record of which conclusions survived scrutiny.
 
 Two separate questions, with very different answers:
@@ -65,9 +73,9 @@ Two separate questions, with very different answers:
 | Densest cell read at >= 0.95 legibility | Claude 5x10 @ **15.7**; gpt-5.6-sol 5x9 @ **18.4** ch/token |
 | Reads dense glyphs best | **gpt-5.6-sol** (mean legibility 0.761 vs opus 0.606, p = 0.0094) |
 | Recovers an exact handle best | **claude** (delimited fields 70/80 vs sol 53/80, luna 22/80) |
-| Resolves the right record best | **claude** (E-BIND-1 20/20 vs sol 17/20, luna 1/20) |
+| Resolves the right record best | **not established** (Claude leads a debug-only n=20 preflight; only sol has Stage 1) |
 | Exact recovery of a 56-char record | Claude **0/18**; gpt-5.6 2-4/18 (underpowered, CIs overlap) |
-| Biggest safety gap | sol returns a record for **~40%** of no-answer queries; Claude 0% |
+| Biggest safety gap | sol returns a record for **~37%** of Stage-1 no-answer calls; Claude has only 0/5 preflight evidence |
 
 ---
 
@@ -222,15 +230,12 @@ if delim:
         rs = [r for r in delim if r['bits'] == b and r['enc'] == e]
         return sum(r[field] for r in rs), len(rs)
     def paired_ci(b):
-        """Matched-pair risk difference. The design is paired, so an independent-sample
-        SE overstates the interval - within-pair association reduces variance."""
+        """Boundary-safe matched-pair risk-difference interval."""
         h = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'hex'}
         z = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'b32'}
         D = [int(h[k]) - int(z[k]) for k in h if k in z]
-        n = len(D); m = sum(D) / n
-        sd = math.sqrt(sum((x - m) ** 2 for x in D) / (n - 1))
-        se = sd / math.sqrt(n)
-        return m, m - 1.96 * se, m + 1.96 * se
+        lo, hi = paired_difference_interval(D)
+        return sum(D) / len(D), lo, hi
     def concordance(b):
         h = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'hex'}
         z = {r['rep']: r['value'] for r in delim if r['bits'] == b and r['enc'] == 'b32'}
@@ -276,11 +281,10 @@ if delim:
       "Every alias rescue was the same confusion: `O` read for the printed digit `0`, 8 of 8. No",
       "case-only, no separator-only, no `I`/`L`. Since the Crockford alphabet excludes `O` from",
       "ground truth entirely, the model emits a symbol that cannot occur there.", "",
-      "**Caveat on the decoder itself.** `dec_b32` returns the full integer; it does not reject",
-      "over-range values internally. Here the *scorer* rejects them because full-value comparison",
-      "against a known expected value fails. Production cannot rely on that, since it starts from",
-      "an unknown decoded handle, so a real validator must enforce `0 <= v < 2^B` **and**",
-      "`encode(v) == normalize(s)` before the tag is checked.", "",
+      "**Protocol decoder, now fixed.** The low-level `dec_b32` primitive has no bit-width and",
+      "therefore returns the full integer. The width-aware `decode_value` path used by the scorer",
+      "now enforces exact symbol count, `0 <= v < 2^B`, and canonical re-encoding before the tag",
+      "or expected-value comparison. Production must use that width-aware path, not `dec_b32` alone.", "",
       "| bits | alphabet | chars | literal | value | rate | 95% LB |", "|---|---|---|---|---|---|---|")
     for b in (64, 128):
         for e in ('hex', 'b32'):
@@ -299,10 +303,11 @@ if delim:
         bb, cc, pv, npair = mcnemar(b)
         w(f"| {b} | {d0:+.2f} | [{lo:+.2f}, {hi:+.2f}] | {bb} vs {cc}, p = {pv:.3f} |")
     w("", "Intervals are matched-pair, not independent-sample: the same bitstrings are encoded",
-      "both ways, and within-pair association narrows the variance. With 1 and 5 discordant",
+      "both ways, so inference is based on the two discordant cells. With 1 and 5 discordant",
       "pairs, McNemar has almost no power - `p = 1.000` means the discordant evidence is too",
-      "sparse to separate the encodings, not that they are equal. A matched-pair *exact* or",
-      "score-based interval would be preferable to this Wald approximation at these counts.")
+      "sparse to separate the encodings, not that they are equal. The displayed interval uses",
+      "Bonferroni-simultaneous exact bounds on the two discordant cells, so it remains",
+      "boundary-safe even when one discordant direction has count zero.")
     w("", "Those intervals are wide enough to contain a materially better hex *and* a modestly",
       "better base32. Establishing equivalence would need a pre-declared margin (say d = 0.10)",
       "and an interval falling entirely inside [-d, +d]; n=20 cannot do that. The earlier wording",
@@ -534,7 +539,7 @@ w("", "---", "", "## 9. Confounds found, including in these instruments", "",
   "| Literal string scoring | penalises value-preserving case/grouping | value equality reported alongside |",
   "| Model given non-Read tools | crops and zooms instead of reading | tools disallowed |",
   "| Adaptive test selection, post-hoc threshold | winner's curse | frozen confirmatory pass |", "",
-  "Six harness bugs corrupted results before being caught. From the Claude arm: Pillow",
+  "The original audit found six harness bugs that corrupted results before being caught. From the Claude arm: Pillow",
   "mis-decodes X11 PCF fonts declaring `first_col > 0` (8x16 and 12x24 rendered one glyph",
   "shifted - patched in `gen_lib.py`); `edge_probe.py` overwrote its results file each run; and",
   "stored answers were truncated to 120 characters before comparison against full-length ground",
@@ -546,6 +551,17 @@ w("", "---", "", "## 9. Confounds found, including in these instruments", "",
   "The third is the most instructive: it was caught only because a sanity check asserted that no",
   "image may exceed `1024/1.2/(cw*ch)` chars per token. Without that assertion the inflated",
   "figures would have looked plausible and propagated into every Part II conclusion.", "",
+  "A later reproducibility audit found additional defects. It traced each one through the stored",
+  "artifacts before deciding whether a reported count had changed:", "",
+  "| later defect | impact on stored claims | resolution |", "|---|---|---|",
+  "| The documented build stopped after 104 of 161 cases | the committed corpus could not be reproduced by the stated command, although its image bytes were sound | one build path now emits all 28- and 32-grid series; catalog hashes are validated by an isolated rebuild |",
+  "| `confirm.py --effort` recorded the requested effort but workers always used `low` | no stored count changed because every existing confirm file requested `low` | forward the argument and cover it with a regression test |",
+  "| Four extension manifests advertised the base matrix | result rows were sound but their cells and payload metadata were wrong | correct the legacy manifests from their actual rows |",
+  "| `UNREADABLE` on an absent query was graded `N` | this could inflate safe abstention; every stored `N` was audited as a literal `NO_MATCH`, so published counts did not change | grade it `P0` and test the absent-item branch |",
+  "| The stored image and text Stage-1 runs used different item namespaces | the apparent same-item comparison and its Fisher tests were invalid; the query sets have zero overlap | withdraw those claims and require paired items in the held-out campaign |",
+  "| Hex decoders discarded arbitrary non-hex characters | malformed answers could be rescued; no stored classification depended on that rescue | accept only documented separators, exact decoded length, and canonical value |",
+  "| Raw responses and provider identity were recorded inconsistently | exact legacy model revisions cannot be recovered from mutable aliases | versioned result envelopes now retain hashes, environment, full stdout/stderr, usage, and immutable model identity; aliases are rejected by default |",
+  "| A stale 1.15 MP Claude flag survived in the catalog | it contradicted the later geometry result | regenerate it from the measured provider geometry |", "",
   "---", "", "## 10. What was retracted", "",
   "| claim | status | replaced by |", "|---|---|---|",
   "| 1568x1568 is the maximum canvas | **retracted** | 1932x1932, measured at the adjacent boundary |",
@@ -568,7 +584,7 @@ w("", "---", "", "## 9. Confounds found, including in these instruments", "",
   "| Enlarging glyphs cannot fix exactness | **narrowed to Claude** | terra reaches 8/12 on large cells |",
   "| 'GPT-5.6 reads dense text better' | **retracted as a family claim** | only sol; luna and terra are significantly worse |",
   "| Sol's abstention failure is family-wide | **retracted** | sol only; terra and luna abstain correctly |",
-  "| Better legibility implies better record resolution | **retracted** | sol reads best, Claude resolves best |")
+  "| Better legibility implies better record resolution | **retracted** | sol leads the tested reading matrix; record resolution remains unresolved because Claude has only a debug preflight and sol only Stage 1 |")
 
 # ─────────────────────────────────────────────────────────────── files
 w("", "---", "", "## 11. Files", "",
@@ -585,34 +601,54 @@ w("", "---", "", "## 11. Files", "",
   "| `span_probe.py` | exact match vs requested span length |",
   "| `delim_probe.py` | delimited equal-information fields, value equality |",
   "| `ebind1.py` | full protocol test: keyed codewords, canonical fetch, gold scoring |",
-  "| `regrade.py` | re-scores stored answers without new API calls |",
+  "| `regrade.py` | audits stored answers without new API calls; writes only with `--write` and records provenance |",
   "| `compare.py` | cross-provider tables on paired, byte-identical stimuli |",
-  "| `probe.py`, `report_eval.py`, `make_docs.py` | inspection and reporting |", "",
+  "| `analyze_ebind.py`, `analyze_encoding.py`, `analyze_layout.py`, `analyze_verifier.py` | clustered, equivalence, factorial and verifier-safety analysis |",
+  "| `analysis_ebind_stage1_sol.{json,md}` | corrected item/page-clustered Stage-1 analysis |",
+  "| `campaign.py` | plans the 2,265-call held-out/Arm-B/verifier/layout/effort campaign; execution is explicit and resumable |",
+  "| `verifier_probe.py` | fail-closed post-fetch reconciliation on correct and deliberately wrong-valid canonical records |",
+  "| `validate_project.py` | catalog hashes, schemas and isolated byte-rebuild invariant |",
+  "| `probe.py`, `report_eval.py`, `make_docs.py` | inspection and deterministic reporting |", "",
+  "### Reproducible environment", "",
+  "Python 3.11 dependencies are pinned in `requirements.lock` and declared in `pyproject.toml`.",
+  "Corpus generation additionally needs DejaVu TrueType fonts and X11 bitmap fonts",
+  "(`fonts-dejavu-core` and `xfonts-base` on Debian/Ubuntu); converted bitmap assets are vendored.",
+  "Model execution needs the relevant `codex` or `claude` CLI and its normal configured",
+  "credentials. Offline generation, validation, analysis and documentation make no external calls.", "",
+  "```bash",
+  "python3 -m venv .venv",
+  ". .venv/bin/activate",
+  "python -m pip install -r requirements.lock",
+  "python -m pytest",
+  "```", "",
   "```bash",
   "python3 generate.py && python3 pack.py      # build images",
   "python3 geometry.py --model gpt-5.6-sol --patch 32   # px/token + ceiling",
   "python3 confirm.py --model gpt-5.6-sol --effort low  # frozen pass, any provider",
   "python3 make_docs.py                        # rebuild this file",
+  "python3 validate_project.py --rebuild       # offline integrity + byte identity",
+  "python3 campaign.py --model <exact-id>      # plan only; no external calls",
   "```", "",
   "Content is seeded per image, so a rebuild reproduces byte-identical images and answers.", "",
   "---", "", "## 12. Open questions", "",
-  "1. **Hierarchical binding.** Page -> block -> handle addressing with a textual manifest,",
-  "   reporting `P(page)`, `P(block|page)`, `P(record|block)` separately. The current failure is",
-  "   a property of row-number lookup, and nothing better has been measured.",
+  "1. **Held-out cross-provider protocol comparison.** Hierarchical page -> block -> handle",
+  "   addressing is implemented, but Claude and the non-sol models have only debug preflights.",
+  "   Run the same frozen Stage-1 item set on the deployment candidates before ranking them.",
   "2. **The admissible canvas region.** One rectangle was tested and failed. The long-edge limit,",
   "   and whether moderate rectangles improve row count or cell divisibility, are unknown.",
   "3. **Delimited x grouped, factorially.** The two were changed together; their separate",
   "   contributions are unmeasured.",
   "4. **Short fields at larger cells.** The n=20 screen ran only at 6x13. 9x18 and 12x24 may",
   "   support longer exact fields; the whole-record CER result does not settle it.",
-  "5. **Error-corrected handles.** Test a structured codeword - 32-bit record index plus 32-bit",
-  "   keyed validation tag in the same 16-character span - and measure `P(false accept)`",
-  "   separately from first-pass failure. A structured codeword's symbol distribution differs",
-  "   from a uniform random one, so the 20/20 result does not transfer to it untested.",
+  "5. **Error-corrected handles and reconciliation.** Test a structured codeword - 32-bit record",
+  "   index plus 32-bit keyed validation tag in the same 16-character span - and measure both",
+  "   optical `P(false accept)` and a fail-closed semantic verifier on deliberately wrong-valid",
+  "   fetched records. Both instruments are implemented; their held-out runs remain unexecuted.",
   "6. **Equivalence, not just non-significance.** Declare a margin (d = 0.10) and power the",
   "   hex/base32 comparison to fit the difference interval inside it. n=20 cannot.",
   "7. **The 2x2 layout experiment.** Grouping x delimiting at 16 and 32 characters, paired.",
-  "8. **Other endpoints.** Every geometry probe ran on the Sonnet CLI path.", "",
+  "8. **Other endpoints.** Geometry is measured on the Claude CLI and Codex attachment paths;",
+  "   API and hosted endpoints remain unmeasured.", "",
   "---", "", "## 13. E-BIND-1: design", "",
   "> **Status: executed.** This section is the design and its rationale; measured results for",
   "> both providers are in section 23. Kept separate because the design decisions were frozen",
@@ -723,21 +759,21 @@ w("", "---", "", "## 11. Files", "",
   "score.**", "",
   "---", "", "## 14. Assumption register", "",
   "| assumption | status | falsification probe |", "|---|---|---|",
-  "| The 20 paired repetitions are independent | not explicitly established | confirm one fresh image and one independent call per rep |",
-  "| Pairing held target position and surrounding layout constant | unknown | compare renderer coordinates and distractor pages |",
+  "| The 20 paired repetitions use fresh stimuli/calls | seeded values are unique by rep; provider-side call independence is not observable | retain item/call IDs and never count calls as extra items |",
+  "| Pairing held target position and surrounding content constant | **audited in renderer tests**: same values, canvas and field start; only the assigned formatting factor changes | keep condition names out of the seed |",
   "| No acceptance depended on excess-bit masking or truncation | **audited: yes** (0 of 34) | canonical re-encode audit |",
   "| Tolerant normalisation is limited to protocol aliases | **audited: yes** (8 of 8 were `O`->`0`) | classify every literal-wrong/value-correct response |",
-  "| `dec_b32` itself rejects over-range values | **no** - the scorer catches them by full-value mismatch | add explicit range + re-encode validation before tag check |",
-  "| Matched-pair Wald intervals are accurate enough | approximate at 1 and 5 discordant pairs | exact or score-based matched-pair interval |",
+  "| The width-aware base32 path rejects over-range/non-canonical values | **audited: yes** | exact length, range and canonical re-encode are enforced before comparison/tag check |",
+  "| Matched-pair intervals remain valid at sparse boundaries | **fixed** | simultaneous exact discordant-cell bounds replace the Wald interval |",
   "| 40/40 is independent confirmation | **too strong** - shared pipeline | treat as replication across item sets |",
-  "| base32 saves cells at page level | unknown under fixed slots and metadata | render complete protocol pages |",
+  "| base32 saves cells at page level | **rendered in Arm B**; successful goodput remains unmeasured | execute paired Arm-B queries and include retries |",
   "| Exact-text page/block labels preserve selection difficulty | plausible | compare against in-image labels |",
-  "| Semantic verification catches wrong valid records | unknown, load-bearing | include near-decoy records |",
+  "| Semantic verification catches wrong valid records | instrumented, not yet measured | held-out fail-closed verifier arm with deliberately injected near-decoys |",
   "| Concordance reflects bitstring difficulty | suggestive only (phi = 0.29) | repeat each value across positions and calls |",
   "| The two runs measure stochastic variation | **false as stated** - values differed too | rerun identical frozen images |",
   "| base32 goodput advantage survives protocol overhead | plausible, unmeasured | include delimiters, manifests, validation, retries |",
-  "| A structured 64-bit handle behaves like a uniform value | unknown | test the actual codeword distribution |",
-  "| Hierarchical binding beats row addressing | unknown | run the page/block/record test |",
+  "| A structured 64-bit handle behaves like a uniform value | unknown; 32+32 instrument implemented | execute the held-out structured-codeword arm |",
+  "| Hierarchical binding beats row addressing | promising in preflight; Stage 1 exists only for sol | held-out Stage 1 on each candidate |",
   "| A 32x32 patch costs one token | **false** - GPT-5.6 bills 1.2 tokens/patch | fit tokens against patch count (section 15) |",
   "| Claude's 1932px ceiling transfers to other providers | **false** - GPT-5.6 caps at 1600px | re-run `geometry.py` per provider |",
   "| The 5.6 line beats Claude on high-entropy exact decode | directional only, n=18, CIs overlap | span/delim stages at n=20 per condition |",
@@ -747,14 +783,14 @@ w("", "---", "", "## 11. Files", "",
   "| Long-span reading failure is intrinsic to vision models | **false** - Claude 0/20 at span 51, all three 5.6 models 12-16/20 | span sweep on both providers |",
   "| Bigger glyphs cannot fix exact recovery | **false for GPT-5.6** - terra 8/12 on large cells where opus manages 1/12 | confirm extension, both providers |",
   "| Uppercase base32 is workable | **false for the entire 5.6 line** - opus 17/20, sol 4/20, terra 2/20, luna 0/20 | four independent probes |",
-  "| A model that reads better resolves records better | **false** - sol reads best, Claude resolves best | E-BIND-1 vs legibility (sections 19, 23) |",
-  "| Poor image results imply poor semantics | **false** - sol scores 99% on the text carrier and 63% on images | text-ceiling control |",
+  "| A model that reads better resolves records better | unresolved across providers - protocol rankings are preflight-only except sol | held-out Stage 1 |",
+  "| Poor image results imply poor semantics | text control is 99%, but the stored Stage-1 text run used a different item namespace | rerun paired carriers |",
   "| Abstention failure is a 5.6 family trait | **false** - only sol; terra and luna abstain 5/5 | preflight across three models |",
   "| GPT-5.6 effort setting does not matter here | **unmeasured** - everything ran pinned at `low` | sweep low/medium/high on one condition |")
 
 # ─────────────────────────────────────────────────────────────── write
 readme = '\n'.join(S) + '\n'
-open(os.path.join(ROOT, 'README.md'), 'w').write(readme)
+write_output('README.md', readme)
 
 cards = []
 for k, v in E.items():
@@ -762,7 +798,7 @@ for k, v in E.items():
 <figcaption><b>{html.escape(os.path.basename(k))}</b><br>{v['w']}x{v['h']} &middot; {v['font']}<br>
 {v['chars']:,} chars &middot; {v['claude_tokens']:,} tok &middot;
 <b>{v['chars_per_claude_token']:.1f}</b> ch/tok</figcaption></figure>""")
-open(os.path.join(ROOT, 'index.html'), 'w').write(f"""<!doctype html><meta charset=utf-8>
+write_output('index.html', f"""<!doctype html><meta charset=utf-8>
 <title>Dense text in images</title>
 <style>
 body{{font:14px/1.5 ui-sans-serif,system-ui,sans-serif;margin:24px;background:#111;color:#eee}}
@@ -847,12 +883,12 @@ if geo or conf56:
         L += ["", "### Against Claude, on the metric that mattered most", "",
               "High-entropy exact decode of a 56-character record - the number that was **0/18** on",
               "Claude at every cell and alphabet:", "",
-              "| model | exact | rate | 95% CI | Fisher vs claude |", "|---|---|---|---|---|",
+              "| model | exact | rate | 95% CI | paired McNemar vs Claude |", "|---|---|---|---|---|",
               "| opus (claude) | 0/18 | 0.00 | [0.00, 0.15] | - |",
-              "| gpt-5.6-luna | 2/18 | 0.11 | [0.02, 0.31] | 0.486 |",
-              "| gpt-5.6-sol | 3/18 | 0.17 | [0.05, 0.38] | 0.229 |",
-              "| gpt-5.6-terra | 4/18 | 0.22 | [0.08, 0.44] | 0.104 |",
-              "| 5.6 pooled | 9/54 | 0.17 | [0.09, 0.27] | 0.100 |", "",
+              "| gpt-5.6-luna | 2/18 | 0.11 | [0.02, 0.31] | 0.500 |",
+              "| gpt-5.6-sol | 3/18 | 0.17 | [0.05, 0.38] | 0.250 |",
+              "| gpt-5.6-terra | 4/18 | 0.22 | [0.08, 0.44] | 0.125 |",
+              "| 5.6 pooled | 9/54 | 0.17 | [0.09, 0.27] | - (not one paired model) |", "",
               "**No individual comparison is significant.** Every 5.6 model recovered records where",
               "Claude recovered none, and the direction is consistent across all three, but the CIs",
               "overlap and the pooled figure mixes 3 models x 3 cells x 3 payloads - the same",
@@ -890,7 +926,7 @@ if geo or conf56:
               "  no equivalent control, so the comparison is not effort-matched.",
               "* **n = 18 per model** across mixed cells and payloads.", ""]
     readme += chr(10).join(L) + chr(10)
-    open(os.path.join(ROOT, 'README.md'), 'w').write(readme)
+    write_output('README.md', readme)
 
 # ---- Part II continued: ladder / legibility / span / delim on the 5.6 line
 import glob as _g4, statistics as _st4
@@ -900,14 +936,14 @@ def _lb(k, n):
         return beta.ppf(0.05, k, n - k + 1) if k > 0 else 0.0
     except ImportError:
         return float('nan')
-lad56  = {os.path.basename(f).replace('results_ladder_','').replace('.json',''): json.load(open(f))
-          for f in _g4.glob(os.path.join(ROOT, 'results_ladder_gpt-5.6-*.json'))}
-edge56 = {os.path.basename(f).replace('results_edge_','').replace('.json',''): json.load(open(f))
-          for f in _g4.glob(os.path.join(ROOT, 'results_edge_gpt-5.6-*.json'))}
-span56 = {os.path.basename(f): json.load(open(f))
-          for f in _g4.glob(os.path.join(ROOT, 'results_span_6x13_*_gpt-5.6-*.json'))}
-del56  = {os.path.basename(f): json.load(open(f))
-          for f in _g4.glob(os.path.join(ROOT, 'results_delim_6x13_gpt-5.6-*.json'))}
+lad56  = {os.path.basename(f).replace('results_ladder_','').replace('.json',''): V.result_rows(json.load(open(f)))
+          for f in sorted(_g4.glob(os.path.join(ROOT, 'results_ladder_gpt-5.6-*.json')))}
+edge56 = {os.path.basename(f).replace('results_edge_','').replace('.json',''): V.result_rows(json.load(open(f)))
+          for f in sorted(_g4.glob(os.path.join(ROOT, 'results_edge_gpt-5.6-*.json')))}
+span56 = {os.path.basename(f): V.result_rows(json.load(open(f)))
+          for f in sorted(_g4.glob(os.path.join(ROOT, 'results_span_6x13_*_gpt-5.6-*.json')))}
+del56  = {os.path.basename(f): V.result_rows(json.load(open(f)))
+          for f in sorted(_g4.glob(os.path.join(ROOT, 'results_delim_6x13_gpt-5.6-*.json')))}
 L = []
 if lad56:
     L += ["", "## 18. The bitmap ladder, same images as Claude", "",
@@ -937,7 +973,7 @@ if edge56:
     for _m in sorted(edge56): _all[_m] = f'results_edge_{_m}.json'
     _rows = {}
     for _m, _f in _all.items():
-        try: _d = json.load(open(os.path.join(ROOT, _f)))
+        try: _d = V.result_rows(json.load(open(os.path.join(ROOT, _f))))
         except Exception: continue
         for r in _d: _rows.setdefault(r['file'], {})[_m] = r
     _models = [m for m in _all if any(m in v for v in _rows.values())]
@@ -977,7 +1013,7 @@ if span56:
           "|---|---|---|---|---|---|---|---|"]
     claude_hex = None
     fp = os.path.join(ROOT, 'results_span_6x13_hex_opus.json')
-    if os.path.exists(fp): claude_hex = json.load(open(fp))
+    if os.path.exists(fp): claude_hex = V.result_rows(json.load(open(fp)))
     def _row(label, alpha, d, key):
         cells, tot, totn = [], 0, 0
         for n in (8, 16, 32, 51):
@@ -1027,7 +1063,7 @@ if del56:
     L.append("")
 if L:
     readme += chr(10).join(L) + chr(10)
-    open(os.path.join(ROOT, 'README.md'), 'w').write(readme)
+    write_output('README.md', readme)
 
 # ---- Part II conclusions
 try:
@@ -1064,7 +1100,7 @@ if _cmp.strip():
          "  leans on language priors to repair glyphs, and those priors do nothing for a hash.", "",
          "### What does not", "",
          "* **The whole-record comparison is underpowered.** 3/18 against 0/18 sounds decisive and",
-         "  is not: Fisher p = 0.229, CIs overlap, and pooling 3 cells x 3 payloads is exactly the",
+         "  is not: paired McNemar p = 0.250, CIs overlap, and pooling 3 cells x 3 payloads is exactly the",
          "  heterogeneous pooling criticised in section 5. The span and legibility probes at n=20",
          "  carry the argument; the confirm matrix does not.",
          "* **Sol follows length instructions worse.** Its literal span score is 55/80 against",
@@ -1080,20 +1116,19 @@ if _cmp.strip():
          "| characters per request | **claude** | 1932x1932 page holds 74,498 vs 51,200 |",
          "| reading very dense glyphs | **gpt-5.6-sol** | legibility 0.761 vs 0.606; reads 21.3 ch/token where nothing else does |",
          "| **recovering an exact handle** | **claude** | delimited fields 70/80 vs sol 53/80, luna 22/80 |",
-         "| **resolving the right record** | **claude** | E-BIND-1 20/20 vs sol 17/20, luna 1/20 |",
-         "| **knowing when there is no answer** | **claude** | sol false-accepts ~38% of no-answer queries; claude 0% |",
+         "| **resolving the right record** | **unresolved** | Claude leads a debug-only 20-item preflight; only sol has Stage 1 |",
+         "| **knowing when there is no answer** | **sol is ruled out** | sol false-accepts 36.7% in Stage 1; Claude's 0/5 is underpowered |",
          "| exact adherence to output format | **claude** | cuts at exactly N; sol over-returns |",
          "| latency | **gpt-5.6** | 20 s/image against 43 (opus) and 104 (sonnet) |", "",
-         "**The two rankings genuinely disagree.** Sol reads glyphs better than Claude; Claude",
-         "executes the retrieval protocol better than sol. If the job is 'squeeze the most",
-         "readable text into the fewest tokens', sol wins. If the job is 'return the correct",
-         "record, or admit there isn't one', Claude wins - and that is the job an agent actually",
-         "has.", "",
+         "**The rankings cannot yet be compared at confirmatory scale.** Sol reads glyphs better",
+         "than Claude and fails the Stage-1 abstention requirement. Claude leads the small preflight,",
+         "but its protocol safety and resolution rates need the same held-out Stage-1 design before",
+         "it can be called the winner.", "",
          "Neither is safe for unverified handles. Every conclusion in Part I about checksums,",
          "canonical fetch and provenance binding applies unchanged to both providers - and sol's",
          "no-answer false-accept rate makes post-fetch reconciliation *more* necessary, not less.", ""]
     readme += chr(10).join(L) + chr(10)
-    open(os.path.join(ROOT, 'README.md'), 'w').write(readme)
+    write_output('README.md', readme)
 
 # ---- E-BIND-1 across providers
 import glob as _g5, collections as _c5
@@ -1120,7 +1155,7 @@ if eb:
                      f"**{c.get('W',0)}** | {c.get('A',0)} | {c.get('N',0)} | "
                      f"**{c.get('W0',0)}** | {c.get('D0',0)} | {c.get('P',0)+c.get('P0',0)} |")
     # false-accept rates with one-sided bounds - the load-bearing safety number
-    L += ["", "### The text ceiling isolates optics from semantics", "",
+    L += ["", "### The preflight text ceiling isolates optics from semantics", "",
           "Every model scores **20/20 C and 5/5 N on the text carrier** - identical corpus,",
           "identical queries, identical distractors, records supplied as text instead of pixels.",
           "So semantic selection, abstention and protocol compliance are all intact in all of",
@@ -1130,12 +1165,14 @@ if eb:
           "The preflight also separates *reading* from *calibration* cleanly: terra (8/20 C) and",
           "luna (1/20 C) read much worse than sol (17/20 C) yet both abstain correctly 5/5, while",
           "sol abstains 0/5. Confidence and competence are independent here.", "",
-          "Note the ranking inverts against legibility: sol reads glyphs better than opus",
-          "(section 19) yet opus wins the protocol task, because E-BIND-1 additionally requires",
+          "Note the preflight ranking inverts against legibility: sol reads glyphs better than opus",
+          "(section 19) yet opus leads this small protocol preflight, which additionally requires",
           "exact code transcription, correct block selection and correct abstention - the three",
           "things sol is weaker at.", "",
-          "### False-accept rates with bounds", "",
-          "| model | stage | carrier | present n | **W** | W rate | 95% UB | no-answer n | **W0** | W0 rate |",
+          "### False-accept rates with call-level bounds", "",
+          "The Stage-1 bound in this table treats repeated calls as independent and is retained only",
+          "for historical comparability; the clustered interval below is the inferential result.", "",
+          "| model | stage | carrier | present n | **W** | W rate | call-level 95% UB | no-answer n | **W0** | W0 rate |",
           "|---|---|---|---|---|---|---|---|---|---|"]
     for (mdl, stage), b in sorted(eb.items()):
         for carrier in ('image', 'text'):
@@ -1175,17 +1212,20 @@ if eb:
               "sample. Per-item n is " + str(len(_items)) + ", so every bound in the table above is",
               "optimistic - the correct denominator for generalising to new items is the item",
               "count, not the call count.", "",
-              "### The text ceiling isolates the deficit as purely optical", "",
-              "The same 120 queries, same records, same distractors, run with the archive supplied",
-              "as text instead of images:", "",
+              "Item/page-clustered bootstrap intervals (rather than treating 360 calls as independent)",
+              "put C at 0.633 [0.533, 0.725], W at 0.027 [0.000, 0.065], and W0 at",
+              "0.367 [0.217, 0.517].", "",
+              "### The stored Stage-1 text ceiling is unpaired", "",
+              "The text run used the `stage1text` seed namespace while the image run used `stage1`;",
+              "their query sets have zero overlap. It is a useful semantic ceiling on a different",
+              "120-item corpus, not the claimed same-item carrier control:", "",
               "| carrier | resolution | correct abstention |", "|---|---|---|",
               "| text | **99.0%** (99/100) | **100%** (20/20) |",
               "| image, hex | 63.3% (190/300) | 3.3% (2/60) |", "",
-              "Fisher p = 1.3e-15 for resolution and 6.5e-17 for abstention. Semantic selection,",
-              "protocol compliance and calibration are all **intact** - sol finds the right record",
-              "and correctly reports absence when it can read the archive. Every point of the",
-              "36-point resolution gap and the whole abstention collapse are attributable to",
-              "reading pixels rather than to any reasoning failure.", "",
+              "The contrast is large and shows that sol can execute the protocol from text, but the",
+              "old Fisher tests treated repeated image calls as independent and compared different",
+              "items. They are withdrawn. The new held-out campaign supplies both carriers from one",
+              "frozen corpus and analyzes their difference by unique item/page.", "",
               "**Sol never abstains on the image carrier.** `A` = 0 across all 300 answer-present",
               "calls and `N` = 2/60 on no-answer. It always produces something; the keyed tag then",
               "rejects 34% of it. On more than a third of questions with no answer at all, sol",
@@ -1208,12 +1248,12 @@ if eb:
           "checksum cannot catch either, because the returned codeword is a valid codeword for a",
           "real record; only reconciliation after fetch can.", ""]
     readme += chr(10).join(L) + chr(10)
-    open(os.path.join(ROOT, 'README.md'), 'w').write(readme)
+    write_output('README.md', readme)
 
 # ---- sol-native 32-grid frontier
 _edge_sol = _load_json(os.path.join(ROOT, 'results_edge_gpt-5.6-sol.json')) if False else None
 try:
-    _edge_sol = json.load(open(os.path.join(ROOT, 'results_edge_gpt-5.6-sol.json')))
+    _edge_sol = V.result_rows(json.load(open(os.path.join(ROOT, 'results_edge_gpt-5.6-sol.json'))))
 except Exception:
     _edge_sol = None
 if _edge_sol:
@@ -1241,7 +1281,7 @@ if _edge_sol:
                       f"**{vb.get('chars_per_gpt_token', 0):.1f} chars per sol token** "
                       f"({vb.get('w')}x{vb.get('h')}, legibility {best['legibility']:.2f}).", ""]
         readme += chr(10).join(L) + chr(10)
-        open(os.path.join(ROOT, 'README.md'), 'w').write(readme)
+        write_output('README.md', readme)
 
 # ---- Part II method + final state
 L = ["", "---", "", "## 25. Method: the GPT-5.6 arm", "",
@@ -1265,7 +1305,8 @@ L = ["", "---", "", "## 25. Method: the GPT-5.6 arm", "",
      "the Claude side is *structurally impossible* on codex - there is no path to act on - so",
      "the codex arm is cleaner in that one respect and different in another. Every comparison",
      "table says so.", "",
-     "Each result records the exact model slug (never `sol`/`opus`), effort, CLI version, prompt",
+     "Each result records the exact model slug (never `sol`/`opus`), effective effort (`null` for",
+     "uncontrolled Claude runs), CLI version, prompt",
      "SHA and image-delivery mode. Usage comes from the `turn.completed` event of the `--json`",
      "stream - note that session files use a different shape (`token_count`), which cost one",
      "debugging cycle.", "",
@@ -1282,22 +1323,38 @@ L = ["", "---", "", "## 25. Method: the GPT-5.6 arm", "",
      "**Solved.** Image-token geometry for both providers, zero-waste canvas construction, the",
      "downscale ceilings (Claude 1932x1932 at 4,761 patches; GPT-5.6 1600x1600 at 2,500 patches",
      "billing 1.2 tokens each), and the density frontier for every glyph cell on both grids.", "",
-     "**Measured, with the caveats stated.** Legibility, span reading, delimited-field recovery",
-     "and full protocol resolution for five models on byte-identical stimuli. Sol reads dense",
-     "glyphs best; Claude executes the retrieval protocol best; the two rankings disagree and",
-     "the disagreement is the useful finding.", "",
+     "**Measured, with the caveats stated.** Legibility, span reading and delimited-field recovery",
+     "cover five models on byte-identical stimuli. Full Stage-1 protocol resolution exists only",
+     "for sol; the other models have debug preflights and must not yet be ranked as protocol winners.", "",
      "**Established and unwelcome.** No configuration on either provider is safe for unverified",
-     "handles. Sol additionally returns a valid codeword for a real record on ~37% of questions",
-     "that have no answer, which no checksum can detect. Post-fetch semantic reconciliation is",
-     "not optional on either provider, and is more necessary on sol than on Claude.", "",
-     "**Still open.** `P(false accept)` for a *structured* codeword (32-bit index + 32-bit keyed",
-     "tag) rather than a uniform random value; the 2x2 grouping-by-delimiting design; equivalence",
-     "testing against a declared margin rather than null-hypothesis tests; effort sweeps on the",
-     "5.6 line, all of which ran pinned at `low`; and Arm B native-density page goodput, which",
-     "would need complete protocol pages rendered on each provider's own optimal canvas.", "",
-     "The single most useful next measurement is unchanged from section 13: a structured-codeword",
-     "false-accept rate with wrong-valid-handle decoys, on whichever provider is actually going",
-     "to be deployed - because that number, not chars-per-token, decides whether an optical",
-     "memory tier is viable.", ""]
+     "handles. Sol additionally returns a valid codeword for a real record on ~37% of Stage-1",
+     "no-answer calls, which no checksum can detect. Post-fetch semantic reconciliation is mandatory",
+     "for sol; other providers require held-out estimates before any safety comparison.", "",
+     "**Implemented but not yet executed.** The 2,265-call campaign includes a 32-bit index +",
+     "32-bit keyed tag, paired image/text carriers, Arm-B native-grid goodput, fail-closed",
+     "verification of deliberately wrong-valid fetched records, the 2x2 grouping-by-delimiting",
+     "design, declared-margin equivalence with boundary-safe discordant-cell intervals, larger",
+     "cells, effort sweeps and rectangular geometry. Paid runs remain explicit through",
+     "`campaign.py --execute`; `--resume` skips only non-dry artifacts with the expected row count.", "",
+     "The next measurement is the held-out structured-codeword Stage 1 on the actual deployment",
+     "candidate, followed by Arm B and the verifier arm. Those estimates, not characters per",
+     "token or a debug preflight,",
+     "decides whether an optical memory tier is viable.", ""]
 readme += chr(10).join(L) + chr(10)
-open(os.path.join(ROOT, 'README.md'), 'w').write(readme)
+write_output('README.md', readme)
+
+if CHECK:
+    different = False
+    for name in ('README.md', 'index.html'):
+        expected_path = os.path.join(ROOT, name)
+        generated_path = os.path.join(OUTPUT_ROOT, name)
+        expected = open(expected_path).read().splitlines(keepends=True)
+        generated = open(generated_path).read().splitlines(keepends=True)
+        if expected != generated:
+            different = True
+            sys.stderr.writelines(difflib.unified_diff(
+                expected, generated, fromfile=name, tofile=f'generated/{name}', n=3))
+    shutil.rmtree(OUTPUT_ROOT)
+    if different:
+        raise SystemExit('generated documentation is stale; run python3 make_docs.py')
+    print('generated documentation: up to date')

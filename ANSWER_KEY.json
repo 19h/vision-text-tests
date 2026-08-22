@@ -1,10 +1,49 @@
 {
- "generated_by": "generate.py",
- "patch_model": {
-  "claude_px_per_token": 28,
-  "gpt_5_6_px_per_token": 32,
-  "claude_downscale_above_pixels": 1150000,
-  "note": "canvas sizes are multiples of 224 = lcm(28,32) so both grids divide evenly"
+ "schema_version": "vision-text-catalog-v2",
+ "generated_by": "generate.py + pack.py",
+ "provider_geometry": {
+  "claude": {
+   "patch": 28,
+   "tokens_per_patch": 1.0,
+   "max_square": 1932,
+   "max_patches": 4761
+  },
+  "opus": {
+   "patch": 28,
+   "tokens_per_patch": 1.0,
+   "max_square": 1932,
+   "max_patches": 4761
+  },
+  "sonnet": {
+   "patch": 28,
+   "tokens_per_patch": 1.0,
+   "max_square": 1932,
+   "max_patches": 4761
+  },
+  "gpt-5.6": {
+   "patch": 32,
+   "tokens_per_patch": 1.2,
+   "max_square": 1600,
+   "max_patches": 2500
+  },
+  "gpt-5.6-sol": {
+   "patch": 32,
+   "tokens_per_patch": 1.2,
+   "max_square": 1600,
+   "max_patches": 2500
+  },
+  "gpt-5.6-luna": {
+   "patch": 32,
+   "tokens_per_patch": 1.2,
+   "max_square": 1600,
+   "max_patches": 2500
+  },
+  "gpt-5.6-terra": {
+   "patch": 32,
+   "tokens_per_patch": 1.2,
+   "max_square": 1600,
+   "max_patches": 2500
+  }
  },
  "images": {
   "A_bitmap_ladder/A01_4x6.png": {
@@ -76,7 +115,9 @@
    "chars_per_gpt_token": 34.11,
    "text_tokens_equiv": 8023,
    "claude_compression": 7.84,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "e96e008e22819fd1dbf31eb9204ca2d59a45cd5401b93f2195ab9ce48f9437a7",
+   "groundtruth_sha256": "715b83aa91974b458bbd18c13d82feef796bce54043a1822f2074b4b269391ea"
   },
   "A_bitmap_ladder/A02_5x7.png": {
    "file": "A_bitmap_ladder/A02_5x7.png",
@@ -147,7 +188,9 @@
    "chars_per_gpt_token": 23.0,
    "text_tokens_equiv": 5410,
    "claude_compression": 5.28,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "cbc61469e471dd996fe36a6feffea1755ee49f924597618a228820b57a5dac3f",
+   "groundtruth_sha256": "d1e0da4bf21be9870d58eb6354d2139fd2f4c99c55e40ca1b51d0f6bbcb15730"
   },
   "A_bitmap_ladder/A03_5x8.png": {
    "file": "A_bitmap_ladder/A03_5x8.png",
@@ -218,7 +261,9 @@
    "chars_per_gpt_token": 20.28,
    "text_tokens_equiv": 4770,
    "claude_compression": 4.66,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "9d8dbc8f5b94b677037334979d9a870a95684206c8107eb910a3704f25bdaf52",
+   "groundtruth_sha256": "a3fa6f11dbee9bd5160720adc52bcb7ba540c31a16c583addd5f615cb4146cde"
   },
   "A_bitmap_ladder/A04_6x9.png": {
    "file": "A_bitmap_ladder/A04_6x9.png",
@@ -289,7 +334,9 @@
    "chars_per_gpt_token": 14.9,
    "text_tokens_equiv": 3504,
    "claude_compression": 3.42,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "315e27c9f8b9ea1f68f2672a39d2d55479265fb7bbf8de2bddeb844c3b2c28b4",
+   "groundtruth_sha256": "946464e154e548e876ca753e8d960398dade4787a0e3a61d5c9f23a2c96cc495"
   },
   "A_bitmap_ladder/A05_6x10.png": {
    "file": "A_bitmap_ladder/A05_6x10.png",
@@ -360,7 +407,9 @@
    "chars_per_gpt_token": 13.37,
    "text_tokens_equiv": 3144,
    "claude_compression": 3.07,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "d9be9f1a30708fc69502478f7ef657256d3e0bd397fb8ea7a527d82da3ab12b9",
+   "groundtruth_sha256": "16e5244ba5078333167098d9c410af47b74098dda58e966477b644fb8b904dfd"
   },
   "A_bitmap_ladder/A06_6x12.png": {
    "file": "A_bitmap_ladder/A06_6x12.png",
@@ -431,7 +480,9 @@
    "chars_per_gpt_token": 11.25,
    "text_tokens_equiv": 2645,
    "claude_compression": 2.58,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "7b6508f80102c1751f09a3c0580d38405276d612560af0dd5f8b1bc8e93b2383",
+   "groundtruth_sha256": "1c2a903aa2a4208c6f6782990617789cdd2207ac2d75732c4cc0251af925c47c"
   },
   "A_bitmap_ladder/A07_6x13.png": {
    "file": "A_bitmap_ladder/A07_6x13.png",
@@ -502,7 +553,9 @@
    "chars_per_gpt_token": 10.34,
    "text_tokens_equiv": 2433,
    "claude_compression": 2.38,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "e1c6bb4a11386f1dcfa2ad40bed37214b4c5a17e5b74def69b924b8a89d7f5c9",
+   "groundtruth_sha256": "f520a5674751b319a8c81e1a5fbefa836f09044d1bef3f8a0581b9a4459291dc"
   },
   "A_bitmap_ladder/A08_7x13.png": {
    "file": "A_bitmap_ladder/A08_7x13.png",
@@ -573,7 +626,9 @@
    "chars_per_gpt_token": 8.72,
    "text_tokens_equiv": 2050,
    "claude_compression": 2.0,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "ee5c62700bd5d69041a8fe5bb28640cfe2b18a11fe34c8292ab894e7316ca413",
+   "groundtruth_sha256": "6582373feac6e77f2a53043ffad943b3aaff9cd29780ebb94b4d3ae4b72e16b4"
   },
   "A_bitmap_ladder/A09_7x14.png": {
    "file": "A_bitmap_ladder/A09_7x14.png",
@@ -644,7 +699,9 @@
    "chars_per_gpt_token": 8.1,
    "text_tokens_equiv": 1905,
    "claude_compression": 1.86,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "e9f405d25afe0d9eaac92f417f81e761c160d434b44215b444e92b697e834127",
+   "groundtruth_sha256": "a2f1f36cd4852bc2fdf258c8cb4b6d78c3d1269cde1786bab965b3f740bb537c"
   },
   "A_bitmap_ladder/A10_8x13.png": {
    "file": "A_bitmap_ladder/A10_8x13.png",
@@ -715,7 +772,9 @@
    "chars_per_gpt_token": 7.62,
    "text_tokens_equiv": 1793,
    "claude_compression": 1.75,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "b0f0240170b763e827e86c23c23cc9eb360f520d8d6bb7cb59331fe16d212d62",
+   "groundtruth_sha256": "059c8e61a39464a6437f6d7402e86f5c5abb46357832521b061f06fa458c741c"
   },
   "A_bitmap_ladder/A11_8x16.png": {
    "file": "A_bitmap_ladder/A11_8x16.png",
@@ -786,7 +845,9 @@
    "chars_per_gpt_token": 6.17,
    "text_tokens_equiv": 1452,
    "claude_compression": 1.42,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "75e053d795cdded17fb07d30d54d1f63dd6195b1b70d79de6f67ca4ab2d46eb0",
+   "groundtruth_sha256": "c97c58de977873aef66d2da98aa76a6c02e92c9a6ff2d95b6ecb6dde11e234b5"
   },
   "A_bitmap_ladder/A12_9x15.png": {
    "file": "A_bitmap_ladder/A12_9x15.png",
@@ -857,7 +918,9 @@
    "chars_per_gpt_token": 5.81,
    "text_tokens_equiv": 1367,
    "claude_compression": 1.34,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "df941d66a87ab902b412a15f83acf71977528c9c9eae1ba8eec1a6510c1d73a8",
+   "groundtruth_sha256": "d9705ed7d9c711839fb243f6f67b03b941db3797154bb80942ff02026542dcb9"
   },
   "A_bitmap_ladder/A13_9x18.png": {
    "file": "A_bitmap_ladder/A13_9x18.png",
@@ -928,7 +991,9 @@
    "chars_per_gpt_token": 4.88,
    "text_tokens_equiv": 1147,
    "claude_compression": 1.12,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "11e7e17bde94683e8066d032c7d9fa3919b3ae494ea1dba0f96f39d86885f024",
+   "groundtruth_sha256": "872a2d163b5abe0639eace87bc23620ba4720d0e398627d5d9706e3b89cef4a2"
   },
   "A_bitmap_ladder/A14_10x20.png": {
    "file": "A_bitmap_ladder/A14_10x20.png",
@@ -999,7 +1064,9 @@
    "chars_per_gpt_token": 3.85,
    "text_tokens_equiv": 906,
    "claude_compression": 0.88,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "136d88085a95af1a79cacbf4b2aa75d73749ab02b13eabbeeacc60c0bc972ea8",
+   "groundtruth_sha256": "ceba19fd1a4bc05b013f996d6e2364bf4f63971d2156966d685e6be87d854b84"
   },
   "A_bitmap_ladder/A15_12x24.png": {
    "file": "A_bitmap_ladder/A15_12x24.png",
@@ -1070,7 +1137,9 @@
    "chars_per_gpt_token": 2.71,
    "text_tokens_equiv": 637,
    "claude_compression": 0.62,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "58d609ef5b20c77c7be6d2aef0f102fd777c97da89532cf56aa619bcac78b82a",
+   "groundtruth_sha256": "bca01f0e2796e48a13e3188a746ca3d7775082fd220914ff7d0d192d820a6fa5"
   },
   "B_mono_ttf_ladder/B01_dejavu_mono_05px.png": {
    "file": "B_mono_ttf_ladder/B01_dejavu_mono_05px.png",
@@ -1140,7 +1209,9 @@
    "chars_per_gpt_token": 38.56,
    "text_tokens_equiv": 9070,
    "claude_compression": 8.86,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "ab85fd0cc289256e65c8c9dc0e4e816b4370536e3d3c4ca90ed4081b51558d57",
+   "groundtruth_sha256": "7d577ffa3340ba5254959bea76e8dd3fe775eeed5652dcb81445dabab8a44672"
   },
   "B_mono_ttf_ladder/B02_dejavu_mono_06px.png": {
    "file": "B_mono_ttf_ladder/B02_dejavu_mono_06px.png",
@@ -1210,7 +1281,9 @@
    "chars_per_gpt_token": 28.05,
    "text_tokens_equiv": 6597,
    "claude_compression": 6.44,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "60a1f7326f405648a30346fcef68ee5fca58970d05fefbf2248c3dde7413cf7a",
+   "groundtruth_sha256": "e4720d67249de9e0b079389af0218525df25b35ece435947ef7185fb78d938fc"
   },
   "B_mono_ttf_ladder/B03_dejavu_mono_07px.png": {
    "file": "B_mono_ttf_ladder/B03_dejavu_mono_07px.png",
@@ -1280,7 +1353,9 @@
    "chars_per_gpt_token": 21.36,
    "text_tokens_equiv": 5024,
    "claude_compression": 4.91,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "e547f835bb7af8d46967afe2e3d9071799bda7ab0f438774e716b040ff38b9fb",
+   "groundtruth_sha256": "950c74edf2546aa8783e2df542260da659e5c2d938516ba5ade73159ef61465c"
   },
   "B_mono_ttf_ladder/B04_dejavu_mono_08px.png": {
    "file": "B_mono_ttf_ladder/B04_dejavu_mono_08px.png",
@@ -1350,7 +1425,9 @@
    "chars_per_gpt_token": 16.69,
    "text_tokens_equiv": 3926,
    "claude_compression": 3.83,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "7779b2f84e229247bb1b1f52586b06d37fc6c9408b3560ba1712a1b04b392ee4",
+   "groundtruth_sha256": "7fe296dbff7f31942e8f5f205011789ad7ec3f08569745478dda8253c2c0db1a"
   },
   "B_mono_ttf_ladder/B05_dejavu_mono_09px.png": {
    "file": "B_mono_ttf_ladder/B05_dejavu_mono_09px.png",
@@ -1420,7 +1497,9 @@
    "chars_per_gpt_token": 12.19,
    "text_tokens_equiv": 2868,
    "claude_compression": 2.8,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "63d7ee73b44610b5342140622b070bc463a90b42a64f39ebe8288e51abeef25e",
+   "groundtruth_sha256": "0186012811bc82f682d282fc0fc053084b51d5edde38266700f230e5d11b62ee"
   },
   "B_mono_ttf_ladder/B06_dejavu_mono_10px.png": {
    "file": "B_mono_ttf_ladder/B06_dejavu_mono_10px.png",
@@ -1490,7 +1569,9 @@
    "chars_per_gpt_token": 10.25,
    "text_tokens_equiv": 2412,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "33f2b23e5de62f5a4b3f3c11b979aab91a4c4ae0abd2fd1387492231586d4957",
+   "groundtruth_sha256": "a9fba024513f26f930ca9d912dc7411191123da11da0cecfdca639212b059886"
   },
   "B_mono_ttf_ladder/B07_dejavu_mono_11px.png": {
    "file": "B_mono_ttf_ladder/B07_dejavu_mono_11px.png",
@@ -1560,7 +1641,9 @@
    "chars_per_gpt_token": 8.57,
    "text_tokens_equiv": 2016,
    "claude_compression": 1.97,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "4bc0c2c20261f558b2f92d3ad82fea8732bd5dd1f85fb9c097cfeef5b9011ae4",
+   "groundtruth_sha256": "60d41224137e50d140492aef5ed1522afc7402eaeec8035376c7e1bd17908e19"
   },
   "B_mono_ttf_ladder/B08_dejavu_mono_12px.png": {
    "file": "B_mono_ttf_ladder/B08_dejavu_mono_12px.png",
@@ -1630,7 +1713,9 @@
    "chars_per_gpt_token": 7.32,
    "text_tokens_equiv": 1722,
    "claude_compression": 1.68,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "b9b35c868dc02d0c83ac1d6b698063adc277636632273ccbdfdc4ab7411c3728",
+   "groundtruth_sha256": "02df4ce2fc16627bacfdbeed69b1167474063ee550c726489b10357706d7ce17"
   },
   "B_mono_ttf_ladder/B09_dejavu_mono_14px.png": {
    "file": "B_mono_ttf_ladder/B09_dejavu_mono_14px.png",
@@ -1700,7 +1785,9 @@
    "chars_per_gpt_token": 5.5,
    "text_tokens_equiv": 1293,
    "claude_compression": 1.26,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "f4d2c4dfaa288ce10b38d6119eccfaa5ddf05d812dbd1daaf61c17e9bf03bf59",
+   "groundtruth_sha256": "398c0780ddabf377c20025a25c29660b5e1c0b427c81d17fb81ad189316c4c0d"
   },
   "B_mono_ttf_ladder/B10_dejavu_mono_16px.png": {
    "file": "B_mono_ttf_ladder/B10_dejavu_mono_16px.png",
@@ -1770,7 +1857,9 @@
    "chars_per_gpt_token": 4.2,
    "text_tokens_equiv": 987,
    "claude_compression": 0.96,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "858f0c48860e5dbc3be0d941abb89475f005beff13f1fadbc2624ae24acba5e2",
+   "groundtruth_sha256": "82a851d8cdc8d119fffccc39c4a40eae3621498dc4a66636f4c640943878300a"
   },
   "B_mono_ttf_ladder/B11_dejavu_mono_20px.png": {
    "file": "B_mono_ttf_ladder/B11_dejavu_mono_20px.png",
@@ -1840,7 +1929,9 @@
    "chars_per_gpt_token": 2.6,
    "text_tokens_equiv": 611,
    "claude_compression": 0.6,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "8d3e1ab65e353f19307965189b4f1194f136f1a4434660ecb3cb04aeb97e35ab",
+   "groundtruth_sha256": "13828630bc393aa4c3dbd9529b7dbd3fc54b66b21ed209e3150e138e7da6dd84"
   },
   "B_mono_ttf_ladder/B12_dejavu_mono_24px.png": {
    "file": "B_mono_ttf_ladder/B12_dejavu_mono_24px.png",
@@ -1910,7 +2001,9 @@
    "chars_per_gpt_token": 1.79,
    "text_tokens_equiv": 422,
    "claude_compression": 0.41,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "cbf2b8cf50d87e7e4bf2dfa4c372a5b6ebf9a9917745ac6bdb9caadce21b3a8a",
+   "groundtruth_sha256": "781b8348e963a1e22e6155a6d0cf8932a0f3bf9c811ac455bc72298ad4baf4ed"
   },
   "B_mono_ttf_ladder/B13_dejavu_mono_32px.png": {
    "file": "B_mono_ttf_ladder/B13_dejavu_mono_32px.png",
@@ -1980,7 +2073,9 @@
    "chars_per_gpt_token": 1.0,
    "text_tokens_equiv": 236,
    "claude_compression": 0.23,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "b95df428b9fa5b9a0a2675fedc1072bcd3f45fc0432a9713581175e7fc525f24",
+   "groundtruth_sha256": "d342045521657ffa728a130cb6875cb276092daaf7ba15852b710a7303702c3f"
   },
   "B_mono_ttf_ladder/B01b_dejavu_mono_06px_noAA.png": {
    "file": "B_mono_ttf_ladder/B01b_dejavu_mono_06px_noAA.png",
@@ -2050,7 +2145,9 @@
    "chars_per_gpt_token": 28.05,
    "text_tokens_equiv": 6597,
    "claude_compression": 6.44,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "608f5f7a17eccc599c3c08ae318224e2c1607cbb90542d7f37a537f446e7a1bb",
+   "groundtruth_sha256": "34b0f1029cb0d566d5666bd7f4fa2614e76c232665b557dd394823292f997c91"
   },
   "B_mono_ttf_ladder/B02b_dejavu_mono_08px_noAA.png": {
    "file": "B_mono_ttf_ladder/B02b_dejavu_mono_08px_noAA.png",
@@ -2120,7 +2217,9 @@
    "chars_per_gpt_token": 16.74,
    "text_tokens_equiv": 3937,
    "claude_compression": 3.84,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "ef5a7f4303d1e8e0a4133d8e87ca817185c60dd0e888c4326f5145be9eeabf2d",
+   "groundtruth_sha256": "f833194c85589187172054c13ed97866fd3d7304edb71e4b6be2cb231edd4c0f"
   },
   "B_mono_ttf_ladder/B03b_dejavu_mono_10px_noAA.png": {
    "file": "B_mono_ttf_ladder/B03b_dejavu_mono_10px_noAA.png",
@@ -2190,7 +2289,9 @@
    "chars_per_gpt_token": 10.29,
    "text_tokens_equiv": 2420,
    "claude_compression": 2.36,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "9f2422cdf41e4c8f9e24b04f586210b6f07329d38b6d3e819dab9761711bb7da",
+   "groundtruth_sha256": "b523ee1fe1db74c7a44e47bc01a2ca278afd62757b17eb044aaf5a8c286c8fc5"
   },
   "B_mono_ttf_ladder/B04b_dejavu_mono_12px_noAA.png": {
    "file": "B_mono_ttf_ladder/B04b_dejavu_mono_12px_noAA.png",
@@ -2260,7 +2361,9 @@
    "chars_per_gpt_token": 7.34,
    "text_tokens_equiv": 1726,
    "claude_compression": 1.69,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "4c02323a410cc59d1e5997f31f881038d13024f338435ae3764b2aff83731472",
+   "groundtruth_sha256": "b12c9ee91a246935bcc4d2baac4fe8e34c2b80b756422b1ab3747165d6fdf70d"
   },
   "B_mono_ttf_ladder/B05b_dejavu_mono_16px_noAA.png": {
    "file": "B_mono_ttf_ladder/B05b_dejavu_mono_16px_noAA.png",
@@ -2330,7 +2433,9 @@
    "chars_per_gpt_token": 4.21,
    "text_tokens_equiv": 990,
    "claude_compression": 0.97,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "6dedac54a10b59885bcc0fb065a0d10bef21da0a2af5b88f4c6eaa38f794e967",
+   "groundtruth_sha256": "b09e226510cb68fd8739eaf861795b364cc90badbfac9fde662aa4be5a42f47c"
   },
   "C_prose_proportional/C01_dejavu_sans_05px.png": {
    "file": "C_prose_proportional/C01_dejavu_sans_05px.png",
@@ -2379,7 +2484,9 @@
    "chars_per_gpt_token": 40.24,
    "text_tokens_equiv": 9464,
    "claude_compression": 9.24,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "bc9c01f2514722a2526273c4b94412c0a1e9ef56040d7302b7c72423d4ad22b3",
+   "groundtruth_sha256": "a2c321a778e0b3fdcd017818a58fc9cc657e9cc3e5d316bf5c652a5dbfd99fdb"
   },
   "C_prose_proportional/C02_dejavu_sans_06px.png": {
    "file": "C_prose_proportional/C02_dejavu_sans_06px.png",
@@ -2428,7 +2535,9 @@
    "chars_per_gpt_token": 29.71,
    "text_tokens_equiv": 6988,
    "claude_compression": 6.82,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "70825c2adf42e2a915a5a618794513e3724670ddfcbebf80ed428c5f6277d7a4",
+   "groundtruth_sha256": "74bfb9e0061718ec400d809447df79e8eac2e13f240aa718f273fa1ae61e4302"
   },
   "C_prose_proportional/C03_dejavu_sans_07px.png": {
    "file": "C_prose_proportional/C03_dejavu_sans_07px.png",
@@ -2477,7 +2586,9 @@
    "chars_per_gpt_token": 22.54,
    "text_tokens_equiv": 5301,
    "claude_compression": 5.18,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "114023a9c1759451ae3a66463aec52e6c99521df8fe7b480957de30d05af4ebd",
+   "groundtruth_sha256": "8c5c482445cbd804b92ecba075458b9b43c2f0821af28cf59fba7b6e1eb89f30"
   },
   "C_prose_proportional/C04_dejavu_sans_08px.png": {
    "file": "C_prose_proportional/C04_dejavu_sans_08px.png",
@@ -2526,7 +2637,9 @@
    "chars_per_gpt_token": 17.96,
    "text_tokens_equiv": 4225,
    "claude_compression": 4.13,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "702cc5c042dfea28af8214c67f9964209ce187fe9498954ba075a82fde4e3258",
+   "groundtruth_sha256": "68dea260ae45fd796246c3cf0a86b4f04b9e23ef04ea103b913eda7761370813"
   },
   "C_prose_proportional/C05_dejavu_sans_09px.png": {
    "file": "C_prose_proportional/C05_dejavu_sans_09px.png",
@@ -2575,7 +2688,9 @@
    "chars_per_gpt_token": 13.39,
    "text_tokens_equiv": 3149,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "baf8dc96d04723b92e6a2f1e8877936114e69c8dfa42608ad7e40702e3e4c593",
+   "groundtruth_sha256": "cd88269ebf8292fdc5f2baa76cd4d40be078220af83d85768cd9e89b55ea8b3b"
   },
   "C_prose_proportional/C06_dejavu_sans_10px.png": {
    "file": "C_prose_proportional/C06_dejavu_sans_10px.png",
@@ -2624,7 +2739,9 @@
    "chars_per_gpt_token": 11.13,
    "text_tokens_equiv": 2617,
    "claude_compression": 2.56,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "d020981b9bdf6dd39a964e8c0a73e7b4ee042aff0902db89d61b6245c447f00b",
+   "groundtruth_sha256": "08c70501fb975a4a73ad3a30c8da8a54adc76072860c89da82d65a3a2d0c80a0"
   },
   "C_prose_proportional/C07_dejavu_sans_12px.png": {
    "file": "C_prose_proportional/C07_dejavu_sans_12px.png",
@@ -2673,7 +2790,9 @@
    "chars_per_gpt_token": 8.14,
    "text_tokens_equiv": 1915,
    "claude_compression": 1.87,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "97dff77a18e5922896e5af3368da4251109e4ce6389af3e5753fd5fb71eeed11",
+   "groundtruth_sha256": "0e31e78f51302694bac524121e16508562ff4755182fd2f850b6b68b3fad2e2a"
   },
   "C_prose_proportional/C08_dejavu_sans_14px.png": {
    "file": "C_prose_proportional/C08_dejavu_sans_14px.png",
@@ -2722,7 +2841,9 @@
    "chars_per_gpt_token": 6.25,
    "text_tokens_equiv": 1470,
    "claude_compression": 1.44,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "178d018c2b8621baab1814838afe5e2b74905ba622a822e9d8d0e8b62350c43c",
+   "groundtruth_sha256": "a36e27a42b9bdbe407624187250a865fdd6a123eedc06b6c9e2f72c469d53628"
   },
   "C_prose_proportional/C09_dejavu_sans_16px.png": {
    "file": "C_prose_proportional/C09_dejavu_sans_16px.png",
@@ -2771,7 +2892,9 @@
    "chars_per_gpt_token": 5.03,
    "text_tokens_equiv": 1182,
    "claude_compression": 1.15,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "491a94037d91a1f3a72782eb5c7647778338344c935ace99c55c2d75c3db30f7",
+   "groundtruth_sha256": "45af2de7c5d1a485cd1043f4ed4a421020121433bd296061b089bcfb2d3acc4a"
   },
   "C_prose_proportional/C10_dejavu_sans_20px.png": {
    "file": "C_prose_proportional/C10_dejavu_sans_20px.png",
@@ -2820,7 +2943,9 @@
    "chars_per_gpt_token": 3.18,
    "text_tokens_equiv": 748,
    "claude_compression": 0.73,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "a772a74e401efcdeac553c8a6130809de81c653070e175edc49daa2c595e3ae6",
+   "groundtruth_sha256": "bb353ea77e92169d6be64bd6d6065d6260afa5e1934962f532814b114a81140c"
   },
   "C_prose_proportional/C11_dejavu_sans_24px.png": {
    "file": "C_prose_proportional/C11_dejavu_sans_24px.png",
@@ -2869,7 +2994,9 @@
    "chars_per_gpt_token": 2.17,
    "text_tokens_equiv": 510,
    "claude_compression": 0.5,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "15387519568dd4ae9e296bbdd185bb793cc914e71bdad7192bb755fe4b4a5ce7",
+   "groundtruth_sha256": "99e6549deb2409b61bca672ad935d6ff02c1ff54f8c348cdb98d53e310abbb59"
   },
   "D_eyecharts/D1_bitmap_eyechart.png": {
    "file": "D_eyecharts/D1_bitmap_eyechart.png",
@@ -2902,7 +3029,9 @@
    "chars_per_gpt_token": 1.0,
    "text_tokens_equiv": 236,
    "claude_compression": 0.23,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "f0319a9fe8372412e374c78fa29252825b59e5ece84e23c11060e38ddb5e5756",
+   "groundtruth_sha256": "d3523ac84618944875ab0ce867b5123882abe1cc28060b58b185a7309253c566"
   },
   "D_eyecharts/D2_truetype_eyechart.png": {
    "file": "D_eyecharts/D2_truetype_eyechart.png",
@@ -2935,7 +3064,9 @@
    "chars_per_gpt_token": 0.87,
    "text_tokens_equiv": 204,
    "claude_compression": 0.2,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "9e385fb49564ef477ed8b54795fd0b541e6a078b982b79d05c89e07a8c88bd7d",
+   "groundtruth_sha256": "713b2f7d7d9c6c3a061d43a1dd6f1c05a5296e2f872fa718850de1b968ad096e"
   },
   "D_eyecharts/D3_descending_fullwidth.png": {
    "file": "D_eyecharts/D3_descending_fullwidth.png",
@@ -2968,7 +3099,9 @@
    "chars_per_gpt_token": 2.03,
    "text_tokens_equiv": 477,
    "claude_compression": 0.47,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "e1bb376f311b3960addae11d9a6d99a46543a220db4c9446d0659259a7d3b7cd",
+   "groundtruth_sha256": "d14754d6d6d61c2360b657fd7ac5de2f6d232987ab80cf590f3df5c7a7425032"
   },
   "E_degradations/6x10/E_6x10_00_baseline.png": {
    "file": "E_degradations/6x10/E_6x10_00_baseline.png",
@@ -3037,7 +3170,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "20bde8ccc3056a4867167e729af515137553763da47d7284c9329df44141daea",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_01_gray60.png": {
    "file": "E_degradations/6x10/E_6x10_01_gray60.png",
@@ -3106,7 +3241,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "015069f5cc59b2a69fb0e3d5afadc81c892b27b618a708c64bd2e21f21d4dbe0",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_02_gray30_faint.png": {
    "file": "E_degradations/6x10/E_6x10_02_gray30_faint.png",
@@ -3175,7 +3312,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "5edf087f34740f7435b79148432092dca1ad53cb6dbe98ee92d527a128be39d7",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_03_inverted.png": {
    "file": "E_degradations/6x10/E_6x10_03_inverted.png",
@@ -3244,7 +3383,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "a04e7059692999b972ff7be4cabd22d62897a8933ad22f1be8dfcd2c299e2c9b",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_04_blue_on_cream.png": {
    "file": "E_degradations/6x10/E_6x10_04_blue_on_cream.png",
@@ -3313,7 +3454,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "0a20a7afe097987b90f36b9052fbdb958122597cd3ff27b535e5309767d958d2",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_05_red_on_green.png": {
    "file": "E_degradations/6x10/E_6x10_05_red_on_green.png",
@@ -3382,7 +3525,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "86553d0abc0ca0e4715005e37fc9d5d8d1e24e54138f2b50d854c46b87536f0a",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_06_blur.png": {
    "file": "E_degradations/6x10/E_6x10_06_blur.png",
@@ -3451,7 +3596,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "344908b136e8b7f10e1654fb12db2e1edc76e373235fc9fec444c48dc8c7529c",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_07_noise.png": {
    "file": "E_degradations/6x10/E_6x10_07_noise.png",
@@ -3520,7 +3667,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "a049e74f63c40ec966192da50d7a7d58e71061a94d225e7ba7992d01b10cbb09",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_08_rotate1_5deg.png": {
    "file": "E_degradations/6x10/E_6x10_08_rotate1_5deg.png",
@@ -3589,7 +3738,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "5ed4385da0738cf41d0ae6d33dc5a3af05e7092a78b7eac63ff4103f0fad02dd",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_09_downup_50pct.png": {
    "file": "E_degradations/6x10/E_6x10_09_downup_50pct.png",
@@ -3658,7 +3809,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "edd411a9931a4874cf67efe9c40f8189a3cafdb8e90239c6d90a3789217dbd72",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_10_lowres_75pct.png": {
    "file": "E_degradations/6x10/E_6x10_10_lowres_75pct.png",
@@ -3727,7 +3880,9 @@
    "chars_per_gpt_token": 23.83,
    "text_tokens_equiv": 3152,
    "claude_compression": 5.47,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "a380efe108c0ddac2e79ba4662a31bfeadca83c45a55e1bcd2bd7ef262c398fd",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_11_jpeg30.jpg": {
    "file": "E_degradations/6x10/E_6x10_11_jpeg30.jpg",
@@ -3796,7 +3951,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "6860f74b8ea72a87e2de571878a0cbf9780613925c1b372936ff4c35ad0bc84c",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/6x10/E_6x10_11_jpeg60.jpg": {
    "file": "E_degradations/6x10/E_6x10_11_jpeg60.jpg",
@@ -3865,7 +4022,9 @@
    "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "49777c7d0237fc64e068806c24e9b99d29905353f0f6f23f8c47a455a58c083e",
+   "groundtruth_sha256": "06491910c1f9ca073a356c7cdd302fc4be40eb112365452d6421288b04b22c88"
   },
   "E_degradations/10px/E_10px_00_baseline.png": {
    "file": "E_degradations/10px/E_10px_00_baseline.png",
@@ -3934,7 +4093,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "39f93645d32c312d267572814100dbfbae8c591504d0376a8ff409f008c46ec7",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_01_gray60.png": {
    "file": "E_degradations/10px/E_10px_01_gray60.png",
@@ -4003,7 +4164,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "63fcb4557014b83afa22914a911c2d7ee00499a4fbbd9f62dae81ec12540d640",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_02_gray30_faint.png": {
    "file": "E_degradations/10px/E_10px_02_gray30_faint.png",
@@ -4072,7 +4235,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "95ed5280675eda0a742812c4706b94a0b8312bac29b3df6bce06f6b503614d44",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_03_inverted.png": {
    "file": "E_degradations/10px/E_10px_03_inverted.png",
@@ -4141,7 +4306,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "829131555949ab8822918e87500109409338eeaa179569313607f1989fb6a915",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_04_blue_on_cream.png": {
    "file": "E_degradations/10px/E_10px_04_blue_on_cream.png",
@@ -4210,7 +4377,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "c482e1776ba2877ac9a57b7b8ea24b78ab08403804c0264b718aefb89ff433e3",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_05_red_on_green.png": {
    "file": "E_degradations/10px/E_10px_05_red_on_green.png",
@@ -4279,7 +4448,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "503be45dceba642c854588a32ce0fd971545a48733d65c276116c47d2e33c576",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_06_blur.png": {
    "file": "E_degradations/10px/E_10px_06_blur.png",
@@ -4348,7 +4519,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "fe03233488d1a1f696d676a021502d14ab5123b200a3ae2837c24506c8f5653f",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_07_noise.png": {
    "file": "E_degradations/10px/E_10px_07_noise.png",
@@ -4417,7 +4590,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "bab8299cb7f659f8eb8e524e096ab974c82c2b935d927e487a0c1c6385e3bd67",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_08_rotate1_5deg.png": {
    "file": "E_degradations/10px/E_10px_08_rotate1_5deg.png",
@@ -4486,7 +4661,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "a5a7560f6957dddf28f43bf0880fb647be52e510cc561b3a87a0b3d730882cae",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_09_downup_50pct.png": {
    "file": "E_degradations/10px/E_10px_09_downup_50pct.png",
@@ -4555,7 +4732,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "2a92d9a56ef1920e66f01aa503d4267b29b75bdbd1ade922197b78878a974e2d",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_10_lowres_75pct.png": {
    "file": "E_degradations/10px/E_10px_10_lowres_75pct.png",
@@ -4624,7 +4803,9 @@
    "chars_per_gpt_token": 18.2,
    "text_tokens_equiv": 2408,
    "claude_compression": 4.18,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "a760565115e12f7e4036b9bbe5b554d05e014eeb2db91d03a13e1aa691f3e025",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_11_jpeg30.jpg": {
    "file": "E_degradations/10px/E_10px_11_jpeg30.jpg",
@@ -4693,7 +4874,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "48c556e103658f324d40b40312bf73bb5d618b2bb7cbfc00052028fa18c48e94",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/10px/E_10px_11_jpeg60.jpg": {
    "file": "E_degradations/10px/E_10px_11_jpeg60.jpg",
@@ -4762,7 +4945,9 @@
    "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "5f3e213915529362b4a3d61a9cfec8f2343fd6500feb54eb0978d3d6cd2da709",
+   "groundtruth_sha256": "3ee2ff072edebd3182742a3bc90a76272ef5638e1f3f1417dc15aee6c0ce768f"
   },
   "E_degradations/oversized/E2_1568x1568_2.5MP.png": {
    "file": "E_degradations/oversized/E2_1568x1568_2.5MP.png",
@@ -4831,7 +5016,9 @@
    "chars_per_gpt_token": 13.81,
    "text_tokens_equiv": 9945,
    "claude_compression": 3.17,
-   "oversized_for_claude": true
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "021da34f86fbb3b47f20fd4dc32f402ba82fc6714ef674139d460d4c2ccb1349",
+   "groundtruth_sha256": "ac3dba1e88bde6a08aa3ce75f561c016634c4953ecc8135655846a848053d165"
   },
   "E_degradations/oversized/E2_2240x2240_5MP.png": {
    "file": "E_degradations/oversized/E2_2240x2240_5MP.png",
@@ -4900,7 +5087,9 @@
    "chars_per_gpt_token": 13.9,
    "text_tokens_equiv": 20428,
    "claude_compression": 3.19,
-   "oversized_for_claude": true
+   "exceeds_claude_measured_envelope": true,
+   "image_sha256": "787d998a2170aad9b25221c1f729795d996d5b4274ecf9982264d232ee08deff",
+   "groundtruth_sha256": "38ac58cab01b0c8dd0382857be99c2c29d190688398be1b4707e2c755a0ba190"
   },
   "F_layouts/F1_table_tiny_5x8.png": {
    "file": "F_layouts/F1_table_tiny_5x8.png",
@@ -4958,7 +5147,9 @@
    "chars_per_gpt_token": 6.66,
    "text_tokens_equiv": 1566,
    "claude_compression": 1.53,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "77300968e1d2b0b6ec42612af1a3cb88c7fd3a27180b3d7397d7b02761517e53",
+   "groundtruth_sha256": "a8fc980251632dade1af591527ae5b8038d262f9245d36830424db88482fba7c"
   },
   "F_layouts/F1_table_normal_9x18.png": {
    "file": "F_layouts/F1_table_normal_9x18.png",
@@ -5016,7 +5207,9 @@
    "chars_per_gpt_token": 2.9,
    "text_tokens_equiv": 682,
    "claude_compression": 0.67,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "693aaec3dab76e94fc15306148bc50b375b1278fd2b1184015d83c2a5fa87d75",
+   "groundtruth_sha256": "b13a97daeaa2f520cbc6bfc9b1281ea389df6f48ac92c7a4279f848414f6026b"
   },
   "F_layouts/F2_code_tiny_6x10.png": {
    "file": "F_layouts/F2_code_tiny_6x10.png",
@@ -5064,7 +5257,9 @@
    "chars_per_gpt_token": 1.91,
    "text_tokens_equiv": 449,
    "claude_compression": 0.44,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "c5588260e92008474c2f23984899bb78639d2321c6ca449cd63718c29de8aba1",
+   "groundtruth_sha256": "e9426c337cbcec31ffdc524a74aa253eedd20102de70c020ce376f91d313735d"
   },
   "F_layouts/F2_code_normal_DejaVuSansMono@16px.png": {
    "file": "F_layouts/F2_code_normal_DejaVuSansMono@16px.png",
@@ -5112,7 +5307,9 @@
    "chars_per_gpt_token": 1.91,
    "text_tokens_equiv": 449,
    "claude_compression": 0.44,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "78c96ea862fac8a07e4a5d0230e51b28a36bb90475de304015e365ca54ccfa88",
+   "groundtruth_sha256": "e9426c337cbcec31ffdc524a74aa253eedd20102de70c020ce376f91d313735d"
   },
   "F_layouts/F3_newspaper_tiny_7px.png": {
    "file": "F_layouts/F3_newspaper_tiny_7px.png",
@@ -5160,7 +5357,9 @@
    "chars_per_gpt_token": 12.73,
    "text_tokens_equiv": 2993,
    "claude_compression": 2.92,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "c5ddd001168bd66c0dc50026ebdf572e0354ea2ade479a5986cf5d41bb55b220",
+   "groundtruth_sha256": "235462f5b5ed51688a8ec4b74826768b77a806d7d403ae868b5c91c7ee69a290"
   },
   "F_layouts/F3_newspaper_normal_13px.png": {
    "file": "F_layouts/F3_newspaper_normal_13px.png",
@@ -5208,7 +5407,9 @@
    "chars_per_gpt_token": 5.79,
    "text_tokens_equiv": 1362,
    "claude_compression": 1.33,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "ceebe7244d8867ba71960c0c3b583d38287477c19fb6a8b88b4d014a6438fcff",
+   "groundtruth_sha256": "e9e7cdf70b8fae050940475c1c44d9709e043d40e54293e0d69a942060e78f3a"
   },
   "F_layouts/F4_receipt_tiny_4x6.png": {
    "file": "F_layouts/F4_receipt_tiny_4x6.png",
@@ -5261,7 +5462,9 @@
    "chars_per_gpt_token": 15.11,
    "text_tokens_equiv": 2666,
    "claude_compression": 3.47,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "3fca1e69e6ec5b56504b7782a3176dc45c4e55363ea80763a95a7aa8e2c3e582",
+   "groundtruth_sha256": "a1a2c020f3e54ce94dd596dc96d3b00cda2e2d41c39677a7f0ae165ddfb9fdc3"
   },
   "F_layouts/F4_receipt_small_6x10.png": {
    "file": "F_layouts/F4_receipt_small_6x10.png",
@@ -5314,7 +5517,9 @@
    "chars_per_gpt_token": 10.08,
    "text_tokens_equiv": 1778,
    "claude_compression": 2.31,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "8fd9e82983383303443a96e6ddca24b8babbae7820931b2ae027967926f74457",
+   "groundtruth_sha256": "9cf72df57f1527b1e5fa46d0acb400745d5fd2a14aa334503666285209c0e908"
   },
   "F_layouts/F4_receipt_normal_9x18.png": {
    "file": "F_layouts/F4_receipt_normal_9x18.png",
@@ -5367,7 +5572,9 @@
    "chars_per_gpt_token": 4.68,
    "text_tokens_equiv": 826,
    "claude_compression": 1.07,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "a4ae743f9f9fe1240c2391c72dcbcb0b281c553d5d5f371d238feab4bd35c1c8",
+   "groundtruth_sha256": "b50f37cd49c142aea57f0e0d4fc365b622a2a5f610e69b532734a1fd9f8de5a9"
   },
   "F_layouts/F5_terminal_tiny_5x8.png": {
    "file": "F_layouts/F5_terminal_tiny_5x8.png",
@@ -5415,7 +5622,9 @@
    "chars_per_gpt_token": 5.97,
    "text_tokens_equiv": 1580,
    "claude_compression": 1.37,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "b8c895c18d5f0d2647503cf94f07d828daa946d2e8206a14647fa65dfda0af43",
+   "groundtruth_sha256": "c082c0ad1cba12859489938224de49cc9b3bbff7af63d3049f345dc7a2456458"
   },
   "F_layouts/F5_terminal_small_6x13.png": {
    "file": "F_layouts/F5_terminal_small_6x13.png",
@@ -5463,7 +5672,9 @@
    "chars_per_gpt_token": 3.52,
    "text_tokens_equiv": 932,
    "claude_compression": 0.81,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "8674a5ac2ee8a0c15b87d18d70af4b674f9fff69e2dc87638d20e2138e667c55",
+   "groundtruth_sha256": "a126891035723cd69ba506ecac9afa98cdb872738effd826495e068d5b7be46c"
   },
   "F_layouts/F5_terminal_normal_9x18.png": {
    "file": "F_layouts/F5_terminal_normal_9x18.png",
@@ -5511,7 +5722,9 @@
    "chars_per_gpt_token": 2.63,
    "text_tokens_equiv": 695,
    "claude_compression": 0.6,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "fe9fa540a2aa58c0f7da8ac5ca369b096d724f69d26096b08ebd10b7db951086",
+   "groundtruth_sha256": "a815a3c6c7f44a438f2099b3814213797c85d931ddeb1760c0ada84f001fbf34"
   },
   "F_layouts/F6_spreadsheet_tiny_5x8.png": {
    "file": "F_layouts/F6_spreadsheet_tiny_5x8.png",
@@ -5565,7 +5778,9 @@
    "chars_per_gpt_token": 6.93,
    "text_tokens_equiv": 1629,
    "claude_compression": 1.59,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "4e5c15aaf1300b944ab6814145c2079bd2edffedb6b9e0fed458e6f0d193cb7f",
+   "groundtruth_sha256": "ad9d85a9d2ae455bf2b98d176d0400a75c44f1e36ca5124b231dee7fe4709c03"
   },
   "F_layouts/F6_spreadsheet_small_6x10.png": {
    "file": "F_layouts/F6_spreadsheet_small_6x10.png",
@@ -5619,7 +5834,9 @@
    "chars_per_gpt_token": 6.93,
    "text_tokens_equiv": 1629,
    "claude_compression": 1.59,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "bb896221942fb80d718b106719fe0ec5931f54bd3a2af7e93c94615c563b7123",
+   "groundtruth_sha256": "20f5c61d86b6a99343162925ea18d872cba69414c6e6de93909d48e40286443d"
   },
   "F_layouts/F6_spreadsheet_normal_8x16.png": {
    "file": "F_layouts/F6_spreadsheet_normal_8x16.png",
@@ -5673,7 +5890,9 @@
    "chars_per_gpt_token": 5.33,
    "text_tokens_equiv": 1254,
    "claude_compression": 1.22,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "54722f17490b4739e261531a9b5d8e088eff41c77168ae2582351ada54871fcd",
+   "groundtruth_sha256": "9c16119cd01361852e35ee61ac9ac287b601c1ddd7b6e9fb1154cce1e073faf0"
   },
   "G_multiscale/G1_contract.png": {
    "file": "G_multiscale/G1_contract.png",
@@ -5748,7 +5967,9 @@
    "chars_per_gpt_token": 14.21,
    "text_tokens_equiv": 4178,
    "claude_compression": 3.26,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "3832a44a0b3dfcf08b9e34d705b67936a35a50c620bd8ed6cbc743e83dc64968",
+   "groundtruth_sha256": "362b8843c7e92e97930ad0f64f43729a05847ca12e10b2c9bd4af8f0ad15081c"
   },
   "G_multiscale/G2_label.png": {
    "file": "G_multiscale/G2_label.png",
@@ -5816,7 +6037,9 @@
    "chars_per_gpt_token": 14.4,
    "text_tokens_equiv": 3387,
    "claude_compression": 3.31,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "b6197546fae3a92d474266d8465c306b72a1aa8938754a5910bf36fd589ccb33",
+   "groundtruth_sha256": "0bc79d068ca648d6f2b822c257dd982987b38e18ab237ede6576ec358f48319c"
   },
   "H_packing/H_clR5x6_1120x672.png": {
    "file": "H_packing/H_clR5x6_1120x672.png",
@@ -5877,6 +6100,7 @@
    "cols": 224,
    "rows": 112,
    "theoretical_ch_per_token": 26.13,
+   "grid_patch": 28,
    "w": 1120,
    "h": 672,
    "chars": 24534,
@@ -5888,7 +6112,9 @@
    "chars_per_gpt_token": 27.82,
    "text_tokens_equiv": 6134,
    "claude_compression": 6.39,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "d82dde8a114ec9f527ee12caf57fe8d52cd732f55900d08f6f4b3f1584c68ab4",
+   "groundtruth_sha256": "a7713067c0a84e410e18afc1584638164c295827fe77bf9282ec15946080df7e"
   },
   "H_packing/H_clR6x6_1344x672.png": {
    "file": "H_packing/H_clR6x6_1344x672.png",
@@ -5949,6 +6175,7 @@
    "cols": 224,
    "rows": 112,
    "theoretical_ch_per_token": 21.78,
+   "grid_patch": 28,
    "w": 1344,
    "h": 672,
    "chars": 24491,
@@ -5960,7 +6187,9 @@
    "chars_per_gpt_token": 23.14,
    "text_tokens_equiv": 6123,
    "claude_compression": 5.31,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "66472052d6922bf86187b2bf549e151508b4d5f8a6afb3ba03062e9a8b1c21aa",
+   "groundtruth_sha256": "b713bc0670c31fa115916f1a56d94e609ef2835f790c1076c2ceed3749ac4885"
   },
   "H_packing/H_clR5x8_1120x896.png": {
    "file": "H_packing/H_clR5x8_1120x896.png",
@@ -6021,6 +6250,7 @@
    "cols": 224,
    "rows": 112,
    "theoretical_ch_per_token": 19.6,
+   "grid_patch": 28,
    "w": 1120,
    "h": 896,
    "chars": 24538,
@@ -6032,7 +6262,9 @@
    "chars_per_gpt_token": 20.87,
    "text_tokens_equiv": 6134,
    "claude_compression": 4.79,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "18fa57eb1ccf53db4157c20df06413fde893ba56a1588fd53fadc22bedcfa5f5",
+   "groundtruth_sha256": "610281aa97255e8e7f1dd4895192a0d47a3c8b2f1cc844b8f60d21f5631bf1aa"
   },
   "H_packing/H_clR6x8_672x896.png": {
    "file": "H_packing/H_clR6x8_672x896.png",
@@ -6093,6 +6325,7 @@
    "cols": 112,
    "rows": 112,
    "theoretical_ch_per_token": 16.33,
+   "grid_patch": 28,
    "w": 672,
    "h": 896,
    "chars": 11963,
@@ -6104,7 +6337,9 @@
    "chars_per_gpt_token": 16.95,
    "text_tokens_equiv": 2991,
    "claude_compression": 3.89,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "3ddd458e7e68a20b6f1bff17f3db9140fbe969e9c6f8b36c5d4656c38e75719b",
+   "groundtruth_sha256": "0e70936255dcf896d5a5c69280d91dd9478c4741fa2a3c96c7717bf3b82c9092"
   },
   "H_packing/H_clR5x10_840x1120.png": {
    "file": "H_packing/H_clR5x10_840x1120.png",
@@ -6165,6 +6400,7 @@
    "cols": 168,
    "rows": 112,
    "theoretical_ch_per_token": 15.68,
+   "grid_patch": 28,
    "w": 840,
    "h": 1120,
    "chars": 18227,
@@ -6176,7 +6412,9 @@
    "chars_per_gpt_token": 16.07,
    "text_tokens_equiv": 4557,
    "claude_compression": 3.8,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "ad31e1496fe84e78a61cded679af014f9cd3715d83ab30e58486d4911bd761b0",
+   "groundtruth_sha256": "0da67aa698c50d961bc468a15e0430ef3ba5e695c7abd3d46323046f38217a32"
   },
   "H_packing/H_clR7x8_896x896.png": {
    "file": "H_packing/H_clR7x8_896x896.png",
@@ -6237,6 +6475,7 @@
    "cols": 128,
    "rows": 112,
    "theoretical_ch_per_token": 14.0,
+   "grid_patch": 28,
    "w": 896,
    "h": 896,
    "chars": 13795,
@@ -6248,7 +6487,9 @@
    "chars_per_gpt_token": 14.66,
    "text_tokens_equiv": 3449,
    "claude_compression": 3.37,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "6cbe49f14484ae90ab8b8a82f9a1d33e15d01a83f758d6029d3eec26dca84739",
+   "groundtruth_sha256": "7bdf27cc6e6880b9612d4bf3afc9647075e6644df71ef41da3d37c185c320b9f"
   },
   "H_packing/H_6x9_1008x1008.png": {
    "file": "H_packing/H_6x9_1008x1008.png",
@@ -6309,6 +6550,7 @@
    "cols": 168,
    "rows": 112,
    "theoretical_ch_per_token": 14.52,
+   "grid_patch": 28,
    "w": 1008,
    "h": 1008,
    "chars": 18221,
@@ -6320,7 +6562,9 @@
    "chars_per_gpt_token": 14.83,
    "text_tokens_equiv": 4555,
    "claude_compression": 3.51,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "1ea02b43ff9bd7afcbcf80012b871b9c970b32b6e46256931c404cacc164f0b0",
+   "groundtruth_sha256": "2316aa4f9083b623cc9cee241a06afa129163bfeecf3a2bf4c4bed7d33b5a0f5"
   },
   "H_packing/H_clB6x10_672x1120.png": {
    "file": "H_packing/H_clB6x10_672x1120.png",
@@ -6381,6 +6625,7 @@
    "cols": 112,
    "rows": 112,
    "theoretical_ch_per_token": 13.07,
+   "grid_patch": 28,
    "w": 672,
    "h": 1120,
    "chars": 12004,
@@ -6392,7 +6637,9 @@
    "chars_per_gpt_token": 13.61,
    "text_tokens_equiv": 3001,
    "claude_compression": 3.13,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "f55cf8f7cde16359b7ade7466c2a02b6b424b0d1e72554ced10c122bb9c2f19b",
+   "groundtruth_sha256": "1c124c26e7ad3ea26c22dc0c92ddcf163f1f489f7bf9d4c5aeb4e258913fdb7f"
   },
   "H_packing/H_clR8x8_896x896.png": {
    "file": "H_packing/H_clR8x8_896x896.png",
@@ -6453,6 +6700,7 @@
    "cols": 112,
    "rows": 112,
    "theoretical_ch_per_token": 12.25,
+   "grid_patch": 28,
    "w": 896,
    "h": 896,
    "chars": 11978,
@@ -6464,7 +6712,9 @@
    "chars_per_gpt_token": 12.73,
    "text_tokens_equiv": 2994,
    "claude_compression": 2.92,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "ecfec21a4277d7fd5ad7bc4b03295dd410c02d7ac50778f3405717035d54ecaf",
+   "groundtruth_sha256": "f6a26698d65dcbe1f0281222f7c4423c3712f1ad29fc049c0ce324fd4664c090"
   },
   "I_aspect/I_6x9_1344x666_74rows.png": {
    "file": "I_aspect/I_6x9_1344x666_74rows.png",
@@ -6534,7 +6784,9 @@
    "chars_per_gpt_token": 15.26,
    "text_tokens_equiv": 4036,
    "claude_compression": 3.5,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "a1d2b892686923b59d272953c1c690a0b4047115ced4ae964b703f61f68034d0",
+   "groundtruth_sha256": "5d33e286c8f1b351e11fd65c8d75862cdc3c6be8ea03598b3b52295b09d34898"
   },
   "I_aspect/I_6x9_672x1341_149rows.png": {
    "file": "I_aspect/I_6x9_672x1341_149rows.png",
@@ -6604,7 +6856,9 @@
    "chars_per_gpt_token": 15.05,
    "text_tokens_equiv": 3983,
    "claude_compression": 3.46,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "f722600c190cacd086525828397780c4aba5d626f4c8a5297055acf1b59633bb",
+   "groundtruth_sha256": "42c4a60dd52ad1131383365ab28c30383e1292d0519ea283d0b154118c7c74c1"
   },
   "I_aspect/I_6x9_894x1008_112rows.png": {
    "file": "I_aspect/I_6x9_894x1008_112rows.png",
@@ -6674,7 +6928,9 @@
    "chars_per_gpt_token": 14.99,
    "text_tokens_equiv": 4030,
    "claude_compression": 3.5,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "60519893dce9d176892a900748f6ac8c304f1511a7b43b5cf521a2de0a102f4d",
+   "groundtruth_sha256": "fdb00b4b5af1c1c4d051854fd62bb76edd4b4a86d23fce634e399155a314d15d"
   },
   "J_pitch/J_4x6_pitch9_1008x1008.png": {
    "file": "J_pitch/J_4x6_pitch9_1008x1008.png",
@@ -6736,6 +6992,7 @@
    "cols": 252,
    "rows": 112,
    "theoretical_ch_per_token": 21.78,
+   "grid_patch": 28,
    "w": 1008,
    "h": 1008,
    "chars": 27654,
@@ -6747,7 +7004,9 @@
    "chars_per_gpt_token": 22.5,
    "text_tokens_equiv": 6914,
    "claude_compression": 5.33,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "6fa298f0590db86457e1fdefe9684c7196aaf4b05a135bfe760b43d854ca82ee",
+   "groundtruth_sha256": "da7207221ee9db75763a2228435e8cbad1daf5c1987c4c251ba399f25763f5a9"
   },
   "J_pitch/J_4x6_pitch10_896x1120.png": {
    "file": "J_pitch/J_4x6_pitch10_896x1120.png",
@@ -6809,6 +7068,7 @@
    "cols": 224,
    "rows": 112,
    "theoretical_ch_per_token": 19.6,
+   "grid_patch": 28,
    "w": 896,
    "h": 1120,
    "chars": 24494,
@@ -6820,7 +7080,9 @@
    "chars_per_gpt_token": 20.83,
    "text_tokens_equiv": 6124,
    "claude_compression": 4.78,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "42880e707403f569e7b16b6e6b5f8d9d411eac2a8c76a2205e2155d0a13f2ed4",
+   "groundtruth_sha256": "c0629b12174d019a6cb928aec9e2e032826ae19088ffb0e6fc88c0abe6afa5e7"
   },
   "J_pitch/J_4x6_pitch12_672x1344.png": {
    "file": "J_pitch/J_4x6_pitch12_672x1344.png",
@@ -6882,6 +7144,7 @@
    "cols": 168,
    "rows": 112,
    "theoretical_ch_per_token": 16.33,
+   "grid_patch": 28,
    "w": 672,
    "h": 1344,
    "chars": 18283,
@@ -6893,7 +7156,9 @@
    "chars_per_gpt_token": 17.27,
    "text_tokens_equiv": 4571,
    "claude_compression": 3.97,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "704c87403d902b9c45b39a608d3e2fd38a289bbd6bf53d9f108adeb269d202db",
+   "groundtruth_sha256": "3b4b470296e6146384256d15bd2afd1045466f258d56944649cbc8c1443a5044"
   },
   "J_pitch/J_clR5x6_pitch9_980x1008.png": {
    "file": "J_pitch/J_clR5x6_pitch9_980x1008.png",
@@ -6955,6 +7220,7 @@
    "cols": 196,
    "rows": 112,
    "theoretical_ch_per_token": 17.42,
+   "grid_patch": 28,
    "w": 980,
    "h": 1008,
    "chars": 21339,
@@ -6966,7 +7232,9 @@
    "chars_per_gpt_token": 17.93,
    "text_tokens_equiv": 5335,
    "claude_compression": 4.23,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "0d323cae545e4c34d7596c5a0d894bff3d7051497f034d2a56f3b5782ddff279",
+   "groundtruth_sha256": "9d54ef86d30c911d7721270c29dc8d76b56bd8838fee9a001ca3b24c2630da0a"
   },
   "J_pitch/J_clR5x8_pitch9_980x1008.png": {
    "file": "J_pitch/J_clR5x8_pitch9_980x1008.png",
@@ -7028,6 +7296,7 @@
    "cols": 196,
    "rows": 112,
    "theoretical_ch_per_token": 17.42,
+   "grid_patch": 28,
    "w": 980,
    "h": 1008,
    "chars": 21387,
@@ -7039,7 +7308,9 @@
    "chars_per_gpt_token": 17.97,
    "text_tokens_equiv": 5347,
    "claude_compression": 4.24,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "0176ef8c59b3d03f7a46487399e8c56832b1cefe556ee06fa6012cfb3ef9722d",
+   "groundtruth_sha256": "ad6637a1eb085cdc0cea95f6e76aeeed6784eb3b788f2718c568f190c00ebf22"
   },
   "J_pitch/J_clR5x8_pitch10_840x1120.png": {
    "file": "J_pitch/J_clR5x8_pitch10_840x1120.png",
@@ -7101,6 +7372,7 @@
    "cols": 168,
    "rows": 112,
    "theoretical_ch_per_token": 15.68,
+   "grid_patch": 28,
    "w": 840,
    "h": 1120,
    "chars": 18176,
@@ -7112,7 +7384,9 @@
    "chars_per_gpt_token": 16.03,
    "text_tokens_equiv": 4544,
    "claude_compression": 3.79,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "d71361bd85e4b6fda7347603a2041a2b77079421e2b724b6e609e6c00bfa56d7",
+   "groundtruth_sha256": "ed41ecb4415fcba10fd2607f763cf0fda2a2bb537db90e7d0c0ef6540b705952"
   },
   "J_pitch/J_clR6x8_pitch9_1008x1008.png": {
    "file": "J_pitch/J_clR6x8_pitch9_1008x1008.png",
@@ -7174,6 +7448,7 @@
    "cols": 168,
    "rows": 112,
    "theoretical_ch_per_token": 14.52,
+   "grid_patch": 28,
    "w": 1008,
    "h": 1008,
    "chars": 18217,
@@ -7185,7 +7460,9 @@
    "chars_per_gpt_token": 14.83,
    "text_tokens_equiv": 4554,
    "claude_compression": 3.51,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "9672512e3a755a6a33c2634eeba266be225422ae853f57143a6904cb8e429ba5",
+   "groundtruth_sha256": "fef90f73641d910bcca891d8c30ca56713b8ca023df0184e1cebcb7b1df60d65"
   },
   "J_pitch/J_5x7_pitch9_980x1008.png": {
    "file": "J_pitch/J_5x7_pitch9_980x1008.png",
@@ -7247,6 +7524,7 @@
    "cols": 196,
    "rows": 112,
    "theoretical_ch_per_token": 17.42,
+   "grid_patch": 28,
    "w": 980,
    "h": 1008,
    "chars": 21343,
@@ -7258,7 +7536,9 @@
    "chars_per_gpt_token": 17.93,
    "text_tokens_equiv": 5336,
    "claude_compression": 4.23,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "f14caacf544aed3c891cf6ca5354e01ad1be8bf96999b651750d4e5a40bca588",
+   "groundtruth_sha256": "45945440c62317dec7de710ce1164023eecb979a826fcb79bad621b5aa2594fe"
   },
   "K_entropy/K_clR6x8_pitch8_672x896.png": {
    "file": "K_entropy/K_clR6x8_pitch8_672x896.png",
@@ -7295,6 +7575,7 @@
    "rows": 112,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 16.33,
+   "grid_patch": 28,
    "w": 672,
    "h": 896,
    "chars": 12208,
@@ -7306,7 +7587,9 @@
    "chars_per_gpt_token": 17.3,
    "text_tokens_equiv": 3052,
    "claude_compression": 3.97,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "74c84b9b38cfcbfae46831fceb460e0930793a7d9ec97e12fe92928d50627d89",
+   "groundtruth_sha256": "7b4b157e60e7910a0c0ee9e5409c76c6337eff66504a12e7c7b2724926027048"
   },
   "K_entropy/K_6x9_pitch9_1008x1008.png": {
    "file": "K_entropy/K_6x9_pitch9_1008x1008.png",
@@ -7343,6 +7626,7 @@
    "rows": 112,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 14.52,
+   "grid_patch": 28,
    "w": 1008,
    "h": 1008,
    "chars": 18368,
@@ -7354,7 +7638,9 @@
    "chars_per_gpt_token": 14.95,
    "text_tokens_equiv": 4592,
    "claude_compression": 3.54,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "488a222429438b5838b3a6e034ba424c196fcf75051017589aab0930ace21c6a",
+   "groundtruth_sha256": "e6ef74dd387488c21ba95f78b5fb5cd0aacfd3f863d8383e59366fbd2d1fb98a"
   },
   "K_entropy/K_4x6_pitch9_1008x1008.png": {
    "file": "K_entropy/K_4x6_pitch9_1008x1008.png",
@@ -7391,6 +7677,7 @@
    "rows": 112,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 21.78,
+   "grid_patch": 28,
    "w": 1008,
    "h": 1008,
    "chars": 27888,
@@ -7402,7 +7689,9 @@
    "chars_per_gpt_token": 22.7,
    "text_tokens_equiv": 6972,
    "claude_compression": 5.38,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "44b73a6067ba5c11646fb5bc19e9c8152c41ef2ca991d9dae4a2f3d574737a4b",
+   "groundtruth_sha256": "2c66fc5d9283f8a2aefb2feb08a9b7f28cfd460adc13ce4bc32e86a489e4c707"
   },
   "K_entropy/K_clR5x8_pitch9_980x1008.png": {
    "file": "K_entropy/K_clR5x8_pitch9_980x1008.png",
@@ -7439,6 +7728,7 @@
    "rows": 112,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 17.42,
+   "grid_patch": 28,
    "w": 980,
    "h": 1008,
    "chars": 21728,
@@ -7450,7 +7740,9 @@
    "chars_per_gpt_token": 18.25,
    "text_tokens_equiv": 5432,
    "claude_compression": 4.31,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "30e0c4857f9b5f5700ecd3d4e73c490d51db2e86a2897930a6f88d3c469f0c4c",
+   "groundtruth_sha256": "8b5c5f7232f39e7de91bebdeb0c7b06a290702963fa262794d17d64627eb15c1"
   },
   "K_entropy/K_6x10_pitch10_672x1120.png": {
    "file": "K_entropy/K_6x10_pitch10_672x1120.png",
@@ -7487,6 +7779,7 @@
    "rows": 112,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 13.07,
+   "grid_patch": 28,
    "w": 672,
    "h": 1120,
    "chars": 12208,
@@ -7498,7 +7791,9 @@
    "chars_per_gpt_token": 13.84,
    "text_tokens_equiv": 3052,
    "claude_compression": 3.18,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "1c5f7ff3d80a3d66b52fd5a75572a587650ca3eb960425ca2e42930a4b3465ea",
+   "groundtruth_sha256": "dac43f8b54699673f85eece67c412e75206970ecd5c66da93933b330fbfbf31a"
   },
   "K_entropy/K_6x13_pitch13_672x1456.png": {
    "file": "K_entropy/K_6x13_pitch13_672x1456.png",
@@ -7535,6 +7830,7 @@
    "rows": 112,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 10.05,
+   "grid_patch": 28,
    "w": 672,
    "h": 1456,
    "chars": 12208,
@@ -7546,7 +7842,9 @@
    "chars_per_gpt_token": 10.53,
    "text_tokens_equiv": 3052,
    "claude_compression": 2.45,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "7099b04f46cd3a45e8d54c709f5f0a8f2d2dec33428e7888ef29ee50a67c2942",
+   "groundtruth_sha256": "8d24450df19bd6d1772d0496f7fdef640826f893955f933b31c96a9b9dcac742"
   },
   "K_entropy/K_7x14_pitch14_448x1568.png": {
    "file": "K_entropy/K_7x14_pitch14_448x1568.png",
@@ -7583,6 +7881,7 @@
    "rows": 112,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 8.0,
+   "grid_patch": 28,
    "w": 448,
    "h": 1568,
    "chars": 7168,
@@ -7594,7 +7893,9 @@
    "chars_per_gpt_token": 8.71,
    "text_tokens_equiv": 1792,
    "claude_compression": 2.0,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "cb5bd8ac4d5db804b6c7d7e2c254cc4a88c17b11541ac35b89812e449d450eab",
+   "groundtruth_sha256": "24b8c096c8a239955bc5b3ac2f7821ce0fb271dd23e3dc64143f0dc36b313fa3"
   },
   "K_entropy/K_8x16_pitch16_448x1568.png": {
    "file": "K_entropy/K_8x16_pitch16_448x1568.png",
@@ -7631,6 +7932,7 @@
    "rows": 98,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 6.12,
+   "grid_patch": 28,
    "w": 448,
    "h": 1568,
    "chars": 5292,
@@ -7642,7 +7944,9 @@
    "chars_per_gpt_token": 6.43,
    "text_tokens_equiv": 1323,
    "claude_compression": 1.48,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "60a91301b539ada8c56683dc7e5b22a32105938b64404f41510a89c81e167645",
+   "groundtruth_sha256": "59b8e5f2b6f2c19d2bdf122609332d57f78c0d8434640c749f44b931e9c7688f"
   },
   "K_entropy/K_9x18_pitch18_504x1512.png": {
    "file": "K_entropy/K_9x18_pitch18_504x1512.png",
@@ -7679,6 +7983,7 @@
    "rows": 84,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 4.84,
+   "grid_patch": 28,
    "w": 504,
    "h": 1512,
    "chars": 4536,
@@ -7690,7 +7995,9 @@
    "chars_per_gpt_token": 4.92,
    "text_tokens_equiv": 1134,
    "claude_compression": 1.17,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "e7fef503212516b2b2b970fe0192906dd82f05884c9f7d0be91494b16cb57503",
+   "groundtruth_sha256": "3b32242f7b701bd231200f81cbcb6da9d629bd5ba1443247f156d8a0d45a914d"
   },
   "K_entropy/K_10x20_pitch20_560x1540.png": {
    "file": "K_entropy/K_10x20_pitch20_560x1540.png",
@@ -7727,6 +8034,7 @@
    "rows": 77,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 3.92,
+   "grid_patch": 28,
    "w": 560,
    "h": 1540,
    "chars": 4158,
@@ -7738,7 +8046,9 @@
    "chars_per_gpt_token": 3.93,
    "text_tokens_equiv": 1040,
    "claude_compression": 0.94,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "d729ed46c612403dadcbd70c59dd08d0a456ef9179624055c6a56335b069df47",
+   "groundtruth_sha256": "6dab3b327e3fd90ff3bfa3f9675eece52c9120f3595ee620df0f8ee552fc93bb"
   },
   "K_entropy/K_12x24_pitch24_672x1344.png": {
    "file": "K_entropy/K_12x24_pitch24_672x1344.png",
@@ -7775,6 +8085,7 @@
    "rows": 56,
    "payload": "high-entropy",
    "theoretical_ch_per_token": 2.72,
+   "grid_patch": 28,
    "w": 672,
    "h": 1344,
    "chars": 3024,
@@ -7786,7 +8097,9 @@
    "chars_per_gpt_token": 2.86,
    "text_tokens_equiv": 756,
    "claude_compression": 0.66,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "ff520dc692ac9b0ae64c8c356af4901e662724cc54ff3f9c2fcc14ebaaf9aeed",
+   "groundtruth_sha256": "edcab6f5ee9c0a9cd33af3f17c7046be31ed685800be6160b154b915d89de081"
   },
   "K2_entropy_narrow/K2_6x9_336x1008.png": {
    "file": "K2_entropy_narrow/K2_6x9_336x1008.png",
@@ -7818,6 +8131,7 @@
    "rows": 112,
    "payload": "high-entropy-narrow",
    "theoretical_ch_per_token": 14.52,
+   "grid_patch": 28,
    "w": 336,
    "h": 1008,
    "chars": 6048,
@@ -7829,7 +8143,9 @@
    "chars_per_gpt_token": 14.32,
    "text_tokens_equiv": 1512,
    "claude_compression": 3.5,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "226bfa5e86af63070333f625fd7ef7e9b87f1cc66e89c0ff8eac5e676504836e",
+   "groundtruth_sha256": "4dde6ab7521f0dd439bfe087fba85d2aa27e89ddaa9422ebd59d440bd52cf040"
   },
   "K2_entropy_narrow/K2_6x10_336x1120.png": {
    "file": "K2_entropy_narrow/K2_6x10_336x1120.png",
@@ -7861,6 +8177,7 @@
    "rows": 112,
    "payload": "high-entropy-narrow",
    "theoretical_ch_per_token": 13.07,
+   "grid_patch": 28,
    "w": 336,
    "h": 1120,
    "chars": 6048,
@@ -7872,7 +8189,9 @@
    "chars_per_gpt_token": 13.09,
    "text_tokens_equiv": 1512,
    "claude_compression": 3.15,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "44fae965178720f723deec8ec639a97904b36a96dfc49cf28ed68e386e8bd9e8",
+   "groundtruth_sha256": "ca9fe086e9fdb9120dde7a875ec582b7777412e572d2f9f2341f6d4f95feed86"
   },
   "K2_entropy_narrow/K2_6x13_336x1456.png": {
    "file": "K2_entropy_narrow/K2_6x13_336x1456.png",
@@ -7904,6 +8223,7 @@
    "rows": 112,
    "payload": "high-entropy-narrow",
    "theoretical_ch_per_token": 10.05,
+   "grid_patch": 28,
    "w": 336,
    "h": 1456,
    "chars": 6048,
@@ -7915,7 +8235,9 @@
    "chars_per_gpt_token": 9.96,
    "text_tokens_equiv": 1512,
    "claude_compression": 2.42,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "50197b316fb9b2dbca6c6745ea826b4ffa64b1a20a8fae05cbad3c1ececff9d0",
+   "groundtruth_sha256": "272f9359a42892bb2e52cca7095ecf3a802db1538dc554edaba215cc354cfaad"
   },
   "K2_entropy_narrow/K2_8x16_448x1456.png": {
    "file": "K2_entropy_narrow/K2_8x16_448x1456.png",
@@ -7947,6 +8269,7 @@
    "rows": 91,
    "payload": "high-entropy-narrow",
    "theoretical_ch_per_token": 6.12,
+   "grid_patch": 28,
    "w": 448,
    "h": 1456,
    "chars": 4914,
@@ -7958,7 +8281,9 @@
    "chars_per_gpt_token": 6.36,
    "text_tokens_equiv": 1228,
    "claude_compression": 1.48,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "74391e49782ff66d95a9066ba8b8c8af4da6b655622b3688d8dbac3dac671c68",
+   "groundtruth_sha256": "e5c29cc28b9853e351163b143db04aebd328695031762051cd67392e7f0f3842"
   },
   "K2_entropy_narrow/K2_9x18_504x1456.png": {
    "file": "K2_entropy_narrow/K2_9x18_504x1456.png",
@@ -7990,6 +8315,7 @@
    "rows": 80,
    "payload": "high-entropy-narrow",
    "theoretical_ch_per_token": 4.84,
+   "grid_patch": 28,
    "w": 504,
    "h": 1456,
    "chars": 4320,
@@ -8001,7 +8327,9 @@
    "chars_per_gpt_token": 4.89,
    "text_tokens_equiv": 1080,
    "claude_compression": 1.15,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "1327465e462d1145142ded68f9d173041acf568532564110164cde19644f5357",
+   "groundtruth_sha256": "4c2fdc8454ff43112a2f1262efc32e4a834bd4f7471d5159d8e05cd01bc9dcdb"
   },
   "H_packing_p32/H_clR5x6_1120x672.png": {
    "file": "H_packing_p32/H_clR5x6_1120x672.png",
@@ -8061,7 +8389,8 @@
    "antialiased": false,
    "cols": 224,
    "rows": 112,
-   "theoretical_ch_per_token": 26.13,
+   "theoretical_ch_per_token": 28.44,
+   "grid_patch": 32,
    "w": 1120,
    "h": 672,
    "chars": 24534,
@@ -8073,7 +8402,9 @@
    "chars_per_gpt_token": 27.82,
    "text_tokens_equiv": 6134,
    "claude_compression": 6.39,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "d82dde8a114ec9f527ee12caf57fe8d52cd732f55900d08f6f4b3f1584c68ab4",
+   "groundtruth_sha256": "a7713067c0a84e410e18afc1584638164c295827fe77bf9282ec15946080df7e"
   },
   "H_packing_p32/H_clR6x6_1344x672.png": {
    "file": "H_packing_p32/H_clR6x6_1344x672.png",
@@ -8133,7 +8464,8 @@
    "antialiased": false,
    "cols": 224,
    "rows": 112,
-   "theoretical_ch_per_token": 21.78,
+   "theoretical_ch_per_token": 23.7,
+   "grid_patch": 32,
    "w": 1344,
    "h": 672,
    "chars": 24491,
@@ -8145,7 +8477,9 @@
    "chars_per_gpt_token": 23.14,
    "text_tokens_equiv": 6123,
    "claude_compression": 5.31,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "66472052d6922bf86187b2bf549e151508b4d5f8a6afb3ba03062e9a8b1c21aa",
+   "groundtruth_sha256": "b713bc0670c31fa115916f1a56d94e609ef2835f790c1076c2ceed3749ac4885"
   },
   "H_packing_p32/H_clR5x8_1120x896.png": {
    "file": "H_packing_p32/H_clR5x8_1120x896.png",
@@ -8205,7 +8539,8 @@
    "antialiased": false,
    "cols": 224,
    "rows": 112,
-   "theoretical_ch_per_token": 19.6,
+   "theoretical_ch_per_token": 21.33,
+   "grid_patch": 32,
    "w": 1120,
    "h": 896,
    "chars": 24538,
@@ -8217,7 +8552,9 @@
    "chars_per_gpt_token": 20.87,
    "text_tokens_equiv": 6134,
    "claude_compression": 4.79,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "18fa57eb1ccf53db4157c20df06413fde893ba56a1588fd53fadc22bedcfa5f5",
+   "groundtruth_sha256": "610281aa97255e8e7f1dd4895192a0d47a3c8b2f1cc844b8f60d21f5631bf1aa"
   },
   "H_packing_p32/H_clR6x8_672x896.png": {
    "file": "H_packing_p32/H_clR6x8_672x896.png",
@@ -8277,7 +8614,8 @@
    "antialiased": false,
    "cols": 112,
    "rows": 112,
-   "theoretical_ch_per_token": 16.33,
+   "theoretical_ch_per_token": 17.78,
+   "grid_patch": 32,
    "w": 672,
    "h": 896,
    "chars": 11963,
@@ -8289,7 +8627,9 @@
    "chars_per_gpt_token": 16.95,
    "text_tokens_equiv": 2991,
    "claude_compression": 3.89,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "3ddd458e7e68a20b6f1bff17f3db9140fbe969e9c6f8b36c5d4656c38e75719b",
+   "groundtruth_sha256": "0e70936255dcf896d5a5c69280d91dd9478c4741fa2a3c96c7717bf3b82c9092"
   },
   "H_packing_p32/H_clR5x10_800x1120.png": {
    "file": "H_packing_p32/H_clR5x10_800x1120.png",
@@ -8349,7 +8689,8 @@
    "antialiased": false,
    "cols": 160,
    "rows": 112,
-   "theoretical_ch_per_token": 15.68,
+   "theoretical_ch_per_token": 17.07,
+   "grid_patch": 32,
    "w": 800,
    "h": 1120,
    "chars": 17331,
@@ -8361,7 +8702,9 @@
    "chars_per_gpt_token": 16.51,
    "text_tokens_equiv": 4333,
    "claude_compression": 3.74,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "fbc33643510d8a3ecf0171760cd41b0b34399a63681ff08647089d990e1c036d",
+   "groundtruth_sha256": "44fe2b4179a8e20bf2e7786d2cc1efaddbd623f0e2c7d15b8e0488f2a9a0f11b"
   },
   "H_packing_p32/H_clR7x8_896x896.png": {
    "file": "H_packing_p32/H_clR7x8_896x896.png",
@@ -8421,7 +8764,8 @@
    "antialiased": false,
    "cols": 128,
    "rows": 112,
-   "theoretical_ch_per_token": 14.0,
+   "theoretical_ch_per_token": 15.24,
+   "grid_patch": 32,
    "w": 896,
    "h": 896,
    "chars": 13795,
@@ -8433,7 +8777,9 @@
    "chars_per_gpt_token": 14.66,
    "text_tokens_equiv": 3449,
    "claude_compression": 3.37,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "6cbe49f14484ae90ab8b8a82f9a1d33e15d01a83f758d6029d3eec26dca84739",
+   "groundtruth_sha256": "7bdf27cc6e6880b9612d4bf3afc9647075e6644df71ef41da3d37c185c320b9f"
   },
   "H_packing_p32/H_6x9_864x864.png": {
    "file": "H_packing_p32/H_6x9_864x864.png",
@@ -8493,7 +8839,8 @@
    "antialiased": false,
    "cols": 144,
    "rows": 96,
-   "theoretical_ch_per_token": 14.52,
+   "theoretical_ch_per_token": 15.8,
+   "grid_patch": 32,
    "w": 864,
    "h": 864,
    "chars": 13324,
@@ -8505,7 +8852,9 @@
    "chars_per_gpt_token": 15.23,
    "text_tokens_equiv": 3331,
    "claude_compression": 3.47,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "644ecb5f328adfa9b4a838c0c19039ae0fb000e8434e337970a2ee15a9968c02",
+   "groundtruth_sha256": "fcca05bd9fa7c15594a08c28dea8d339f2430373436236b3483a7b845ebb6012"
   },
   "H_packing_p32/H_clB6x10_672x1120.png": {
    "file": "H_packing_p32/H_clB6x10_672x1120.png",
@@ -8565,7 +8914,8 @@
    "antialiased": false,
    "cols": 112,
    "rows": 112,
-   "theoretical_ch_per_token": 13.07,
+   "theoretical_ch_per_token": 14.22,
+   "grid_patch": 32,
    "w": 672,
    "h": 1120,
    "chars": 12004,
@@ -8577,7 +8927,9 @@
    "chars_per_gpt_token": 13.61,
    "text_tokens_equiv": 3001,
    "claude_compression": 3.13,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "f55cf8f7cde16359b7ade7466c2a02b6b424b0d1e72554ced10c122bb9c2f19b",
+   "groundtruth_sha256": "1c124c26e7ad3ea26c22dc0c92ddcf163f1f489f7bf9d4c5aeb4e258913fdb7f"
   },
   "H_packing_p32/H_clR8x8_896x896.png": {
    "file": "H_packing_p32/H_clR8x8_896x896.png",
@@ -8637,7 +8989,8 @@
    "antialiased": false,
    "cols": 112,
    "rows": 112,
-   "theoretical_ch_per_token": 12.25,
+   "theoretical_ch_per_token": 13.33,
+   "grid_patch": 32,
    "w": 896,
    "h": 896,
    "chars": 11978,
@@ -8649,7 +9002,9 @@
    "chars_per_gpt_token": 12.73,
    "text_tokens_equiv": 2994,
    "claude_compression": 2.92,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "ecfec21a4277d7fd5ad7bc4b03295dd410c02d7ac50778f3405717035d54ecaf",
+   "groundtruth_sha256": "f6a26698d65dcbe1f0281222f7c4423c3712f1ad29fc049c0ce324fd4664c090"
   },
   "J_pitch_p32/J_4x6_pitch9_864x864.png": {
    "file": "J_pitch_p32/J_4x6_pitch9_864x864.png",
@@ -8710,7 +9065,8 @@
    "antialiased": false,
    "cols": 216,
    "rows": 96,
-   "theoretical_ch_per_token": 21.78,
+   "theoretical_ch_per_token": 23.7,
+   "grid_patch": 32,
    "w": 864,
    "h": 864,
    "chars": 20197,
@@ -8722,7 +9078,9 @@
    "chars_per_gpt_token": 23.09,
    "text_tokens_equiv": 5049,
    "claude_compression": 5.25,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "237f90e691b71a36aa13355ec0caa603c01e1971a57238968720e85d7ae251b3",
+   "groundtruth_sha256": "8c63165b572b6f84a8c6b151a6139e0ca1d956415d2ab5efcc8803efaed43f85"
   },
   "J_pitch_p32/J_4x6_pitch10_896x1120.png": {
    "file": "J_pitch_p32/J_4x6_pitch10_896x1120.png",
@@ -8783,7 +9141,8 @@
    "antialiased": false,
    "cols": 224,
    "rows": 112,
-   "theoretical_ch_per_token": 19.6,
+   "theoretical_ch_per_token": 21.33,
+   "grid_patch": 32,
    "w": 896,
    "h": 1120,
    "chars": 24494,
@@ -8795,7 +9154,9 @@
    "chars_per_gpt_token": 20.83,
    "text_tokens_equiv": 6124,
    "claude_compression": 4.78,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "42880e707403f569e7b16b6e6b5f8d9d411eac2a8c76a2205e2155d0a13f2ed4",
+   "groundtruth_sha256": "c0629b12174d019a6cb928aec9e2e032826ae19088ffb0e6fc88c0abe6afa5e7"
   },
   "J_pitch_p32/J_4x6_pitch12_672x1344.png": {
    "file": "J_pitch_p32/J_4x6_pitch12_672x1344.png",
@@ -8856,7 +9217,8 @@
    "antialiased": false,
    "cols": 168,
    "rows": 112,
-   "theoretical_ch_per_token": 16.33,
+   "theoretical_ch_per_token": 17.78,
+   "grid_patch": 32,
    "w": 672,
    "h": 1344,
    "chars": 18283,
@@ -8868,7 +9230,9 @@
    "chars_per_gpt_token": 17.27,
    "text_tokens_equiv": 4571,
    "claude_compression": 3.97,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "704c87403d902b9c45b39a608d3e2fd38a289bbd6bf53d9f108adeb269d202db",
+   "groundtruth_sha256": "3b4b470296e6146384256d15bd2afd1045466f258d56944649cbc8c1443a5044"
   },
   "J_pitch_p32/J_clR5x6_pitch9_800x864.png": {
    "file": "J_pitch_p32/J_clR5x6_pitch9_800x864.png",
@@ -8929,7 +9293,8 @@
    "antialiased": false,
    "cols": 160,
    "rows": 96,
-   "theoretical_ch_per_token": 17.42,
+   "theoretical_ch_per_token": 18.96,
+   "grid_patch": 32,
    "w": 800,
    "h": 864,
    "chars": 14827,
@@ -8941,7 +9306,9 @@
    "chars_per_gpt_token": 18.3,
    "text_tokens_equiv": 3707,
    "claude_compression": 4.12,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "4fc590e4106c53ad97b4604e62b6ad8ee549a73ca8515474c1dbd41dfd08c8c2",
+   "groundtruth_sha256": "3ca995885afeaaeca4e57826e18cfda1032392ebb64ff0fc48017850047abd5d"
   },
   "J_pitch_p32/J_clR5x8_pitch9_800x864.png": {
    "file": "J_pitch_p32/J_clR5x8_pitch9_800x864.png",
@@ -9002,7 +9369,8 @@
    "antialiased": false,
    "cols": 160,
    "rows": 96,
-   "theoretical_ch_per_token": 17.42,
+   "theoretical_ch_per_token": 18.96,
+   "grid_patch": 32,
    "w": 800,
    "h": 864,
    "chars": 14850,
@@ -9014,7 +9382,9 @@
    "chars_per_gpt_token": 18.33,
    "text_tokens_equiv": 3712,
    "claude_compression": 4.13,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "94235c5915e9331e0affa9c459ee5454a8f1c33afcc0926297793810f3330a79",
+   "groundtruth_sha256": "eca49aa18e746bcdf133c654c6860c6f97c4dfe5d927cf51b303048cc4a71903"
   },
   "J_pitch_p32/J_clR5x8_pitch10_800x1120.png": {
    "file": "J_pitch_p32/J_clR5x8_pitch10_800x1120.png",
@@ -9075,7 +9445,8 @@
    "antialiased": false,
    "cols": 160,
    "rows": 112,
-   "theoretical_ch_per_token": 15.68,
+   "theoretical_ch_per_token": 17.07,
+   "grid_patch": 32,
    "w": 800,
    "h": 1120,
    "chars": 17296,
@@ -9087,7 +9458,9 @@
    "chars_per_gpt_token": 16.47,
    "text_tokens_equiv": 4324,
    "claude_compression": 3.73,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "7dcae35056d820959b96609a3355eedfea6e66e61b666c25666c57d9191d1ecd",
+   "groundtruth_sha256": "0b2538609edaad0dab149e9d11b5c5d5308da76d7a030cc66c9bcfe718daa582"
   },
   "J_pitch_p32/J_clR6x8_pitch9_864x864.png": {
    "file": "J_pitch_p32/J_clR6x8_pitch9_864x864.png",
@@ -9148,7 +9521,8 @@
    "antialiased": false,
    "cols": 144,
    "rows": 96,
-   "theoretical_ch_per_token": 14.52,
+   "theoretical_ch_per_token": 15.8,
+   "grid_patch": 32,
    "w": 864,
    "h": 864,
    "chars": 13343,
@@ -9160,7 +9534,9 @@
    "chars_per_gpt_token": 15.25,
    "text_tokens_equiv": 3336,
    "claude_compression": 3.47,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "38396b5bd74a4ff41b130321eedd5259a14dbf85e2f91e42bc9e7257a7da3362",
+   "groundtruth_sha256": "2c961ba7f402c577e5155af0c0dadb85007e3f72de04d578190aa53433df7f58"
   },
   "J_pitch_p32/J_5x7_pitch9_800x864.png": {
    "file": "J_pitch_p32/J_5x7_pitch9_800x864.png",
@@ -9221,7 +9597,8 @@
    "antialiased": false,
    "cols": 160,
    "rows": 96,
-   "theoretical_ch_per_token": 17.42,
+   "theoretical_ch_per_token": 18.96,
+   "grid_patch": 32,
    "w": 800,
    "h": 864,
    "chars": 14869,
@@ -9233,7 +9610,9 @@
    "chars_per_gpt_token": 18.36,
    "text_tokens_equiv": 3717,
    "claude_compression": 4.13,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "1cd84974f8b595d1c8f62c27e38904853c9b79c374fe0fde6ba1583e43aaee10",
+   "groundtruth_sha256": "358f4570e5ba9fa8e937afcdc98f70f26d171fce7b946eb4d881750afd24c379"
   },
   "K_entropy_p32/K_clR6x8_pitch8_672x896.png": {
    "file": "K_entropy_p32/K_clR6x8_pitch8_672x896.png",
@@ -9269,7 +9648,8 @@
    "cols": 112,
    "rows": 112,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 16.33,
+   "theoretical_ch_per_token": 17.78,
+   "grid_patch": 32,
    "w": 672,
    "h": 896,
    "chars": 12208,
@@ -9281,7 +9661,9 @@
    "chars_per_gpt_token": 17.3,
    "text_tokens_equiv": 3052,
    "claude_compression": 3.97,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "74c84b9b38cfcbfae46831fceb460e0930793a7d9ec97e12fe92928d50627d89",
+   "groundtruth_sha256": "7b4b157e60e7910a0c0ee9e5409c76c6337eff66504a12e7c7b2724926027048"
   },
   "K_entropy_p32/K_6x9_pitch9_864x864.png": {
    "file": "K_entropy_p32/K_6x9_pitch9_864x864.png",
@@ -9317,7 +9699,8 @@
    "cols": 144,
    "rows": 96,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 14.52,
+   "theoretical_ch_per_token": 15.8,
+   "grid_patch": 32,
    "w": 864,
    "h": 864,
    "chars": 13824,
@@ -9329,7 +9712,9 @@
    "chars_per_gpt_token": 15.8,
    "text_tokens_equiv": 3456,
    "claude_compression": 3.6,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "6fec11dc22351b350429b797d0fca908a787897336f4c726392a8e43e97623b2",
+   "groundtruth_sha256": "5fc6736b3c5863f3f2dc59a132bbb92ccde4ddcc5509029c4e2130d08edf056d"
   },
   "K_entropy_p32/K_4x6_pitch9_864x864.png": {
    "file": "K_entropy_p32/K_4x6_pitch9_864x864.png",
@@ -9365,7 +9750,8 @@
    "cols": 216,
    "rows": 96,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 21.78,
+   "theoretical_ch_per_token": 23.7,
+   "grid_patch": 32,
    "w": 864,
    "h": 864,
    "chars": 20544,
@@ -9377,7 +9763,9 @@
    "chars_per_gpt_token": 23.48,
    "text_tokens_equiv": 5136,
    "claude_compression": 5.34,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "76388704a5b5b7ef23ba09ddd01171d9e307e48ff268a192bfda6692e6052c16",
+   "groundtruth_sha256": "1e151b7970d7dbd8059c987efc7b9ef0c5eff9238591b749a7c69e9e15a3d018"
   },
   "K_entropy_p32/K_clR5x8_pitch9_800x864.png": {
    "file": "K_entropy_p32/K_clR5x8_pitch9_800x864.png",
@@ -9413,7 +9801,8 @@
    "cols": 160,
    "rows": 96,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 17.42,
+   "theoretical_ch_per_token": 18.96,
+   "grid_patch": 32,
    "w": 800,
    "h": 864,
    "chars": 15264,
@@ -9425,7 +9814,9 @@
    "chars_per_gpt_token": 18.84,
    "text_tokens_equiv": 3816,
    "claude_compression": 4.24,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "45b1da9a8adde2f9ee2a32f7fc62747e259b481660301f31cd7c6ae3b5f9667a",
+   "groundtruth_sha256": "197b9862a4fd055c84f3d5c503affa3ff9e7598a5b046b2334f3589824f87589"
   },
   "K_entropy_p32/K_6x10_pitch10_672x1120.png": {
    "file": "K_entropy_p32/K_6x10_pitch10_672x1120.png",
@@ -9461,7 +9852,8 @@
    "cols": 112,
    "rows": 112,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 13.07,
+   "theoretical_ch_per_token": 14.22,
+   "grid_patch": 32,
    "w": 672,
    "h": 1120,
    "chars": 12208,
@@ -9473,7 +9865,9 @@
    "chars_per_gpt_token": 13.84,
    "text_tokens_equiv": 3052,
    "claude_compression": 3.18,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "1c5f7ff3d80a3d66b52fd5a75572a587650ca3eb960425ca2e42930a4b3465ea",
+   "groundtruth_sha256": "dac43f8b54699673f85eece67c412e75206970ecd5c66da93933b330fbfbf31a"
   },
   "K_entropy_p32/K_6x13_pitch13_768x1248.png": {
    "file": "K_entropy_p32/K_6x13_pitch13_768x1248.png",
@@ -9509,7 +9903,8 @@
    "cols": 128,
    "rows": 96,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 10.05,
+   "theoretical_ch_per_token": 10.94,
+   "grid_patch": 32,
    "w": 768,
    "h": 1248,
    "chars": 11904,
@@ -9521,7 +9916,9 @@
    "chars_per_gpt_token": 10.6,
    "text_tokens_equiv": 2976,
    "claude_compression": 2.36,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "c2dd64fbd88cadfef96b820a846a823b9907599c6dbbfbde5049dd6756471e31",
+   "groundtruth_sha256": "6e05a2056bac686f549a99383e665360d193cfb87316df06894ca43859bc0d08"
   },
   "K_entropy_p32/K_7x14_pitch14_448x1568.png": {
    "file": "K_entropy_p32/K_7x14_pitch14_448x1568.png",
@@ -9557,7 +9954,8 @@
    "cols": 64,
    "rows": 112,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 8.0,
+   "theoretical_ch_per_token": 8.71,
+   "grid_patch": 32,
    "w": 448,
    "h": 1568,
    "chars": 7168,
@@ -9569,7 +9967,9 @@
    "chars_per_gpt_token": 8.71,
    "text_tokens_equiv": 1792,
    "claude_compression": 2.0,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "cb5bd8ac4d5db804b6c7d7e2c254cc4a88c17b11541ac35b89812e449d450eab",
+   "groundtruth_sha256": "24b8c096c8a239955bc5b3ac2f7821ce0fb271dd23e3dc64143f0dc36b313fa3"
   },
   "K_entropy_p32/K_8x16_pitch16_448x1568.png": {
    "file": "K_entropy_p32/K_8x16_pitch16_448x1568.png",
@@ -9605,7 +10005,8 @@
    "cols": 56,
    "rows": 98,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 6.12,
+   "theoretical_ch_per_token": 6.67,
+   "grid_patch": 32,
    "w": 448,
    "h": 1568,
    "chars": 5292,
@@ -9617,7 +10018,9 @@
    "chars_per_gpt_token": 6.43,
    "text_tokens_equiv": 1323,
    "claude_compression": 1.48,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "60a91301b539ada8c56683dc7e5b22a32105938b64404f41510a89c81e167645",
+   "groundtruth_sha256": "59b8e5f2b6f2c19d2bdf122609332d57f78c0d8434640c749f44b931e9c7688f"
   },
   "K_entropy_p32/K_9x18_pitch18_576x1440.png": {
    "file": "K_entropy_p32/K_9x18_pitch18_576x1440.png",
@@ -9653,7 +10056,8 @@
    "cols": 64,
    "rows": 80,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 4.84,
+   "theoretical_ch_per_token": 5.27,
+   "grid_patch": 32,
    "w": 576,
    "h": 1440,
    "chars": 5120,
@@ -9665,7 +10069,9 @@
    "chars_per_gpt_token": 5.27,
    "text_tokens_equiv": 1280,
    "claude_compression": 1.17,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "1c30b1d60ad13133cb0e5863cfca03a0163c172a5f519d5515b63cffe842cd3a",
+   "groundtruth_sha256": "2a86ee5557b1221e5b1b8a29a5565832f021364fa78d95d30b266b3c26814ddd"
   },
   "K_entropy_p32/K_10x20_pitch20_640x1440.png": {
    "file": "K_entropy_p32/K_10x20_pitch20_640x1440.png",
@@ -9701,7 +10107,8 @@
    "cols": 64,
    "rows": 72,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 3.92,
+   "theoretical_ch_per_token": 4.27,
+   "grid_patch": 32,
    "w": 640,
    "h": 1440,
    "chars": 4608,
@@ -9713,7 +10120,9 @@
    "chars_per_gpt_token": 4.27,
    "text_tokens_equiv": 1152,
    "claude_compression": 0.96,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "0143b7e6b93e4a32d72d7d357d1513beb62cb2fe2b1b4e2f522e155cb0baee4c",
+   "groundtruth_sha256": "de06cfc1f76084a329fa6e776ae0b5ea44c641650a75c3873ee4a86254a7ebc2"
   },
   "K_entropy_p32/K_12x24_pitch24_672x1344.png": {
    "file": "K_entropy_p32/K_12x24_pitch24_672x1344.png",
@@ -9749,7 +10158,8 @@
    "cols": 56,
    "rows": 56,
    "payload": "high-entropy",
-   "theoretical_ch_per_token": 2.72,
+   "theoretical_ch_per_token": 2.96,
+   "grid_patch": 32,
    "w": 672,
    "h": 1344,
    "chars": 3024,
@@ -9761,7 +10171,9 @@
    "chars_per_gpt_token": 2.86,
    "text_tokens_equiv": 756,
    "claude_compression": 0.66,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "ff520dc692ac9b0ae64c8c356af4901e662724cc54ff3f9c2fcc14ebaaf9aeed",
+   "groundtruth_sha256": "edcab6f5ee9c0a9cd33af3f17c7046be31ed685800be6160b154b915d89de081"
   },
   "K2_entropy_narrow_p32/K2_6x9_384x1152.png": {
    "file": "K2_entropy_narrow_p32/K2_6x9_384x1152.png",
@@ -9792,7 +10204,8 @@
    "cols": 64,
    "rows": 128,
    "payload": "high-entropy-narrow",
-   "theoretical_ch_per_token": 14.52,
+   "theoretical_ch_per_token": 15.8,
+   "grid_patch": 32,
    "w": 384,
    "h": 1152,
    "chars": 8192,
@@ -9804,7 +10217,9 @@
    "chars_per_gpt_token": 15.8,
    "text_tokens_equiv": 2048,
    "claude_compression": 3.48,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "7f878e6d2ac2dc041c3f2e08c3d0ded5aee723ee4adb9651b47165f9cba4de4d",
+   "groundtruth_sha256": "5694c10b7b5787b9b8c1e232e1c8cf58fa7ecc67f611574db545df3407fa6c15"
   },
   "K2_entropy_narrow_p32/K2_6x10_384x1120.png": {
    "file": "K2_entropy_narrow_p32/K2_6x10_384x1120.png",
@@ -9835,7 +10250,8 @@
    "cols": 64,
    "rows": 112,
    "payload": "high-entropy-narrow",
-   "theoretical_ch_per_token": 13.07,
+   "theoretical_ch_per_token": 14.22,
+   "grid_patch": 32,
    "w": 384,
    "h": 1120,
    "chars": 7168,
@@ -9847,7 +10263,9 @@
    "chars_per_gpt_token": 14.22,
    "text_tokens_equiv": 1792,
    "claude_compression": 3.2,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "42f1d5c49b87e797504fc83e560855a03b50cf43ce4087068939c5fb93d08ad6",
+   "groundtruth_sha256": "1fbdd83645008241a6bc5ecf14b9a4d7b980bf09efd6bb3b444042e12dbf3f9d"
   },
   "K2_entropy_narrow_p32/K2_6x13_384x1248.png": {
    "file": "K2_entropy_narrow_p32/K2_6x13_384x1248.png",
@@ -9878,7 +10296,8 @@
    "cols": 64,
    "rows": 96,
    "payload": "high-entropy-narrow",
-   "theoretical_ch_per_token": 10.05,
+   "theoretical_ch_per_token": 10.94,
+   "grid_patch": 32,
    "w": 384,
    "h": 1248,
    "chars": 6144,
@@ -9890,7 +10309,9 @@
    "chars_per_gpt_token": 10.94,
    "text_tokens_equiv": 1536,
    "claude_compression": 2.44,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "c9047ac408e098b75915bf40edb364d5be9fb67f2deb38ed5df095233bdec194",
+   "groundtruth_sha256": "faeb9bd66b72c3333d0af58860623a9fcbed91e2bdd0e5d086f661539aa55b1e"
   },
   "K2_entropy_narrow_p32/K2_8x16_448x1600.png": {
    "file": "K2_entropy_narrow_p32/K2_8x16_448x1600.png",
@@ -9921,7 +10342,8 @@
    "cols": 56,
    "rows": 100,
    "payload": "high-entropy-narrow",
-   "theoretical_ch_per_token": 6.12,
+   "theoretical_ch_per_token": 6.67,
+   "grid_patch": 32,
    "w": 448,
    "h": 1600,
    "chars": 5400,
@@ -9933,7 +10355,9 @@
    "chars_per_gpt_token": 6.43,
    "text_tokens_equiv": 1350,
    "claude_compression": 1.45,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "1702552987145a24dd9808d9c7f2113ec3393a377f505f70e3fc69d43b945e05",
+   "groundtruth_sha256": "0ac81132867401958e2ba1459aeea365d6df2a2db60cb3dafc01b66e7b946095"
   },
   "K2_entropy_narrow_p32/K2_9x18_576x1440.png": {
    "file": "K2_entropy_narrow_p32/K2_9x18_576x1440.png",
@@ -9964,7 +10388,8 @@
    "cols": 64,
    "rows": 80,
    "payload": "high-entropy-narrow",
-   "theoretical_ch_per_token": 4.84,
+   "theoretical_ch_per_token": 5.27,
+   "grid_patch": 32,
    "w": 576,
    "h": 1440,
    "chars": 5120,
@@ -9976,7 +10401,9 @@
    "chars_per_gpt_token": 5.27,
    "text_tokens_equiv": 1280,
    "claude_compression": 1.17,
-   "oversized_for_claude": false
+   "exceeds_claude_measured_envelope": false,
+   "image_sha256": "c783455ef0e3be26f0be4e105139201d6190b86aa2d9aca333d525398d84b472",
+   "groundtruth_sha256": "2b2087248032da04b4a35e87abbff8cb06bd361ca18740c9a31853fb92aa695c"
   }
  }
 }

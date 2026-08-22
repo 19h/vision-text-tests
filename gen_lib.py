@@ -16,20 +16,37 @@ MONO_BOLD   = '/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf'
 
 CLAUDE_PATCH = 28   # Claude: 28x28 px per image token
 GPT_PATCH    = 32   # GPT-5.6: 32x32 px per image token
-CLAUDE_MAX_PIXELS = 1_150_000   # above this Claude downscales, destroying tiny text
 
 # Measured image-token geometry per provider family.  `tokens_per_patch` is NOT always 1:
 # gpt-5.6-sol bills 1.2 tokens per 32x32 patch (fit: tokens = 13,990 + 1.2*patches, exact
 # across 224/448/896/1344 squares), so its effective rate is 1024/1.2 = 853 px per billed
 # token against Claude's 784.  See results_geometry_rate_*.json.
+_CLAUDE_GEOMETRY = dict(patch=28, tokens_per_patch=1.0,
+                        max_square=1932, max_patches=4761)
+_GPT56_GEOMETRY = dict(patch=32, tokens_per_patch=1.2,
+                       max_square=1600, max_patches=2500)
 PROVIDER_GEOMETRY = {
     # max_square: largest un-downscaled square, measured at the adjacent boundary.
-    'claude':      dict(patch=28, tokens_per_patch=1.0, max_square=1932, max_patches=4761),
-    'gpt-5.6-sol': dict(patch=32, tokens_per_patch=1.2, max_square=1600, max_patches=2500),
+    'claude':          _CLAUDE_GEOMETRY,
+    'opus':            _CLAUDE_GEOMETRY,
+    'sonnet':          _CLAUDE_GEOMETRY,
+    'gpt-5.6':         _GPT56_GEOMETRY,
+    'gpt-5.6-sol':     _GPT56_GEOMETRY,
+    'gpt-5.6-luna':    _GPT56_GEOMETRY,
+    'gpt-5.6-terra':   _GPT56_GEOMETRY,
 }
 
 def geom(model):
-    return PROVIDER_GEOMETRY.get(model, PROVIDER_GEOMETRY['claude'])
+    """Measured geometry for an exact model id or provider family.
+
+    Unknown GPT-5.6 slugs inherit the measured family geometry; other unknown names
+    retain the historical Claude default for backwards compatibility.
+    """
+    if model in PROVIDER_GEOMETRY:
+        return PROVIDER_GEOMETRY[model]
+    if str(model).startswith('gpt-5.6'):
+        return _GPT56_GEOMETRY
+    return _CLAUDE_GEOMETRY
 
 def image_tokens(w, h, patch=CLAUDE_PATCH, tokens_per_patch=1.0):
     """Billed image tokens for a canvas."""
@@ -115,7 +132,14 @@ def stats(w, h, text):
                 chars_per_gpt_token=round(chars / gt, 2),   # 32px patches at 1.2 tok/patch
                 text_tokens_equiv=round(chars / 4),
                 claude_compression=round((chars / 4) / ct, 2),
-                oversized_for_claude=(w * h > CLAUDE_MAX_PIXELS))
+                # A pure pixel-area threshold was retracted.  This conservative flag
+                # only says that the canvas exceeds the measured square/patch envelope;
+                # it makes no claim that every shape inside the envelope is admissible.
+                exceeds_claude_measured_envelope=(
+                    w > _CLAUDE_GEOMETRY['max_square'] or
+                    h > _CLAUDE_GEOMETRY['max_square'] or
+                    math.ceil(w / CLAUDE_PATCH) * math.ceil(h / CLAUDE_PATCH)
+                    > _CLAUDE_GEOMETRY['max_patches']))
 
 # ---------------------------------------------------------------- corpus
 SUBJ = ["Depot Kilo","Sector 14","Unit Bravo","The north yard","Terminal 7","Crew Delta",

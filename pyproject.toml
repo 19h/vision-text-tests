@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vision-text-tests"
+version = "0.2.0"
+description = "Reproducible dense-text-in-images benchmark"
+requires-python = ">=3.11"
+dependencies = [
+  "Pillow==12.1.1",
+  "numpy==2.3.5",
+  "scipy==1.16.3",
+  "jsonschema==4.25.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools]
+py-modules = [
+  "analyze_ebind", "analyze_encoding", "analyze_layout", "analyze_verifier", "campaign", "compare", "confirm",
+  "delim_probe", "ebind1", "edge_probe", "gen_lib", "generate", "geometry",
+  "layout_probe", "pack", "pack_text", "power_equivalence", "providers",
+  "provenance", "regrade", "report_eval", "run_eval", "span_probe", "verifier_probe"
+]

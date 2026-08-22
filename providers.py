@@ -12,14 +12,22 @@ The two CLIs differ in a way that matters for this benchmark:
 
 Both are recorded with exact model slugs; never store a mutable alias.
 """
-import json, os, re, subprocess, hashlib, shutil
+import json, os, subprocess, hashlib, shutil
 
 CODEX_MODELS  = {'gpt-5.6-sol', 'gpt-5.6-luna', 'gpt-5.6-terra', 'gpt-5.5',
                  'gpt-5.4', 'gpt-5.4-mini', 'gpt-5.3-codex-spark'}
 CLAUDE_TOOLS_OFF = 'Bash,Write,Edit,Glob,Grep,Task,WebFetch,WebSearch,NotebookEdit'
+MUTABLE_MODEL_ALIASES = {'opus', 'sonnet', 'haiku', 'sol', 'luna', 'terra', 'latest'}
 
 def provider_for(model):
     return 'codex' if model in CODEX_MODELS or model.startswith('gpt-') else 'claude'
+
+def model_is_mutable_alias(model):
+    return str(model).lower() in MUTABLE_MODEL_ALIASES
+
+def effective_effort(model, requested):
+    """Effort is controllable on Codex; Claude CLI runs are explicitly uncontrolled."""
+    return requested if provider_for(model) == 'codex' else None
 
 def cli_version(provider):
     exe = 'codex' if provider == 'codex' else 'claude'
@@ -61,7 +69,7 @@ def _codex(prompt, images, model, effort, schema_path, timeout, cwd):
             it = pay.get('item') or {}
             if it.get('type') in ('agent_message', 'assistant_message'):
                 text = it.get('text') or it.get('message') or text
-    return dict(text=text, usage=usage, stdout=r.stdout, stderr=r.stderr[-2000:],
+    return dict(text=text, usage=usage, stdout=r.stdout, stderr=r.stderr,
                 event_types=types, returncode=r.returncode, argv=cmd)
 
 # ─────────────────────────────────────────────────────────────── claude
@@ -80,7 +88,7 @@ def _claude(prompt, images, model, effort, schema_path, timeout, cwd):
                      output_tokens=u.get('output_tokens', 0))
     except json.JSONDecodeError:
         text = r.stdout.strip()
-    return dict(text=text, usage=usage, stdout=r.stdout[-4000:], stderr=r.stderr[-2000:],
+    return dict(text=text, usage=usage, stdout=r.stdout, stderr=r.stderr,
                 event_types={}, returncode=r.returncode, argv=cmd[:-1])
 
 def run(prompt, model, images=None, effort='low', schema_path=None, timeout=900, cwd=None):
@@ -88,20 +96,41 @@ def run(prompt, model, images=None, effort='low', schema_path=None, timeout=900,
     model-side failure; inspect `text is None` and `stderr`."""
     prov = provider_for(model)
     fn = _codex if prov == 'codex' else _claude
-    out = fn(prompt, images, model, effort, schema_path, timeout, cwd or os.getcwd())
+    try:
+        out = fn(prompt, images, model, effort, schema_path, timeout, cwd or os.getcwd())
+    except subprocess.TimeoutExpired as e:
+        as_text = lambda value: (value.decode(errors='replace') if isinstance(value, bytes)
+                                 else (value or ''))
+        out = dict(text=None, usage={}, stdout=as_text(e.stdout), stderr=as_text(e.stderr),
+                   event_types={}, returncode=None, argv=e.cmd, error='timeout')
+    except FileNotFoundError as e:
+        out = dict(text=None, usage={}, stdout='', stderr=str(e), event_types={},
+                   returncode=None, argv=[], error='cli_not_found')
     out.update(provider=prov, model=model, effort=effort if prov == 'codex' else None,
                prompt_sha=hashlib.sha256(prompt.encode()).hexdigest()[:16],
                n_images=len(images or []))
     return out
 
 def parse_json_answer(text):
-    """Last JSON object in a response, or None."""
+    """Last decodable JSON object in a response, including nested objects."""
     if not text: return None
-    for c in reversed(re.findall(r'\{.*?\}', text, re.S)):
-        try: return json.loads(c)
-        except json.JSONDecodeError: continue
-    try: return json.loads(text)
-    except Exception: return None
+    decoder = json.JSONDecoder()
+    found = []
+    i = 0
+    while i < len(text):
+        i = text.find('{', i)
+        if i < 0: break
+        try:
+            value, end = decoder.raw_decode(text[i:])
+        except json.JSONDecodeError:
+            i += 1
+            continue
+        if isinstance(value, dict):
+            found.append(value)
+            i += end
+        else:
+            i += 1
+    return found[-1] if found else None
 
 
 def image_head(provider, path, desc="contains dense small text"):

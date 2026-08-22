@@ -17,7 +17,11 @@ from gen_lib import *
 from gen_lib import image_tokens, chars_per_token
 
 LCM = 224                                  # lcm(28, 32): divides evenly for both models
-SFX = ''   # set to '_p32' etc. when generating for a non-28 grid
+def suffix_for(patch):
+    return '' if patch == CLAUDE_PATCH else f'_p{patch}'
+
+def token_multiplier(patch):
+    return 1.2 if patch == GPT_PATCH else 1.0
 
 def lcm(a, b): return a * b // math.gcd(a, b)
 
@@ -89,10 +93,11 @@ def series_H(patch=CLAUDE_PATCH):
         m = re.search(r'(\d+)x(\d+)', name); cw, lh = int(m.group(1)), int(m.group(2))
         w, h = exact_fit(cw, lh, patch=patch)
         im, lines, meta, rows, cols, f = packed_page(name, w, h, 'H' + name)
-        G.emit(f"H_packing{SFX}/H_{name}_{w}x{h}.png", im, '\n'.join(lines),
+        G.emit(f"H_packing{suffix_for(patch)}/H_{name}_{w}x{h}.png", im, '\n'.join(lines),
                dict(series='H_packing', style='zero-waste maximal packing', font=f'X11 {name}',
                     cell=f'{cw}x{lh}', cap_height_px=lh, antialiased=False, cols=cols, rows=rows,
-                    theoretical_ch_per_token=round(784 / (cw * lh), 2)),
+                    theoretical_ch_per_token=round(chars_per_token(
+                        cw, lh, patch, token_multiplier(patch)), 2), grid_patch=patch),
                G.line_probes(lines, meta, rows))
 
 def series_I():
@@ -112,27 +117,8 @@ def merge_key():
     p = os.path.join(ROOT, 'ANSWER_KEY.json')
     k = json.load(open(p))
     k['images'].update(G.ENTRIES)
-    json.dump(k, open(p, 'w'), indent=1)
+    G.write_catalog(k['images'], generated_by='generate.py + pack.py')
     print(f"answer key updated: {len(k['images'])} images")
-
-if __name__ == '__main__':
-    ap = argparse.ArgumentParser(); ap.add_argument('--table', action='store_true')
-    ap.add_argument('--patch', type=int, default=CLAUDE_PATCH)
-    ap.add_argument('--mult', type=float, default=1.0)
-    a = ap.parse_args()
-    if a.patch != CLAUDE_PATCH:
-        SFX = f'_p{a.patch}'
-        globals()['SFX'] = SFX
-    if a.table:
-        print(f"{'font':9s}{'cell':>6s}{'px/ch':>6s}{'canvas':>12s}{'cols':>5s}{'rows':>5s}"
-              f"{'chars':>8s}{'cl-tok':>7s}{'ch/cl':>7s}{'ch/gpt':>7s}{'waste':>7s}")
-        for r in frontier(patch=a.patch, mult=a.mult):
-            print(f"{r['font']:9s}{r['cw']}x{r['lh']:<4d}{r['area']:>6d}"
-                  f"{str(r['w'])+'x'+str(r['h']):>12s}{r['cols']:>5d}{r['rows']:>5d}"
-                  f"{r['chars']:>8d}{r['claude_tokens']:>7d}{r['ch_per_claude']:>7.1f}"
-                  f"{r['ch_per_gpt']:>7.1f}{r['waste_pct']:>6.1f}%")
-        sys.exit()
-    series_H(patch=a.patch); series_I(); merge_key()
 
 # ---------------------------------------------------------------- J: pitch vs glyph size
 # Series A-H confound glyph design with row pitch: every X11 face has a fixed cell.
@@ -151,11 +137,12 @@ def series_J(patch=CLAUDE_PATCH):
         lines, meta = numbered_lines(rng, cols, rows)
         im, d = canvas(w, h)
         draw_lines(d, f, lines, 0, 0, lh=pitch)          # <- pitch overrides the font cell
-        G.emit(f"J_pitch{SFX}/J_{name}_pitch{pitch}_{w}x{h}.png", im, '\n'.join(lines),
+        G.emit(f"J_pitch{suffix_for(patch)}/J_{name}_pitch{pitch}_{w}x{h}.png", im, '\n'.join(lines),
                dict(series='J_pitch', style=f'{name} glyphs at {pitch}px row pitch',
                     font=f'X11 {name}', cell=f'{cw}x{pitch}', glyph_cell=f'{cw}x{nat}',
                     pitch=pitch, antialiased=False, cols=cols, rows=rows,
-                    theoretical_ch_per_token=round(784 / (cw * pitch), 2)),
+                    theoretical_ch_per_token=round(chars_per_token(
+                        cw, pitch, patch, token_multiplier(patch)), 2), grid_patch=patch),
                G.line_probes(lines, meta, rows))
 
 # ---------------------------------------------------------------- K: payload entropy
@@ -194,11 +181,12 @@ def series_K(patch=CLAUDE_PATCH):
                   dict(id='verbatim_second', q="Transcribe the second line exactly.", a=lines[1]),
                   dict(id='verbatim_last', q="Transcribe the final line exactly.", a=lines[-1]),
                   dict(id='n_lines', q="How many lines are in the image?", a=str(rows))]
-        G.emit(f"K_entropy{SFX}/K_{name}_pitch{pitch}_{w}x{h}.png", im, '\n'.join(lines),
+        G.emit(f"K_entropy{suffix_for(patch)}/K_{name}_pitch{pitch}_{w}x{h}.png", im, '\n'.join(lines),
                dict(series='K_entropy', style=f'random 4-char groups, {pitch}px pitch',
                     font=f'X11 {name}', cell=f'{cw}x{pitch}', pitch=pitch, antialiased=False,
                     cols=cols, rows=rows, payload='high-entropy',
-                    theoretical_ch_per_token=round(784 / (cw * pitch), 2)), probes)
+                    theoretical_ch_per_token=round(chars_per_token(
+                        cw, pitch, patch, token_multiplier(patch)), 2), grid_patch=patch), probes)
 
 # K2: high-entropy payload on NARROW pages.  K's 224-char lines make transcribing five of
 # them a ~660-character random-string task, so a K failure could be output stamina or
@@ -213,7 +201,12 @@ def series_K2(patch=CLAUDE_PATCH):
         w = uw * max(1, round(56 * cw / uw))          # ~56 columns
         uh = lcm(patch, pitch)
         max_h = 1600 if patch == 32 else 1456         # provider max square
-        h = uh * max(1, min(round(112 * pitch / uh), max_h // uh))   # stay a multiple of uh
+        target_h = uh * max(1, round(112 * pitch / uh))
+        # Preserve the original Claude corpus's 1456px cap even for the one cell
+        # (9x18) where that leaves a partial final row.  The provider-native p32
+        # series was explicitly designed to remain grid/cell aligned.
+        h = (uh * max(1, min(round(112 * pitch / uh), max_h // uh))
+             if patch == GPT_PATCH else min(max_h, target_h))
         f = bitmap(name)
         cols, rows = w // cw, h // pitch
         rng = random.Random(f'K2{name}')
@@ -223,8 +216,45 @@ def series_K2(patch=CLAUDE_PATCH):
         probes = [dict(id='verbatim_first', q="Transcribe the first line exactly.", a=lines[0]),
                   dict(id='verbatim_second', q="Transcribe the second line exactly.", a=lines[1]),
                   dict(id='verbatim_last', q="Transcribe the final line exactly.", a=lines[-1])]
-        G.emit(f"K2_entropy_narrow{SFX}/K2_{name}_{w}x{h}.png", im, '\n'.join(lines),
+        G.emit(f"K2_entropy_narrow{suffix_for(patch)}/K2_{name}_{w}x{h}.png", im, '\n'.join(lines),
                dict(series='K2_entropy_narrow', style=f'random 4-char groups, {cols}-char lines',
                     font=f'X11 {name}', cell=f'{cw}x{pitch}', pitch=pitch, antialiased=False,
                     cols=cols, rows=rows, payload='high-entropy-narrow',
-                    theoretical_ch_per_token=round(784 / (cw * pitch), 2)), probes)
+                    theoretical_ch_per_token=round(chars_per_token(
+                        cw, pitch, patch, token_multiplier(patch)), 2), grid_patch=patch), probes)
+
+def build_series(patch, include_aspect=False):
+    series_H(patch)
+    if include_aspect:
+        series_I()
+    series_J(patch)
+    series_K(patch)
+    series_K2(patch)
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--table', action='store_true')
+    ap.add_argument('--patch', type=int, default=None,
+                    help='build one grid only; default rebuilds the complete 28+32 grid corpus')
+    ap.add_argument('--mult', type=float, default=None)
+    a = ap.parse_args()
+    patch = a.patch or CLAUDE_PATCH
+    mult = a.mult if a.mult is not None else token_multiplier(patch)
+    if a.table:
+        print(f"{'font':9s}{'cell':>6s}{'px/ch':>6s}{'canvas':>12s}{'cols':>5s}{'rows':>5s}"
+              f"{'chars':>8s}{'cl-tok':>7s}{'ch/cl':>7s}{'ch/gpt':>7s}{'waste':>7s}")
+        for r in frontier(patch=patch, mult=mult):
+            print(f"{r['font']:9s}{r['cw']}x{r['lh']:<4d}{r['area']:>6d}"
+                  f"{str(r['w'])+'x'+str(r['h']):>12s}{r['cols']:>5d}{r['rows']:>5d}"
+                  f"{r['chars']:>8d}{r['claude_tokens']:>7d}{r['ch_per_claude']:>7.1f}"
+                  f"{r['ch_per_gpt']:>7.1f}{r['waste_pct']:>6.1f}%")
+        return
+    if a.patch is None:
+        build_series(CLAUDE_PATCH, include_aspect=True)
+        build_series(GPT_PATCH, include_aspect=False)
+    else:
+        build_series(a.patch, include_aspect=(a.patch == CLAUDE_PATCH))
+    merge_key()
+
+if __name__ == '__main__':
+    main()

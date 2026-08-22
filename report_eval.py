@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Merge results_*.json into a comparison table."""
 import json, glob, os, collections, sys
+import provenance as V
 ROOT = os.path.dirname(os.path.abspath(__file__))
 rows = collections.defaultdict(dict)
 models, order = [], []
 SKIP = ('confirm', 'ebind1', 'span', 'delim', 'edge', 'geometry')
 for f in sorted(glob.glob(os.path.join(ROOT, 'results_*.json'))):
     if any(x in os.path.basename(f) for x in SKIP): continue
-    blob = json.load(open(f))
-    if not isinstance(blob, list): continue
+    blob = V.result_rows(json.load(open(f)))
     for r in blob:
         if not isinstance(r, dict) or 'file' not in r: continue
         m = r['model']

@@ -1,2 +1,6 @@
 __pycache__
 .DS_Store
+.pytest_cache/
+.venv/
+*.egg-info/
+campaign-plan.json

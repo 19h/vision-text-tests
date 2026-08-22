@@ -6,8 +6,12 @@ image delivery: codex attaches images with -i, claude -p is given a path and use
 tool. Stimuli identical, delivery not - stated on every table rather than buried.
 """
 import json, glob, os, re, sys, statistics as st
+import provenance as V
 ROOT = os.path.dirname(os.path.abspath(__file__))
 def _load(p):
+    try: return V.result_rows(json.load(open(os.path.join(ROOT, p))))
+    except Exception: return None
+def _blob(p):
     try: return json.load(open(os.path.join(ROOT, p)))
     except Exception: return None
 def lb(k, n):
@@ -24,7 +28,7 @@ NN = lambda s: re.sub(r'\s+', '', str(s))
 
 def ladder():
     files = {'opus': 'results_opus.json', 'sonnet': 'results_sonnet.json'}
-    for f in glob.glob(os.path.join(ROOT, 'results_ladder_*.json')):
+    for f in sorted(glob.glob(os.path.join(ROOT, 'results_ladder_*.json'))):
         files[os.path.basename(f)[15:-5]] = os.path.basename(f)
     got = {m: {r['glyph']: r for r in _load(p) or []} for m, p in files.items()}
     got = {m: v for m, v in got.items() if v}
@@ -40,7 +44,7 @@ def ladder():
 
 def legibility():
     files = {'opus': 'results_edge_opus.json'}
-    for f in glob.glob(os.path.join(ROOT, 'results_edge_gpt-5.6-*.json')):
+    for f in sorted(glob.glob(os.path.join(ROOT, 'results_edge_gpt-5.6-*.json'))):
         files[os.path.basename(f)[13:-5]] = os.path.basename(f)
     # key on the FILE, not (cell, rate): the sol-native _p32 pages can collide with
     # 28-grid pages on that tuple and silently overwrite them. Pairing must be on
@@ -66,7 +70,7 @@ def legibility():
 
 def spans():
     got = {}
-    for f in glob.glob(os.path.join(ROOT, 'results_span_6x13_*.json')):
+    for f in sorted(glob.glob(os.path.join(ROOT, 'results_span_6x13_*.json'))):
         b = os.path.basename(f)[len('results_span_6x13_'):-5]
         alpha, model = b.split('_', 1)
         got[(model, alpha)] = _load(os.path.basename(f))
@@ -85,7 +89,7 @@ def spans():
 
 def delim():
     got = {os.path.basename(f)[len('results_delim_6x13_'):-5]: _load(os.path.basename(f))
-           for f in glob.glob(os.path.join(ROOT, 'results_delim_6x13_*.json'))}
+           for f in sorted(glob.glob(os.path.join(ROOT, 'results_delim_6x13_*.json')))}
     got = {k: v for k, v in got.items() if v and 'UNPAIRED' not in k}
     if not got: return
     print("\n=== DELIMITED EQUAL-INFORMATION FIELDS n=20 (decoded value equality) ===")
@@ -103,7 +107,7 @@ def delim():
 
 def confirm():
     files = {'opus': ['results_confirm-v1_opus.json', 'results_confirm-v1-ext_opus.json']}
-    for f in glob.glob(os.path.join(ROOT, 'results_confirm-v1_gpt-5.6-*.json')):
+    for f in sorted(glob.glob(os.path.join(ROOT, 'results_confirm-v1_gpt-5.6-*.json'))):
         m = json.load(open(f))['manifest']['model']
         files[m] = [os.path.basename(f)]
         x = os.path.basename(f).replace('confirm-v1_', 'confirm-v1-ext_')
@@ -112,7 +116,7 @@ def confirm():
     print("\n=== WHOLE 56-CHAR RECORDS, high-entropy payload, base matrix ===")
     print(f"{'model':16s}{'exact':>9s}{'rate':>7s}{'95% LB':>9s}{'bind disp=0':>13s}")
     for m, ps in files.items():
-        R = [r for p in ps for r in (_load(p) or {}).get('results', [])]
+        R = [r for p in ps for r in (_load(p) or [])]
         hi = [r for r in R if r['probe'] == 'decode' and r['payload'] != 'prose' and r['font'] in BASE]
         bd = [r for r in R if r['probe'] == 'bind' and r['font'] in BASE]
         if not hi: continue
@@ -123,6 +127,11 @@ def confirm():
 
 if __name__ == '__main__':
     print("Claude vs GPT-5.6 - identical images; image DELIVERY differs (path+Read vs attached -i)")
+    errors = []
     for fn in (ladder, legibility, confirm, spans, delim):
         try: fn()
-        except Exception as e: print(f"  [{fn.__name__}: {e}]")
+        except Exception as e:
+            errors.append(f"{fn.__name__}: {e}")
+            print(f"  [{fn.__name__}: {e}]")
+    if errors:
+        raise SystemExit("comparison failures: " + "; ".join(errors))

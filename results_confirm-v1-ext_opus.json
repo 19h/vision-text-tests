@@ -4,16 +4,15 @@
   "model": "opus",
   "reps": 2,
   "cells": [
-   "clR5x10",
-   "6x13",
-   "8x16"
+   "9x18",
+   "10x20",
+   "12x24"
   ],
   "payloads": [
-   "prose",
-   "alnum_easy",
    "hex",
    "b64"
   ],
+  "legacy_manifest_corrected": true,
   "line_chars": 56,
   "prompt_decode_sha": "7ec0b7be25263cad",
   "prompt_bind_sha": "3610002e12ac3ba4",

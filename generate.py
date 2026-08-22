@@ -1,10 +1,42 @@
 #!/usr/bin/env python3
 """Build the visual-text-comprehension test corpus.  python3 generate.py"""
-import os, json, math, random, csv
+import os, json, math, random, csv, hashlib
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
 from gen_lib import *
 
 ENTRIES = {}
+
+CATALOG_COLUMNS = [
+    'file','series','style','font','cell','size_px','cap_height_px','antialiased',
+    'degradation','w','h','megapixels','rows','cols','chars','claude_tokens',
+    'gpt_tokens','chars_per_claude_token','chars_per_gpt_token','text_tokens_equiv',
+    'claude_compression','exceeds_claude_measured_envelope','groundtruth',
+    'image_sha256','groundtruth_sha256',
+]
+
+def file_sha256(path):
+    h = hashlib.sha256()
+    with open(path, 'rb') as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+def write_catalog(entries, generated_by='generate.py'):
+    """Write the authoritative JSON and CSV catalogs from one complete entry map."""
+    key = dict(
+        schema_version='vision-text-catalog-v2',
+        generated_by=generated_by,
+        provider_geometry=PROVIDER_GEOMETRY,
+        images=entries,
+    )
+    with open(os.path.join(ROOT, 'ANSWER_KEY.json'), 'w') as f:
+        json.dump(key, f, indent=1)
+        f.write('\n')
+    with open(os.path.join(ROOT, 'manifest.csv'), 'w', newline='') as f:
+        writer = csv.DictWriter(f, CATALOG_COLUMNS, extrasaction='ignore', lineterminator='\n')
+        writer.writeheader()
+        for name in sorted(entries):
+            writer.writerow(entries[name])
 
 def emit(rel, im, text, info, probes):
     path = os.path.join(OUT, rel)
@@ -15,6 +47,8 @@ def emit(rel, im, text, info, probes):
         f.write(text)
     e = dict(file=rel, groundtruth='groundtruth/' + gtrel, probes=probes)
     e.update(info); e.update(stats(im.width, im.height, text))
+    e['image_sha256'] = file_sha256(path)
+    e['groundtruth_sha256'] = file_sha256(os.path.join(GT, gtrel))
     ENTRIES[rel] = e
     print(f"  {rel:52s} {im.width}x{im.height} {e['chars']:6d} chars "
           f"{e['chars_per_claude_token']:6.2f} ch/claude-tok")
@@ -546,23 +580,7 @@ def main():
     for fn in (series_A, series_B, series_B2, series_C, series_D,
                series_E, series_E2, series_F, series_F3, series_F4, series_F5, series_F6, series_G):
         fn()
-    # ---- answer key
-    key = dict(
-        generated_by='generate.py',
-        patch_model=dict(claude_px_per_token=CLAUDE_PATCH, gpt_5_6_px_per_token=GPT_PATCH,
-                         claude_downscale_above_pixels=CLAUDE_MAX_PIXELS,
-                         note='canvas sizes are multiples of 224 = lcm(28,32) so both grids divide evenly'),
-        images=ENTRIES)
-    with open(os.path.join(ROOT, 'ANSWER_KEY.json'), 'w') as f:
-        json.dump(key, f, indent=1)
-    # ---- manifest
-    cols = ['file','series','style','font','cell','size_px','cap_height_px','antialiased','degradation',
-            'w','h','megapixels','rows','cols','chars','claude_tokens','gpt_tokens',
-            'chars_per_claude_token','chars_per_gpt_token','text_tokens_equiv','claude_compression',
-            'oversized_for_claude','groundtruth']
-    with open(os.path.join(ROOT, 'manifest.csv'), 'w', newline='') as f:
-        w = csv.DictWriter(f, cols, extrasaction='ignore'); w.writeheader()
-        for e in ENTRIES.values(): w.writerow(e)
+    write_catalog(ENTRIES)
     print(f"\n{len(ENTRIES)} images -> {OUT}")
     print(f"answer key  -> {os.path.join(ROOT,'ANSWER_KEY.json')}")
     print(f"manifest    -> {os.path.join(ROOT,'manifest.csv')}")

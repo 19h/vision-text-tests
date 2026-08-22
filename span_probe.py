@@ -11,6 +11,7 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from confirm import render, cer, VERSION
 import providers as P
+import provenance as V
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 PROMPT = ("{head}"
@@ -38,29 +39,46 @@ def one(job, model, effort='low'):
     # `prefix` isolates reading; report both.
     _n = lambda s: re.sub(r'\s+', '', str(s))
     res = dict(cell=f'{cw}x{lh}', font=cell, payload=kind, span=n, rep=rep,
-               model=model, provider=P.provider_for(model), effort=effort,
+               model=model, provider=P.provider_for(model),
+               effort=P.effective_effort(model, effort),
                exact=got == want,
                prefix=bool(_n(want)) and _n(got).startswith(_n(want)),
                overlong=len(_n(got)) > len(_n(want)),
                cer=round(cer(got, want), 4), got=got, want=want,
-               abstain=got.upper() == 'UNREADABLE', seconds=round(time.time() - t0))
+               abstain=got.upper() == 'UNREADABLE', image_sha256=V.sha256_file(p),
+               response=V.response_record(rr), seconds=round(time.time() - t0))
     print(f"  {cell:7s} {kind:4s} span={n:3d} rep{rep} exact={str(res['exact']):5s} "
           f"cer={res['cer']:.3f} {res['seconds']}s")
     return res
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('--model', default='opus'); ap.add_argument('--reps', type=int, default=3)
+    ap.add_argument('--model', required=True); ap.add_argument('--reps', type=int, default=3)
     ap.add_argument('--cell', default='9x18'); ap.add_argument('--payload', default='hex')
     ap.add_argument('--jobs', type=int, default=3)
     ap.add_argument('--effort', default='low')
+    ap.add_argument('--tag', default='')
+    ap.add_argument('--overwrite', action='store_true')
+    ap.add_argument('--allow-mutable-model-alias', action='store_true')
     a = ap.parse_args()
+    if P.model_is_mutable_alias(a.model) and not a.allow_mutable_model_alias:
+        ap.error('--model must be an exact immutable model id (or opt into an exploratory alias)')
+    output_path = os.path.join(
+        ROOT, f'results_span_{a.cell}_{a.payload}{a.tag}_{a.model}.json')
+    V.require_new_output(output_path, a.overwrite)
     cw, lh = (int(x) for x in re.match(r'(?:\D*)(\d+)x(\d+)', a.cell).groups())
     jobs = [(a.cell, cw, lh, a.payload, n, r) for n in (8, 16, 32, 51) for r in range(1, a.reps + 1)]
     print(f"{len(jobs)} runs: {a.cell} {a.payload}, spans 8/16/32/51, {a.reps} reps")
     with ThreadPoolExecutor(a.jobs) as ex:
         out = list(ex.map(lambda j: one(j, a.model, a.effort), jobs))
-    json.dump(out, open(os.path.join(ROOT, f'results_span_{a.cell}_{a.payload}_{a.model}.json'), 'w'), indent=1)
+    prov = P.provider_for(a.model)
+    manifest = V.manifest(
+        experiment='span-v2', model=a.model, provider=prov, effort=a.effort,
+        cli_version=P.cli_version(prov), harness_path=__file__,
+        prompts={'span': PROMPT}, cell=a.cell, payload=a.payload, reps=a.reps,
+        spans=[8, 16, 32, 51])
+    V.dump_json(output_path,
+                dict(schema_version=V.RESULT_SCHEMA_VERSION, manifest=manifest, results=out))
     import statistics as st
     print("\nspan  literal  prefix  overlong  mean CER")
     for n in (8, 16, 32, 51):

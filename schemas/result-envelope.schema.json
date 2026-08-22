@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/vision-text-result-envelope-v2.schema.json",
+  "title": "Dense-text benchmark result envelope",
+  "type": "object",
+  "required": ["schema_version", "manifest", "results"],
+  "properties": {
+    "schema_version": {"const": "vision-text-result-v2"},
+    "manifest": {
+      "type": "object",
+      "required": ["schema_version", "experiment", "created_at", "model", "provider", "effort", "cli_version", "harness_sha256", "prompts", "images", "environment"],
+      "properties": {
+        "schema_version": {"const": "vision-text-result-v2"},
+        "experiment": {"type": "string", "minLength": 1},
+        "created_at": {"type": "string", "format": "date-time"},
+        "model": {"type": "string", "minLength": 1},
+        "provider": {"type": "string", "minLength": 1},
+        "effort": {"type": ["string", "null"]},
+        "cli_version": {"type": ["string", "null"]},
+        "harness_sha256": {"type": "string", "pattern": "^[0-9a-f]{16}$"},
+        "prompts": {"type": "object"},
+        "images": {"type": "array"},
+        "environment": {"type": "object"}
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["model", "response"],
+        "properties": {
+          "model": {"type": "string", "minLength": 1},
+          "response": {
+            "type": "object",
+            "required": ["text", "usage", "returncode", "stderr", "stdout", "argv", "provider", "model", "n_images"]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

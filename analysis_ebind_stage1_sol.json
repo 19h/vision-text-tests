@@ -1,0 +1,324 @@
+{
+ "groups": {
+  "image/hex": {
+   "absent": {
+    "D0": {
+     "ci95": [
+      0.45,
+      0.7333333333333333
+     ],
+     "cluster": "item_only_legacy",
+     "n_calls": 60,
+     "n_items": 20,
+     "rate": 0.6
+    },
+    "N": {
+     "ci95": [
+      0.0,
+      0.08333333333333333
+     ],
+     "cluster": "item_only_legacy",
+     "n_calls": 60,
+     "n_items": 20,
+     "rate": 0.03333333333333333
+    },
+    "P0": {
+     "ci95": [
+      0.0,
+      0.16112515805281938
+     ],
+     "cluster": "item_only_legacy+wilson_boundary",
+     "n_calls": 60,
+     "n_items": 20,
+     "rate": 0.0
+    },
+    "W0": {
+     "ci95": [
+      0.21666666666666665,
+      0.5166666666666667
+     ],
+     "cluster": "item_only_legacy",
+     "n_calls": 60,
+     "n_items": 20,
+     "rate": 0.36666666666666664
+    }
+   },
+   "call_counts": {
+    "C": 190,
+    "D": 102,
+    "D0": 36,
+    "N": 2,
+    "W": 8,
+    "W0": 22
+   },
+   "calls": 360,
+   "descriptive": {
+    "canonical_code_parse_rate": 0.85,
+    "correct_block_rate_present": 0.6333333333333333,
+    "correct_record_given_correct_block": 1.0,
+    "geometric_attempts_if_iid": {
+     "absent_correct": 30.0,
+     "present_correct": 1.5789473684210527
+    },
+    "latency_seconds": {
+     "n": 360,
+     "p50": 5.0,
+     "p95": 14.0
+    },
+    "protocol_response_rate": 1.0,
+    "successful_present_queries_per_recorded_input_token": null,
+    "tag_pass_given_tag_checked": 0.7432432432432432,
+    "usage_tokens": {
+     "cached_input_total": 0,
+     "calls_with_usage": 0,
+     "input_p50": null,
+     "input_total": 0,
+     "output_total": 0
+    }
+   },
+   "items": 120,
+   "passes": [
+    1,
+    2,
+    3
+   ],
+   "present": {
+    "A": {
+     "ci95": [
+      0.0,
+      0.4898908364545973
+     ],
+     "cluster": "page_then_item+wilson_boundary",
+     "n_calls": 300,
+     "n_items": 100,
+     "rate": 0.0
+    },
+    "C": {
+     "ci95": [
+      0.532608695652174,
+      0.7249190938511327
+     ],
+     "cluster": "page_then_item",
+     "n_calls": 300,
+     "n_items": 100,
+     "rate": 0.6333333333333333
+    },
+    "D": {
+     "ci95": [
+      0.23987538940809966,
+      0.4498381877022654
+     ],
+     "cluster": "page_then_item",
+     "n_calls": 300,
+     "n_items": 100,
+     "rate": 0.34
+    },
+    "P": {
+     "ci95": [
+      0.0,
+      0.4898908364545973
+     ],
+     "cluster": "page_then_item+wilson_boundary",
+     "n_calls": 300,
+     "n_items": 100,
+     "rate": 0.0
+    },
+    "W": {
+     "ci95": [
+      0.0,
+      0.06472491909385113
+     ],
+     "cluster": "page_then_item",
+     "n_calls": 300,
+     "n_items": 100,
+     "rate": 0.026666666666666665
+    }
+   }
+  },
+  "text/hex": {
+   "absent": {
+    "D0": {
+     "ci95": [
+      0.0,
+      0.16112515805281938
+     ],
+     "cluster": "item_only_legacy+wilson_boundary",
+     "n_calls": 20,
+     "n_items": 20,
+     "rate": 0.0
+    },
+    "N": {
+     "ci95": [
+      0.8388748419471806,
+      1.0
+     ],
+     "cluster": "item_only_legacy+wilson_boundary",
+     "n_calls": 20,
+     "n_items": 20,
+     "rate": 1.0
+    },
+    "P0": {
+     "ci95": [
+      0.0,
+      0.16112515805281938
+     ],
+     "cluster": "item_only_legacy+wilson_boundary",
+     "n_calls": 20,
+     "n_items": 20,
+     "rate": 0.0
+    },
+    "W0": {
+     "ci95": [
+      0.0,
+      0.16112515805281938
+     ],
+     "cluster": "item_only_legacy+wilson_boundary",
+     "n_calls": 20,
+     "n_items": 20,
+     "rate": 0.0
+    }
+   },
+   "call_counts": {
+    "C": 99,
+    "D": 1,
+    "N": 20
+   },
+   "calls": 120,
+   "descriptive": {
+    "canonical_code_parse_rate": 1.0,
+    "correct_block_rate_present": 0.99,
+    "correct_record_given_correct_block": 1.0,
+    "geometric_attempts_if_iid": {
+     "absent_correct": 1.0,
+     "present_correct": 1.0101010101010102
+    },
+    "latency_seconds": {
+     "n": 120,
+     "p50": 5.0,
+     "p95": 20.049999999999997
+    },
+    "protocol_response_rate": 1.0,
+    "successful_present_queries_per_recorded_input_token": null,
+    "tag_pass_given_tag_checked": 0.99,
+    "usage_tokens": {
+     "cached_input_total": 0,
+     "calls_with_usage": 0,
+     "input_p50": null,
+     "input_total": 0,
+     "output_total": 0
+    }
+   },
+   "items": 120,
+   "passes": [
+    1
+   ],
+   "present": {
+    "A": {
+     "ci95": [
+      0.0,
+      0.4898908364545973
+     ],
+     "cluster": "page_then_item+wilson_boundary",
+     "n_calls": 100,
+     "n_items": 100,
+     "rate": 0.0
+    },
+    "C": {
+     "ci95": [
+      0.9583333333333334,
+      1.0
+     ],
+     "cluster": "page_then_item",
+     "n_calls": 100,
+     "n_items": 100,
+     "rate": 0.99
+    },
+    "D": {
+     "ci95": [
+      0.0,
+      0.04123711340206185
+     ],
+     "cluster": "page_then_item",
+     "n_calls": 100,
+     "n_items": 100,
+     "rate": 0.01
+    },
+    "P": {
+     "ci95": [
+      0.0,
+      0.4898908364545973
+     ],
+     "cluster": "page_then_item+wilson_boundary",
+     "n_calls": 100,
+     "n_items": 100,
+     "rate": 0.0
+    },
+    "W": {
+     "ci95": [
+      0.0,
+      0.4898908364545973
+     ],
+     "cluster": "page_then_item+wilson_boundary",
+     "n_calls": 100,
+     "n_items": 100,
+     "rate": 0.0
+    }
+   }
+  }
+ },
+ "paired_architecture_differences": {
+  "arm_A_minus_B_absent_correct_image_hex": {
+   "ci95": [
+    null,
+    null
+   ],
+   "difference": null,
+   "n_paired_items": 0
+  },
+  "arm_A_minus_B_present_correct_image_hex": {
+   "ci95": [
+    null,
+    null
+   ],
+   "difference": null,
+   "n_paired_items": 0
+  },
+  "arm_B_hex_minus_b32_present_correct": {
+   "ci95": [
+    null,
+    null
+   ],
+   "difference": null,
+   "n_paired_items": 0
+  }
+ },
+ "paired_carrier_differences": {
+  "absent_correct": {
+   "ci95": [
+    null,
+    null
+   ],
+   "difference": null,
+   "n_paired_items": 0
+  },
+  "present_correct": {
+   "ci95": [
+    null,
+    null
+   ],
+   "difference": null,
+   "n_paired_items": 0
+  }
+ },
+ "schema_version": "ebind-analysis-v1",
+ "sources": [
+  {
+   "path": "results_ebind1_stage1_A_gpt-5.6-sol.json",
+   "sha256": "70641ea582092fd4074b3a8e46aaba8d9c2961de932121da4703f2fb14758200"
+  },
+  {
+   "path": "results_ebind1_stage1text_A_gpt-5.6-sol.json",
+   "sha256": "5d8770572d3b6e9daddb9aa4cc6eeee6c3cd7ef58a6184291c923e3a2e786ea5"
+  }
+ ]
+}

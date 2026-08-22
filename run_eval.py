@@ -8,6 +8,7 @@ import argparse, json, os, re, subprocess, sys, time, difflib
 from concurrent.futures import ThreadPoolExecutor
 
 import providers as P
+import provenance as V
 ROOT = os.path.dirname(os.path.abspath(__file__))
 KEY = json.load(open(os.path.join(ROOT, 'ANSWER_KEY.json')))['images']
 GRADED = ('n_lines', 'passphrase', 'rare_count', 'verbatim_mid')   # + every code_*
@@ -35,11 +36,11 @@ def call(path, ps, model, timeout, effort='low'):
         r = P.run(build_prompt(path, ps, prov), model=model,
                   images=P.images_for(prov, [path]), effort=effort, timeout=timeout, cwd=ROOT)
     except subprocess.TimeoutExpired:
-        return None, time.time() - t0, 'timeout'
+        return None, time.time() - t0, 'timeout', None
     ans = P.parse_json_answer(r['text'])
     if not isinstance(ans, dict):
-        return None, time.time() - t0, str(r['text'])[:200]
-    return ans, time.time() - t0, None
+        return None, time.time() - t0, str(r['text'])[:200], V.response_record(r)
+    return ans, time.time() - t0, None, V.response_record(r)
 
 def norm(s): return re.sub(r'\s+', ' ', str(s)).strip()
 
@@ -82,11 +83,14 @@ def run_one(item, model, timeout, effort='low'):
     k, v = item
     ps = probes_for(v)
     gt = open(os.path.join(ROOT, v['groundtruth'])).read().split('\n')
-    ans, secs, err = call(os.path.join(ROOT, 'images', k), ps, model, timeout, effort)
-    res = dict(file=k, model=model, provider=P.provider_for(model), effort=effort,
+    image_path = os.path.join(ROOT, 'images', k)
+    ans, secs, err, response = call(image_path, ps, model, timeout, effort)
+    res = dict(file=k, model=model, provider=P.provider_for(model),
+               effort=P.effective_effort(model, effort),
                seconds=round(secs, 1), error=err,
                glyph=v.get('cell') or f"{v.get('size_px')}px", chars=v['chars'],
-               ch_per_tok=v['chars_per_claude_token'], details={})
+               ch_per_tok=v['chars_per_claude_token'], image_sha256=V.sha256_file(image_path),
+               response=response, details={})
     if ans is None:
         res.update(code_acc=None, verbatim_sim=None, score=None)
         print(f"  {model:7s} {k:44s} FAILED ({err})")
@@ -116,21 +120,34 @@ def run_one(item, model, timeout, effort='low'):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('--model', default='sonnet')
+    ap.add_argument('--model', required=True)
     ap.add_argument('--series', nargs='*', default=[])
     ap.add_argument('--images', nargs='*', default=[])
     ap.add_argument('--jobs', type=int, default=3)
     ap.add_argument('--timeout', type=int, default=900)
-    ap.add_argument('--out', default='results.json')
+    ap.add_argument('--out', default=None)
     ap.add_argument('--effort', default='low')
+    ap.add_argument('--overwrite', action='store_true')
+    ap.add_argument('--allow-mutable-model-alias', action='store_true')
     a = ap.parse_args()
+    if P.model_is_mutable_alias(a.model) and not a.allow_mutable_model_alias:
+        ap.error('--model must be an exact immutable model id (or opt into an exploratory alias)')
+    output_name = a.out or f'results_ladder_{a.model}.json'
+    p = os.path.join(ROOT, output_name)
+    V.require_new_output(p, a.overwrite)
     items = [(k, v) for k, v in KEY.items()
              if (not a.series or v['series'] in a.series)
              and (not a.images or any(s.lower() in k.lower() for s in a.images))]
     print(f"{len(items)} images x model={a.model}, {a.jobs} parallel")
     with ThreadPoolExecutor(a.jobs) as ex:
         out = list(ex.map(lambda it: run_one(it, a.model, a.timeout, a.effort), items))
-    p = os.path.join(ROOT, a.out)
-    prev = json.load(open(p)) if os.path.exists(p) else []
-    json.dump(prev + out, open(p, 'w'), indent=1)
+    prov = P.provider_for(a.model)
+    manifest = V.manifest(
+        experiment='ladder-eval-v2', model=a.model, provider=prov, effort=a.effort,
+        cli_version=P.cli_version(prov), harness_path=__file__,
+        prompts={'instruction_template': build_prompt('<IMAGE>', [], prov)},
+        series=a.series, image_filters=a.images, jobs=a.jobs, timeout=a.timeout,
+        append_semantics='one immutable artifact per output path')
+    V.dump_json(p, dict(schema_version=V.RESULT_SCHEMA_VERSION,
+                        manifest=manifest, results=out))
     print(f"-> {p}")

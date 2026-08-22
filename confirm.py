@@ -15,6 +15,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_lib import bitmap, canvas, draw_lines, tokens
 from pack import exact_fit
 import providers as P
+import provenance as V
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 VERSION = 'confirm-v1'
@@ -95,8 +96,7 @@ def call(prompt, model, image=None, effort='low', timeout=900):
               effort=effort, timeout=timeout, cwd=ROOT)
     ans = P.parse_json_answer(r['text'])
     line = ans.get('line') if isinstance(ans, dict) else None
-    return line, json.dumps(dict(text=r['text'], usage=r['usage'],
-                                 rc=r['returncode'], stderr=r['stderr'][-400:]))
+    return line, V.response_record(r)
 
 def one(job, model, effort='low'):
     cellname, cw, lh, kind, rep = job
@@ -105,7 +105,8 @@ def one(job, model, effort='low'):
     d = os.path.join(ROOT, 'images', 'CONFIRM'); os.makedirs(d, exist_ok=True)
     p = os.path.join(d, f'{cellname}_{kind}_{seed}.png'); im.save(p)
     ct, gt = tokens(w, h)
-    base = dict(version=VERSION, model=model, provider=P.provider_for(model), effort=effort, cell=f'{cw}x{lh}', font=cellname, payload=kind,
+    base = dict(version=VERSION, model=model, provider=P.provider_for(model),
+                effort=P.effective_effort(model, effort), cell=f'{cw}x{lh}', font=cellname, payload=kind,
                 rep=rep, w=w, h=h, cols=cols, rows=rows, line_chars=cols,
                 claude_tokens=ct, chars=cols * rows,
                 ch_per_token=round(cols * rows / ct, 2))
@@ -114,7 +115,8 @@ def one(job, model, effort='low'):
     prov = P.provider_for(model)
     got, raw = call(P_DECODE.format(head=head(prov, p)), model, image=p, effort=effort)
     want = lines[0]
-    out.append(dict(base, probe='decode', target_row=1, got=got, want=want, raw=raw[-2000:],
+    out.append(dict(base, probe='decode', target_row=1, got=got, want=want,
+                    image_sha256=V.sha256_file(p), response=raw,
                     exact=(got or '').strip() == want.strip(),
                     cer=round(cer((got or '').strip(), want.strip()), 4),
                     abstain=(got or '').strip().upper() == 'UNREADABLE',
@@ -127,7 +129,8 @@ def one(job, model, effort='low'):
     if got and got.strip().upper() != 'UNREADABLE':
         best = max(range(len(lines)), key=lambda i: difflib.SequenceMatcher(None, got.strip(), lines[i]).ratio())
         if difflib.SequenceMatcher(None, got.strip(), lines[best]).ratio() > 0.6: hit = best + 1
-    out.append(dict(base, probe='bind', target_row=n, got=got, want=want, raw=raw[-2000:],
+    out.append(dict(base, probe='bind', target_row=n, got=got, want=want,
+                    image_sha256=V.sha256_file(p), response=raw,
                     exact=(got or '').strip() == want.strip(),
                     cer=round(cer((got or '').strip(), want.strip()), 4),
                     abstain=(got or '').strip().upper() == 'UNREADABLE',
@@ -139,16 +142,29 @@ def one(job, model, effort='low'):
               f"disp={r.get('displacement')} {r['seconds']}s")
     return out
 
+def execute_jobs(jobs, model, effort, workers=3):
+    """Execute the frozen matrix while preserving the manifest's declared effort."""
+    with ThreadPoolExecutor(workers) as ex:
+        return [r for rows in ex.map(lambda job: one(job, model, effort), jobs) for r in rows]
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('--model', default='opus'); ap.add_argument('--reps', type=int, default=2)
+    ap.add_argument('--model', required=True); ap.add_argument('--reps', type=int, default=2)
     ap.add_argument('--jobs', type=int, default=3)
     ap.add_argument('--cells', nargs='*', default=None,
                     help='override cell set (extension run; prompts/grader stay frozen)')
     ap.add_argument('--payloads', nargs='*', default=None)
     ap.add_argument('--tag', default='')
     ap.add_argument('--effort', default='low')
+    ap.add_argument('--overwrite', action='store_true')
+    ap.add_argument('--allow-mutable-model-alias', action='store_true',
+                    help='exploratory compatibility only; confirmatory provenance requires an exact id')
     a = ap.parse_args()
+    if P.model_is_mutable_alias(a.model) and not a.allow_mutable_model_alias:
+        ap.error('--model must be an exact immutable model id (or explicitly opt into an exploratory alias)')
+    fn = f'results_{VERSION}{a.tag}_{a.model}.json'
+    result_path = os.path.join(ROOT, fn)
+    V.require_new_output(result_path, a.overwrite)
     cells = CELLS
     if a.cells:
         cells = [(c, int(re.search(r'(\d+)x', c).group(1)), int(re.search(r'x(\d+)', c).group(1)))
@@ -157,18 +173,18 @@ if __name__ == '__main__':
     jobs = [(c, cw, lh, k, r) for (c, cw, lh) in cells for k in payloads
             for r in range(1, a.reps + 1)]
     src = open(__file__).read()
-    manifest = dict(version=VERSION, model=a.model, reps=a.reps, cells=[c[0] for c in CELLS],
-                    payloads=PAYLOADS, line_chars=LINE_CHARS,
-                    prompt_decode_sha=hashlib.sha256(P_DECODE.encode()).hexdigest()[:16],
-                    prompt_bind_sha=hashlib.sha256(P_BIND.encode()).hexdigest()[:16],
-                    harness_sha=hashlib.sha256(src.encode()).hexdigest()[:16],
-                    provider=P.provider_for(a.model), effort=a.effort,
-                    cli_version=P.cli_version(P.provider_for(a.model)),
-                    image_delivery='attached (-i)' if P.provider_for(a.model)=='codex' else 'path + Read tool',
-                    tools_allowed='Read', n_runs=len(jobs) * 2)
+    prov = P.provider_for(a.model)
+    manifest = V.manifest(
+        experiment=VERSION, model=a.model, provider=prov, effort=a.effort,
+        cli_version=P.cli_version(prov), harness_path=__file__,
+        prompts={'decode_template': P_DECODE, 'bind_template': P_BIND},
+        version=VERSION, reps=a.reps, cells=[c[0] for c in cells],
+        payloads=payloads, line_chars=LINE_CHARS,
+        image_delivery='attached (-i)' if prov == 'codex' else 'path + Read tool',
+        tools_allowed='read-only' if prov == 'codex' else 'Read',
+        mutable_model_alias=P.model_is_mutable_alias(a.model), n_runs=len(jobs) * 2)
     print(json.dumps(manifest, indent=1))
-    with ThreadPoolExecutor(a.jobs) as ex:
-        res = [r for rs in ex.map(lambda j: one(j, a.model), jobs) for r in rs]
-    fn = f'results_{VERSION}{a.tag}_{a.model}.json'
-    json.dump(dict(manifest=manifest, results=res), open(os.path.join(ROOT, fn), 'w'), indent=1)
+    res = execute_jobs(jobs, a.model, a.effort, a.jobs)
+    V.dump_json(result_path,
+                dict(schema_version=V.RESULT_SCHEMA_VERSION, manifest=manifest, results=res))
     print(f"\n-> {fn}")
