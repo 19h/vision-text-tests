@@ -1,0 +1,1037 @@
+[
+ {
+  "file": "A_bitmap_ladder/A01_4x6.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 10.4,
+  "error": null,
+  "glyph": "4x6",
+  "chars": 32093,
+  "ch_per_tok": 31.34,
+  "details": {
+   "n_lines": {
+    "got": "150",
+    "want": "148",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "UNREADABLE",
+    "want": "COBALT-OTTER-6836 (line 0053)",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "5 (lines [7, 48, 59, 81, 87])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0013": {
+    "got": "UNREADABLE",
+    "want": "495GW",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0050": {
+    "got": "UNREADABLE",
+    "want": "ZUFZM",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0099": {
+    "got": "UNREADABLE",
+    "want": "6QQRM",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0148": {
+    "got": "UNREADABLE",
+    "want": "V227W",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0050 ZUFZM Terminal 7 quarantined 139 bins of scrap at bay 95; photograph 5HY attached; humidity 58 percent; driver badge ZMY5; weight variance 60 kg; barcode DTBKXK unreadable on first pass; temperature held at 33C; no",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 7,
+  "n_lines": "wrong",
+  "passphrase": "abstain",
+  "ch_per_tok_gpt": 34.11,
+  "misaddressed": 0
+ },
+ {
+  "file": "A_bitmap_ladder/A02_5x7.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 13.6,
+  "error": null,
+  "glyph": "5x7",
+  "chars": 21642,
+  "ch_per_tok": 21.13,
+  "details": {
+   "n_lines": {
+    "got": "126",
+    "want": "126",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "UNREADABLE",
+    "want": "COBALT-MARLIN-7549 (line 0074)",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "5 (lines [2, 15, 29, 37, 54])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0011": {
+    "got": "UNREADABLE",
+    "want": "7U6SK",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0043": {
+    "got": "UNREADABLE",
+    "want": "BDW57",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0085": {
+    "got": "UNREADABLE",
+    "want": "TYE6X",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0126": {
+    "got": "UNREADABLE",
+    "want": "BQDX6",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0043 BDW57 The cold store rerouted 8739 sacks of silica at bay 51; photograph ECF attached; no damage reported; tare recorded as 307 kg; escort vehicle W3T assigned; held 185",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 7,
+  "n_lines": "ok",
+  "passphrase": "abstain",
+  "ch_per_tok_gpt": 23.0,
+  "misaddressed": 0
+ },
+ {
+  "file": "A_bitmap_ladder/A03_5x8.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 22.1,
+  "error": null,
+  "glyph": "5x8",
+  "chars": 19080,
+  "ch_per_tok": 18.63,
+  "details": {
+   "n_lines": {
+    "got": "111",
+    "want": "111",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "UNREADABLE",
+    "want": "VIOLET-OTTER-4570 (line 0044)",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "4 (lines [11, 30, 31, 90])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0010": {
+    "got": "UNREADABLE",
+    "want": "6FK3Y",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0038": {
+    "got": "UNREADABLE",
+    "want": "FBFWM",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0075": {
+    "got": "UNREADABLE",
+    "want": "EN2UC",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0111": {
+    "got": "UNREADABLE",
+    "want": "LP8GT",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0038 FBFWM Substation Foxtrot scanned 7857 sacks of silica by lift 11; gate camera 29 clear; manifest reprinted twice; checksum N6RW verified; humidity 36 percent; checksum",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 7,
+  "n_lines": "ok",
+  "passphrase": "abstain",
+  "ch_per_tok_gpt": 20.28,
+  "misaddressed": 0
+ },
+ {
+  "file": "A_bitmap_ladder/A04_6x9.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 23.8,
+  "error": null,
+  "glyph": "6x9",
+  "chars": 14016,
+  "ch_per_tok": 13.69,
+  "details": {
+   "n_lines": {
+    "got": "100",
+    "want": "98",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "UNREADABLE",
+    "want": "INDIGO-LYNX-5704 (line 0059)",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "UNREADABLE",
+    "want": "3 (lines [15, 46, 57])",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0009": {
+    "got": "UNREADABLE",
+    "want": "NSEWQ",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0033": {
+    "got": "UNREADABLE",
+    "want": "99FLT",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0066": {
+    "got": "UNREADABLE",
+    "want": "2ED3G",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "code_0098": {
+    "got": "UNREADABLE",
+    "want": "BV4DQ",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "UNREADABLE",
+    "want": "0033 99FLT The north yard logged 905 reels of fibre at bay 90; gate camera 16 clear; weight variance 6 kg; checksum H993 verified; manifest",
+    "verdict": "abstain",
+    "score": 0.0
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.0,
+  "legibility": 0.0,
+  "abstained": 7,
+  "n_lines": "wrong",
+  "passphrase": "abstain",
+  "ch_per_tok_gpt": 14.9,
+  "misaddressed": 0
+ },
+ {
+  "file": "A_bitmap_ladder/A05_6x10.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 44.9,
+  "error": null,
+  "glyph": "6x10",
+  "chars": 12575,
+  "ch_per_tok": 12.28,
+  "details": {
+   "n_lines": {
+    "got": "88",
+    "want": "88",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "UNREADABLE",
+    "want": "SORREL-FALCON-3922 (line 0057)",
+    "verdict": "abstain",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "13",
+    "want": "3 (lines [13, 38, 48])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0008": {
+    "got": "GM64D",
+    "want": "3MCH3",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0030": {
+    "got": "WFERB",
+    "want": "WFERP",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0059": {
+    "got": "QZYJA",
+    "want": "QZYJA",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0088": {
+    "got": "BV57N",
+    "want": "MDYP6",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "WFERB Warehouse 3 shipped 8347 reels of fiber for client AZ4Q; checksum CEZX verified; humidity 47 percent; signature captured on pad 2;",
+    "want": "0030 WFERP Warehouse 3 shipped 8347 reels of fibre for client AZ4U; checksum CEZX verified; humidity 47 percent; signature captured on pad 2;",
+    "verdict": "partial",
+    "score": 0.96
+   }
+  },
+  "code_acc": 0.25,
+  "verbatim_sim": 0.96,
+  "legibility": 0.941,
+  "abstained": 1,
+  "n_lines": "ok",
+  "passphrase": "abstain",
+  "ch_per_tok_gpt": 13.37,
+  "misaddressed": 0
+ },
+ {
+  "file": "A_bitmap_ladder/A06_6x12.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 53.1,
+  "error": null,
+  "glyph": "6x12",
+  "chars": 10580,
+  "ch_per_tok": 10.33,
+  "details": {
+   "n_lines": {
+    "got": "74",
+    "want": "74",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "INDIGO-OTTER-4726, line 0071",
+    "want": "INDIGO-OTTER-4726 (line 0071)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "1",
+    "want": "2 (lines [20, 21])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0007": {
+    "got": "D0X5V",
+    "want": "DQXV5",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0025": {
+    "got": "MH4K7",
+    "want": "HM4K7",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0050": {
+    "got": "CE82G",
+    "want": "CE82G",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0074": {
+    "got": "2RY0?",
+    "want": "2N86B",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "0025 MH4K7 Convoy Echo quarantined 7218 pallets of resin against quota 18; driver badge TXSL; escort vehicle UVC assigned; checksum MH4JQ verified;",
+    "want": "0025 HM4K7 Convoy Echo quarantined 7218 pallets of resin against quota 18; driver badge TVSK; escort vehicle UWC assigned; checksum MH4J verified;",
+    "verdict": "partial",
+    "score": 0.969
+   }
+  },
+  "code_acc": 0.25,
+  "verbatim_sim": 0.969,
+  "legibility": 0.969,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "ok",
+  "ch_per_tok_gpt": 11.25,
+  "misaddressed": 0
+ },
+ {
+  "file": "A_bitmap_ladder/A07_6x13.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 10.4,
+  "error": null,
+  "glyph": "6x13",
+  "chars": 9731,
+  "ch_per_tok": 9.5,
+  "details": {
+   "n_lines": {
+    "got": "69",
+    "want": "68",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "VIOLET-FALCON-8820!! on line 0034",
+    "want": "VIOLET-FALCON-8820 (line 0035)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "3",
+    "want": "2 (lines [4, 60])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0006": {
+    "got": "FHBM",
+    "want": "FHBM8",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0023": {
+    "got": "JWRG",
+    "want": "WJHRG",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0046": {
+    "got": "FJXW",
+    "want": "FJX6W",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0068": {
+    "got": "KHRT",
+    "want": "DQABA",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "0023 JWRG Line Charlie inspected 1707 bales of flax under seal 2YQN; gate camera 18 clear; driver badge ZRZZ; manifest reprinted twice; no damage reported;",
+    "want": "0023 WJHRG Line Charlie inspected 1707 bales of flax under seal 2YQN; gate camera 18 clear; driver badge ZRZZ; manifest reprinted twice; no damage",
+    "verdict": "partial",
+    "score": 0.957
+   }
+  },
+  "code_acc": 0.0,
+  "verbatim_sim": 0.957,
+  "legibility": 0.957,
+  "abstained": 0,
+  "n_lines": "wrong",
+  "passphrase": "ok",
+  "ch_per_tok_gpt": 10.34,
+  "misaddressed": 0
+ },
+ {
+  "file": "A_bitmap_ladder/A08_7x13.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 11.6,
+  "error": null,
+  "glyph": "7x13",
+  "chars": 8200,
+  "ch_per_tok": 8.01,
+  "details": {
+   "n_lines": {
+    "got": "70",
+    "want": "68",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "VIOLET-BADGER-7305! on line 0027",
+    "want": "VIOLET-BADGER-7305 (line 0024)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "3",
+    "want": "2 (lines [33, 49])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0006": {
+    "got": "HXLWR",
+    "want": "HXWWR",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0023": {
+    "got": "T496D",
+    "want": "T496D",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0046": {
+    "got": "JXTV8",
+    "want": "JXTV8",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0068": {
+    "got": "R6FLP",
+    "want": "L5AP9",
+    "verdict": "misaddressed(line 67 not 68)",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "0023 T496D The east pier inspected 8460 cases of ballast for client QRKS; gate camera 3 clear; humidity 26 percent; no",
+    "want": "0023 T496D The east pier inspected 8460 cases of ballast for client QRKS; gate camera 3 clear; humidity 26 percent; no",
+    "verdict": "ok",
+    "score": 1.0
+   }
+  },
+  "misaddressed": 1,
+  "code_acc": 0.5,
+  "verbatim_sim": 1.0,
+  "legibility": 1.0,
+  "abstained": 0,
+  "n_lines": "wrong",
+  "passphrase": "ok",
+  "ch_per_tok_gpt": 8.72
+ },
+ {
+  "file": "A_bitmap_ladder/A09_7x14.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 16.0,
+  "error": null,
+  "glyph": "7x14",
+  "chars": 7619,
+  "ch_per_tok": 7.44,
+  "details": {
+   "n_lines": {
+    "got": "64",
+    "want": "63",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "INDIGO-LYNX-9520 on line 0027",
+    "want": "INDIGO-LYNX-9520 (line 0027)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "2",
+    "want": "2 (lines [51, 55])",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0006": {
+    "got": "4UC2N",
+    "want": "4WC2N",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0022": {
+    "got": "CABJU",
+    "want": "CABJU",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0043": {
+    "got": "BSVUF",
+    "want": "BSVUF",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0063": {
+    "got": "7YM6B",
+    "want": "NW6HJ",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "CABJU Line Charlie quarantined 2510 trays of quartz at bay 37; humidity 22 percent; escort vehicle 6BN assigned; gate",
+    "want": "0022 CABJU Line Charlie quarantined 2510 trays of quartz at bay 37; humidity 22 percent; escort vehicle 6BN assigned; gate",
+    "verdict": "partial",
+    "score": 0.979
+   }
+  },
+  "code_acc": 0.5,
+  "verbatim_sim": 0.979,
+  "legibility": 0.957,
+  "abstained": 0,
+  "n_lines": "wrong",
+  "passphrase": "ok",
+  "ch_per_tok_gpt": 8.1,
+  "misaddressed": 0
+ },
+ {
+  "file": "A_bitmap_ladder/A10_8x13.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 16.4,
+  "error": null,
+  "glyph": "8x13",
+  "chars": 7172,
+  "ch_per_tok": 7.0,
+  "details": {
+   "n_lines": {
+    "got": "70",
+    "want": "68",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "SORREL-FALCON-037! on line 0060",
+    "want": "SORREL-FALCON-9037 (line 0059)",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "rare_count": {
+    "got": "2",
+    "want": "2 (lines [27, 53])",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0006": {
+    "got": "H2M4G",
+    "want": "H2M49",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0023": {
+    "got": "LBA8",
+    "want": "LBAA8",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0046": {
+    "got": "L4C2Z",
+    "want": "L4CZZ",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0068": {
+    "got": "Q2NS2",
+    "want": "7LL97",
+    "verdict": "misaddressed(line 67 not 68)",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "0023 LBA8 The cold store weighed 6470 tubs of pitch at bay 71; manifest reprinted twice; temperature held at",
+    "want": "0023 LBAA8 The cold store weighed 6470 tubs of pitch at bay 71; manifest reprinted twice; temperature held at",
+    "verdict": "ok",
+    "score": 0.995
+   }
+  },
+  "misaddressed": 1,
+  "code_acc": 0.0,
+  "verbatim_sim": 0.995,
+  "legibility": 0.991,
+  "abstained": 0,
+  "n_lines": "wrong",
+  "passphrase": "wrong",
+  "ch_per_tok_gpt": 7.62
+ },
+ {
+  "file": "A_bitmap_ladder/A11_8x16.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 10.9,
+  "error": null,
+  "glyph": "8x16",
+  "chars": 5808,
+  "ch_per_tok": 5.67,
+  "details": {
+   "n_lines": {
+    "got": "55",
+    "want": "55",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "VIOLET-FALCON-5566, line 0015",
+    "want": "VIOLET-FALCON-5566 (line 0014)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "3",
+    "want": "2 (lines [25, 36])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0005": {
+    "got": "APVN8",
+    "want": "CGLDX",
+    "verdict": "misaddressed(line 4 not 5)",
+    "score": 0.0
+   },
+   "code_0019": {
+    "got": "LWP8R",
+    "want": "LWP8C",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0037": {
+    "got": "T8H5V",
+    "want": "T8H5V",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0055": {
+    "got": "L4VCL",
+    "want": "L4VCL",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "verbatim_mid": {
+    "got": "0019 LWP8R Team Juliet dispatched 9813 kegs of solvent pending review MB6; temperature held at -4C; humidity",
+    "want": "0019 LWP8C Team Juliet dispatched 9813 kegs of solvent pending review MB6; temperature held at -4C; humidity",
+    "verdict": "ok",
+    "score": 0.991
+   }
+  },
+  "misaddressed": 1,
+  "code_acc": 0.5,
+  "verbatim_sim": 0.991,
+  "legibility": 0.991,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "ok",
+  "ch_per_tok_gpt": 6.17
+ },
+ {
+  "file": "A_bitmap_ladder/A12_9x15.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 14.9,
+  "error": null,
+  "glyph": "9x15",
+  "chars": 5469,
+  "ch_per_tok": 5.34,
+  "details": {
+   "n_lines": {
+    "got": "60",
+    "want": "59",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "passphrase": {
+    "got": "VIOLET-FALCON-5774, line 0044",
+    "want": "VIOLET-FALCON-5774 (line 0044)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "2",
+    "want": "2 (lines [4, 25])",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0005": {
+    "got": "MDN6G",
+    "want": "MDN6G",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0020": {
+    "got": "XTGAF",
+    "want": "XTGAF",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0040": {
+    "got": "SRZ3U",
+    "want": "5RZ3U",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0059": {
+    "got": "TKTSH",
+    "want": "K7GFX",
+    "verdict": "misaddressed(line 58 not 59)",
+    "score": 0.0
+   },
+   "verbatim_mid": {
+    "got": "0020 XTGAF Platform 22 recovered 9552 bales of flax en route 7; photograph KKR attached;",
+    "want": "0020 XTGAF Platform 22 recovered 9552 bales of flax on route 7; photograph KKR attached;",
+    "verdict": "ok",
+    "score": 0.989
+   }
+  },
+  "misaddressed": 1,
+  "code_acc": 0.5,
+  "verbatim_sim": 0.989,
+  "legibility": 0.989,
+  "abstained": 0,
+  "n_lines": "wrong",
+  "passphrase": "ok",
+  "ch_per_tok_gpt": 5.81
+ },
+ {
+  "file": "A_bitmap_ladder/A13_9x18.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 9.1,
+  "error": null,
+  "glyph": "9x18",
+  "chars": 4588,
+  "ch_per_tok": 4.48,
+  "details": {
+   "n_lines": {
+    "got": "49",
+    "want": "49",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "VIOLET-BADGER-7692 on line 0047",
+    "want": "VIOLET-BADGER-7692 (line 0047)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "2",
+    "want": "2 (lines [3, 45])",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0005": {
+    "got": "JU5JZ",
+    "want": "JW5JZ",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0017": {
+    "got": "3TLHL",
+    "want": "3TLHL",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0033": {
+    "got": "MGJLW",
+    "want": "QQ2J4",
+    "verdict": "misaddressed(line 34 not 33)",
+    "score": 0.0
+   },
+   "code_0049": {
+    "got": "2T2PS",
+    "want": "2T2PS",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "verbatim_mid": {
+    "got": "0017 3TLHL Crew Delta inspected 1964 kegs of solvent pending review 8XY; gate camera 21 clear;",
+    "want": "0017 3TLHL Crew Delta inspected 1964 kegs of solvent pending review 8XY; gate camera 21 clear;",
+    "verdict": "ok",
+    "score": 1.0
+   }
+  },
+  "misaddressed": 1,
+  "code_acc": 0.5,
+  "verbatim_sim": 1.0,
+  "legibility": 1.0,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "ok",
+  "ch_per_tok_gpt": 4.88
+ },
+ {
+  "file": "A_bitmap_ladder/A14_10x20.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 8.8,
+  "error": null,
+  "glyph": "10x20",
+  "chars": 3622,
+  "ch_per_tok": 3.54,
+  "details": {
+   "n_lines": {
+    "got": "44",
+    "want": "44",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "INDIGO-LYNX-4605 on line 0042",
+    "want": "INDIGO-LYNX-4605 (line 0042)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "2",
+    "want": "2 (lines [33, 35])",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0004": {
+    "got": "WNAUL",
+    "want": "WNAUL",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0015": {
+    "got": "KCIQR",
+    "want": "KCTQR",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0030": {
+    "got": "BUC8R",
+    "want": "BUC8R",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0044": {
+    "got": "67Y6G",
+    "want": "67Y6G",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "verbatim_mid": {
+    "got": "0015 KCIQR Convoy Echo impounded 7365 bales of flax with manifest I6BK; two seals",
+    "want": "0015 KCTQR Convoy Echo impounded 7365 bales of flax with manifest T6BK; two seals",
+    "verdict": "partial",
+    "score": 0.975
+   }
+  },
+  "code_acc": 0.75,
+  "verbatim_sim": 0.975,
+  "legibility": 0.975,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "ok",
+  "ch_per_tok_gpt": 3.85,
+  "misaddressed": 0
+ },
+ {
+  "file": "A_bitmap_ladder/A15_12x24.png",
+  "model": "gpt-5.6-terra",
+  "provider": "codex",
+  "effort": "low",
+  "seconds": 8.8,
+  "error": null,
+  "glyph": "12x24",
+  "chars": 2548,
+  "ch_per_tok": 2.49,
+  "details": {
+   "n_lines": {
+    "got": "37",
+    "want": "37",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "passphrase": {
+    "got": "INDIGO-OTTER-8474 on line 0027",
+    "want": "INDIGO-OTTER-8474 (line 0027)",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "rare_count": {
+    "got": "1",
+    "want": "0 (lines [])",
+    "verdict": "wrong",
+    "score": 0.0
+   },
+   "code_0004": {
+    "got": "7KCHM",
+    "want": "7KCHM",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0013": {
+    "got": "7GRRA",
+    "want": "7GRRA",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0025": {
+    "got": "WUSCC",
+    "want": "WUSCC",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "code_0037": {
+    "got": "D3RZQ",
+    "want": "D3RZQ",
+    "verdict": "ok",
+    "score": 1.0
+   },
+   "verbatim_mid": {
+    "got": "0013 7GRRA Team Juliet inspected 525 boxes of ferrite via gate 34;",
+    "want": "0013 7GRRA Team Juliet inspected 525 boxes of ferrite via gate 34;",
+    "verdict": "ok",
+    "score": 1.0
+   }
+  },
+  "code_acc": 1.0,
+  "verbatim_sim": 1.0,
+  "legibility": 1.0,
+  "abstained": 0,
+  "n_lines": "ok",
+  "passphrase": "ok",
+  "ch_per_tok_gpt": 2.71,
+  "misaddressed": 0
+ }
+]

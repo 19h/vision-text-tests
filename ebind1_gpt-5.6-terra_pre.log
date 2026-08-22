@@ -1,0 +1,87 @@
+E-BIND-1 preflight arm A: 75 calls, model=gpt-5.6-terra, 72 records in 6 blocks
+  image hex  rep1 present -> C  (ok) 6s
+  image hex  rep1 present -> D  (range) 7s
+  image hex  rep1 absent  -> N  (-) 13s
+  image hex  rep1 present -> D  (tag_fail) 6s
+  image hex  rep1 present -> A  (-) 7s
+  image hex  rep1 present -> D  (range) 6s
+  image hex  rep1 present -> C  (ok) 6s
+  image hex  rep1 present -> D  (tag_fail) 6s
+  image hex  rep1 present -> C  (ok) 14s
+  image hex  rep1 absent  -> N  (-) 14s
+  image hex  rep1 present -> C  (ok) 9s
+  image hex  rep1 present -> C  (ok) 6s
+  image hex  rep1 present -> D  (range) 5s
+  image hex  rep1 absent  -> N  (-) 10s
+  image hex  rep1 present -> D  (tag_fail) 6s
+  image hex  rep1 present -> C  (ok) 6s
+  image hex  rep1 present -> C  (ok) 6s
+  image hex  rep1 present -> D  (tag_fail) 6s
+  image hex  rep1 present -> D  (tag_fail) 13s
+  image hex  rep1 absent  -> N  (-) 10s
+  image hex  rep1 present -> C  (ok) 17s
+  image hex  rep1 present -> D  (range) 14s
+  image hex  rep1 present -> D  (tag_fail) 5s
+  image hex  rep1 present -> D  (tag_fail) 10s
+  image hex  rep1 absent  -> N  (-) 11s
+  image b32  rep1 absent  -> D0 (range) 7s
+  image b32  rep1 present -> D  (range) 6s
+  image b32  rep1 present -> C  (ok) 6s
+  image b32  rep1 present -> D  (range) 9s
+  image b32  rep1 present -> D  (range) 14s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 present -> D  (range) 7s
+  image b32  rep1 present -> D  (tag_fail) 7s
+  image b32  rep1 present -> D  (range) 8s
+  image b32  rep1 absent  -> D0 (tag_fail) 22s
+  image b32  rep1 present -> D  (range) 22s
+  image b32  rep1 present -> D  (bad_index) 7s
+  image b32  rep1 absent  -> N  (-) 10s
+  image b32  rep1 present -> D  (tag_fail) 8s
+  image b32  rep1 present -> D  (range) 10s
+  image b32  rep1 present -> D  (range) 7s
+  image b32  rep1 present -> D  (range) 14s
+  image b32  rep1 present -> D  (range) 14s
+  image b32  rep1 present -> D  (tag_fail) 7s
+  image b32  rep1 absent  -> N  (-) 6s
+  image b32  rep1 present -> C  (ok) 15s
+  image b32  rep1 present -> D  (range) 14s
+  image b32  rep1 present -> D  (range) 6s
+  image b32  rep1 absent  -> N  (-) 7s
+  image b32  rep1 present -> D  (tag_fail) 15s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 absent  -> N  (-) 25s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 18s
+  text  hex  rep1 present -> C  (ok) 13s
+  text  hex  rep1 present -> C  (ok) 16s
+  text  hex  rep1 absent  -> N  (-) 22s
+  text  hex  rep1 present -> C  (ok) 14s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 absent  -> N  (-) 21s
+  text  hex  rep1 present -> C  (ok) 21s
+  text  hex  rep1 present -> C  (ok) 14s
+  text  hex  rep1 present -> C  (ok) 8s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 present -> C  (ok) 16s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 absent  -> N  (-) 18s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 absent  -> N  (-) 22s
+
+image/hex: A=1  C=8  D=11  N=5
+  P(correct block) = 8/20
+
+image/b32: C=2  D=18  D0=2  N=3
+  P(correct block) = 2/20
+
+text/hex: C=20  N=5
+  P(correct block) = 20/20
+
+-> results_ebind1_preflight_A_gpt-5.6-terra.json

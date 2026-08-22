@@ -62,7 +62,8 @@
   "legibility": 0.0,
   "abstained": 7,
   "n_lines": "wrong",
-  "passphrase": "abstain"
+  "passphrase": "abstain",
+  "misaddressed": 0
  },
  {
   "file": "H_packing/H_clR6x6_1344x672.png",
@@ -127,7 +128,8 @@
   "legibility": 0.0,
   "abstained": 8,
   "n_lines": "abstain",
-  "passphrase": "abstain"
+  "passphrase": "abstain",
+  "misaddressed": 0
  },
  {
   "file": "H_packing/H_clR5x8_1120x896.png",
@@ -192,7 +194,8 @@
   "legibility": 0.0,
   "abstained": 7,
   "n_lines": "ok",
-  "passphrase": "abstain"
+  "passphrase": "abstain",
+  "misaddressed": 0
  },
  {
   "file": "H_packing/H_clR6x8_672x896.png",
@@ -257,7 +260,8 @@
   "legibility": 0.0,
   "abstained": 7,
   "n_lines": "wrong",
-  "passphrase": "abstain"
+  "passphrase": "abstain",
+  "misaddressed": 0
  },
  {
   "file": "H_packing/H_clR5x10_840x1120.png",
@@ -322,7 +326,8 @@
   "legibility": 0.987,
   "abstained": 0,
   "n_lines": "ok",
-  "passphrase": "wrong"
+  "passphrase": "wrong",
+  "misaddressed": 0
  },
  {
   "file": "H_packing/H_clR7x8_896x896.png",
@@ -387,7 +392,8 @@
   "legibility": 0.0,
   "abstained": 6,
   "n_lines": "ok",
-  "passphrase": "wrong"
+  "passphrase": "wrong",
+  "misaddressed": 0
  },
  {
   "file": "H_packing/H_6x9_1008x1008.png",
@@ -518,7 +524,8 @@
   "legibility": 0.953,
   "abstained": 0,
   "n_lines": "ok",
-  "passphrase": "ok"
+  "passphrase": "ok",
+  "misaddressed": 0
  },
  {
   "file": "H_packing/H_clR8x8_896x896.png",
@@ -583,7 +590,8 @@
   "legibility": 0.0,
   "abstained": 6,
   "n_lines": "wrong",
-  "passphrase": "wrong"
+  "passphrase": "wrong",
+  "misaddressed": 0
  },
  {
   "file": "I_aspect/I_6x9_1344x666_74rows.png",
@@ -780,6 +788,7 @@
   "legibility": 0.972,
   "abstained": 0,
   "n_lines": "ok",
-  "passphrase": "wrong"
+  "passphrase": "wrong",
+  "misaddressed": 0
  }
 ]

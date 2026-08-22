@@ -1,0 +1,154 @@
+{
+ "model": "gpt-5.6-terra",
+ "effort": "low",
+ "patch": 32,
+ "cli": "codex-cli 0.147.0",
+ "rows": [
+  {
+   "w": 448,
+   "h": 448,
+   "rep": 1,
+   "model": "gpt-5.6-terra",
+   "effort": "low",
+   "input_tokens": 14225,
+   "cached": 0,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 896,
+   "h": 896,
+   "rep": 1,
+   "model": "gpt-5.6-terra",
+   "effort": "low",
+   "input_tokens": 14930,
+   "cached": 13056,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 1600,
+   "h": 1600,
+   "rep": 1,
+   "model": "gpt-5.6-terra",
+   "effort": "low",
+   "input_tokens": 16992,
+   "cached": 2816,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 1664,
+   "h": 1664,
+   "rep": 1,
+   "model": "gpt-5.6-terra",
+   "effort": "low",
+   "input_tokens": 16992,
+   "cached": 12032,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 448,
+   "h": 448,
+   "rep": 2,
+   "model": "gpt-5.6-terra",
+   "effort": "low",
+   "input_tokens": 14225,
+   "cached": 9984,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 896,
+   "h": 896,
+   "rep": 2,
+   "model": "gpt-5.6-terra",
+   "effort": "low",
+   "input_tokens": 14930,
+   "cached": 13056,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 1600,
+   "h": 1600,
+   "rep": 2,
+   "model": "gpt-5.6-terra",
+   "effort": "low",
+   "input_tokens": 16992,
+   "cached": 0,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 1664,
+   "h": 1664,
+   "rep": 2,
+   "model": "gpt-5.6-terra",
+   "effort": "low",
+   "input_tokens": 16992,
+   "cached": 12032,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  }
+ ],
+ "summary": [
+  {
+   "w": 448,
+   "h": 448,
+   "px": 200704,
+   "patches": 196,
+   "n": 2,
+   "min": 14225,
+   "median": 14225.0,
+   "marginal": ""
+  },
+  {
+   "w": 896,
+   "h": 896,
+   "px": 802816,
+   "patches": 784,
+   "n": 2,
+   "min": 14930,
+   "median": 14930.0,
+   "marginal": "854"
+  },
+  {
+   "w": 1600,
+   "h": 1600,
+   "px": 2560000,
+   "patches": 2500,
+   "n": 2,
+   "min": 16992,
+   "median": 16992.0,
+   "marginal": "852"
+  },
+  {
+   "w": 1664,
+   "h": 1664,
+   "px": 2768896,
+   "patches": 2704,
+   "n": 2,
+   "min": 16992,
+   "median": 16992.0,
+   "marginal": "n/a"
+  }
+ ]
+}

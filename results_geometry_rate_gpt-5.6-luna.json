@@ -1,0 +1,154 @@
+{
+ "model": "gpt-5.6-luna",
+ "effort": "low",
+ "patch": 32,
+ "cli": "codex-cli 0.147.0",
+ "rows": [
+  {
+   "w": 448,
+   "h": 448,
+   "rep": 1,
+   "model": "gpt-5.6-luna",
+   "effort": "low",
+   "input_tokens": 12661,
+   "cached": 0,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 896,
+   "h": 896,
+   "rep": 1,
+   "model": "gpt-5.6-luna",
+   "effort": "low",
+   "input_tokens": 13366,
+   "cached": 8960,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 1600,
+   "h": 1600,
+   "rep": 1,
+   "model": "gpt-5.6-luna",
+   "effort": "low",
+   "input_tokens": 15428,
+   "cached": 8960,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 1664,
+   "h": 1664,
+   "rep": 1,
+   "model": "gpt-5.6-luna",
+   "effort": "low",
+   "input_tokens": 15428,
+   "cached": 8960,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 448,
+   "h": 448,
+   "rep": 2,
+   "model": "gpt-5.6-luna",
+   "effort": "low",
+   "input_tokens": 12453,
+   "cached": 0,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 896,
+   "h": 896,
+   "rep": 2,
+   "model": "gpt-5.6-luna",
+   "effort": "low",
+   "input_tokens": 13366,
+   "cached": 8960,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 1600,
+   "h": 1600,
+   "rep": 2,
+   "model": "gpt-5.6-luna",
+   "effort": "low",
+   "input_tokens": 15428,
+   "cached": 8960,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  },
+  {
+   "w": 1664,
+   "h": 1664,
+   "rep": 2,
+   "model": "gpt-5.6-luna",
+   "effort": "low",
+   "input_tokens": 15428,
+   "cached": 0,
+   "cache_write": 0,
+   "output_tokens": 5,
+   "ok": true,
+   "text": "OK"
+  }
+ ],
+ "summary": [
+  {
+   "w": 448,
+   "h": 448,
+   "px": 200704,
+   "patches": 196,
+   "n": 2,
+   "min": 12453,
+   "median": 12557.0,
+   "marginal": ""
+  },
+  {
+   "w": 896,
+   "h": 896,
+   "px": 802816,
+   "patches": 784,
+   "n": 2,
+   "min": 13366,
+   "median": 13366.0,
+   "marginal": "659"
+  },
+  {
+   "w": 1600,
+   "h": 1600,
+   "px": 2560000,
+   "patches": 2500,
+   "n": 2,
+   "min": 15428,
+   "median": 15428.0,
+   "marginal": "852"
+  },
+  {
+   "w": 1664,
+   "h": 1664,
+   "px": 2768896,
+   "patches": 2704,
+   "n": 2,
+   "min": 15428,
+   "median": 15428.0,
+   "marginal": "n/a"
+  }
+ ]
+}

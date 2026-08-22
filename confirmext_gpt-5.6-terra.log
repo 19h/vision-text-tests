@@ -1,0 +1,52 @@
+{
+ "version": "confirm-v1",
+ "model": "gpt-5.6-terra",
+ "reps": 2,
+ "cells": [
+  "clR5x10",
+  "6x13",
+  "8x16"
+ ],
+ "payloads": [
+  "prose",
+  "alnum_easy",
+  "hex",
+  "b64"
+ ],
+ "line_chars": 56,
+ "prompt_decode_sha": "87a08dbd92ac5be4",
+ "prompt_bind_sha": "bc791e06d6f9d11e",
+ "harness_sha": "ff3acf98bea39cf5",
+ "provider": "codex",
+ "effort": "low",
+ "cli_version": "codex-cli 0.147.0",
+ "image_delivery": "attached (-i)",
+ "tools_allowed": "Read",
+ "n_runs": 24
+}
+  9x18     b64        rep1 decode exact=False cer=0.018 disp=None 16s
+  9x18     b64        rep1 bind   exact=False cer=0.964 disp=None 7s
+  9x18     hex        rep2 decode exact=True  cer=0.000 disp=None 16s
+  9x18     hex        rep2 bind   exact=False cer=1.000 disp=None 8s
+  9x18     hex        rep1 decode exact=True  cer=0.000 disp=None 19s
+  9x18     hex        rep1 bind   exact=True  cer=0.000 disp=0 7s
+  10x20    hex        rep1 decode exact=True  cer=0.000 disp=None 6s
+  10x20    hex        rep1 bind   exact=False cer=1.000 disp=None 8s
+  9x18     b64        rep2 decode exact=False cer=0.036 disp=None 12s
+  9x18     b64        rep2 bind   exact=False cer=0.143 disp=0 7s
+  10x20    hex        rep2 decode exact=True  cer=0.000 disp=None 9s
+  10x20    hex        rep2 bind   exact=True  cer=0.000 disp=0 9s
+  10x20    b64        rep2 decode exact=True  cer=0.000 disp=None 7s
+  10x20    b64        rep2 bind   exact=True  cer=0.000 disp=0 16s
+  12x24    hex        rep1 decode exact=True  cer=0.000 disp=None 8s
+  12x24    hex        rep1 bind   exact=False cer=0.036 disp=0 15s
+  10x20    b64        rep1 decode exact=False cer=0.018 disp=None 7s
+  10x20    b64        rep1 bind   exact=False cer=0.107 disp=0 22s
+  12x24    hex        rep2 decode exact=True  cer=0.000 disp=None 7s
+  12x24    hex        rep2 bind   exact=False cer=0.052 disp=0 13s
+  12x24    b64        rep1 decode exact=True  cer=0.000 disp=None 8s
+  12x24    b64        rep1 bind   exact=False cer=0.964 disp=None 13s
+  12x24    b64        rep2 decode exact=False cer=0.036 disp=None 12s
+  12x24    b64        rep2 bind   exact=False cer=0.982 disp=None 9s
+
+-> results_confirm-v1-ext_gpt-5.6-terra.json

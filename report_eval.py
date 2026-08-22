@@ -4,13 +4,22 @@ import json, glob, os, collections, sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 rows = collections.defaultdict(dict)
 models, order = [], []
+SKIP = ('confirm', 'ebind1', 'span', 'delim', 'edge', 'geometry')
 for f in sorted(glob.glob(os.path.join(ROOT, 'results_*.json'))):
-    for r in json.load(open(f)):
+    if any(x in os.path.basename(f) for x in SKIP): continue
+    blob = json.load(open(f))
+    if not isinstance(blob, list): continue
+    for r in blob:
+        if not isinstance(r, dict) or 'file' not in r: continue
         m = r['model']
         if m not in models: models.append(m)
         if r['file'] not in order: order.append(r['file'])
         rows[r['file']][m] = r
-order.sort(key=lambda k: rows[k][models[0]]['ch_per_tok'], reverse=True)
+def _dens(k):
+    for m in models:
+        if m in rows[k]: return rows[k][m].get('ch_per_tok', 0)
+    return 0
+order.sort(key=_dens, reverse=True)
 
 def cell(r):
     if r is None: return '  --  '
@@ -22,7 +31,8 @@ hdr = f"| {'glyph':>6s} | {'ch/tok':>6s} | " + ' | '.join(f"{m} codes | {m} verb
 sep = '|' + '---|' * (2 + 2 * len(models))
 print(hdr); print(sep)
 for k in order:
-    r0 = rows[k][models[0]]
+    r0 = next((rows[k][m] for m in models if m in rows[k]), None)
+    if r0 is None: continue
     line = f"| {r0['glyph']:>6s} | {r0['ch_per_tok']:6.1f} | "
     for m in models:
         r = rows[k].get(m)

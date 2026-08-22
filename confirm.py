@@ -14,19 +14,30 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_lib import bitmap, canvas, draw_lines, tokens
 from pack import exact_fit
+import providers as P
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 VERSION = 'confirm-v1'
 LINE_CHARS = 56                      # held constant: output burden is not a variable here
 
 # ---- frozen prompts -------------------------------------------------------
-P_DECODE = ("Read the image at {p}\n\n"
+# The QUESTION is byte-identical across providers; only the image-delivery sentence
+# differs, because codex attaches the image (-i) while claude -p is given a path and
+# fetches it with the Read tool.  That asymmetry is unavoidable and is recorded in the
+# manifest so comparisons can state it.
+HEAD_PATH   = "Read the image at {p}\n\n"
+HEAD_ATTACH = "The image attached to this message contains dense small text.\n\n"
+
+def head(provider, path):
+    return HEAD_ATTACH if provider == 'codex' else HEAD_PATH.format(p=path)
+
+P_DECODE = ("{head}"
             "Transcribe the FIRST line of text exactly as printed, including the leading\n"
             "4-digit line number. It is at the very top of the image; no row counting is\n"
             "needed. Output STRICT JSON only: {{\"line\": \"...\"}}\n"
             "If the glyphs are unresolvable use {{\"line\": \"UNREADABLE\"}}. Do not guess.\n"
             "Answer from the image alone; do not run any command to crop, zoom or enhance it.")
-P_BIND   = ("Read the image at {p}\n\n"
+P_BIND   = ("{head}"
             "Transcribe line {n:04d} exactly as printed, including its leading 4-digit line\n"
             "number. Output STRICT JSON only: {{\"line\": \"...\"}}\n"
             "If the glyphs are unresolvable use {{\"line\": \"UNREADABLE\"}}. Do not guess.\n"
@@ -78,31 +89,30 @@ def cer(a, b):
     sm = difflib.SequenceMatcher(None, a, b)
     return 1 - sum(bl.size for bl in sm.get_matching_blocks()) / max(len(a), len(b))
 
-def call(prompt, model, timeout=600):
-    r = subprocess.run(['claude', '-p', '--allowedTools', 'Read', '--disallowedTools',
-                        'Bash,Write,Edit,Glob,Grep,Task,WebFetch,WebSearch,NotebookEdit',
-                        '--model', model, prompt],
-                       capture_output=True, text=True, timeout=timeout, cwd=ROOT)
-    m = re.findall(r'\{.*?\}', r.stdout, re.S)
-    for cand in reversed(m):
-        try: return json.loads(cand).get('line', ''), r.stdout
-        except json.JSONDecodeError: continue
-    return None, r.stdout
+def call(prompt, model, image=None, effort='low', timeout=900):
+    prov = P.provider_for(model)
+    r = P.run(prompt, model=model, images=[image] if (image and prov == 'codex') else None,
+              effort=effort, timeout=timeout, cwd=ROOT)
+    ans = P.parse_json_answer(r['text'])
+    line = ans.get('line') if isinstance(ans, dict) else None
+    return line, json.dumps(dict(text=r['text'], usage=r['usage'],
+                                 rc=r['returncode'], stderr=r['stderr'][-400:]))
 
-def one(job, model):
+def one(job, model, effort='low'):
     cellname, cw, lh, kind, rep = job
     seed = f'rep{rep}'
     im, lines, w, h, cols, rows = render(cellname, cw, lh, kind, seed)
     d = os.path.join(ROOT, 'images', 'CONFIRM'); os.makedirs(d, exist_ok=True)
     p = os.path.join(d, f'{cellname}_{kind}_{seed}.png'); im.save(p)
     ct, gt = tokens(w, h)
-    base = dict(version=VERSION, model=model, cell=f'{cw}x{lh}', font=cellname, payload=kind,
+    base = dict(version=VERSION, model=model, provider=P.provider_for(model), effort=effort, cell=f'{cw}x{lh}', font=cellname, payload=kind,
                 rep=rep, w=w, h=h, cols=cols, rows=rows, line_chars=cols,
                 claude_tokens=ct, chars=cols * rows,
                 ch_per_token=round(cols * rows / ct, 2))
     out = []
     t0 = time.time()
-    got, raw = call(P_DECODE.format(p=p), model)
+    prov = P.provider_for(model)
+    got, raw = call(P_DECODE.format(head=head(prov, p)), model, image=p, effort=effort)
     want = lines[0]
     out.append(dict(base, probe='decode', target_row=1, got=got, want=want, raw=raw[-2000:],
                     exact=(got or '').strip() == want.strip(),
@@ -111,7 +121,7 @@ def one(job, model):
                     seconds=round(time.time() - t0)))
     n = rows // 2
     t0 = time.time()
-    got, raw = call(P_BIND.format(p=p, n=n), model)
+    got, raw = call(P_BIND.format(head=head(prov, p), n=n), model, image=p, effort=effort)
     want = lines[n - 1]
     hit = None
     if got and got.strip().upper() != 'UNREADABLE':
@@ -137,6 +147,7 @@ if __name__ == '__main__':
                     help='override cell set (extension run; prompts/grader stay frozen)')
     ap.add_argument('--payloads', nargs='*', default=None)
     ap.add_argument('--tag', default='')
+    ap.add_argument('--effort', default='low')
     a = ap.parse_args()
     cells = CELLS
     if a.cells:
@@ -151,7 +162,9 @@ if __name__ == '__main__':
                     prompt_decode_sha=hashlib.sha256(P_DECODE.encode()).hexdigest()[:16],
                     prompt_bind_sha=hashlib.sha256(P_BIND.encode()).hexdigest()[:16],
                     harness_sha=hashlib.sha256(src.encode()).hexdigest()[:16],
-                    cli_version=subprocess.run(['claude','--version'],capture_output=True,text=True).stdout.strip(),
+                    provider=P.provider_for(a.model), effort=a.effort,
+                    cli_version=P.cli_version(P.provider_for(a.model)),
+                    image_delivery='attached (-i)' if P.provider_for(a.model)=='codex' else 'path + Read tool',
                     tools_allowed='Read', n_runs=len(jobs) * 2)
     print(json.dumps(manifest, indent=1))
     with ThreadPoolExecutor(a.jobs) as ex:

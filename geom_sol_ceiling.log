@@ -1,0 +1,16 @@
+geometry/ceiling: 8 calls, model=gpt-5.6-sol, effort=low, patch=32, cli=codex-cli 0.147.0
+  1792x1792 rep1: input=16992 cached=2816 ok=True
+  2240x2240 rep1: input=16992 cached=13056 ok=True
+  2688x2688 rep1: input=16992 cached=9984 ok=True
+  3200x3200 rep1: input=16992 cached=12032 ok=True
+  1792x1792 rep2: input=16992 cached=0 ok=True
+  2240x2240 rep2: input=16992 cached=2816 ok=True
+  2688x2688 rep2: input=16992 cached=13056 ok=True
+  3200x3200 rep2: input=16992 cached=12032 ok=True
+
+      canvas    pixels  patches  n     min  median  d(px)/d(tok)
+   1792x1792   3211264     3136  2   16992   16992              
+   2240x2240   5017600     4900  2   16992   16992           n/a
+   2688x2688   7225344     7056  2   16992   16992           n/a
+   3200x3200  10240000    10000  2   16992   16992           n/a
+-> results_geometry_ceiling_gpt-5.6-sol.json

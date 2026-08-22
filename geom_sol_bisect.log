@@ -1,0 +1,16 @@
+geometry/bisect: 8 calls, model=gpt-5.6-sol, effort=low, patch=32, cli=codex-cli 0.147.0
+  1536x1536 rep1: input=16756 cached=9984 ok=True
+  1600x1600 rep1: input=16992 cached=9984 ok=True
+  1632x1632 rep1: input=16992 cached=12032 ok=True
+  1664x1664 rep1: input=16992 cached=9984 ok=True
+  1536x1536 rep2: input=16756 cached=0 ok=True
+  1600x1600 rep2: input=16992 cached=12032 ok=True
+  1632x1632 rep2: input=16992 cached=0 ok=True
+  1664x1664 rep2: input=16992 cached=12032 ok=True
+
+      canvas    pixels  patches  n     min  median  d(px)/d(tok)
+   1536x1536   2359296     2304  2   16756   16756              
+   1600x1600   2560000     2500  2   16992   16992           850
+   1632x1632   2663424     2601  2   16992   16992           n/a
+   1664x1664   2768896     2704  2   16992   16992           n/a
+-> results_geometry_bisect_gpt-5.6-sol.json

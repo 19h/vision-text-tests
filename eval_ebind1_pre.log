@@ -1,0 +1,87 @@
+E-BIND-1 preflight arm A: 75 calls, model=opus, 72 records in 6 blocks
+  image hex  rep1 present -> C  (ok) 13s
+  image hex  rep1 present -> C  (ok) 18s
+  image hex  rep1 absent  -> N  (-) 30s
+  image hex  rep1 present -> C  (ok) 22s
+  image hex  rep1 present -> C  (ok) 18s
+  image hex  rep1 present -> C  (ok) 18s
+  image hex  rep1 present -> C  (ok) 22s
+  image hex  rep1 present -> C  (ok) 19s
+  image hex  rep1 present -> C  (ok) 35s
+  image hex  rep1 absent  -> N  (-) 21s
+  image hex  rep1 present -> C  (ok) 19s
+  image hex  rep1 present -> C  (ok) 18s
+  image hex  rep1 absent  -> N  (-) 20s
+  image hex  rep1 present -> C  (ok) 15s
+  image hex  rep1 present -> C  (ok) 17s
+  image hex  rep1 present -> C  (ok) 35s
+  image hex  rep1 present -> C  (ok) 19s
+  image hex  rep1 present -> C  (ok) 23s
+  image hex  rep1 present -> C  (ok) 21s
+  image hex  rep1 absent  -> N  (-) 20s
+  image hex  rep1 present -> C  (ok) 15s
+  image hex  rep1 present -> C  (ok) 14s
+  image hex  rep1 present -> C  (ok) 20s
+  image hex  rep1 present -> C  (ok) 15s
+  image hex  rep1 absent  -> N  (-) 17s
+  image b32  rep1 absent  -> N  (-) 18s
+  image b32  rep1 present -> C  (ok) 20s
+  image b32  rep1 present -> C  (ok) 27s
+  image b32  rep1 present -> C  (ok) 22s
+  image b32  rep1 present -> C  (ok) 18s
+  image b32  rep1 present -> C  (ok) 16s
+  image b32  rep1 present -> C  (ok) 27s
+  image b32  rep1 present -> C  (ok) 27s
+  image b32  rep1 present -> D  (tag_fail) 19s
+  image b32  rep1 absent  -> N  (-) 20s
+  image b32  rep1 present -> D  (tag_fail) 20s
+  image b32  rep1 present -> C  (ok) 24s
+  image b32  rep1 present -> C  (ok) 15s
+  image b32  rep1 absent  -> N  (-) 17s
+  image b32  rep1 present -> C  (ok) 19s
+  image b32  rep1 present -> C  (ok) 19s
+  image b32  rep1 present -> C  (ok) 29s
+  image b32  rep1 present -> C  (ok) 17s
+  image b32  rep1 present -> C  (ok) 19s
+  image b32  rep1 absent  -> N  (-) 19s
+  image b32  rep1 present -> C  (ok) 16s
+  image b32  rep1 present -> C  (ok) 16s
+  image b32  rep1 present -> D  (range) 22s
+  image b32  rep1 absent  -> N  (-) 21s
+  image b32  rep1 present -> C  (ok) 28s
+  text  hex  rep1 absent  -> N  (-) 27s
+  text  hex  rep1 present -> C  (ok) 25s
+  text  hex  rep1 present -> C  (ok) 31s
+  text  hex  rep1 present -> C  (ok) 20s
+  text  hex  rep1 present -> C  (ok) 23s
+  text  hex  rep1 present -> C  (ok) 26s
+  text  hex  rep1 present -> C  (ok) 21s
+  text  hex  rep1 present -> C  (ok) 18s
+  text  hex  rep1 present -> C  (ok) 28s
+  text  hex  rep1 absent  -> N  (-) 22s
+  text  hex  rep1 present -> C  (ok) 27s
+  text  hex  rep1 present -> C  (ok) 24s
+  text  hex  rep1 present -> C  (ok) 22s
+  text  hex  rep1 present -> C  (ok) 22s
+  text  hex  rep1 absent  -> N  (-) 55s
+  text  hex  rep1 present -> C  (ok) 23s
+  text  hex  rep1 present -> C  (ok) 27s
+  text  hex  rep1 present -> C  (ok) 15s
+  text  hex  rep1 present -> C  (ok) 18s
+  text  hex  rep1 absent  -> N  (-) 16s
+  text  hex  rep1 present -> C  (ok) 26s
+  text  hex  rep1 present -> C  (ok) 27s
+  text  hex  rep1 present -> C  (ok) 28s
+  text  hex  rep1 present -> C  (ok) 23s
+  text  hex  rep1 absent  -> N  (-) 25s
+
+image/hex: C=20  N=5
+  P(correct block) = 20/20
+
+image/b32: C=17  D=3  N=5
+  P(correct block) = 17/20
+
+text/hex: C=20  N=5
+  P(correct block) = 20/20
+
+-> results_ebind1_preflight_A_opus.json

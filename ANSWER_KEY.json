@@ -71,9 +71,9 @@
    "lines": 148,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 31.34,
-   "chars_per_gpt_token": 40.93,
+   "chars_per_gpt_token": 34.11,
    "text_tokens_equiv": 8023,
    "claude_compression": 7.84,
    "oversized_for_claude": false
@@ -142,9 +142,9 @@
    "lines": 126,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 21.13,
-   "chars_per_gpt_token": 27.6,
+   "chars_per_gpt_token": 23.0,
    "text_tokens_equiv": 5410,
    "claude_compression": 5.28,
    "oversized_for_claude": false
@@ -213,9 +213,9 @@
    "lines": 111,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 18.63,
-   "chars_per_gpt_token": 24.34,
+   "chars_per_gpt_token": 20.28,
    "text_tokens_equiv": 4770,
    "claude_compression": 4.66,
    "oversized_for_claude": false
@@ -284,9 +284,9 @@
    "lines": 98,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 13.69,
-   "chars_per_gpt_token": 17.88,
+   "chars_per_gpt_token": 14.9,
    "text_tokens_equiv": 3504,
    "claude_compression": 3.42,
    "oversized_for_claude": false
@@ -355,9 +355,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.28,
-   "chars_per_gpt_token": 16.04,
+   "chars_per_gpt_token": 13.37,
    "text_tokens_equiv": 3144,
    "claude_compression": 3.07,
    "oversized_for_claude": false
@@ -426,9 +426,9 @@
    "lines": 74,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 10.33,
-   "chars_per_gpt_token": 13.49,
+   "chars_per_gpt_token": 11.25,
    "text_tokens_equiv": 2645,
    "claude_compression": 2.58,
    "oversized_for_claude": false
@@ -497,9 +497,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.5,
-   "chars_per_gpt_token": 12.41,
+   "chars_per_gpt_token": 10.34,
    "text_tokens_equiv": 2433,
    "claude_compression": 2.38,
    "oversized_for_claude": false
@@ -568,9 +568,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 8.01,
-   "chars_per_gpt_token": 10.46,
+   "chars_per_gpt_token": 8.72,
    "text_tokens_equiv": 2050,
    "claude_compression": 2.0,
    "oversized_for_claude": false
@@ -639,9 +639,9 @@
    "lines": 63,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 7.44,
-   "chars_per_gpt_token": 9.72,
+   "chars_per_gpt_token": 8.1,
    "text_tokens_equiv": 1905,
    "claude_compression": 1.86,
    "oversized_for_claude": false
@@ -710,9 +710,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 7.0,
-   "chars_per_gpt_token": 9.15,
+   "chars_per_gpt_token": 7.62,
    "text_tokens_equiv": 1793,
    "claude_compression": 1.75,
    "oversized_for_claude": false
@@ -781,9 +781,9 @@
    "lines": 55,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 5.67,
-   "chars_per_gpt_token": 7.41,
+   "chars_per_gpt_token": 6.17,
    "text_tokens_equiv": 1452,
    "claude_compression": 1.42,
    "oversized_for_claude": false
@@ -852,9 +852,9 @@
    "lines": 59,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 5.34,
-   "chars_per_gpt_token": 6.98,
+   "chars_per_gpt_token": 5.81,
    "text_tokens_equiv": 1367,
    "claude_compression": 1.34,
    "oversized_for_claude": false
@@ -923,9 +923,9 @@
    "lines": 49,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 4.48,
-   "chars_per_gpt_token": 5.85,
+   "chars_per_gpt_token": 4.88,
    "text_tokens_equiv": 1147,
    "claude_compression": 1.12,
    "oversized_for_claude": false
@@ -994,9 +994,9 @@
    "lines": 44,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 3.54,
-   "chars_per_gpt_token": 4.62,
+   "chars_per_gpt_token": 3.85,
    "text_tokens_equiv": 906,
    "claude_compression": 0.88,
    "oversized_for_claude": false
@@ -1065,9 +1065,9 @@
    "lines": 37,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 2.49,
-   "chars_per_gpt_token": 3.25,
+   "chars_per_gpt_token": 2.71,
    "text_tokens_equiv": 637,
    "claude_compression": 0.62,
    "oversized_for_claude": false
@@ -1135,9 +1135,9 @@
    "lines": 126,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 35.43,
-   "chars_per_gpt_token": 46.28,
+   "chars_per_gpt_token": 38.56,
    "text_tokens_equiv": 9070,
    "claude_compression": 8.86,
    "oversized_for_claude": false
@@ -1205,9 +1205,9 @@
    "lines": 110,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 25.77,
-   "chars_per_gpt_token": 33.66,
+   "chars_per_gpt_token": 28.05,
    "text_tokens_equiv": 6597,
    "claude_compression": 6.44,
    "oversized_for_claude": false
@@ -1275,9 +1275,9 @@
    "lines": 98,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 19.62,
-   "chars_per_gpt_token": 25.63,
+   "chars_per_gpt_token": 21.36,
    "text_tokens_equiv": 5024,
    "claude_compression": 4.91,
    "oversized_for_claude": false
@@ -1345,9 +1345,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 15.34,
-   "chars_per_gpt_token": 20.03,
+   "chars_per_gpt_token": 16.69,
    "text_tokens_equiv": 3926,
    "claude_compression": 3.83,
    "oversized_for_claude": false
@@ -1415,9 +1415,9 @@
    "lines": 73,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 11.2,
-   "chars_per_gpt_token": 14.63,
+   "chars_per_gpt_token": 12.19,
    "text_tokens_equiv": 2868,
    "claude_compression": 2.8,
    "oversized_for_claude": false
@@ -1485,9 +1485,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.42,
-   "chars_per_gpt_token": 12.3,
+   "chars_per_gpt_token": 10.25,
    "text_tokens_equiv": 2412,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -1555,9 +1555,9 @@
    "lines": 63,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 7.88,
-   "chars_per_gpt_token": 10.29,
+   "chars_per_gpt_token": 8.57,
    "text_tokens_equiv": 2016,
    "claude_compression": 1.97,
    "oversized_for_claude": false
@@ -1625,9 +1625,9 @@
    "lines": 59,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 6.73,
-   "chars_per_gpt_token": 8.79,
+   "chars_per_gpt_token": 7.32,
    "text_tokens_equiv": 1722,
    "claude_compression": 1.68,
    "oversized_for_claude": false
@@ -1695,9 +1695,9 @@
    "lines": 52,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 5.05,
-   "chars_per_gpt_token": 6.6,
+   "chars_per_gpt_token": 5.5,
    "text_tokens_equiv": 1293,
    "claude_compression": 1.26,
    "oversized_for_claude": false
@@ -1765,9 +1765,9 @@
    "lines": 46,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 3.85,
-   "chars_per_gpt_token": 5.03,
+   "chars_per_gpt_token": 4.2,
    "text_tokens_equiv": 987,
    "claude_compression": 0.96,
    "oversized_for_claude": false
@@ -1835,9 +1835,9 @@
    "lines": 36,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 2.39,
-   "chars_per_gpt_token": 3.12,
+   "chars_per_gpt_token": 2.6,
    "text_tokens_equiv": 611,
    "claude_compression": 0.6,
    "oversized_for_claude": false
@@ -1905,9 +1905,9 @@
    "lines": 30,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 1.65,
-   "chars_per_gpt_token": 2.15,
+   "chars_per_gpt_token": 1.79,
    "text_tokens_equiv": 422,
    "claude_compression": 0.41,
    "oversized_for_claude": false
@@ -1975,9 +1975,9 @@
    "lines": 23,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 0.92,
-   "chars_per_gpt_token": 1.2,
+   "chars_per_gpt_token": 1.0,
    "text_tokens_equiv": 236,
    "claude_compression": 0.23,
    "oversized_for_claude": false
@@ -2045,9 +2045,9 @@
    "lines": 110,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 25.77,
-   "chars_per_gpt_token": 33.66,
+   "chars_per_gpt_token": 28.05,
    "text_tokens_equiv": 6597,
    "claude_compression": 6.44,
    "oversized_for_claude": false
@@ -2115,9 +2115,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 15.38,
-   "chars_per_gpt_token": 20.09,
+   "chars_per_gpt_token": 16.74,
    "text_tokens_equiv": 3937,
    "claude_compression": 3.84,
    "oversized_for_claude": false
@@ -2185,9 +2185,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.45,
-   "chars_per_gpt_token": 12.35,
+   "chars_per_gpt_token": 10.29,
    "text_tokens_equiv": 2420,
    "claude_compression": 2.36,
    "oversized_for_claude": false
@@ -2255,9 +2255,9 @@
    "lines": 59,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 6.74,
-   "chars_per_gpt_token": 8.81,
+   "chars_per_gpt_token": 7.34,
    "text_tokens_equiv": 1726,
    "claude_compression": 1.69,
    "oversized_for_claude": false
@@ -2325,9 +2325,9 @@
    "lines": 46,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 3.87,
-   "chars_per_gpt_token": 5.05,
+   "chars_per_gpt_token": 4.21,
    "text_tokens_equiv": 990,
    "claude_compression": 0.97,
    "oversized_for_claude": false
@@ -2374,9 +2374,9 @@
    "lines": 110,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 36.97,
-   "chars_per_gpt_token": 48.28,
+   "chars_per_gpt_token": 40.24,
    "text_tokens_equiv": 9464,
    "claude_compression": 9.24,
    "oversized_for_claude": false
@@ -2423,9 +2423,9 @@
    "lines": 98,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 27.3,
-   "chars_per_gpt_token": 35.66,
+   "chars_per_gpt_token": 29.71,
    "text_tokens_equiv": 6988,
    "claude_compression": 6.82,
    "oversized_for_claude": false
@@ -2472,9 +2472,9 @@
    "lines": 87,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 20.71,
-   "chars_per_gpt_token": 27.04,
+   "chars_per_gpt_token": 22.54,
    "text_tokens_equiv": 5301,
    "claude_compression": 5.18,
    "oversized_for_claude": false
@@ -2521,9 +2521,9 @@
    "lines": 79,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 16.5,
-   "chars_per_gpt_token": 21.56,
+   "chars_per_gpt_token": 17.96,
    "text_tokens_equiv": 4225,
    "claude_compression": 4.13,
    "oversized_for_claude": false
@@ -2570,9 +2570,9 @@
    "lines": 67,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.3,
-   "chars_per_gpt_token": 16.07,
+   "chars_per_gpt_token": 13.39,
    "text_tokens_equiv": 3149,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -2619,9 +2619,9 @@
    "lines": 62,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 10.22,
-   "chars_per_gpt_token": 13.35,
+   "chars_per_gpt_token": 11.13,
    "text_tokens_equiv": 2617,
    "claude_compression": 2.56,
    "oversized_for_claude": false
@@ -2668,9 +2668,9 @@
    "lines": 55,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 7.48,
-   "chars_per_gpt_token": 9.77,
+   "chars_per_gpt_token": 8.14,
    "text_tokens_equiv": 1915,
    "claude_compression": 1.87,
    "oversized_for_claude": false
@@ -2717,9 +2717,9 @@
    "lines": 50,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 5.74,
-   "chars_per_gpt_token": 7.5,
+   "chars_per_gpt_token": 6.25,
    "text_tokens_equiv": 1470,
    "claude_compression": 1.44,
    "oversized_for_claude": false
@@ -2766,9 +2766,9 @@
    "lines": 45,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 4.62,
-   "chars_per_gpt_token": 6.03,
+   "chars_per_gpt_token": 5.03,
    "text_tokens_equiv": 1182,
    "claude_compression": 1.15,
    "oversized_for_claude": false
@@ -2815,9 +2815,9 @@
    "lines": 36,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 2.92,
-   "chars_per_gpt_token": 3.82,
+   "chars_per_gpt_token": 3.18,
    "text_tokens_equiv": 748,
    "claude_compression": 0.73,
    "oversized_for_claude": false
@@ -2864,9 +2864,9 @@
    "lines": 30,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 1.99,
-   "chars_per_gpt_token": 2.6,
+   "chars_per_gpt_token": 2.17,
    "text_tokens_equiv": 510,
    "claude_compression": 0.5,
    "oversized_for_claude": false
@@ -2897,9 +2897,9 @@
    "lines": 15,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 0.92,
-   "chars_per_gpt_token": 1.2,
+   "chars_per_gpt_token": 1.0,
    "text_tokens_equiv": 236,
    "claude_compression": 0.23,
    "oversized_for_claude": false
@@ -2930,9 +2930,9 @@
    "lines": 13,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 0.79,
-   "chars_per_gpt_token": 1.04,
+   "chars_per_gpt_token": 0.87,
    "text_tokens_equiv": 204,
    "claude_compression": 0.2,
    "oversized_for_claude": false
@@ -2963,9 +2963,9 @@
    "lines": 15,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 1.86,
-   "chars_per_gpt_token": 2.43,
+   "chars_per_gpt_token": 2.03,
    "text_tokens_equiv": 477,
    "claude_compression": 0.47,
    "oversized_for_claude": false
@@ -3032,9 +3032,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3101,9 +3101,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3170,9 +3170,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3239,9 +3239,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3308,9 +3308,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3377,9 +3377,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3446,9 +3446,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3515,9 +3515,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3584,9 +3584,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3653,9 +3653,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3722,9 +3722,9 @@
    "lines": 88,
    "megapixels": 0.452,
    "claude_tokens": 576,
-   "gpt_tokens": 441,
+   "gpt_tokens": 529,
    "chars_per_claude_token": 21.89,
-   "chars_per_gpt_token": 28.59,
+   "chars_per_gpt_token": 23.83,
    "text_tokens_equiv": 3152,
    "claude_compression": 5.47,
    "oversized_for_claude": false
@@ -3791,9 +3791,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3860,9 +3860,9 @@
    "lines": 88,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 12.31,
-   "chars_per_gpt_token": 16.08,
+   "chars_per_gpt_token": 13.4,
    "text_tokens_equiv": 3152,
    "claude_compression": 3.08,
    "oversized_for_claude": false
@@ -3929,9 +3929,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -3998,9 +3998,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4067,9 +4067,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4136,9 +4136,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4205,9 +4205,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4274,9 +4274,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4343,9 +4343,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4412,9 +4412,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4481,9 +4481,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4550,9 +4550,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4619,9 +4619,9 @@
    "lines": 68,
    "megapixels": 0.452,
    "claude_tokens": 576,
-   "gpt_tokens": 441,
+   "gpt_tokens": 529,
    "chars_per_claude_token": 16.72,
-   "chars_per_gpt_token": 21.84,
+   "chars_per_gpt_token": 18.2,
    "text_tokens_equiv": 2408,
    "claude_compression": 4.18,
    "oversized_for_claude": false
@@ -4688,9 +4688,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4757,9 +4757,9 @@
    "lines": 68,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 9.41,
-   "chars_per_gpt_token": 12.29,
+   "chars_per_gpt_token": 10.24,
    "text_tokens_equiv": 2408,
    "claude_compression": 2.35,
    "oversized_for_claude": false
@@ -4826,9 +4826,9 @@
    "lines": 156,
    "megapixels": 2.459,
    "claude_tokens": 3136,
-   "gpt_tokens": 2401,
+   "gpt_tokens": 2881,
    "chars_per_claude_token": 12.68,
-   "chars_per_gpt_token": 16.57,
+   "chars_per_gpt_token": 13.81,
    "text_tokens_equiv": 9945,
    "claude_compression": 3.17,
    "oversized_for_claude": true
@@ -4895,9 +4895,9 @@
    "lines": 223,
    "megapixels": 5.018,
    "claude_tokens": 6400,
-   "gpt_tokens": 4900,
+   "gpt_tokens": 5880,
    "chars_per_claude_token": 12.77,
-   "chars_per_gpt_token": 16.68,
+   "chars_per_gpt_token": 13.9,
    "text_tokens_equiv": 20428,
    "claude_compression": 3.19,
    "oversized_for_claude": true
@@ -4953,9 +4953,9 @@
    "lines": 108,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 6.12,
-   "chars_per_gpt_token": 7.99,
+   "chars_per_gpt_token": 6.66,
    "text_tokens_equiv": 1566,
    "claude_compression": 1.53,
    "oversized_for_claude": false
@@ -5011,9 +5011,9 @@
    "lines": 47,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 2.66,
-   "chars_per_gpt_token": 3.48,
+   "chars_per_gpt_token": 2.9,
    "text_tokens_equiv": 682,
    "claude_compression": 0.67,
    "oversized_for_claude": false
@@ -5059,9 +5059,9 @@
    "lines": 50,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 1.75,
-   "chars_per_gpt_token": 2.29,
+   "chars_per_gpt_token": 1.91,
    "text_tokens_equiv": 449,
    "claude_compression": 0.44,
    "oversized_for_claude": false
@@ -5107,9 +5107,9 @@
    "lines": 50,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 1.75,
-   "chars_per_gpt_token": 2.29,
+   "chars_per_gpt_token": 1.91,
    "text_tokens_equiv": 449,
    "claude_compression": 0.44,
    "oversized_for_claude": false
@@ -5155,9 +5155,9 @@
    "lines": 166,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 11.69,
-   "chars_per_gpt_token": 15.27,
+   "chars_per_gpt_token": 12.73,
    "text_tokens_equiv": 2993,
    "claude_compression": 2.92,
    "oversized_for_claude": false
@@ -5203,9 +5203,9 @@
    "lines": 142,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 5.32,
-   "chars_per_gpt_token": 6.95,
+   "chars_per_gpt_token": 5.79,
    "text_tokens_equiv": 1362,
    "claude_compression": 1.33,
    "oversized_for_claude": false
@@ -5256,9 +5256,9 @@
    "lines": 106,
    "megapixels": 0.602,
    "claude_tokens": 768,
-   "gpt_tokens": 588,
+   "gpt_tokens": 706,
    "chars_per_claude_token": 13.88,
-   "chars_per_gpt_token": 18.13,
+   "chars_per_gpt_token": 15.11,
    "text_tokens_equiv": 2666,
    "claude_compression": 3.47,
    "oversized_for_claude": false
@@ -5309,9 +5309,9 @@
    "lines": 106,
    "megapixels": 0.602,
    "claude_tokens": 768,
-   "gpt_tokens": 588,
+   "gpt_tokens": 706,
    "chars_per_claude_token": 9.26,
-   "chars_per_gpt_token": 12.09,
+   "chars_per_gpt_token": 10.08,
    "text_tokens_equiv": 1778,
    "claude_compression": 2.31,
    "oversized_for_claude": false
@@ -5362,9 +5362,9 @@
    "lines": 74,
    "megapixels": 0.602,
    "claude_tokens": 768,
-   "gpt_tokens": 588,
+   "gpt_tokens": 706,
    "chars_per_claude_token": 4.3,
-   "chars_per_gpt_token": 5.62,
+   "chars_per_gpt_token": 4.68,
    "text_tokens_equiv": 826,
    "claude_compression": 1.07,
    "oversized_for_claude": false
@@ -5410,9 +5410,9 @@
    "lines": 82,
    "megapixels": 0.903,
    "claude_tokens": 1152,
-   "gpt_tokens": 882,
+   "gpt_tokens": 1058,
    "chars_per_claude_token": 5.49,
-   "chars_per_gpt_token": 7.17,
+   "chars_per_gpt_token": 5.97,
    "text_tokens_equiv": 1580,
    "claude_compression": 1.37,
    "oversized_for_claude": false
@@ -5458,9 +5458,9 @@
    "lines": 50,
    "megapixels": 0.903,
    "claude_tokens": 1152,
-   "gpt_tokens": 882,
+   "gpt_tokens": 1058,
    "chars_per_claude_token": 3.23,
-   "chars_per_gpt_token": 4.22,
+   "chars_per_gpt_token": 3.52,
    "text_tokens_equiv": 932,
    "claude_compression": 0.81,
    "oversized_for_claude": false
@@ -5506,9 +5506,9 @@
    "lines": 36,
    "megapixels": 0.903,
    "claude_tokens": 1152,
-   "gpt_tokens": 882,
+   "gpt_tokens": 1058,
    "chars_per_claude_token": 2.41,
-   "chars_per_gpt_token": 3.15,
+   "chars_per_gpt_token": 2.63,
    "text_tokens_equiv": 695,
    "claude_compression": 0.6,
    "oversized_for_claude": false
@@ -5560,9 +5560,9 @@
    "lines": 49,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 6.36,
-   "chars_per_gpt_token": 8.31,
+   "chars_per_gpt_token": 6.93,
    "text_tokens_equiv": 1629,
    "claude_compression": 1.59,
    "oversized_for_claude": false
@@ -5614,9 +5614,9 @@
    "lines": 49,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 6.36,
-   "chars_per_gpt_token": 8.31,
+   "chars_per_gpt_token": 6.93,
    "text_tokens_equiv": 1629,
    "claude_compression": 1.59,
    "oversized_for_claude": false
@@ -5668,9 +5668,9 @@
    "lines": 46,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 4.9,
-   "chars_per_gpt_token": 6.4,
+   "chars_per_gpt_token": 5.33,
    "text_tokens_equiv": 1254,
    "claude_compression": 1.22,
    "oversized_for_claude": false
@@ -5743,9 +5743,9 @@
    "lines": 90,
    "megapixels": 1.004,
    "claude_tokens": 1280,
-   "gpt_tokens": 980,
+   "gpt_tokens": 1176,
    "chars_per_claude_token": 13.06,
-   "chars_per_gpt_token": 17.05,
+   "chars_per_gpt_token": 14.21,
    "text_tokens_equiv": 4178,
    "claude_compression": 3.26,
    "oversized_for_claude": false
@@ -5811,9 +5811,9 @@
    "lines": 65,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 13.23,
-   "chars_per_gpt_token": 17.28,
+   "chars_per_gpt_token": 14.4,
    "text_tokens_equiv": 3387,
    "claude_compression": 3.31,
    "oversized_for_claude": false
@@ -5883,9 +5883,9 @@
    "lines": 112,
    "megapixels": 0.753,
    "claude_tokens": 960,
-   "gpt_tokens": 735,
+   "gpt_tokens": 882,
    "chars_per_claude_token": 25.56,
-   "chars_per_gpt_token": 33.38,
+   "chars_per_gpt_token": 27.82,
    "text_tokens_equiv": 6134,
    "claude_compression": 6.39,
    "oversized_for_claude": false
@@ -5955,9 +5955,9 @@
    "lines": 112,
    "megapixels": 0.903,
    "claude_tokens": 1152,
-   "gpt_tokens": 882,
+   "gpt_tokens": 1058,
    "chars_per_claude_token": 21.26,
-   "chars_per_gpt_token": 27.77,
+   "chars_per_gpt_token": 23.14,
    "text_tokens_equiv": 6123,
    "claude_compression": 5.31,
    "oversized_for_claude": false
@@ -6027,9 +6027,9 @@
    "lines": 112,
    "megapixels": 1.004,
    "claude_tokens": 1280,
-   "gpt_tokens": 980,
+   "gpt_tokens": 1176,
    "chars_per_claude_token": 19.17,
-   "chars_per_gpt_token": 25.04,
+   "chars_per_gpt_token": 20.87,
    "text_tokens_equiv": 6134,
    "claude_compression": 4.79,
    "oversized_for_claude": false
@@ -6099,9 +6099,9 @@
    "lines": 112,
    "megapixels": 0.602,
    "claude_tokens": 768,
-   "gpt_tokens": 588,
+   "gpt_tokens": 706,
    "chars_per_claude_token": 15.58,
-   "chars_per_gpt_token": 20.35,
+   "chars_per_gpt_token": 16.95,
    "text_tokens_equiv": 2991,
    "claude_compression": 3.89,
    "oversized_for_claude": false
@@ -6171,9 +6171,9 @@
    "lines": 112,
    "megapixels": 0.941,
    "claude_tokens": 1200,
-   "gpt_tokens": 945,
+   "gpt_tokens": 1134,
    "chars_per_claude_token": 15.19,
-   "chars_per_gpt_token": 19.29,
+   "chars_per_gpt_token": 16.07,
    "text_tokens_equiv": 4557,
    "claude_compression": 3.8,
    "oversized_for_claude": false
@@ -6243,9 +6243,9 @@
    "lines": 112,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 13.47,
-   "chars_per_gpt_token": 17.6,
+   "chars_per_gpt_token": 14.66,
    "text_tokens_equiv": 3449,
    "claude_compression": 3.37,
    "oversized_for_claude": false
@@ -6315,9 +6315,9 @@
    "lines": 112,
    "megapixels": 1.016,
    "claude_tokens": 1296,
-   "gpt_tokens": 1024,
+   "gpt_tokens": 1229,
    "chars_per_claude_token": 14.06,
-   "chars_per_gpt_token": 17.79,
+   "chars_per_gpt_token": 14.83,
    "text_tokens_equiv": 4555,
    "claude_compression": 3.51,
    "oversized_for_claude": false
@@ -6387,9 +6387,9 @@
    "lines": 112,
    "megapixels": 0.753,
    "claude_tokens": 960,
-   "gpt_tokens": 735,
+   "gpt_tokens": 882,
    "chars_per_claude_token": 12.5,
-   "chars_per_gpt_token": 16.33,
+   "chars_per_gpt_token": 13.61,
    "text_tokens_equiv": 3001,
    "claude_compression": 3.13,
    "oversized_for_claude": false
@@ -6459,9 +6459,9 @@
    "lines": 112,
    "megapixels": 0.803,
    "claude_tokens": 1024,
-   "gpt_tokens": 784,
+   "gpt_tokens": 941,
    "chars_per_claude_token": 11.7,
-   "chars_per_gpt_token": 15.28,
+   "chars_per_gpt_token": 12.73,
    "text_tokens_equiv": 2994,
    "claude_compression": 2.92,
    "oversized_for_claude": false
@@ -6529,9 +6529,9 @@
    "lines": 74,
    "megapixels": 0.895,
    "claude_tokens": 1152,
-   "gpt_tokens": 882,
+   "gpt_tokens": 1058,
    "chars_per_claude_token": 14.02,
-   "chars_per_gpt_token": 18.31,
+   "chars_per_gpt_token": 15.26,
    "text_tokens_equiv": 4036,
    "claude_compression": 3.5,
    "oversized_for_claude": false
@@ -6599,9 +6599,9 @@
    "lines": 149,
    "megapixels": 0.901,
    "claude_tokens": 1152,
-   "gpt_tokens": 882,
+   "gpt_tokens": 1058,
    "chars_per_claude_token": 13.83,
-   "chars_per_gpt_token": 18.06,
+   "chars_per_gpt_token": 15.05,
    "text_tokens_equiv": 3983,
    "claude_compression": 3.46,
    "oversized_for_claude": false
@@ -6669,9 +6669,9 @@
    "lines": 112,
    "megapixels": 0.901,
    "claude_tokens": 1152,
-   "gpt_tokens": 896,
+   "gpt_tokens": 1075,
    "chars_per_claude_token": 13.99,
-   "chars_per_gpt_token": 17.99,
+   "chars_per_gpt_token": 14.99,
    "text_tokens_equiv": 4030,
    "claude_compression": 3.5,
    "oversized_for_claude": false
@@ -6742,9 +6742,9 @@
    "lines": 112,
    "megapixels": 1.016,
    "claude_tokens": 1296,
-   "gpt_tokens": 1024,
+   "gpt_tokens": 1229,
    "chars_per_claude_token": 21.34,
-   "chars_per_gpt_token": 27.01,
+   "chars_per_gpt_token": 22.5,
    "text_tokens_equiv": 6914,
    "claude_compression": 5.33,
    "oversized_for_claude": false
@@ -6815,9 +6815,9 @@
    "lines": 112,
    "megapixels": 1.004,
    "claude_tokens": 1280,
-   "gpt_tokens": 980,
+   "gpt_tokens": 1176,
    "chars_per_claude_token": 19.14,
-   "chars_per_gpt_token": 24.99,
+   "chars_per_gpt_token": 20.83,
    "text_tokens_equiv": 6124,
    "claude_compression": 4.78,
    "oversized_for_claude": false
@@ -6888,9 +6888,9 @@
    "lines": 112,
    "megapixels": 0.903,
    "claude_tokens": 1152,
-   "gpt_tokens": 882,
+   "gpt_tokens": 1058,
    "chars_per_claude_token": 15.87,
-   "chars_per_gpt_token": 20.73,
+   "chars_per_gpt_token": 17.27,
    "text_tokens_equiv": 4571,
    "claude_compression": 3.97,
    "oversized_for_claude": false
@@ -6961,9 +6961,9 @@
    "lines": 112,
    "megapixels": 0.988,
    "claude_tokens": 1260,
-   "gpt_tokens": 992,
+   "gpt_tokens": 1190,
    "chars_per_claude_token": 16.94,
-   "chars_per_gpt_token": 21.51,
+   "chars_per_gpt_token": 17.93,
    "text_tokens_equiv": 5335,
    "claude_compression": 4.23,
    "oversized_for_claude": false
@@ -7034,9 +7034,9 @@
    "lines": 112,
    "megapixels": 0.988,
    "claude_tokens": 1260,
-   "gpt_tokens": 992,
+   "gpt_tokens": 1190,
    "chars_per_claude_token": 16.97,
-   "chars_per_gpt_token": 21.56,
+   "chars_per_gpt_token": 17.97,
    "text_tokens_equiv": 5347,
    "claude_compression": 4.24,
    "oversized_for_claude": false
@@ -7107,9 +7107,9 @@
    "lines": 112,
    "megapixels": 0.941,
    "claude_tokens": 1200,
-   "gpt_tokens": 945,
+   "gpt_tokens": 1134,
    "chars_per_claude_token": 15.15,
-   "chars_per_gpt_token": 19.23,
+   "chars_per_gpt_token": 16.03,
    "text_tokens_equiv": 4544,
    "claude_compression": 3.79,
    "oversized_for_claude": false
@@ -7180,9 +7180,9 @@
    "lines": 112,
    "megapixels": 1.016,
    "claude_tokens": 1296,
-   "gpt_tokens": 1024,
+   "gpt_tokens": 1229,
    "chars_per_claude_token": 14.06,
-   "chars_per_gpt_token": 17.79,
+   "chars_per_gpt_token": 14.83,
    "text_tokens_equiv": 4554,
    "claude_compression": 3.51,
    "oversized_for_claude": false
@@ -7253,9 +7253,9 @@
    "lines": 112,
    "megapixels": 0.988,
    "claude_tokens": 1260,
-   "gpt_tokens": 992,
+   "gpt_tokens": 1190,
    "chars_per_claude_token": 16.94,
-   "chars_per_gpt_token": 21.52,
+   "chars_per_gpt_token": 17.93,
    "text_tokens_equiv": 5336,
    "claude_compression": 4.23,
    "oversized_for_claude": false
@@ -7301,9 +7301,9 @@
    "lines": 112,
    "megapixels": 0.602,
    "claude_tokens": 768,
-   "gpt_tokens": 588,
+   "gpt_tokens": 706,
    "chars_per_claude_token": 15.9,
-   "chars_per_gpt_token": 20.76,
+   "chars_per_gpt_token": 17.3,
    "text_tokens_equiv": 3052,
    "claude_compression": 3.97,
    "oversized_for_claude": false
@@ -7349,9 +7349,9 @@
    "lines": 112,
    "megapixels": 1.016,
    "claude_tokens": 1296,
-   "gpt_tokens": 1024,
+   "gpt_tokens": 1229,
    "chars_per_claude_token": 14.17,
-   "chars_per_gpt_token": 17.94,
+   "chars_per_gpt_token": 14.95,
    "text_tokens_equiv": 4592,
    "claude_compression": 3.54,
    "oversized_for_claude": false
@@ -7397,9 +7397,9 @@
    "lines": 112,
    "megapixels": 1.016,
    "claude_tokens": 1296,
-   "gpt_tokens": 1024,
+   "gpt_tokens": 1229,
    "chars_per_claude_token": 21.52,
-   "chars_per_gpt_token": 27.23,
+   "chars_per_gpt_token": 22.7,
    "text_tokens_equiv": 6972,
    "claude_compression": 5.38,
    "oversized_for_claude": false
@@ -7445,9 +7445,9 @@
    "lines": 112,
    "megapixels": 0.988,
    "claude_tokens": 1260,
-   "gpt_tokens": 992,
+   "gpt_tokens": 1190,
    "chars_per_claude_token": 17.24,
-   "chars_per_gpt_token": 21.9,
+   "chars_per_gpt_token": 18.25,
    "text_tokens_equiv": 5432,
    "claude_compression": 4.31,
    "oversized_for_claude": false
@@ -7493,9 +7493,9 @@
    "lines": 112,
    "megapixels": 0.753,
    "claude_tokens": 960,
-   "gpt_tokens": 735,
+   "gpt_tokens": 882,
    "chars_per_claude_token": 12.72,
-   "chars_per_gpt_token": 16.61,
+   "chars_per_gpt_token": 13.84,
    "text_tokens_equiv": 3052,
    "claude_compression": 3.18,
    "oversized_for_claude": false
@@ -7541,9 +7541,9 @@
    "lines": 112,
    "megapixels": 0.978,
    "claude_tokens": 1248,
-   "gpt_tokens": 966,
+   "gpt_tokens": 1159,
    "chars_per_claude_token": 9.78,
-   "chars_per_gpt_token": 12.64,
+   "chars_per_gpt_token": 10.53,
    "text_tokens_equiv": 3052,
    "claude_compression": 2.45,
    "oversized_for_claude": false
@@ -7589,9 +7589,9 @@
    "lines": 112,
    "megapixels": 0.702,
    "claude_tokens": 896,
-   "gpt_tokens": 686,
+   "gpt_tokens": 823,
    "chars_per_claude_token": 8.0,
-   "chars_per_gpt_token": 10.45,
+   "chars_per_gpt_token": 8.71,
    "text_tokens_equiv": 1792,
    "claude_compression": 2.0,
    "oversized_for_claude": false
@@ -7637,9 +7637,9 @@
    "lines": 98,
    "megapixels": 0.702,
    "claude_tokens": 896,
-   "gpt_tokens": 686,
+   "gpt_tokens": 823,
    "chars_per_claude_token": 5.91,
-   "chars_per_gpt_token": 7.71,
+   "chars_per_gpt_token": 6.43,
    "text_tokens_equiv": 1323,
    "claude_compression": 1.48,
    "oversized_for_claude": false
@@ -7685,9 +7685,9 @@
    "lines": 84,
    "megapixels": 0.762,
    "claude_tokens": 972,
-   "gpt_tokens": 768,
+   "gpt_tokens": 922,
    "chars_per_claude_token": 4.67,
-   "chars_per_gpt_token": 5.91,
+   "chars_per_gpt_token": 4.92,
    "text_tokens_equiv": 1134,
    "claude_compression": 1.17,
    "oversized_for_claude": false
@@ -7733,9 +7733,9 @@
    "lines": 77,
    "megapixels": 0.862,
    "claude_tokens": 1100,
-   "gpt_tokens": 882,
+   "gpt_tokens": 1058,
    "chars_per_claude_token": 3.78,
-   "chars_per_gpt_token": 4.71,
+   "chars_per_gpt_token": 3.93,
    "text_tokens_equiv": 1040,
    "claude_compression": 0.94,
    "oversized_for_claude": false
@@ -7781,9 +7781,9 @@
    "lines": 56,
    "megapixels": 0.903,
    "claude_tokens": 1152,
-   "gpt_tokens": 882,
+   "gpt_tokens": 1058,
    "chars_per_claude_token": 2.62,
-   "chars_per_gpt_token": 3.43,
+   "chars_per_gpt_token": 2.86,
    "text_tokens_equiv": 756,
    "claude_compression": 0.66,
    "oversized_for_claude": false
@@ -7824,9 +7824,9 @@
    "lines": 112,
    "megapixels": 0.339,
    "claude_tokens": 432,
-   "gpt_tokens": 352,
+   "gpt_tokens": 422,
    "chars_per_claude_token": 14.0,
-   "chars_per_gpt_token": 17.18,
+   "chars_per_gpt_token": 14.32,
    "text_tokens_equiv": 1512,
    "claude_compression": 3.5,
    "oversized_for_claude": false
@@ -7867,9 +7867,9 @@
    "lines": 112,
    "megapixels": 0.376,
    "claude_tokens": 480,
-   "gpt_tokens": 385,
+   "gpt_tokens": 462,
    "chars_per_claude_token": 12.6,
-   "chars_per_gpt_token": 15.71,
+   "chars_per_gpt_token": 13.09,
    "text_tokens_equiv": 1512,
    "claude_compression": 3.15,
    "oversized_for_claude": false
@@ -7910,9 +7910,9 @@
    "lines": 112,
    "megapixels": 0.489,
    "claude_tokens": 624,
-   "gpt_tokens": 506,
+   "gpt_tokens": 607,
    "chars_per_claude_token": 9.69,
-   "chars_per_gpt_token": 11.95,
+   "chars_per_gpt_token": 9.96,
    "text_tokens_equiv": 1512,
    "claude_compression": 2.42,
    "oversized_for_claude": false
@@ -7953,9 +7953,9 @@
    "lines": 91,
    "megapixels": 0.652,
    "claude_tokens": 832,
-   "gpt_tokens": 644,
+   "gpt_tokens": 773,
    "chars_per_claude_token": 5.91,
-   "chars_per_gpt_token": 7.63,
+   "chars_per_gpt_token": 6.36,
    "text_tokens_equiv": 1228,
    "claude_compression": 1.48,
    "oversized_for_claude": false
@@ -7996,11 +7996,1986 @@
    "lines": 80,
    "megapixels": 0.734,
    "claude_tokens": 936,
-   "gpt_tokens": 736,
+   "gpt_tokens": 883,
    "chars_per_claude_token": 4.62,
-   "chars_per_gpt_token": 5.87,
+   "chars_per_gpt_token": 4.89,
    "text_tokens_equiv": 1080,
    "claude_compression": 1.15,
+   "oversized_for_claude": false
+  },
+  "H_packing_p32/H_clR5x6_1120x672.png": {
+   "file": "H_packing_p32/H_clR5x6_1120x672.png",
+   "groundtruth": "groundtruth/H_packing_p32__H_clR5x6_1120x672.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "COBALT-LYNX-5062 (line 0086)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [35, 67, 96, 106])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "9L9MK"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "CTSBE"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "UT5J6"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "LBARB"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 CTSBE Line Charlie scanned 2681 cases of ballast pending review XFG; no damage reported; held 217 minutes for customs; checksum THHC verified; humidity 88 percent; two seals broken; no damage reported; temperature"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 LBARB Platform 22 relabelled 6053 crates of tin with manifest WEV8; manifest reprinted twice; no damage reported; weight variance 7 kg; weight variance 46 kg; escort vehicle UZN assigned; gate camera 15 clear;"
+    }
+   ],
+   "series": "H_packing",
+   "style": "zero-waste maximal packing",
+   "font": "X11 clR5x6",
+   "cell": "5x6",
+   "cap_height_px": 6,
+   "antialiased": false,
+   "cols": 224,
+   "rows": 112,
+   "theoretical_ch_per_token": 26.13,
+   "w": 1120,
+   "h": 672,
+   "chars": 24534,
+   "lines": 112,
+   "megapixels": 0.753,
+   "claude_tokens": 960,
+   "gpt_tokens": 882,
+   "chars_per_claude_token": 25.56,
+   "chars_per_gpt_token": 27.82,
+   "text_tokens_equiv": 6134,
+   "claude_compression": 6.39,
+   "oversized_for_claude": false
+  },
+  "H_packing_p32/H_clR6x6_1344x672.png": {
+   "file": "H_packing_p32/H_clR6x6_1344x672.png",
+   "groundtruth": "groundtruth/H_packing_p32__H_clR6x6_1344x672.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "COBALT-BADGER-8926 (line 0032)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [19, 82, 93, 111])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "F6CJZ"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "YRST6"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "UVGQQ"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "WFLFB"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 YRST6 Platform 22 invoiced 2914 kegs of solvent under seal B5CF; held 151 minutes for customs; held 19 minutes for customs; checksum W4LR verified; humidity 23 percent; escort vehicle NH4 assigned; signature captured"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 WFLFB Berth 19 logged 9506 pallets of resin by lift 2; barcode U6ZJVS unreadable on first pass; weight variance 55 kg; weight variance 30 kg; weight variance 83 kg; held 82 minutes for customs; gate camera 9 clear;"
+    }
+   ],
+   "series": "H_packing",
+   "style": "zero-waste maximal packing",
+   "font": "X11 clR6x6",
+   "cell": "6x6",
+   "cap_height_px": 6,
+   "antialiased": false,
+   "cols": 224,
+   "rows": 112,
+   "theoretical_ch_per_token": 21.78,
+   "w": 1344,
+   "h": 672,
+   "chars": 24491,
+   "lines": 112,
+   "megapixels": 0.903,
+   "claude_tokens": 1152,
+   "gpt_tokens": 1058,
+   "chars_per_claude_token": 21.26,
+   "chars_per_gpt_token": 23.14,
+   "text_tokens_equiv": 6123,
+   "claude_compression": 5.31,
+   "oversized_for_claude": false
+  },
+  "H_packing_p32/H_clR5x8_1120x896.png": {
+   "file": "H_packing_p32/H_clR5x8_1120x896.png",
+   "groundtruth": "groundtruth/H_packing_p32__H_clR5x8_1120x896.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "AMBER-LYNX-8474 (line 0082)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [23, 43, 54, 55])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "9WRQA"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "GCVTA"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "SAZUT"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "JYN4U"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 GCVTA The north yard rejected 3192 reels of fibre against quota 49; temperature held at 16C; photograph 79W attached; photograph JB2 attached; barcode V5HSUW unreadable on first pass; barcode ZYSR9D unreadable on"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 JYN4U Node 41 rejected 664 pallets of resin against quota 72; humidity 15 percent; driver badge AH5Y; photograph 8JG attached; humidity 41 percent; held 113 minutes for customs; no damage reported; manifest reprinted"
+    }
+   ],
+   "series": "H_packing",
+   "style": "zero-waste maximal packing",
+   "font": "X11 clR5x8",
+   "cell": "5x8",
+   "cap_height_px": 8,
+   "antialiased": false,
+   "cols": 224,
+   "rows": 112,
+   "theoretical_ch_per_token": 19.6,
+   "w": 1120,
+   "h": 896,
+   "chars": 24538,
+   "lines": 112,
+   "megapixels": 1.004,
+   "claude_tokens": 1280,
+   "gpt_tokens": 1176,
+   "chars_per_claude_token": 19.17,
+   "chars_per_gpt_token": 20.87,
+   "text_tokens_equiv": 6134,
+   "claude_compression": 4.79,
+   "oversized_for_claude": false
+  },
+  "H_packing_p32/H_clR6x8_672x896.png": {
+   "file": "H_packing_p32/H_clR6x8_672x896.png",
+   "groundtruth": "groundtruth/H_packing_p32__H_clR6x8_672x896.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "AMBER-OTTER-1494 (line 0055)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [40, 62, 83, 90])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "EZDSY"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "7RV3N"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "5TA5P"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "E2HLP"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 7RV3N Terminal 7 shipped 3936 pallets of resin under seal XE4F; no damage reported; gate camera 16 clear;"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 E2HLP Terminal 7 quarantined 3241 rolls of felt via gate 27; escort vehicle VNK assigned; barcode 8WZUN5"
+    }
+   ],
+   "series": "H_packing",
+   "style": "zero-waste maximal packing",
+   "font": "X11 clR6x8",
+   "cell": "6x8",
+   "cap_height_px": 8,
+   "antialiased": false,
+   "cols": 112,
+   "rows": 112,
+   "theoretical_ch_per_token": 16.33,
+   "w": 672,
+   "h": 896,
+   "chars": 11963,
+   "lines": 112,
+   "megapixels": 0.602,
+   "claude_tokens": 768,
+   "gpt_tokens": 706,
+   "chars_per_claude_token": 15.58,
+   "chars_per_gpt_token": 16.95,
+   "text_tokens_equiv": 2991,
+   "claude_compression": 3.89,
+   "oversized_for_claude": false
+  },
+  "H_packing_p32/H_clR5x10_800x1120.png": {
+   "file": "H_packing_p32/H_clR5x10_800x1120.png",
+   "groundtruth": "groundtruth/H_packing_p32__H_clR5x10_800x1120.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "INDIGO-FALCON-1886 (line 0101)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [33, 35, 38, 49])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "MU4KZ"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "LGB8X"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "6NUAH"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "3DEAX"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 LGB8X Warehouse 3 transferred 5623 rolls of felt for client HGLN; ZEPHYR; humidity 10 percent; gate camera 7 clear; manifest reprinted twice; escort"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 3DEAX The east pier transferred 6072 drums of glycol against order 5040; escort vehicle 97F assigned; weight variance 33 kg; two seals broken; photograph"
+    }
+   ],
+   "series": "H_packing",
+   "style": "zero-waste maximal packing",
+   "font": "X11 clR5x10",
+   "cell": "5x10",
+   "cap_height_px": 10,
+   "antialiased": false,
+   "cols": 160,
+   "rows": 112,
+   "theoretical_ch_per_token": 15.68,
+   "w": 800,
+   "h": 1120,
+   "chars": 17331,
+   "lines": 112,
+   "megapixels": 0.896,
+   "claude_tokens": 1160,
+   "gpt_tokens": 1050,
+   "chars_per_claude_token": 14.94,
+   "chars_per_gpt_token": 16.51,
+   "text_tokens_equiv": 4333,
+   "claude_compression": 3.74,
+   "oversized_for_claude": false
+  },
+  "H_packing_p32/H_clR7x8_896x896.png": {
+   "file": "H_packing_p32/H_clR7x8_896x896.png",
+   "groundtruth": "groundtruth/H_packing_p32__H_clR7x8_896x896.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "INDIGO-FALCON-7981 (line 0061)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [14, 27, 93, 94])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "FK9HY"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "98NQM"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "6MQ8R"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "E2DS7"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 98NQM Unit Bravo audited 8424 bins of scrap by lift 9; held 91 minutes for customs; tare recorded as 596 kg; gate camera"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 E2DS7 Crew Delta rerouted 9194 drums of glycol via gate 40; escort vehicle CT8 assigned; checksum ZFN7 verified; two"
+    }
+   ],
+   "series": "H_packing",
+   "style": "zero-waste maximal packing",
+   "font": "X11 clR7x8",
+   "cell": "7x8",
+   "cap_height_px": 8,
+   "antialiased": false,
+   "cols": 128,
+   "rows": 112,
+   "theoretical_ch_per_token": 14.0,
+   "w": 896,
+   "h": 896,
+   "chars": 13795,
+   "lines": 112,
+   "megapixels": 0.803,
+   "claude_tokens": 1024,
+   "gpt_tokens": 941,
+   "chars_per_claude_token": 13.47,
+   "chars_per_gpt_token": 14.66,
+   "text_tokens_equiv": 3449,
+   "claude_compression": 3.37,
+   "oversized_for_claude": false
+  },
+  "H_packing_p32/H_6x9_864x864.png": {
+   "file": "H_packing_p32/H_6x9_864x864.png",
+   "groundtruth": "groundtruth/H_packing_p32__H_6x9_864x864.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "96"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "VIOLET-LYNX-4153 (line 0041)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "3 (lines [28, 57, 91])"
+    },
+    {
+     "id": "code_0009",
+     "q": "What is the 5-character code on line 0009?",
+     "a": "X95AW"
+    },
+    {
+     "id": "code_0033",
+     "q": "What is the 5-character code on line 0033?",
+     "a": "4XHC9"
+    },
+    {
+     "id": "code_0065",
+     "q": "What is the 5-character code on line 0065?",
+     "a": "RQ5SA"
+    },
+    {
+     "id": "code_0096",
+     "q": "What is the 5-character code on line 0096?",
+     "a": "PP557"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0033 exactly.",
+     "a": "0033 4XHC9 Substation Foxtrot shipped 9426 sacks of silica on route 4; two seals broken; humidity 60 percent; escort vehicle P4E assigned;"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 PP557 Node 41 weighed 2759 pallets of resin via gate 1; weight variance 26 kg; humidity 22 percent; temperature held at -2C; checksum"
+    }
+   ],
+   "series": "H_packing",
+   "style": "zero-waste maximal packing",
+   "font": "X11 6x9",
+   "cell": "6x9",
+   "cap_height_px": 9,
+   "antialiased": false,
+   "cols": 144,
+   "rows": 96,
+   "theoretical_ch_per_token": 14.52,
+   "w": 864,
+   "h": 864,
+   "chars": 13324,
+   "lines": 96,
+   "megapixels": 0.746,
+   "claude_tokens": 961,
+   "gpt_tokens": 875,
+   "chars_per_claude_token": 13.86,
+   "chars_per_gpt_token": 15.23,
+   "text_tokens_equiv": 3331,
+   "claude_compression": 3.47,
+   "oversized_for_claude": false
+  },
+  "H_packing_p32/H_clB6x10_672x1120.png": {
+   "file": "H_packing_p32/H_clB6x10_672x1120.png",
+   "groundtruth": "groundtruth/H_packing_p32__H_clB6x10_672x1120.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "COBALT-FALCON-9879 (line 0043)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [5, 54, 65, 82])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "3JZWM"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "QCP8W"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "ADDFR"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "6E7BK"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 QCP8W Team Juliet impounded 4373 trays of quartz under seal CQ4V; two seals broken; no damage reported;"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 6E7BK Substation Foxtrot quarantined 9731 trays of quartz by lift 12; gate camera 14 clear; gate camera 9"
+    }
+   ],
+   "series": "H_packing",
+   "style": "zero-waste maximal packing",
+   "font": "X11 clB6x10",
+   "cell": "6x10",
+   "cap_height_px": 10,
+   "antialiased": false,
+   "cols": 112,
+   "rows": 112,
+   "theoretical_ch_per_token": 13.07,
+   "w": 672,
+   "h": 1120,
+   "chars": 12004,
+   "lines": 112,
+   "megapixels": 0.753,
+   "claude_tokens": 960,
+   "gpt_tokens": 882,
+   "chars_per_claude_token": 12.5,
+   "chars_per_gpt_token": 13.61,
+   "text_tokens_equiv": 3001,
+   "claude_compression": 3.13,
+   "oversized_for_claude": false
+  },
+  "H_packing_p32/H_clR8x8_896x896.png": {
+   "file": "H_packing_p32/H_clR8x8_896x896.png",
+   "groundtruth": "groundtruth/H_packing_p32__H_clR8x8_896x896.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "VIOLET-OTTER-4573 (line 0093)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [12, 44, 90, 91])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "FEJJF"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "Y8BN5"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "T7S85"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "G8TCL"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 Y8BN5 Crew Delta dispatched 3203 trays of quartz under seal 2HB3; tare recorded as 425 kg; driver badge"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 G8TCL Unit Bravo logged 9568 bins of scrap under seal U4RD; driver badge 7K9T; tare recorded as 62 kg;"
+    }
+   ],
+   "series": "H_packing",
+   "style": "zero-waste maximal packing",
+   "font": "X11 clR8x8",
+   "cell": "8x8",
+   "cap_height_px": 8,
+   "antialiased": false,
+   "cols": 112,
+   "rows": 112,
+   "theoretical_ch_per_token": 12.25,
+   "w": 896,
+   "h": 896,
+   "chars": 11978,
+   "lines": 112,
+   "megapixels": 0.803,
+   "claude_tokens": 1024,
+   "gpt_tokens": 941,
+   "chars_per_claude_token": 11.7,
+   "chars_per_gpt_token": 12.73,
+   "text_tokens_equiv": 2994,
+   "claude_compression": 2.92,
+   "oversized_for_claude": false
+  },
+  "J_pitch_p32/J_4x6_pitch9_864x864.png": {
+   "file": "J_pitch_p32/J_4x6_pitch9_864x864.png",
+   "groundtruth": "groundtruth/J_pitch_p32__J_4x6_pitch9_864x864.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "96"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "VIOLET-FALCON-5916 (line 0029)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "3 (lines [13, 20, 77])"
+    },
+    {
+     "id": "code_0009",
+     "q": "What is the 5-character code on line 0009?",
+     "a": "YKHE8"
+    },
+    {
+     "id": "code_0033",
+     "q": "What is the 5-character code on line 0033?",
+     "a": "ASQPR"
+    },
+    {
+     "id": "code_0065",
+     "q": "What is the 5-character code on line 0065?",
+     "a": "9CYSK"
+    },
+    {
+     "id": "code_0096",
+     "q": "What is the 5-character code on line 0096?",
+     "a": "DTKJM"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0033 exactly.",
+     "a": "0033 ASQPR The relay station relabelled 2083 kegs of solvent on route 4; two seals broken; no damage reported; barcode TGFQLS unreadable on first pass; weight variance 47 kg; no damage reported; manifest reprinted"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 DTKJM Line Charlie invoiced 7646 rolls of felt for client T6SQ; held 122 minutes for customs; temperature held at 6C; no damage reported; tare recorded as 439 kg; driver badge C9WP; humidity 50 percent; held"
+    }
+   ],
+   "series": "J_pitch",
+   "style": "4x6 glyphs at 9px row pitch",
+   "font": "X11 4x6",
+   "cell": "4x9",
+   "glyph_cell": "4x6",
+   "pitch": 9,
+   "antialiased": false,
+   "cols": 216,
+   "rows": 96,
+   "theoretical_ch_per_token": 21.78,
+   "w": 864,
+   "h": 864,
+   "chars": 20197,
+   "lines": 96,
+   "megapixels": 0.746,
+   "claude_tokens": 961,
+   "gpt_tokens": 875,
+   "chars_per_claude_token": 21.02,
+   "chars_per_gpt_token": 23.09,
+   "text_tokens_equiv": 5049,
+   "claude_compression": 5.25,
+   "oversized_for_claude": false
+  },
+  "J_pitch_p32/J_4x6_pitch10_896x1120.png": {
+   "file": "J_pitch_p32/J_4x6_pitch10_896x1120.png",
+   "groundtruth": "groundtruth/J_pitch_p32__J_4x6_pitch10_896x1120.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "INDIGO-LYNX-6323 (line 0040)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [3, 13, 43, 65])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "2YFT4"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "TQSGS"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "446FH"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "VRULZ"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 TQSGS Line Charlie rejected 161 boxes of ferrite against quota 34; tare recorded as 570 kg; escort vehicle FTA assigned; temperature held at 10C; temperature held at 33C; photograph TY3 attached; barcode FXTS5H"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 VRULZ Substation Foxtrot recovered 5754 tubs of pitch on route 8; no damage reported; escort vehicle FCV assigned; two seals broken; humidity 10 percent; manifest reprinted twice; manifest reprinted twice; barcode"
+    }
+   ],
+   "series": "J_pitch",
+   "style": "4x6 glyphs at 10px row pitch",
+   "font": "X11 4x6",
+   "cell": "4x10",
+   "glyph_cell": "4x6",
+   "pitch": 10,
+   "antialiased": false,
+   "cols": 224,
+   "rows": 112,
+   "theoretical_ch_per_token": 19.6,
+   "w": 896,
+   "h": 1120,
+   "chars": 24494,
+   "lines": 112,
+   "megapixels": 1.004,
+   "claude_tokens": 1280,
+   "gpt_tokens": 1176,
+   "chars_per_claude_token": 19.14,
+   "chars_per_gpt_token": 20.83,
+   "text_tokens_equiv": 6124,
+   "claude_compression": 4.78,
+   "oversized_for_claude": false
+  },
+  "J_pitch_p32/J_4x6_pitch12_672x1344.png": {
+   "file": "J_pitch_p32/J_4x6_pitch12_672x1344.png",
+   "groundtruth": "groundtruth/J_pitch_p32__J_4x6_pitch12_672x1344.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "SORREL-FALCON-8291 (line 0096)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [7, 9, 92, 103])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "SU8PD"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "5F2D2"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "ZXGJN"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "F4ZKW"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 5F2D2 Convoy Echo logged 3503 tubs of pitch on route 8; held 95 minutes for customs; gate camera 3 clear; humidity 59 percent; weight variance 50 kg; manifest"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 F4ZKW Terminal 7 invoiced 5847 reels of fibre by lift 3; two seals broken; escort vehicle YCM assigned; barcode 7BK79V unreadable on first pass; driver badge"
+    }
+   ],
+   "series": "J_pitch",
+   "style": "4x6 glyphs at 12px row pitch",
+   "font": "X11 4x6",
+   "cell": "4x12",
+   "glyph_cell": "4x6",
+   "pitch": 12,
+   "antialiased": false,
+   "cols": 168,
+   "rows": 112,
+   "theoretical_ch_per_token": 16.33,
+   "w": 672,
+   "h": 1344,
+   "chars": 18283,
+   "lines": 112,
+   "megapixels": 0.903,
+   "claude_tokens": 1152,
+   "gpt_tokens": 1058,
+   "chars_per_claude_token": 15.87,
+   "chars_per_gpt_token": 17.27,
+   "text_tokens_equiv": 4571,
+   "claude_compression": 3.97,
+   "oversized_for_claude": false
+  },
+  "J_pitch_p32/J_clR5x6_pitch9_800x864.png": {
+   "file": "J_pitch_p32/J_clR5x6_pitch9_800x864.png",
+   "groundtruth": "groundtruth/J_pitch_p32__J_clR5x6_pitch9_800x864.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "96"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "COBALT-BADGER-9775 (line 0055)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "3 (lines [16, 36, 47])"
+    },
+    {
+     "id": "code_0009",
+     "q": "What is the 5-character code on line 0009?",
+     "a": "ZS4NG"
+    },
+    {
+     "id": "code_0033",
+     "q": "What is the 5-character code on line 0033?",
+     "a": "UKXFQ"
+    },
+    {
+     "id": "code_0065",
+     "q": "What is the 5-character code on line 0065?",
+     "a": "FQMBR"
+    },
+    {
+     "id": "code_0096",
+     "q": "What is the 5-character code on line 0096?",
+     "a": "64ZGE"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0033 exactly.",
+     "a": "0033 UKXFQ Berth 19 quarantined 9428 cases of ballast on route 8; checksum 5XNV verified; signature captured on pad 4; no damage reported; humidity 73"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 64ZGE Unit Bravo transferred 1002 bales of flax for client GGRU; two seals broken; two seals broken; checksum LQQN verified; two seals broken; photograph"
+    }
+   ],
+   "series": "J_pitch",
+   "style": "clR5x6 glyphs at 9px row pitch",
+   "font": "X11 clR5x6",
+   "cell": "5x9",
+   "glyph_cell": "5x6",
+   "pitch": 9,
+   "antialiased": false,
+   "cols": 160,
+   "rows": 96,
+   "theoretical_ch_per_token": 17.42,
+   "w": 800,
+   "h": 864,
+   "chars": 14827,
+   "lines": 96,
+   "megapixels": 0.691,
+   "claude_tokens": 899,
+   "gpt_tokens": 810,
+   "chars_per_claude_token": 16.49,
+   "chars_per_gpt_token": 18.3,
+   "text_tokens_equiv": 3707,
+   "claude_compression": 4.12,
+   "oversized_for_claude": false
+  },
+  "J_pitch_p32/J_clR5x8_pitch9_800x864.png": {
+   "file": "J_pitch_p32/J_clR5x8_pitch9_800x864.png",
+   "groundtruth": "groundtruth/J_pitch_p32__J_clR5x8_pitch9_800x864.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "96"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "INDIGO-FALCON-4308 (line 0078)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "3 (lines [9, 24, 83])"
+    },
+    {
+     "id": "code_0009",
+     "q": "What is the 5-character code on line 0009?",
+     "a": "Y9FQF"
+    },
+    {
+     "id": "code_0033",
+     "q": "What is the 5-character code on line 0033?",
+     "a": "EQ8NX"
+    },
+    {
+     "id": "code_0065",
+     "q": "What is the 5-character code on line 0065?",
+     "a": "JKYYJ"
+    },
+    {
+     "id": "code_0096",
+     "q": "What is the 5-character code on line 0096?",
+     "a": "5DGL6"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0033 exactly.",
+     "a": "0033 EQ8NX Platform 22 scanned 5846 canisters of argon at bay 4; temperature held at 6C; humidity 44 percent; driver badge 2H6T; gate camera 28 clear;"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 5DGL6 Warehouse 3 logged 7894 tubs of pitch pending review Q5D; checksum 7E7N verified; signature captured on pad 8; humidity 20 percent; weight variance"
+    }
+   ],
+   "series": "J_pitch",
+   "style": "clR5x8 glyphs at 9px row pitch",
+   "font": "X11 clR5x8",
+   "cell": "5x9",
+   "glyph_cell": "5x8",
+   "pitch": 9,
+   "antialiased": false,
+   "cols": 160,
+   "rows": 96,
+   "theoretical_ch_per_token": 17.42,
+   "w": 800,
+   "h": 864,
+   "chars": 14850,
+   "lines": 96,
+   "megapixels": 0.691,
+   "claude_tokens": 899,
+   "gpt_tokens": 810,
+   "chars_per_claude_token": 16.52,
+   "chars_per_gpt_token": 18.33,
+   "text_tokens_equiv": 3712,
+   "claude_compression": 4.13,
+   "oversized_for_claude": false
+  },
+  "J_pitch_p32/J_clR5x8_pitch10_800x1120.png": {
+   "file": "J_pitch_p32/J_clR5x8_pitch10_800x1120.png",
+   "groundtruth": "groundtruth/J_pitch_p32__J_clR5x8_pitch10_800x1120.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "112"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "VIOLET-FALCON-4123 (line 0086)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "4 (lines [70, 73, 85, 111])"
+    },
+    {
+     "id": "code_0010",
+     "q": "What is the 5-character code on line 0010?",
+     "a": "KC944"
+    },
+    {
+     "id": "code_0038",
+     "q": "What is the 5-character code on line 0038?",
+     "a": "SASE5"
+    },
+    {
+     "id": "code_0075",
+     "q": "What is the 5-character code on line 0075?",
+     "a": "Y528S"
+    },
+    {
+     "id": "code_0112",
+     "q": "What is the 5-character code on line 0112?",
+     "a": "4TYLX"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0038 exactly.",
+     "a": "0038 SASE5 Node 41 logged 5569 bales of flax via gate 43; no damage reported; gate camera 14 clear; photograph RAR attached; driver badge NTMU; two seals"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 4TYLX Platform 22 audited 1287 drums of glycol with manifest A7LD; tare recorded as 303 kg; photograph DTY attached; gate camera 1 clear; checksum 25S8"
+    }
+   ],
+   "series": "J_pitch",
+   "style": "clR5x8 glyphs at 10px row pitch",
+   "font": "X11 clR5x8",
+   "cell": "5x10",
+   "glyph_cell": "5x8",
+   "pitch": 10,
+   "antialiased": false,
+   "cols": 160,
+   "rows": 112,
+   "theoretical_ch_per_token": 15.68,
+   "w": 800,
+   "h": 1120,
+   "chars": 17296,
+   "lines": 112,
+   "megapixels": 0.896,
+   "claude_tokens": 1160,
+   "gpt_tokens": 1050,
+   "chars_per_claude_token": 14.91,
+   "chars_per_gpt_token": 16.47,
+   "text_tokens_equiv": 4324,
+   "claude_compression": 3.73,
+   "oversized_for_claude": false
+  },
+  "J_pitch_p32/J_clR6x8_pitch9_864x864.png": {
+   "file": "J_pitch_p32/J_clR6x8_pitch9_864x864.png",
+   "groundtruth": "groundtruth/J_pitch_p32__J_clR6x8_pitch9_864x864.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "96"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "AMBER-FALCON-6562 (line 0079)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "3 (lines [53, 69, 74])"
+    },
+    {
+     "id": "code_0009",
+     "q": "What is the 5-character code on line 0009?",
+     "a": "KPL2W"
+    },
+    {
+     "id": "code_0033",
+     "q": "What is the 5-character code on line 0033?",
+     "a": "VV36H"
+    },
+    {
+     "id": "code_0065",
+     "q": "What is the 5-character code on line 0065?",
+     "a": "LGLYS"
+    },
+    {
+     "id": "code_0096",
+     "q": "What is the 5-character code on line 0096?",
+     "a": "PVFD6"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0033 exactly.",
+     "a": "0033 VV36H Crew Delta rejected 1199 boxes of ferrite pending review UFN; driver badge FRGN; held 191 minutes for customs; photograph L5W"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 PVFD6 Crew Delta weighed 9625 bins of scrap against order 9590; photograph LLH attached; photograph RWD attached; temperature held at"
+    }
+   ],
+   "series": "J_pitch",
+   "style": "clR6x8 glyphs at 9px row pitch",
+   "font": "X11 clR6x8",
+   "cell": "6x9",
+   "glyph_cell": "6x8",
+   "pitch": 9,
+   "antialiased": false,
+   "cols": 144,
+   "rows": 96,
+   "theoretical_ch_per_token": 14.52,
+   "w": 864,
+   "h": 864,
+   "chars": 13343,
+   "lines": 96,
+   "megapixels": 0.746,
+   "claude_tokens": 961,
+   "gpt_tokens": 875,
+   "chars_per_claude_token": 13.88,
+   "chars_per_gpt_token": 15.25,
+   "text_tokens_equiv": 3336,
+   "claude_compression": 3.47,
+   "oversized_for_claude": false
+  },
+  "J_pitch_p32/J_5x7_pitch9_800x864.png": {
+   "file": "J_pitch_p32/J_5x7_pitch9_800x864.png",
+   "groundtruth": "groundtruth/J_pitch_p32__J_5x7_pitch9_800x864.txt",
+   "probes": [
+    {
+     "id": "n_lines",
+     "q": "How many numbered lines are in this image?",
+     "a": "96"
+    },
+    {
+     "id": "passphrase",
+     "q": "An exclamation-marked PASSPHRASE appears on one line. What is it, and on which line number?",
+     "a": "COBALT-MARLIN-7468 (line 0043)"
+    },
+    {
+     "id": "rare_count",
+     "q": "How many times does the word ZEPHYR appear?",
+     "a": "3 (lines [55, 62, 84])"
+    },
+    {
+     "id": "code_0009",
+     "q": "What is the 5-character code on line 0009?",
+     "a": "H99KS"
+    },
+    {
+     "id": "code_0033",
+     "q": "What is the 5-character code on line 0033?",
+     "a": "AXB28"
+    },
+    {
+     "id": "code_0065",
+     "q": "What is the 5-character code on line 0065?",
+     "a": "7KDSN"
+    },
+    {
+     "id": "code_0096",
+     "q": "What is the 5-character code on line 0096?",
+     "a": "AATE9"
+    },
+    {
+     "id": "verbatim_mid",
+     "q": "Transcribe line 0033 exactly.",
+     "a": "0033 AXB28 Sector 14 audited 2968 sacks of silica against order 7063; two seals broken; photograph PBJ attached; manifest reprinted twice; photograph 7GM"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 AATE9 Convoy Echo rerouted 9993 bins of scrap with manifest 3UU3; no damage reported; two seals broken; humidity 29 percent; driver badge G7QV;"
+    }
+   ],
+   "series": "J_pitch",
+   "style": "5x7 glyphs at 9px row pitch",
+   "font": "X11 5x7",
+   "cell": "5x9",
+   "glyph_cell": "5x7",
+   "pitch": 9,
+   "antialiased": false,
+   "cols": 160,
+   "rows": 96,
+   "theoretical_ch_per_token": 17.42,
+   "w": 800,
+   "h": 864,
+   "chars": 14869,
+   "lines": 96,
+   "megapixels": 0.691,
+   "claude_tokens": 899,
+   "gpt_tokens": 810,
+   "chars_per_claude_token": 16.54,
+   "chars_per_gpt_token": 18.36,
+   "text_tokens_equiv": 3717,
+   "claude_compression": 4.13,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_clR6x8_pitch8_672x896.png": {
+   "file": "K_entropy_p32/K_clR6x8_pitch8_672x896.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_clR6x8_pitch8_672x896.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 DXUQ EB55 3Q3Y VBVW 3J2P 9JV6 BAVE 9L54 UHUG J5PZ HKVY YVL7 HCEB AADZ 77RW D4AF 5FAS QYFG XAPF TDG7 8VUX"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 4TNE 4GF4 6SMW ZXBD T24V JRA6 5GZM AJF6 ESCY Q4D6 MEPP X9LC EE6Q CVKZ ZDWM 6UJ3 TX8A PQA3 3QVU LBNN GPFA"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 MQHC 8MM7 8ZCU 5HF4 8WRP 9JZR 6YV3 KQMS QHLH AR5T SEQT 5S4E DUL6 Q4QJ ZL68 CYQB PZFA XDRU 4DN5 LPVG LEUM"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "112"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 8px pitch",
+   "font": "X11 clR6x8",
+   "cell": "6x8",
+   "pitch": 8,
+   "antialiased": false,
+   "cols": 112,
+   "rows": 112,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 16.33,
+   "w": 672,
+   "h": 896,
+   "chars": 12208,
+   "lines": 112,
+   "megapixels": 0.602,
+   "claude_tokens": 768,
+   "gpt_tokens": 706,
+   "chars_per_claude_token": 15.9,
+   "chars_per_gpt_token": 17.3,
+   "text_tokens_equiv": 3052,
+   "claude_compression": 3.97,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_6x9_pitch9_864x864.png": {
+   "file": "K_entropy_p32/K_6x9_pitch9_864x864.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_6x9_pitch9_864x864.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 4WMJ QXWF QLK3 WSQL KT72 QNFF 85MH ZRNY 9RVM J3GK K9NY JPHH XDFQ CZHC 8539 XMFM 99WY 25EN X6RR L56R GZYH 8RF6 N5CF 5XZ8 CWHE T76V 3FLT 9W5P"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 MJHL EFE8 QUN5 B48J Q33L PX88 YU8A GV4Y YCYB NMJS GDJ8 U7PH 6VJS Z4JP 5VCP QK5L AQUT SU7F 2APZ AE8R 7JBX X7PX FL57 MNQM ZBWY 4QC2 T4BZ 3NWF"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 AJFN 2A5Q P2SS LAZP 8LUW ZUCC L7W8 ZPB7 J5UT HPS4 59E9 FEPS MRAX 4Z7W Z3KE S58B AM8P DD52 DBAV Z5LY LUR7 6UM5 AGTD EE7F ATFH ZKAA 8UUZ QAQL"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "96"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 9px pitch",
+   "font": "X11 6x9",
+   "cell": "6x9",
+   "pitch": 9,
+   "antialiased": false,
+   "cols": 144,
+   "rows": 96,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 14.52,
+   "w": 864,
+   "h": 864,
+   "chars": 13824,
+   "lines": 96,
+   "megapixels": 0.746,
+   "claude_tokens": 961,
+   "gpt_tokens": 875,
+   "chars_per_claude_token": 14.39,
+   "chars_per_gpt_token": 15.8,
+   "text_tokens_equiv": 3456,
+   "claude_compression": 3.6,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_4x6_pitch9_864x864.png": {
+   "file": "K_entropy_p32/K_4x6_pitch9_864x864.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_4x6_pitch9_864x864.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 5EZT K65G CUM2 YCNY GM5E LS2S PHHX 5VVW NYS9 KXYE K4PB 7R74 9DGU 3LWD RA25 JJPA F9SH SXUK TFVY HATK GGHS 5QAP 5NYD JUAB YE4W UCFD SKKA KRPQ 6ASW YGZZ EAZS WGRV 7UND 3D8X HWX2 MVP2 MQA9 LWZ3 Q99T SFP9 BUYE XE6V"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 FYZ4 RSMN 83KG 5ND2 9ML3 JYQ9 PLHJ AUE4 5QX9 U3L4 Z4VN U5SC ZMQP Q4XE HGK9 J8UN EJSY MYDH PWLW KGT3 H9LJ 23ND U8YE 54XK LEL4 GMJ8 2DCL WLUR 2T6C Z8DD 82N4 MPMH 5LZK QDZ3 8MHS MGCR UWGM KHAQ GCG2 UU4A HPHQ 3VAR"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 6SBT YDQQ DY3H L2PK XRMA UFJB DDEM TYPS RLH9 Y89Y XWF7 VZBP SA6T NR7P 7HCA KHWW UCAU JG3E GP58 LG3Z HURE LDQM HZZ5 NH6Y AMXU 3R9R AT8Y TUTS XHP7 SS2K MX6A MAJW QBVS HK5K VNRL CCGH MK3L X7ZM BF5V W8D8 LGD4 8CZT"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "96"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 9px pitch",
+   "font": "X11 4x6",
+   "cell": "4x9",
+   "pitch": 9,
+   "antialiased": false,
+   "cols": 216,
+   "rows": 96,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 21.78,
+   "w": 864,
+   "h": 864,
+   "chars": 20544,
+   "lines": 96,
+   "megapixels": 0.746,
+   "claude_tokens": 961,
+   "gpt_tokens": 875,
+   "chars_per_claude_token": 21.38,
+   "chars_per_gpt_token": 23.48,
+   "text_tokens_equiv": 5136,
+   "claude_compression": 5.34,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_clR5x8_pitch9_800x864.png": {
+   "file": "K_entropy_p32/K_clR5x8_pitch9_800x864.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_clR5x8_pitch9_800x864.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 TSTR X7MJ K3GJ 8G9W 5AJT BDBS ERAE ET3N BCFX RWWN 26ER W9N2 VEJ3 TZZY XC2E VA94 WYQL KP4E MBT9 94JK 3879 DTKM 6Z75 74SB Q32P Y8LZ CTUG BY84 5QH9 F4HX NCV7"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 HH5U 8GMF DNYQ ZFU9 M3GM DN8L J3AN BSFS C8B4 U9CQ 3DRJ VW6B GS84 E5VL NFXA K8EG SZJE 6RVU RL52 CZWP 5YHK FZCB 6XYF M4EJ 3M2U JE5K VFU2 8JZM MKMA ZF8X 2NH4"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 Q9U5 KXF3 R6HC ZJQK FJ7D WBFE UEGT JEA9 N73X 4HK4 ZZTR C4L6 PV3G YN88 4JP8 FVFW NRLB AZNR 7G4T XB3F PTMP KVLM 8LK6 Q49T ED2M T2XK PXSH V6NQ AZPW 3RRG EY69"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "96"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 9px pitch",
+   "font": "X11 clR5x8",
+   "cell": "5x9",
+   "pitch": 9,
+   "antialiased": false,
+   "cols": 160,
+   "rows": 96,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 17.42,
+   "w": 800,
+   "h": 864,
+   "chars": 15264,
+   "lines": 96,
+   "megapixels": 0.691,
+   "claude_tokens": 899,
+   "gpt_tokens": 810,
+   "chars_per_claude_token": 16.98,
+   "chars_per_gpt_token": 18.84,
+   "text_tokens_equiv": 3816,
+   "claude_compression": 4.24,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_6x10_pitch10_672x1120.png": {
+   "file": "K_entropy_p32/K_6x10_pitch10_672x1120.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_6x10_pitch10_672x1120.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 FGJQ 7E8D C4M6 FZ4R FQHE BLCT FKG8 RXAH C5ED EGWD EQA7 EMR4 YNRT 863B 8BMY UVLN E6KT XAXV YBDL 9B4P HP92"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 4DBH A2N3 6N6K PB8A W746 5UR8 HA58 69MQ 7UUM HC9H C6MS JGVT PWY5 GUYT B3EE N8ST 4C6D B3K6 6ZPU 5WWA N7ET"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 S2CC 3GSE NUWV TWWQ QGR2 8TLE D79H VXVW TCRJ XBFX YMH4 MCQR D38W GB9Q SDN6 633V 3Y86 TC9X WEGR CRWQ ADXV"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "112"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 10px pitch",
+   "font": "X11 6x10",
+   "cell": "6x10",
+   "pitch": 10,
+   "antialiased": false,
+   "cols": 112,
+   "rows": 112,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 13.07,
+   "w": 672,
+   "h": 1120,
+   "chars": 12208,
+   "lines": 112,
+   "megapixels": 0.753,
+   "claude_tokens": 960,
+   "gpt_tokens": 882,
+   "chars_per_claude_token": 12.72,
+   "chars_per_gpt_token": 13.84,
+   "text_tokens_equiv": 3052,
+   "claude_compression": 3.18,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_6x13_pitch13_768x1248.png": {
+   "file": "K_entropy_p32/K_6x13_pitch13_768x1248.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_6x13_pitch13_768x1248.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 L3E6 VL4V B7TX 7Y2F E5CU QY52 FR5A YKCX 6S7E 3LNP YD72 FY7K W5FB S4M2 KEEV MP8P RJXG URZ8 NA2P LDT6 JZEA ULKT VGZN SU6S"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 NHCR QHFZ URKQ J9NT RUQ7 6BWC 5XRW VBKM DMPW ARHG MBJT ASL4 5MR6 9NYN Q6Z2 9WHM PZ3R 48PC ZQQA AJ6E UNUN 2WBQ PVLH 5SA4"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 HNFE 8MRJ 5USE 4ELF QZXV 7Y22 WHCF YFEG SV3Q E6BT ZBQN VF2K SBZF ZE4J 3H2Q 45LY MPVS 5WYS 8A3P CZWQ H58K RKSY 6PYL ECS2"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "96"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 13px pitch",
+   "font": "X11 6x13",
+   "cell": "6x13",
+   "pitch": 13,
+   "antialiased": false,
+   "cols": 128,
+   "rows": 96,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 10.05,
+   "w": 768,
+   "h": 1248,
+   "chars": 11904,
+   "lines": 96,
+   "megapixels": 0.958,
+   "claude_tokens": 1260,
+   "gpt_tokens": 1123,
+   "chars_per_claude_token": 9.45,
+   "chars_per_gpt_token": 10.6,
+   "text_tokens_equiv": 2976,
+   "claude_compression": 2.36,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_7x14_pitch14_448x1568.png": {
+   "file": "K_entropy_p32/K_7x14_pitch14_448x1568.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_7x14_pitch14_448x1568.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 5EWR 34VR 9SG7 6RGV EE4V 87EU MLN9 V4AN 4GZ6 5YVX HUHD AS77"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 T392 3W8U 9L94 ZFQG D9WL RCDJ ABF7 2A8V 3YZH KSTL 8WK7 MAGR"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 L33D JAS9 DRAL 8RL4 MJBR RE2V PFMA 7ZMH YGBQ 4YHB FS26 X9AD"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "112"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 14px pitch",
+   "font": "X11 7x14",
+   "cell": "7x14",
+   "pitch": 14,
+   "antialiased": false,
+   "cols": 64,
+   "rows": 112,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 8.0,
+   "w": 448,
+   "h": 1568,
+   "chars": 7168,
+   "lines": 112,
+   "megapixels": 0.702,
+   "claude_tokens": 896,
+   "gpt_tokens": 823,
+   "chars_per_claude_token": 8.0,
+   "chars_per_gpt_token": 8.71,
+   "text_tokens_equiv": 1792,
+   "claude_compression": 2.0,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_8x16_pitch16_448x1568.png": {
+   "file": "K_entropy_p32/K_8x16_pitch16_448x1568.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_8x16_pitch16_448x1568.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 8ZVJ VUZK 6UHQ JTZJ PWN5 D8EV RBTX 4GL6 ZZNS YL4S"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 HNPF 43NK P23M L87A 9VA9 FM43 U4DB XAX9 ENCQ CJB9"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0098 H2SN 4XBR W5H4 FT3R 6NUL KM8W U9PB MDPH Q9X7 CA9A"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "98"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 16px pitch",
+   "font": "X11 8x16",
+   "cell": "8x16",
+   "pitch": 16,
+   "antialiased": false,
+   "cols": 56,
+   "rows": 98,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 6.12,
+   "w": 448,
+   "h": 1568,
+   "chars": 5292,
+   "lines": 98,
+   "megapixels": 0.702,
+   "claude_tokens": 896,
+   "gpt_tokens": 823,
+   "chars_per_claude_token": 5.91,
+   "chars_per_gpt_token": 6.43,
+   "text_tokens_equiv": 1323,
+   "claude_compression": 1.48,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_9x18_pitch18_576x1440.png": {
+   "file": "K_entropy_p32/K_9x18_pitch18_576x1440.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_9x18_pitch18_576x1440.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 JDVW YE8S MM7D P349 FTX8 2239 VEDG 2CF7 3DUR VBC6 AP42 SJ3R"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 KFMT GMJC 2FKJ 9V7A GP8F 763J 927U D4LU 6R72 6XZR 9E3F FPGU"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0080 HKWV YJCZ RCXW 86KQ 6MX9 P6A7 TWTZ 2DVM G8GA G8TV NR32 8W7J"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "80"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 18px pitch",
+   "font": "X11 9x18",
+   "cell": "9x18",
+   "pitch": 18,
+   "antialiased": false,
+   "cols": 64,
+   "rows": 80,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 4.84,
+   "w": 576,
+   "h": 1440,
+   "chars": 5120,
+   "lines": 80,
+   "megapixels": 0.829,
+   "claude_tokens": 1092,
+   "gpt_tokens": 972,
+   "chars_per_claude_token": 4.69,
+   "chars_per_gpt_token": 5.27,
+   "text_tokens_equiv": 1280,
+   "claude_compression": 1.17,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_10x20_pitch20_640x1440.png": {
+   "file": "K_entropy_p32/K_10x20_pitch20_640x1440.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_10x20_pitch20_640x1440.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 SEKV E4DY SQ9M ZM9D THJ2 HTWX VCZT 7WX2 9G3L YXP7 WB49 QG85"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 H2WL M5EC Q8W4 ATBM YSWD JWQ7 EW85 KM8X TML5 RRLX VZH6 R6HM"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0072 8WMD ABFK REDT WHTF KPX4 ER3T DQ79 AA9P LRT7 DT5R A3C3 TCBN"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "72"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 20px pitch",
+   "font": "X11 10x20",
+   "cell": "10x20",
+   "pitch": 20,
+   "antialiased": false,
+   "cols": 64,
+   "rows": 72,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 3.92,
+   "w": 640,
+   "h": 1440,
+   "chars": 4608,
+   "lines": 72,
+   "megapixels": 0.922,
+   "claude_tokens": 1196,
+   "gpt_tokens": 1080,
+   "chars_per_claude_token": 3.85,
+   "chars_per_gpt_token": 4.27,
+   "text_tokens_equiv": 1152,
+   "claude_compression": 0.96,
+   "oversized_for_claude": false
+  },
+  "K_entropy_p32/K_12x24_pitch24_672x1344.png": {
+   "file": "K_entropy_p32/K_12x24_pitch24_672x1344.png",
+   "groundtruth": "groundtruth/K_entropy_p32__K_12x24_pitch24_672x1344.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 HNH5 MQPC 4CNN AQ67 B7HC XX4Z RBFH 3YNH C4SQ Q8N2"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 R39W 2SS9 LAC4 S2VM CXW2 332L QPDE E35Z 6EPV PQLD"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0056 HE98 UJDQ JCEY WYE6 2EWF XR2A D2Q4 SY66 XLRX EJ5K"
+    },
+    {
+     "id": "n_lines",
+     "q": "How many lines are in the image?",
+     "a": "56"
+    }
+   ],
+   "series": "K_entropy",
+   "style": "random 4-char groups, 24px pitch",
+   "font": "X11 12x24",
+   "cell": "12x24",
+   "pitch": 24,
+   "antialiased": false,
+   "cols": 56,
+   "rows": 56,
+   "payload": "high-entropy",
+   "theoretical_ch_per_token": 2.72,
+   "w": 672,
+   "h": 1344,
+   "chars": 3024,
+   "lines": 56,
+   "megapixels": 0.903,
+   "claude_tokens": 1152,
+   "gpt_tokens": 1058,
+   "chars_per_claude_token": 2.62,
+   "chars_per_gpt_token": 2.86,
+   "text_tokens_equiv": 756,
+   "claude_compression": 0.66,
+   "oversized_for_claude": false
+  },
+  "K2_entropy_narrow_p32/K2_6x9_384x1152.png": {
+   "file": "K2_entropy_narrow_p32/K2_6x9_384x1152.png",
+   "groundtruth": "groundtruth/K2_entropy_narrow_p32__K2_6x9_384x1152.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 39GX KQ2K FZT8 3V9D 9SKP P5A9 4KR4 VYN6 8G3U SZEY SXWE E238"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 FWFD SWJQ GE63 SLZS N23B KW6H ZGXX QK3Z PFAE M6GY ULQV HFUP"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0128 B98E 5ARR 5L9Z UMJQ VFCR WBVN Z5Y7 KATR 6NN5 55GJ KJ3X XP4K"
+    }
+   ],
+   "series": "K2_entropy_narrow",
+   "style": "random 4-char groups, 64-char lines",
+   "font": "X11 6x9",
+   "cell": "6x9",
+   "pitch": 9,
+   "antialiased": false,
+   "cols": 64,
+   "rows": 128,
+   "payload": "high-entropy-narrow",
+   "theoretical_ch_per_token": 14.52,
+   "w": 384,
+   "h": 1152,
+   "chars": 8192,
+   "lines": 128,
+   "megapixels": 0.442,
+   "claude_tokens": 588,
+   "gpt_tokens": 518,
+   "chars_per_claude_token": 13.93,
+   "chars_per_gpt_token": 15.8,
+   "text_tokens_equiv": 2048,
+   "claude_compression": 3.48,
+   "oversized_for_claude": false
+  },
+  "K2_entropy_narrow_p32/K2_6x10_384x1120.png": {
+   "file": "K2_entropy_narrow_p32/K2_6x10_384x1120.png",
+   "groundtruth": "groundtruth/K2_entropy_narrow_p32__K2_6x10_384x1120.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 4HRX 4LKM BMTZ XPXL 5Y3K 6QWH ZK4D YEFR 5L8D FHC5 Y7K3 6LYQ"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 RUFK GURC 7QSA N48T VHUB DAPX 3JXE AAD3 3BQ3 WSLL UNED 6XBF"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0112 APJW VYMJ 7JEA PBTF DQV4 MS9P L8QM FPVB 7KY7 PR3R RXBL SS6Y"
+    }
+   ],
+   "series": "K2_entropy_narrow",
+   "style": "random 4-char groups, 64-char lines",
+   "font": "X11 6x10",
+   "cell": "6x10",
+   "pitch": 10,
+   "antialiased": false,
+   "cols": 64,
+   "rows": 112,
+   "payload": "high-entropy-narrow",
+   "theoretical_ch_per_token": 13.07,
+   "w": 384,
+   "h": 1120,
+   "chars": 7168,
+   "lines": 112,
+   "megapixels": 0.43,
+   "claude_tokens": 560,
+   "gpt_tokens": 504,
+   "chars_per_claude_token": 12.8,
+   "chars_per_gpt_token": 14.22,
+   "text_tokens_equiv": 1792,
+   "claude_compression": 3.2,
+   "oversized_for_claude": false
+  },
+  "K2_entropy_narrow_p32/K2_6x13_384x1248.png": {
+   "file": "K2_entropy_narrow_p32/K2_6x13_384x1248.png",
+   "groundtruth": "groundtruth/K2_entropy_narrow_p32__K2_6x13_384x1248.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 89NW 6PQN 3C74 NGW8 NZJ9 A6SD BK2G SL9K NFER 7ZRZ BXE7 3N23"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 CJ65 DGKW KVK4 JKKA RN3U XG7F 8P94 D8GB BV3G V87Q QT32 8TJT"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0096 GRFQ XTT3 538A Z87G MF24 YF28 JB7A E8Y4 NFDN QVE2 ZTK5 T8N9"
+    }
+   ],
+   "series": "K2_entropy_narrow",
+   "style": "random 4-char groups, 64-char lines",
+   "font": "X11 6x13",
+   "cell": "6x13",
+   "pitch": 13,
+   "antialiased": false,
+   "cols": 64,
+   "rows": 96,
+   "payload": "high-entropy-narrow",
+   "theoretical_ch_per_token": 10.05,
+   "w": 384,
+   "h": 1248,
+   "chars": 6144,
+   "lines": 96,
+   "megapixels": 0.479,
+   "claude_tokens": 630,
+   "gpt_tokens": 562,
+   "chars_per_claude_token": 9.75,
+   "chars_per_gpt_token": 10.94,
+   "text_tokens_equiv": 1536,
+   "claude_compression": 2.44,
+   "oversized_for_claude": false
+  },
+  "K2_entropy_narrow_p32/K2_8x16_448x1600.png": {
+   "file": "K2_entropy_narrow_p32/K2_8x16_448x1600.png",
+   "groundtruth": "groundtruth/K2_entropy_narrow_p32__K2_8x16_448x1600.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 8X8M RA3G NC7L XZJR MB47 PAFG T7W3 QL95 5Y4H B6VH"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 TM5M TYFR P3RF 8PCH CENM ABY9 RV6X 4TZT XXTG G6SW"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0100 FUBE XL96 GXK3 KTVX 736L C8ZW ZJ9M EYZS 6Q8T J7AF"
+    }
+   ],
+   "series": "K2_entropy_narrow",
+   "style": "random 4-char groups, 56-char lines",
+   "font": "X11 8x16",
+   "cell": "8x16",
+   "pitch": 16,
+   "antialiased": false,
+   "cols": 56,
+   "rows": 100,
+   "payload": "high-entropy-narrow",
+   "theoretical_ch_per_token": 6.12,
+   "w": 448,
+   "h": 1600,
+   "chars": 5400,
+   "lines": 100,
+   "megapixels": 0.717,
+   "claude_tokens": 928,
+   "gpt_tokens": 840,
+   "chars_per_claude_token": 5.82,
+   "chars_per_gpt_token": 6.43,
+   "text_tokens_equiv": 1350,
+   "claude_compression": 1.45,
+   "oversized_for_claude": false
+  },
+  "K2_entropy_narrow_p32/K2_9x18_576x1440.png": {
+   "file": "K2_entropy_narrow_p32/K2_9x18_576x1440.png",
+   "groundtruth": "groundtruth/K2_entropy_narrow_p32__K2_9x18_576x1440.txt",
+   "probes": [
+    {
+     "id": "verbatim_first",
+     "q": "Transcribe the first line exactly.",
+     "a": "0001 JLUS SCHP 7AEG ZTCL A2HB G285 U8WQ 3TRL DPXU TB7X WCHQ QRN9"
+    },
+    {
+     "id": "verbatim_second",
+     "q": "Transcribe the second line exactly.",
+     "a": "0002 5VQW L7SD B4JW F3BF SMN4 FNSS CVMV 4H2S CEMY 85V7 HNM6 HSP2"
+    },
+    {
+     "id": "verbatim_last",
+     "q": "Transcribe the final line exactly.",
+     "a": "0080 VSJ2 B7ZU 3HL2 VYK3 U2QZ QGVG 29MQ PUM6 WZC9 7XRK LZR4 59J4"
+    }
+   ],
+   "series": "K2_entropy_narrow",
+   "style": "random 4-char groups, 64-char lines",
+   "font": "X11 9x18",
+   "cell": "9x18",
+   "pitch": 18,
+   "antialiased": false,
+   "cols": 64,
+   "rows": 80,
+   "payload": "high-entropy-narrow",
+   "theoretical_ch_per_token": 4.84,
+   "w": 576,
+   "h": 1440,
+   "chars": 5120,
+   "lines": 80,
+   "megapixels": 0.829,
+   "claude_tokens": 1092,
+   "gpt_tokens": 972,
+   "chars_per_claude_token": 4.69,
+   "chars_per_gpt_token": 5.27,
+   "text_tokens_equiv": 1280,
+   "claude_compression": 1.17,
    "oversized_for_claude": false
   }
  }

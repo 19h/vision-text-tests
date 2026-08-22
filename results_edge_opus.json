@@ -16,7 +16,8 @@
   ],
   "seconds": 37,
   "sample_got": "0001 590X 4Z2N FF7B 34V0 8SVP P5A9 4KB4 WVH6 6G3U 3ZEY",
-  "sample_want": "0001 39GX KQ2K FZT8 3V9D 9SKP P5A9 4KR4 VYN6 8G3U SZEY"
+  "sample_want": "0001 39GX KQ2K FZT8 3V9D 9SKP P5A9 4KR4 VYN6 8G3U SZEY",
+  "ch_per_tok_gpt": 14.32
  },
  {
   "file": "K2_entropy_narrow/K2_6x10_336x1120.png",
@@ -35,7 +36,8 @@
   ],
   "seconds": 45,
   "sample_got": "0001 4HRX 4LXH BHTZ XPXL 5Y3K 6QWH ZK4D YEFR 5L8D FHC5",
-  "sample_want": "0001 4HRX 4LKM BMTZ XPXL 5Y3K 6QWH ZK4D YEFR 5L8D FHC5"
+  "sample_want": "0001 4HRX 4LKM BMTZ XPXL 5Y3K 6QWH ZK4D YEFR 5L8D FHC5",
+  "ch_per_tok_gpt": 13.09
  },
  {
   "file": "K2_entropy_narrow/K2_6x13_336x1456.png",
@@ -54,7 +56,8 @@
   ],
   "seconds": 18,
   "sample_got": "0001 BRWN 6PQN 3C74 NQ48 NZJ9 A6SD BK2G SL9K NFER 7ZRZ",
-  "sample_want": "0001 89NW 6PQN 3C74 NGW8 NZJ9 A6SD BK2G SL9K NFER 7ZRZ"
+  "sample_want": "0001 89NW 6PQN 3C74 NGW8 NZJ9 A6SD BK2G SL9K NFER 7ZRZ",
+  "ch_per_tok_gpt": 9.96
  },
  {
   "file": "K2_entropy_narrow/K2_8x16_448x1456.png",
@@ -73,7 +76,8 @@
   ],
   "seconds": 22,
   "sample_got": "0001 8X8M RA3G NC7L XZJR MB47 PAFG T7W3 QL95 5Y4H B6VH",
-  "sample_want": "0001 8X8M RA3G NC7L XZJR MB47 PAFG T7W3 QL95 5Y4H B6VH"
+  "sample_want": "0001 8X8M RA3G NC7L XZJR MB47 PAFG T7W3 QL95 5Y4H B6VH",
+  "ch_per_tok_gpt": 6.36
  },
  {
   "file": "K2_entropy_narrow/K2_9x18_504x1456.png",
@@ -92,7 +96,8 @@
   ],
   "seconds": 17,
   "sample_got": "0001 JLUS SCHP 7AEG ZTCL A2HB G285 U8WQ 3TRL DPXU TB7X",
-  "sample_want": "0001 JLUS SCHP 7AEG ZTCL A2HB G285 U8WQ 3TRL DPXU TB7X"
+  "sample_want": "0001 JLUS SCHP 7AEG ZTCL A2HB G285 U8WQ 3TRL DPXU TB7X",
+  "ch_per_tok_gpt": 4.89
  },
  {
   "file": "J_pitch/J_clR5x8_pitch10_840x1120.png",
@@ -103,7 +108,8 @@
   "abstained": 0,
   "confidence": "medium",
   "seconds": 22,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 16.03
  },
  {
   "file": "J_pitch/J_4x6_pitch9_1008x1008.png",
@@ -114,7 +120,8 @@
   "abstained": 5,
   "confidence": "low",
   "seconds": 36,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 22.5
  },
  {
   "file": "J_pitch/J_4x6_pitch12_672x1344.png",
@@ -125,7 +132,8 @@
   "abstained": 0,
   "confidence": "low",
   "seconds": 26,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 17.27
  },
  {
   "file": "J_pitch/J_4x6_pitch10_896x1120.png",
@@ -136,7 +144,8 @@
   "abstained": 5,
   "confidence": "low",
   "seconds": 39,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 20.83
  },
  {
   "file": "J_pitch/J_clR6x8_pitch9_1008x1008.png",
@@ -147,7 +156,8 @@
   "abstained": 0,
   "confidence": "medium",
   "seconds": 23,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 14.83
  },
  {
   "file": "K_entropy/K_clR6x8_pitch8_672x896.png",
@@ -158,7 +168,8 @@
   "abstained": 5,
   "confidence": "low",
   "seconds": 19,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 17.3
  },
  {
   "file": "K_entropy/K_6x9_pitch9_1008x1008.png",
@@ -169,7 +180,8 @@
   "abstained": 5,
   "confidence": "low",
   "seconds": 31,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 14.95
  },
  {
   "file": "K_entropy/K_4x6_pitch9_1008x1008.png",
@@ -180,7 +192,8 @@
   "abstained": 5,
   "confidence": "low",
   "seconds": 23,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 22.7
  },
  {
   "file": "K_entropy/K_clR5x8_pitch9_980x1008.png",
@@ -191,7 +204,8 @@
   "abstained": 5,
   "confidence": "low",
   "seconds": 17,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 18.25
  },
  {
   "file": "K_entropy/K_6x10_pitch10_672x1120.png",
@@ -202,7 +216,8 @@
   "abstained": 5,
   "confidence": "low",
   "seconds": 50,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 13.84
  },
  {
   "file": "K_entropy/K_6x13_pitch13_672x1456.png",
@@ -213,7 +228,8 @@
   "abstained": 2,
   "confidence": "low",
   "seconds": 64,
-  "reconstructed_from": "eval_edge.log"
+  "reconstructed_from": "eval_edge.log",
+  "ch_per_tok_gpt": 10.53
  },
  {
   "file": "K_entropy/K_9x18_pitch18_504x1512.png",
@@ -224,7 +240,8 @@
   "abstained": 0,
   "confidence": "medium",
   "seconds": 19,
-  "reconstructed_from": "eval_edge2.log"
+  "reconstructed_from": "eval_edge2.log",
+  "ch_per_tok_gpt": 4.92
  },
  {
   "file": "K_entropy/K_7x14_pitch14_448x1568.png",
@@ -235,7 +252,8 @@
   "abstained": 0,
   "confidence": "low",
   "seconds": 28,
-  "reconstructed_from": "eval_edge2.log"
+  "reconstructed_from": "eval_edge2.log",
+  "ch_per_tok_gpt": 8.71
  },
  {
   "file": "K_entropy/K_8x16_pitch16_448x1568.png",
@@ -246,7 +264,8 @@
   "abstained": 0,
   "confidence": "medium",
   "seconds": 34,
-  "reconstructed_from": "eval_edge2.log"
+  "reconstructed_from": "eval_edge2.log",
+  "ch_per_tok_gpt": 6.43
  },
  {
   "file": "K_entropy/K_10x20_pitch20_560x1540.png",
@@ -257,7 +276,8 @@
   "abstained": 0,
   "confidence": "medium",
   "seconds": 21,
-  "reconstructed_from": "eval_edge2.log"
+  "reconstructed_from": "eval_edge2.log",
+  "ch_per_tok_gpt": 3.93
  },
  {
   "file": "K_entropy/K_12x24_pitch24_672x1344.png",
@@ -268,7 +288,8 @@
   "abstained": 0,
   "confidence": "high",
   "seconds": 17,
-  "reconstructed_from": "eval_edge2.log"
+  "reconstructed_from": "eval_edge2.log",
+  "ch_per_tok_gpt": 2.86
  },
  {
   "file": "H_packing/H_clR6x8_672x896.png",
@@ -287,7 +308,8 @@
   ],
   "seconds": 28,
   "sample_got": "UNREADABLE",
-  "sample_want": "0001 7YBKW Depot Kilo quarantined 5058 cases of ballast on route 7; no damage reported; temperature "
+  "sample_want": "0001 7YBKW Depot Kilo quarantined 5058 cases of ballast on route 7; no damage reported; temperature ",
+  "ch_per_tok_gpt": 16.95
  },
  {
   "file": "H_packing/H_clR5x10_840x1120.png",
@@ -306,7 +328,8 @@
   ],
   "seconds": 18,
   "sample_got": "0001 XWE4Z The cold store logged 8450 rolls of felt under seal 4MBR; photograph E64 attached; signat",
-  "sample_want": "0001 XWE4Z The cold store logged 8450 rolls of felt under seal 4MBR; photograph E64 attached; signat"
+  "sample_want": "0001 XWE4Z The cold store logged 8450 rolls of felt under seal 4MBR; photograph E64 attached; signat",
+  "ch_per_tok_gpt": 16.07
  },
  {
   "file": "J_pitch/J_clR5x6_pitch9_980x1008.png",
@@ -325,7 +348,8 @@
   ],
   "seconds": 50,
   "sample_got": "HQ5JU The relay station dispatched 2928 tubs of pitch pending review VSZ; gate camera 8 clear; drive",
-  "sample_want": "0001 NQ5VV The relay station dispatched 2925 tubs of pitch pending review VSZ; gate camera 8 clear; "
+  "sample_want": "0001 NQ5VV The relay station dispatched 2925 tubs of pitch pending review VSZ; gate camera 8 clear; ",
+  "ch_per_tok_gpt": 17.93
  },
  {
   "file": "J_pitch/J_clR5x8_pitch9_980x1008.png",
@@ -344,7 +368,8 @@
   ],
   "seconds": 27,
   "sample_got": "0001 4LR3L The relay station relabelled 2083 trays of quartz via gate 12; driver badge UJFP; on firs",
-  "sample_want": "0001 4LA3L The relay station relabelled 2803 trays of quartz via gate 12; driver badge UJFP; barcode"
+  "sample_want": "0001 4LA3L The relay station relabelled 2803 trays of quartz via gate 12; driver badge UJFP; barcode",
+  "ch_per_tok_gpt": 17.97
  },
  {
   "file": "J_pitch/J_5x7_pitch9_980x1008.png",
@@ -363,6 +388,7 @@
   ],
   "seconds": 29,
   "sample_got": "K97SZ Line Charlie weighed 1125 boxes of ferrite by lift 5; temperature held at 3C; driver badge RNF",
-  "sample_want": "0001 K97SZ Line Charlie weighed 1125 boxes of ferrite by lift 5; temperature held at 3C; two seals b"
+  "sample_want": "0001 K97SZ Line Charlie weighed 1125 boxes of ferrite by lift 5; temperature held at 3C; two seals b",
+  "ch_per_tok_gpt": 17.93
  }
 ]

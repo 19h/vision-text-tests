@@ -11,10 +11,11 @@ import os, sys, json, re, random, subprocess, time, argparse, difflib, math
 from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_lib import bitmap, canvas, draw_lines, tokens
+import providers as P
 ROOT = os.path.dirname(os.path.abspath(__file__))
 B32 = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"     # Crockford
 
-PROMPT = ("Read the image at {p}\n\n"
+PROMPT = ("{head}"
           "The FIRST line of text, at the very top, contains one field enclosed in square\n"
           "brackets. Transcribe exactly the characters BETWEEN the brackets - not the\n"
           "brackets themselves, and nothing else.\n"
@@ -53,25 +54,23 @@ def render(cell, cw, lh, enc, bits, seed):
     im, d = canvas(w, h); draw_lines(d, f, lines, 0, 0, lh=lh)
     return im, lines, vals, w, h, cols, rows
 
-def one(job, model):
+def one(job, model, effort='low'):
     cell, cw, lh, enc, bits, rep = job
     im, lines, vals, w, h, cols, rows = render(cell, cw, lh, enc, bits, f'r{rep}')
     dd = os.path.join(ROOT, 'images', 'DELIM'); os.makedirs(dd, exist_ok=True)
     p = os.path.join(dd, f'{cell}_{enc}{bits}_r{rep}.png'); im.save(p)
     want_s = lines[0][lines[0].index('[') + 1:lines[0].index(']')]
     t0 = time.time()
-    r = subprocess.run(['claude', '-p', '--allowedTools', 'Read', '--disallowedTools',
-                        'Bash,Write,Edit,Glob,Grep,Task,WebFetch,WebSearch',
-                        '--model', model, PROMPT.format(p=p)],
-                       capture_output=True, text=True, timeout=600, cwd=ROOT)
-    got = ''
-    for c in reversed(re.findall(r'\{.*?\}', r.stdout, re.S)):
-        try: got = json.loads(c).get('field', ''); break
-        except json.JSONDecodeError: continue
+    prov = P.provider_for(model)
+    rr = P.run(PROMPT.format(head=P.image_head(prov, p)), model=model,
+               images=P.images_for(prov, [p]), effort=effort, timeout=900, cwd=ROOT)
+    ans = P.parse_json_answer(rr['text'])
+    got = (ans or {}).get('field', '') if isinstance(ans, dict) else ''
     got = (got or '').strip()
     dec = dec_hex if enc == 'hex' else dec_b32
     gv, wv = (None if got.upper() == 'UNREADABLE' else dec(got)), vals[0]
     res = dict(cell=f'{cw}x{lh}', enc=enc, bits=bits, chars=len(want_s), rep=rep,
+               model=model, provider=P.provider_for(model), effort=effort,
                literal=got == want_s, value=(gv == wv), got=got, want=want_s,
                abstain=got.upper() == 'UNREADABLE',
                cer=round(1 - difflib.SequenceMatcher(None, got, want_s).ratio(), 4),
@@ -84,13 +83,14 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--model', default='opus'); ap.add_argument('--reps', type=int, default=20)
     ap.add_argument('--cell', default='6x13'); ap.add_argument('--jobs', type=int, default=3)
+    ap.add_argument('--effort', default='low')
     a = ap.parse_args()
     cw, lh = (int(x) for x in re.match(r'(?:\D*)(\d+)x(\d+)', a.cell).groups())
     jobs = [(a.cell, cw, lh, e, b, r) for b in (128, 64) for e in ('hex', 'b32')
             for r in range(1, a.reps + 1)]
     print(f"{len(jobs)} runs: {a.cell}, equal-information delimited fields")
     with ThreadPoolExecutor(a.jobs) as ex:
-        out = list(ex.map(lambda j: one(j, a.model), jobs))
+        out = list(ex.map(lambda j: one(j, a.model, a.effort), jobs))
     json.dump(out, open(os.path.join(ROOT, f'results_delim_{a.cell}_{a.model}.json'), 'w'), indent=1)
     print(f"\n{'enc':6s}{'bits':>5s}{'chars':>6s}{'literal':>9s}{'value':>8s}")
     for b in (128, 64):

@@ -3,9 +3,14 @@
 import json, os, sys, glob
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_eval import grade, best_line, norm, KEY, ROOT
+SKIP = ('confirm', 'ebind1', 'span', 'delim', 'edge', 'geometry')
 for f in sys.argv[1:] or glob.glob(os.path.join(ROOT, 'results_*.json')):
-    data = json.load(open(f)); changed = 0
+    if not sys.argv[1:] and any(x in os.path.basename(f) for x in SKIP): continue
+    data = json.load(open(f))
+    if not isinstance(data, list): continue
+    changed = 0
     for r in data:
+        if not isinstance(r, dict) or 'file' not in r or r['file'] not in KEY: continue
         v = KEY[r['file']]
         gt = open(os.path.join(ROOT, v['groundtruth'])).read().split('\n')
         codes, sims, legs, ab, mis = [], [], [], 0, 0

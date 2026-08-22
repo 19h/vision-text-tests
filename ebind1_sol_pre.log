@@ -1,0 +1,87 @@
+E-BIND-1 preflight arm A: 75 calls, model=gpt-5.6-sol, 72 records in 6 blocks
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 absent  -> W0 (ok) 6s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> D  (range) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 absent  -> D0 (tag_fail) 5s
+  image hex  rep1 present -> C  (ok) 6s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 absent  -> W0 (ok) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> D  (tag_fail) 6s
+  image hex  rep1 absent  -> W0 (ok) 6s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> D  (tag_fail) 5s
+  image hex  rep1 present -> C  (ok) 5s
+  image hex  rep1 present -> C  (ok) 7s
+  image hex  rep1 absent  -> D0 (tag_fail) 5s
+  image b32  rep1 absent  -> D0 (range) 5s
+  image b32  rep1 present -> D  (tag_fail) 5s
+  image b32  rep1 present -> C  (ok) 5s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 present -> C  (ok) 6s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 present -> D  (tag_fail) 6s
+  image b32  rep1 present -> D  (tag_fail) 5s
+  image b32  rep1 present -> A  (-) 10s
+  image b32  rep1 absent  -> D0 (tag_fail) 5s
+  image b32  rep1 present -> D  (tag_fail) 5s
+  image b32  rep1 present -> D  (tag_fail) 6s
+  image b32  rep1 absent  -> D0 (range) 5s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 present -> D  (tag_fail) 5s
+  image b32  rep1 present -> C  (ok) 5s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 present -> D  (tag_fail) 5s
+  image b32  rep1 absent  -> D0 (tag_fail) 5s
+  image b32  rep1 present -> C  (ok) 7s
+  image b32  rep1 present -> D  (range) 6s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 absent  -> D0 (range) 6s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 absent  -> N  (-) 14s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 present -> C  (ok) 15s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 7s
+  text  hex  rep1 absent  -> N  (-) 27s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 absent  -> N  (-) 20s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 11s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 present -> C  (ok) 6s
+  text  hex  rep1 absent  -> N  (-) 19s
+  text  hex  rep1 present -> C  (ok) 9s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 absent  -> N  (-) 17s
+
+image/hex: C=17  D=3  D0=2  W0=3
+  P(correct block) = 17/20
+
+image/b32: A=1  C=4  D=15  D0=5
+  P(correct block) = 4/20
+
+text/hex: C=20  N=5
+  P(correct block) = 20/20
+
+-> results_ebind1_preflight_A_gpt-5.6-sol.json

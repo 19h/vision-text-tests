@@ -1,0 +1,20 @@
+geometry/rate: 12 calls, model=gpt-5.6-sol, effort=low, patch=32, cli=codex-cli 0.147.0
+  224x224 rep1: input=14048 cached=2816 ok=True
+  448x448 rep1: input=14225 cached=0 ok=True
+  896x896 rep1: input=14930 cached=9984 ok=True
+  1344x1344 rep1: input=16108 cached=13056 ok=True
+  224x224 rep2: input=14048 cached=9984 ok=True
+  448x448 rep2: input=14225 cached=9984 ok=True
+  896x896 rep2: input=14930 cached=0 ok=True
+  1344x1344 rep2: input=16108 cached=0 ok=True
+  224x224 rep3: input=14048 cached=9984 ok=True
+  448x448 rep3: input=14225 cached=9984 ok=True
+  896x896 rep3: input=14930 cached=0 ok=True
+  1344x1344 rep3: input=15900 cached=0 ok=True
+
+      canvas    pixels  patches  n     min  median  d(px)/d(tok)
+     224x224     50176       49  3   14048   14048              
+     448x448    200704      196  3   14225   14225           850
+     896x896    802816      784  3   14930   14930           854
+   1344x1344   1806336     1764  3   15900   16108          1035
+-> results_geometry_rate_gpt-5.6-sol.json

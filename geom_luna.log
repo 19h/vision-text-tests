@@ -1,0 +1,16 @@
+geometry/rate: 8 calls, model=gpt-5.6-luna, effort=low, patch=32, cli=codex-cli 0.147.0
+  448x448 rep1: input=12661 cached=0 ok=True
+  896x896 rep1: input=13366 cached=8960 ok=True
+  1600x1600 rep1: input=15428 cached=8960 ok=True
+  1664x1664 rep1: input=15428 cached=8960 ok=True
+  448x448 rep2: input=12453 cached=0 ok=True
+  896x896 rep2: input=13366 cached=8960 ok=True
+  1600x1600 rep2: input=15428 cached=8960 ok=True
+  1664x1664 rep2: input=15428 cached=0 ok=True
+
+      canvas    pixels  patches  n     min  median  d(px)/d(tok)
+     448x448    200704      196  2   12453   12557              
+     896x896    802816      784  2   13366   13366           659
+   1600x1600   2560000     2500  2   15428   15428           852
+   1664x1664   2768896     2704  2   15428   15428           n/a
+-> results_geometry_rate_gpt-5.6-luna.json

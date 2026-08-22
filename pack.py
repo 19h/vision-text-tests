@@ -14,19 +14,21 @@ import os, re, sys, json, math, random, argparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import generate as G
 from gen_lib import *
+from gen_lib import image_tokens, chars_per_token
 
 LCM = 224                                  # lcm(28, 32): divides evenly for both models
+SFX = ''   # set to '_p32' etc. when generating for a non-28 grid
 
 def lcm(a, b): return a * b // math.gcd(a, b)
 
 def waste(cw, lh, w, h):
     return 1 - ((w // cw) * cw * (h // lh) * lh) / (w * h)
 
-def exact_fit(cw, lh, lo=600_000, hi=1_050_000, target_rows=112):
+def exact_fit(cw, lh, lo=600_000, hi=1_050_000, target_rows=112, patch=CLAUDE_PATCH):
     """Zero-waste canvas: 224 | w,h and cw|w, lh|h.  Among the fits, prefer one whose
     row count is near `target_rows`, so candidates differ in glyph size but not in how
     many rows the model has to count.  Falls back to minimum-waste if no exact fit."""
-    for unit in (LCM, CLAUDE_PATCH):      # 224 divides both grids; 28 is Claude-exact only
+    for unit in (LCM, patch):             # 224 divides both grids; `patch` is provider-exact
         uw, uh = lcm(unit, cw), lcm(unit, lh)
         best = None
         for w in range(uw, 1569, uw):
@@ -46,21 +48,25 @@ def exact_fit(cw, lh, lo=600_000, hi=1_050_000, target_rows=112):
             if best is None or score < best[0]: best = (score, w, h)
     return (best[1], best[2]) if best else (896, 896)
 
-def frontier(maxarea=140):
+def frontier(maxarea=140, patch=CLAUDE_PATCH, mult=1.0):
     names = [f[:-7] for f in os.listdir(X11)
              if re.fullmatch(r'(cl[RBI]\d+x\d+|\d+x\d+[BO]?)\.pcf\.gz', f)]
     out = []
     for n in sorted(names):
         m = re.search(r'(\d+)x(\d+)', n); cw, lh = int(m.group(1)), int(m.group(2))
         if cw * lh > maxarea: continue
-        w, h = exact_fit(cw, lh)
+        w, h = exact_fit(cw, lh, patch=patch)
         if not w: continue
         out.append(dict(font=n, cw=cw, lh=lh, area=cw * lh, w=w, h=h,
                         cols=w // cw, rows=h // lh, chars=(w // cw) * (h // lh),
-                        claude_tokens=w * h // 784, gpt_tokens=math.ceil(w/32) * math.ceil(h/32),
-                        ch_per_claude=784 / (cw * lh), ch_per_gpt=1024 / (cw * lh),
+                        claude_tokens=w * h // 784,
+                        gpt_tokens=math.ceil(w/32) * math.ceil(h/32) * 1.2,
+                        tokens=image_tokens(w, h, patch, mult),
+                        ch_per_claude=chars_per_token(cw, lh, 28, 1.0),
+                        ch_per_gpt=chars_per_token(cw, lh, 32, 1.2),
+                        ch_per_token=chars_per_token(cw, lh, patch, mult),
                         waste_pct=round(waste(cw, lh, w, h) * 100, 2)))
-    out.sort(key=lambda r: -r['ch_per_claude'])
+    out.sort(key=lambda r: -r['ch_per_token'])
     return out
 
 def packed_page(fontname, w, h, seed, pad=0):
@@ -77,13 +83,13 @@ def packed_page(fontname, w, h, seed, pad=0):
 CANDIDATES = ['clR5x6', 'clR6x6', 'clR5x8', 'clR6x8', 'clR5x10', 'clR7x8',
               '6x9', 'clB6x10', 'clR8x8']
 
-def series_H():
+def series_H(patch=CLAUDE_PATCH):
     print("\n[H] packing frontier - zero-waste canvases around the legibility floor")
     for name in CANDIDATES:
         m = re.search(r'(\d+)x(\d+)', name); cw, lh = int(m.group(1)), int(m.group(2))
-        w, h = exact_fit(cw, lh)
+        w, h = exact_fit(cw, lh, patch=patch)
         im, lines, meta, rows, cols, f = packed_page(name, w, h, 'H' + name)
-        G.emit(f"H_packing/H_{name}_{w}x{h}.png", im, '\n'.join(lines),
+        G.emit(f"H_packing{SFX}/H_{name}_{w}x{h}.png", im, '\n'.join(lines),
                dict(series='H_packing', style='zero-waste maximal packing', font=f'X11 {name}',
                     cell=f'{cw}x{lh}', cap_height_px=lh, antialiased=False, cols=cols, rows=rows,
                     theoretical_ch_per_token=round(784 / (cw * lh), 2)),
@@ -111,17 +117,22 @@ def merge_key():
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(); ap.add_argument('--table', action='store_true')
+    ap.add_argument('--patch', type=int, default=CLAUDE_PATCH)
+    ap.add_argument('--mult', type=float, default=1.0)
     a = ap.parse_args()
+    if a.patch != CLAUDE_PATCH:
+        SFX = f'_p{a.patch}'
+        globals()['SFX'] = SFX
     if a.table:
         print(f"{'font':9s}{'cell':>6s}{'px/ch':>6s}{'canvas':>12s}{'cols':>5s}{'rows':>5s}"
               f"{'chars':>8s}{'cl-tok':>7s}{'ch/cl':>7s}{'ch/gpt':>7s}{'waste':>7s}")
-        for r in frontier():
+        for r in frontier(patch=a.patch, mult=a.mult):
             print(f"{r['font']:9s}{r['cw']}x{r['lh']:<4d}{r['area']:>6d}"
                   f"{str(r['w'])+'x'+str(r['h']):>12s}{r['cols']:>5d}{r['rows']:>5d}"
                   f"{r['chars']:>8d}{r['claude_tokens']:>7d}{r['ch_per_claude']:>7.1f}"
                   f"{r['ch_per_gpt']:>7.1f}{r['waste_pct']:>6.1f}%")
         sys.exit()
-    series_H(); series_I(); merge_key()
+    series_H(patch=a.patch); series_I(); merge_key()
 
 # ---------------------------------------------------------------- J: pitch vs glyph size
 # Series A-H confound glyph design with row pitch: every X11 face has a fixed cell.
@@ -129,18 +140,18 @@ if __name__ == '__main__':
 PITCH_GRID = [('4x6', 9), ('4x6', 10), ('4x6', 12), ('clR5x6', 9),
               ('clR5x8', 9), ('clR5x8', 10), ('clR6x8', 9), ('5x7', 9)]
 
-def series_J():
+def series_J(patch=CLAUDE_PATCH):
     print("\n[J] pitch decoupled from glyph size - same font, taller line step")
     for name, pitch in PITCH_GRID:
         m = re.search(r'(\d+)x(\d+)', name); cw, nat = int(m.group(1)), int(m.group(2))
-        w, h = exact_fit(cw, pitch)
+        w, h = exact_fit(cw, pitch, patch=patch)
         f = bitmap(name)
         cols, rows = w // cw, h // pitch
         rng = random.Random(f'J{name}@{pitch}')
         lines, meta = numbered_lines(rng, cols, rows)
         im, d = canvas(w, h)
         draw_lines(d, f, lines, 0, 0, lh=pitch)          # <- pitch overrides the font cell
-        G.emit(f"J_pitch/J_{name}_pitch{pitch}_{w}x{h}.png", im, '\n'.join(lines),
+        G.emit(f"J_pitch{SFX}/J_{name}_pitch{pitch}_{w}x{h}.png", im, '\n'.join(lines),
                dict(series='J_pitch', style=f'{name} glyphs at {pitch}px row pitch',
                     font=f'X11 {name}', cell=f'{cw}x{pitch}', glyph_cell=f'{cw}x{nat}',
                     pitch=pitch, antialiased=False, cols=cols, rows=rows,
@@ -168,11 +179,11 @@ def entropy_lines(rng, cols, rows, group=4):
 ENTROPY_GRID = [('clR6x8', 8), ('6x9', 9), ('4x6', 9), ('clR5x8', 9), ('6x10', 10), ('6x13', 13),
                 ('7x14', 14), ('8x16', 16), ('9x18', 18), ('10x20', 20), ('12x24', 24)]
 
-def series_K():
+def series_K(patch=CLAUDE_PATCH):
     print("\n[K] high-entropy payload - same geometry, no linguistic redundancy")
     for name, pitch in ENTROPY_GRID:
         m = re.search(r'(\d+)x(\d+)', name); cw = int(m.group(1))
-        w, h = exact_fit(cw, pitch)
+        w, h = exact_fit(cw, pitch, patch=patch)
         f = bitmap(name)
         cols, rows = w // cw, h // pitch
         rng = random.Random(f'K{name}@{pitch}')
@@ -183,7 +194,7 @@ def series_K():
                   dict(id='verbatim_second', q="Transcribe the second line exactly.", a=lines[1]),
                   dict(id='verbatim_last', q="Transcribe the final line exactly.", a=lines[-1]),
                   dict(id='n_lines', q="How many lines are in the image?", a=str(rows))]
-        G.emit(f"K_entropy/K_{name}_pitch{pitch}_{w}x{h}.png", im, '\n'.join(lines),
+        G.emit(f"K_entropy{SFX}/K_{name}_pitch{pitch}_{w}x{h}.png", im, '\n'.join(lines),
                dict(series='K_entropy', style=f'random 4-char groups, {pitch}px pitch',
                     font=f'X11 {name}', cell=f'{cw}x{pitch}', pitch=pitch, antialiased=False,
                     cols=cols, rows=rows, payload='high-entropy',
@@ -194,14 +205,15 @@ def series_K():
 # refusal rather than reading.  Same cells, ~56-char lines: same density, small answer.
 K2_GRID = [('6x9', 9), ('6x10', 10), ('6x13', 13), ('8x16', 16), ('9x18', 18)]
 
-def series_K2():
+def series_K2(patch=CLAUDE_PATCH):
     print("\n[K2] high-entropy, narrow pages - reading isolated from transcription burden")
     for name, pitch in K2_GRID:
         cw = int(re.search(r'(\d+)x', name).group(1))
-        uw = lcm(CLAUDE_PATCH, cw)
+        uw = lcm(patch, cw)
         w = uw * max(1, round(56 * cw / uw))          # ~56 columns
-        h = lcm(CLAUDE_PATCH, pitch) * max(1, round(112 * pitch / lcm(CLAUDE_PATCH, pitch)))
-        h = min(h, 1456)
+        uh = lcm(patch, pitch)
+        max_h = 1600 if patch == 32 else 1456         # provider max square
+        h = uh * max(1, min(round(112 * pitch / uh), max_h // uh))   # stay a multiple of uh
         f = bitmap(name)
         cols, rows = w // cw, h // pitch
         rng = random.Random(f'K2{name}')
@@ -211,7 +223,7 @@ def series_K2():
         probes = [dict(id='verbatim_first', q="Transcribe the first line exactly.", a=lines[0]),
                   dict(id='verbatim_second', q="Transcribe the second line exactly.", a=lines[1]),
                   dict(id='verbatim_last', q="Transcribe the final line exactly.", a=lines[-1])]
-        G.emit(f"K2_entropy_narrow/K2_{name}_{w}x{h}.png", im, '\n'.join(lines),
+        G.emit(f"K2_entropy_narrow{SFX}/K2_{name}_{w}x{h}.png", im, '\n'.join(lines),
                dict(series='K2_entropy_narrow', style=f'random 4-char groups, {cols}-char lines',
                     font=f'X11 {name}', cell=f'{cw}x{pitch}', pitch=pitch, antialiased=False,
                     cols=cols, rows=rows, payload='high-entropy-narrow',

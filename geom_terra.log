@@ -1,0 +1,16 @@
+geometry/rate: 8 calls, model=gpt-5.6-terra, effort=low, patch=32, cli=codex-cli 0.147.0
+  448x448 rep1: input=14225 cached=0 ok=True
+  896x896 rep1: input=14930 cached=13056 ok=True
+  1600x1600 rep1: input=16992 cached=2816 ok=True
+  1664x1664 rep1: input=16992 cached=12032 ok=True
+  448x448 rep2: input=14225 cached=9984 ok=True
+  896x896 rep2: input=14930 cached=13056 ok=True
+  1600x1600 rep2: input=16992 cached=0 ok=True
+  1664x1664 rep2: input=16992 cached=12032 ok=True
+
+      canvas    pixels  patches  n     min  median  d(px)/d(tok)
+     448x448    200704      196  2   14225   14225              
+     896x896    802816      784  2   14930   14930           854
+   1600x1600   2560000     2500  2   16992   16992           852
+   1664x1664   2768896     2704  2   16992   16992           n/a
+-> results_geometry_rate_gpt-5.6-terra.json

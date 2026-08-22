@@ -1,0 +1,87 @@
+E-BIND-1 preflight arm A: 75 calls, model=gpt-5.6-luna, 72 records in 6 blocks
+  image hex  rep1 present -> A  (-) 7s
+  image hex  rep1 absent  -> N  (-) 7s
+  image hex  rep1 present -> D  (tag_fail) 4s
+  image hex  rep1 present -> D  (range) 8s
+  image hex  rep1 present -> A  (-) 10s
+  image hex  rep1 present -> D  (range) 14s
+  image hex  rep1 present -> A  (-) 13s
+  image hex  rep1 present -> D  (tag_fail) 7s
+  image hex  rep1 present -> D  (range) 6s
+  image hex  rep1 present -> D  (tag_fail) 5s
+  image hex  rep1 absent  -> N  (-) 13s
+  image hex  rep1 present -> D  (tag_fail) 5s
+  image hex  rep1 present -> D  (tag_fail) 5s
+  image hex  rep1 absent  -> N  (-) 12s
+  image hex  rep1 present -> D  (tag_fail) 5s
+  image hex  rep1 present -> D  (range) 4s
+  image hex  rep1 present -> D  (range) 15s
+  image hex  rep1 present -> D  (tag_fail) 12s
+  image hex  rep1 absent  -> N  (-) 7s
+  image hex  rep1 present -> C  (ok) 4s
+  image hex  rep1 present -> D  (tag_fail) 23s
+  image hex  rep1 present -> A  (-) 6s
+  image hex  rep1 present -> D  (range) 9s
+  image hex  rep1 present -> A  (-) 12s
+  image hex  rep1 absent  -> N  (-) 12s
+  image b32  rep1 absent  -> N  (-) 6s
+  image b32  rep1 present -> D  (tag_fail) 5s
+  image b32  rep1 present -> A  (-) 9s
+  image b32  rep1 present -> D  (range) 10s
+  image b32  rep1 present -> D  (range) 10s
+  image b32  rep1 present -> D  (range) 9s
+  image b32  rep1 present -> D  (range) 16s
+  image b32  rep1 present -> D  (range) 8s
+  image b32  rep1 present -> D  (range) 15s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 absent  -> D0 (range) 14s
+  image b32  rep1 present -> D  (range) 8s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 absent  -> N  (-) 7s
+  image b32  rep1 present -> A  (-) 15s
+  image b32  rep1 present -> A  (-) 13s
+  image b32  rep1 present -> D  (range) 5s
+  image b32  rep1 present -> D  (range) 14s
+  image b32  rep1 absent  -> N  (-) 7s
+  image b32  rep1 present -> D  (range) 9s
+  image b32  rep1 present -> A  (-) 31s
+  image b32  rep1 present -> D  (range) 14s
+  image b32  rep1 present -> A  (-) 11s
+  image b32  rep1 present -> A  (-) 19s
+  image b32  rep1 absent  -> N  (-) 20s
+  text  hex  rep1 absent  -> N  (-) 29s
+  text  hex  rep1 present -> C  (ok) 14s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 15s
+  text  hex  rep1 present -> C  (ok) 13s
+  text  hex  rep1 present -> C  (ok) 27s
+  text  hex  rep1 present -> C  (ok) 13s
+  text  hex  rep1 present -> C  (ok) 10s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 absent  -> N  (-) 33s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 absent  -> N  (-) 27s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 5s
+  text  hex  rep1 present -> C  (ok) 23s
+  text  hex  rep1 present -> C  (ok) 23s
+  text  hex  rep1 absent  -> N  (-) 19s
+  text  hex  rep1 present -> C  (ok) 21s
+  text  hex  rep1 present -> C  (ok) 9s
+  text  hex  rep1 present -> C  (ok) 15s
+  text  hex  rep1 present -> C  (ok) 16s
+  text  hex  rep1 absent  -> N  (-) 43s
+
+image/hex: A=5  C=1  D=14  N=5
+  P(correct block) = 1/20
+
+image/b32: A=6  D=14  D0=1  N=4
+  P(correct block) = 0/20
+
+text/hex: C=20  N=5
+  P(correct block) = 20/20
+
+-> results_ebind1_preflight_A_gpt-5.6-luna.json

@@ -10,7 +10,9 @@
   "got": "f63c b66",
   "want": "f63c b66",
   "abstain": false,
-  "seconds": 11
+  "seconds": 11,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -23,7 +25,9 @@
   "got": "5af0 86e",
   "want": "5af0 86e",
   "abstain": false,
-  "seconds": 13
+  "seconds": 13,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -36,7 +40,9 @@
   "got": "2a4a 607",
   "want": "2a4a 607",
   "abstain": false,
-  "seconds": 11
+  "seconds": 11,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -49,7 +55,9 @@
   "got": "f63c b663 6fd9 d",
   "want": "f63c b663 6fd9 d",
   "abstain": false,
-  "seconds": 11
+  "seconds": 11,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -62,7 +70,9 @@
   "got": "5af0 86ee 9785 a",
   "want": "5af0 86ee 9785 a",
   "abstain": false,
-  "seconds": 11
+  "seconds": 11,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -75,7 +85,9 @@
   "got": "2a4a 6078 0dfc 7",
   "want": "2a4a 6078 0dfc 7",
   "abstain": false,
-  "seconds": 13
+  "seconds": 13,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -88,7 +100,9 @@
   "got": "f63c b663 6fd9 d4aa 44a2 4c4a c3",
   "want": "f63c b663 6fd9 d4aa 44a2 4c4a c3",
   "abstain": false,
-  "seconds": 15
+  "seconds": 15,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -101,7 +115,9 @@
   "got": "5af0 86ee 9785 a7d1 d5bd f848 ca",
   "want": "5af0 86ee 9785 a7d1 d5bd f848 ca",
   "abstain": false,
-  "seconds": 15
+  "seconds": 15,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -114,7 +130,9 @@
   "got": "2a4a 6078 0dfc 7e60 171f 9c26 af",
   "want": "2a4a 6078 0dfc 7e60 171f 9c26 af",
   "abstain": false,
-  "seconds": 14
+  "seconds": 14,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -127,7 +145,9 @@
   "got": "f63c b663 6fd9 d4aa 44a2 4c4a c3ed 204c 4dca 1981 e",
   "want": "f63c b663 6fd9 d4aa 44a2 4c4a c3ed 204c 4dca 1981 e",
   "abstain": false,
-  "seconds": 15
+  "seconds": 15,
+  "prefix": true,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -140,7 +160,9 @@
   "got": "5af0 86ee 9785 a7d1 d5bd f848 ca17 09a6 b470 377d 3",
   "want": "5af0 86ee 9785 a7d1 d5bd f848 ca17 09a6 b470 377d 7",
   "abstain": false,
-  "seconds": 22
+  "seconds": 22,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "9x18",
@@ -153,6 +175,8 @@
   "got": "UNREADABLE",
   "want": "2a4a 6078 0dfc 7e60 171f 9c26 af15 80cc 940c a087 c",
   "abstain": true,
-  "seconds": 77
+  "seconds": 77,
+  "prefix": false,
+  "overlong": false
  }
 ]

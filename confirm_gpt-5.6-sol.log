@@ -1,0 +1,76 @@
+{
+ "version": "confirm-v1",
+ "model": "gpt-5.6-sol",
+ "reps": 2,
+ "cells": [
+  "clR5x10",
+  "6x13",
+  "8x16"
+ ],
+ "payloads": [
+  "prose",
+  "alnum_easy",
+  "hex",
+  "b64"
+ ],
+ "line_chars": 56,
+ "prompt_decode_sha": "87a08dbd92ac5be4",
+ "prompt_bind_sha": "bc791e06d6f9d11e",
+ "harness_sha": "ff3acf98bea39cf5",
+ "provider": "codex",
+ "effort": "low",
+ "cli_version": "codex-cli 0.147.0",
+ "image_delivery": "attached (-i)",
+ "tools_allowed": "Read",
+ "n_runs": 48
+}
+  clR5x10  prose      rep1 decode exact=False cer=0.018 disp=None 5s
+  clR5x10  prose      rep1 bind   exact=True  cer=0.000 disp=0 8s
+  clR5x10  prose      rep2 decode exact=False cer=0.018 disp=None 5s
+  clR5x10  prose      rep2 bind   exact=False cer=0.600 disp=1 10s
+  clR5x10  alnum_easy rep1 decode exact=False cer=0.053 disp=None 15s
+  clR5x10  alnum_easy rep1 bind   exact=False cer=0.929 disp=None 9s
+  clR5x10  hex        rep1 decode exact=False cer=1.000 disp=None 14s
+  clR5x10  hex        rep1 bind   exact=False cer=1.000 disp=None 14s
+  clR5x10  alnum_easy rep2 decode exact=False cer=0.089 disp=None 5s
+  clR5x10  alnum_easy rep2 bind   exact=False cer=0.107 disp=0 29s
+  clR5x10  hex        rep2 decode exact=False cer=0.036 disp=None 14s
+  clR5x10  hex        rep2 bind   exact=False cer=1.000 disp=None 16s
+  clR5x10  b64        rep1 decode exact=False cer=0.143 disp=None 10s
+  clR5x10  b64        rep1 bind   exact=False cer=0.946 disp=None 7s
+  6x13     prose      rep1 decode exact=True  cer=0.000 disp=None 5s
+  6x13     prose      rep1 bind   exact=True  cer=0.000 disp=0 6s
+  clR5x10  b64        rep2 decode exact=False cer=0.054 disp=None 11s
+  clR5x10  b64        rep2 bind   exact=False cer=0.268 disp=0 13s
+  6x13     prose      rep2 decode exact=True  cer=0.000 disp=None 6s
+  6x13     prose      rep2 bind   exact=True  cer=0.000 disp=0 7s
+  6x13     hex        rep1 decode exact=True  cer=0.000 disp=None 5s
+  6x13     hex        rep1 bind   exact=True  cer=0.000 disp=0 10s
+  6x13     alnum_easy rep1 decode exact=False cer=0.071 disp=None 12s
+  6x13     alnum_easy rep1 bind   exact=False cer=0.036 disp=0 11s
+  6x13     alnum_easy rep2 decode exact=False cer=0.018 disp=None 6s
+  6x13     alnum_easy rep2 bind   exact=False cer=0.946 disp=None 13s
+  6x13     hex        rep2 decode exact=True  cer=0.000 disp=None 6s
+  6x13     hex        rep2 bind   exact=True  cer=0.000 disp=0 10s
+  6x13     b64        rep2 decode exact=False cer=0.054 disp=None 6s
+  6x13     b64        rep2 bind   exact=False cer=0.054 disp=0 13s
+  8x16     prose      rep1 decode exact=True  cer=0.000 disp=None 5s
+  8x16     prose      rep1 bind   exact=False cer=0.018 disp=0 5s
+  8x16     prose      rep2 decode exact=True  cer=0.000 disp=None 5s
+  8x16     prose      rep2 bind   exact=True  cer=0.000 disp=0 5s
+  6x13     b64        rep1 decode exact=False cer=0.179 disp=None 20s
+  6x13     b64        rep1 bind   exact=False cer=0.054 disp=0 19s
+  8x16     alnum_easy rep1 decode exact=False cer=0.018 disp=None 9s
+  8x16     alnum_easy rep1 bind   exact=False cer=0.018 disp=0 12s
+  8x16     alnum_easy rep2 decode exact=False cer=0.018 disp=None 5s
+  8x16     alnum_easy rep2 bind   exact=False cer=0.018 disp=0 13s
+  8x16     hex        rep1 decode exact=False cer=0.018 disp=None 13s
+  8x16     hex        rep1 bind   exact=False cer=0.036 disp=0 15s
+  8x16     b64        rep1 decode exact=False cer=0.125 disp=None 13s
+  8x16     b64        rep1 bind   exact=False cer=0.036 disp=0 13s
+  8x16     hex        rep2 decode exact=True  cer=0.000 disp=None 6s
+  8x16     hex        rep2 bind   exact=False cer=1.000 disp=None 25s
+  8x16     b64        rep2 decode exact=False cer=0.018 disp=None 11s
+  8x16     b64        rep2 bind   exact=False cer=0.054 disp=0 13s
+
+-> results_confirm-v1_gpt-5.6-sol.json

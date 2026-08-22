@@ -18,6 +18,30 @@ CLAUDE_PATCH = 28   # Claude: 28x28 px per image token
 GPT_PATCH    = 32   # GPT-5.6: 32x32 px per image token
 CLAUDE_MAX_PIXELS = 1_150_000   # above this Claude downscales, destroying tiny text
 
+# Measured image-token geometry per provider family.  `tokens_per_patch` is NOT always 1:
+# gpt-5.6-sol bills 1.2 tokens per 32x32 patch (fit: tokens = 13,990 + 1.2*patches, exact
+# across 224/448/896/1344 squares), so its effective rate is 1024/1.2 = 853 px per billed
+# token against Claude's 784.  See results_geometry_rate_*.json.
+PROVIDER_GEOMETRY = {
+    # max_square: largest un-downscaled square, measured at the adjacent boundary.
+    'claude':      dict(patch=28, tokens_per_patch=1.0, max_square=1932, max_patches=4761),
+    'gpt-5.6-sol': dict(patch=32, tokens_per_patch=1.2, max_square=1600, max_patches=2500),
+}
+
+def geom(model):
+    return PROVIDER_GEOMETRY.get(model, PROVIDER_GEOMETRY['claude'])
+
+def image_tokens(w, h, patch=CLAUDE_PATCH, tokens_per_patch=1.0):
+    """Billed image tokens for a canvas."""
+    return math.ceil(w / patch) * math.ceil(h / patch) * tokens_per_patch
+
+def px_per_token(patch=CLAUDE_PATCH, tokens_per_patch=1.0):
+    return patch * patch / tokens_per_patch
+
+def chars_per_token(cw, ch, patch=CLAUDE_PATCH, tokens_per_patch=1.0):
+    """Density ceiling for a monospace cell, assuming exact divisibility and full fill."""
+    return px_per_token(patch, tokens_per_patch) / (cw * ch)
+
 for d in (OUT, GT, FONTDIR):
     os.makedirs(d, exist_ok=True)
 
@@ -75,8 +99,10 @@ def ttf(path, size, mono=True, tight=1.0, label=None):
 
 # ---------------------------------------------------------------- token math
 def tokens(w, h):
+    """(claude_tokens, gpt56_tokens).  GPT-5.6 bills 1.2 tokens per 32x32 patch - see
+    PROVIDER_GEOMETRY - so the second value is patches * 1.2, not raw patch count."""
     c = math.ceil(w / CLAUDE_PATCH) * math.ceil(h / CLAUDE_PATCH)
-    g = math.ceil(w / GPT_PATCH)    * math.ceil(h / GPT_PATCH)
+    g = math.ceil(w / GPT_PATCH)    * math.ceil(h / GPT_PATCH) * 1.2
     return c, g
 
 def stats(w, h, text):
@@ -84,9 +110,9 @@ def stats(w, h, text):
     ct, gt = tokens(w, h)
     return dict(w=w, h=h, chars=chars, lines=text.count('\n') + 1,
                 megapixels=round(w * h / 1e6, 3),
-                claude_tokens=ct, gpt_tokens=gt,
+                claude_tokens=ct, gpt_tokens=round(gt),
                 chars_per_claude_token=round(chars / ct, 2),
-                chars_per_gpt_token=round(chars / gt, 2),
+                chars_per_gpt_token=round(chars / gt, 2),   # 32px patches at 1.2 tok/patch
                 text_tokens_equiv=round(chars / 4),
                 claude_compression=round((chars / 4) / ct, 2),
                 oversized_for_claude=(w * h > CLAUDE_MAX_PIXELS))

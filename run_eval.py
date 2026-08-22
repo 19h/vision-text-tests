@@ -7,6 +7,7 @@
 import argparse, json, os, re, subprocess, sys, time, difflib
 from concurrent.futures import ThreadPoolExecutor
 
+import providers as P
 ROOT = os.path.dirname(os.path.abspath(__file__))
 KEY = json.load(open(os.path.join(ROOT, 'ANSWER_KEY.json')))['images']
 GRADED = ('n_lines', 'passphrase', 'rare_count', 'verbatim_mid')   # + every code_*
@@ -15,10 +16,10 @@ def probes_for(v):
     ps = [p for p in v['probes'] if p['id'].startswith('code_') or p['id'] in GRADED]
     return ps or v['probes'][:5]
 
-def build_prompt(path, ps):
+def build_prompt(path, ps, provider='claude'):
     qs = '\n'.join(f'  "{p["id"]}": {p["q"]}' for p in ps)
-    return (f"Read the image at {path}\n\n"
-            "It contains dense small text. Answer the questions below from the image.\n"
+    return (P.image_head(provider, path, 'is the page referred to below')
+          + "It contains dense small text. Answer the questions below from the image.\n"
             "Output STRICT JSON and nothing else: one key per question id, string values.\n"
             'If you genuinely cannot read what a question asks for, answer "UNREADABLE".\n'
             "Do not guess or invent plausible-looking text - the content is random, so a\n"
@@ -27,22 +28,18 @@ def build_prompt(path, ps):
             "image-processing tool to crop, zoom or enhance it - that invalidates the test.\n\n"
             f"Questions:\n{qs}\n")
 
-def call(path, ps, model, timeout):
+def call(path, ps, model, timeout, effort='low'):
     t0 = time.time()
+    prov = P.provider_for(model)
     try:
-        r = subprocess.run(['claude', '-p', '--allowedTools', 'Read',
-                            '--disallowedTools', 'Bash,Write,Edit,Glob,Grep,Task,WebFetch,WebSearch,NotebookEdit',
-                            '--model', model, build_prompt(path, ps)],
-                           capture_output=True, text=True, timeout=timeout, cwd=ROOT)
-        out = r.stdout.strip()
+        r = P.run(build_prompt(path, ps, prov), model=model,
+                  images=P.images_for(prov, [path]), effort=effort, timeout=timeout, cwd=ROOT)
     except subprocess.TimeoutExpired:
         return None, time.time() - t0, 'timeout'
-    m = re.findall(r'\{.*\}', out, re.S)
-    if not m: return None, time.time() - t0, out[:200]
-    try:
-        return json.loads(m[-1]), time.time() - t0, None
-    except json.JSONDecodeError as e:
-        return None, time.time() - t0, f'bad json: {e}'
+    ans = P.parse_json_answer(r['text'])
+    if not isinstance(ans, dict):
+        return None, time.time() - t0, str(r['text'])[:200]
+    return ans, time.time() - t0, None
 
 def norm(s): return re.sub(r'\s+', ' ', str(s)).strip()
 
@@ -81,12 +78,13 @@ def grade(pid, got, want, gt=None):
         return ('partial' if sim > 0.5 else 'wrong'), sim
     return ('ok', 1.0) if g == w else ('wrong', 0.0)
 
-def run_one(item, model, timeout):
+def run_one(item, model, timeout, effort='low'):
     k, v = item
     ps = probes_for(v)
     gt = open(os.path.join(ROOT, v['groundtruth'])).read().split('\n')
-    ans, secs, err = call(os.path.join(ROOT, 'images', k), ps, model, timeout)
-    res = dict(file=k, model=model, seconds=round(secs, 1), error=err,
+    ans, secs, err = call(os.path.join(ROOT, 'images', k), ps, model, timeout, effort)
+    res = dict(file=k, model=model, provider=P.provider_for(model), effort=effort,
+               seconds=round(secs, 1), error=err,
                glyph=v.get('cell') or f"{v.get('size_px')}px", chars=v['chars'],
                ch_per_tok=v['chars_per_claude_token'], details={})
     if ans is None:
@@ -124,13 +122,14 @@ if __name__ == '__main__':
     ap.add_argument('--jobs', type=int, default=3)
     ap.add_argument('--timeout', type=int, default=900)
     ap.add_argument('--out', default='results.json')
+    ap.add_argument('--effort', default='low')
     a = ap.parse_args()
     items = [(k, v) for k, v in KEY.items()
              if (not a.series or v['series'] in a.series)
              and (not a.images or any(s.lower() in k.lower() for s in a.images))]
     print(f"{len(items)} images x model={a.model}, {a.jobs} parallel")
     with ThreadPoolExecutor(a.jobs) as ex:
-        out = list(ex.map(lambda it: run_one(it, a.model, a.timeout), items))
+        out = list(ex.map(lambda it: run_one(it, a.model, a.timeout, a.effort), items))
     p = os.path.join(ROOT, a.out)
     prev = json.load(open(p)) if os.path.exists(p) else []
     json.dump(prev + out, open(p, 'w'), indent=1)

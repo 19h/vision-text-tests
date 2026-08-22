@@ -10,7 +10,9 @@
   "got": "hpMf nKT",
   "want": "6yMF nKT",
   "abstain": false,
-  "seconds": 11
+  "seconds": 11,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -23,7 +25,9 @@
   "got": "SZih rZY",
   "want": "SZih rZf",
   "abstain": false,
-  "seconds": 12
+  "seconds": 12,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -36,7 +40,9 @@
   "got": "6nvr SYF",
   "want": "6nvr SYf",
   "abstain": false,
-  "seconds": 11
+  "seconds": 11,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -49,7 +55,9 @@
   "got": "UNREADABLE",
   "want": "6yMF nKTZ UtSt D",
   "abstain": true,
-  "seconds": 33
+  "seconds": 33,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -62,7 +70,9 @@
   "got": "SZih rZY8 WtJF t",
   "want": "SZih rZf8 WtJf t",
   "abstain": false,
-  "seconds": 12
+  "seconds": 12,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -75,7 +85,9 @@
   "got": "6nvr SYFi 0i0q O",
   "want": "6nvr SYfO i0qO O",
   "abstain": false,
-  "seconds": 43
+  "seconds": 43,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -88,7 +100,9 @@
   "got": "nMPk nKTZ UtSt DcnQ zyRd H3dN zx",
   "want": "6yMF nKTZ UtSt DcnQ zyRd H9dN zx",
   "abstain": false,
-  "seconds": 19
+  "seconds": 19,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -101,7 +115,9 @@
   "got": "SZih rZY8 WtJF tnZ+ OQ4t peVZ H9",
   "want": "SZih rZf8 WtJf tnZ+ OQ4t peVZ H9",
   "abstain": false,
-  "seconds": 13
+  "seconds": 13,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -114,7 +130,9 @@
   "got": "6nvr SYFt 0i0q Obrq pUJs qFYe Em",
   "want": "6nvr SYfO i0qO Obrg pOJs qFYe Em",
   "abstain": false,
-  "seconds": 41
+  "seconds": 41,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -127,7 +145,9 @@
   "got": "UNREADABLE",
   "want": "6yMF nKTZ UtSt DcnQ zyRd H9dN zxvQ y9zg V+DB QqnD w",
   "abstain": true,
-  "seconds": 29
+  "seconds": 29,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -140,7 +160,9 @@
   "got": "UNREADABLE",
   "want": "SZih rZf8 WtJf tnZ+ OQ4t peVZ H9bC m2gg TnL/ FTfp R",
   "abstain": true,
-  "seconds": 25
+  "seconds": 25,
+  "prefix": false,
+  "overlong": false
  },
  {
   "cell": "6x13",
@@ -153,6 +175,8 @@
   "got": "6nvr SYFi 0iOq OObr gpXJ sqFY eEm6 m6OI 1Yum UUWO W",
   "want": "6nvr SYfO i0qO Obrg pOJs qFYe Em6m 60I1 YumU UWOW Z",
   "abstain": false,
-  "seconds": 52
+  "seconds": 52,
+  "prefix": false,
+  "overlong": false
  }
 ]
